@@ -1,0 +1,16 @@
+<!-- Banner -->
+<section id="banner" class="major">
+    <div class="inner">
+        <header class="major">
+            <h1>{{ page.landing-title }}</h1>
+        </header>
+        <div class="content">
+            <p style="text-transform: uppercase;">{{ site.description }}</p>
+            {% if page.action %}
+            <ul class="actions">
+                <li><a href="{{ page.action.ref }}" class="button next scrolly">{{ page.action.text }}</a></li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</section>

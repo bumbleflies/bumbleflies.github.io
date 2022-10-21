@@ -1,7 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: bumble
+landing-title: 'Willkommen bei den bumbleflies'
+action:
+    text: 'schreib uns'
+    ref: '#contact'
 
-layout: home
+show_tile: false
 ---
-## Wir lieben Open Space!

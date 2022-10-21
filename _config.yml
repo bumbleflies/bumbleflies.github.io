@@ -1,13 +1,35 @@
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/
 title: bumbleflies | 🦋
 email: info@bumbleflies.de
-description: >- # this means to ignore newlines until "baseurl:"
-  Wir lieben Open Space!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: bumbleflies_OS
-github_username:  bumbleflies
+description: Wir lieben Open Space!
+name: bumbleflies
+baseurl: ""
+url: ""
+twitter:
+  username: bumbleflies_OS
+github:
+  username:  bumbleflies
+
+locale: "de-DE"
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+#remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+remote_theme: "andrewbanchich/forty-jekyll-theme"
 
 repository: bumbleflies/bumbleflies.github.io
+
+# Business Info
+author: bumbleflies UG
+street_address: Gleiwitzer Straße 6-d
+city: MÜnchen
+zip_code: 81929
+phone: +49 1567 8451908
+
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 3
+
+
+exclude:
+- README.md
+- 404.html
