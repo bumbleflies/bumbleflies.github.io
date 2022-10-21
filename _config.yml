@@ -29,7 +29,14 @@ phone: +49 1567 8451908
 tiles-source: pages # accepts "posts" or "pages"
 tiles-count: 3
 
-
+# https://jekyllrb.com/docs/troubleshooting/#configuration-problems
 exclude:
-- README.md
-- 404.html
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - 404.html
