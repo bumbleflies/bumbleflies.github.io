@@ -1,3 +1,11 @@
-remote_theme: volny/creative-theme-jekyll
-title: Welcome to the bumbleflies.
-description: Wir lieben Open Space!
+title: bumbleflies | 🦋
+email: info@bumbleflies.de
+description: >- # this means to ignore newlines until "baseurl:"
+  Wir lieben Open Space!
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: bumbleflies_OS
+github_username:  bumbleflies
+
+# Build settings
+theme: minimal-mistakes-jekyll
