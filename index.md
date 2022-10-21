@@ -4,4 +4,4 @@
 
 layout: home
 ---
-# Willkommen bei den bumbleflies
+## Wir lieben Open Space!

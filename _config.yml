@@ -8,4 +8,4 @@ twitter_username: bumbleflies_OS
 github_username:  bumbleflies
 
 # Build settings
-remote_theme: mmistakes/minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
