@@ -10,41 +10,11 @@
 # Deutsch
 # -----------------
 de: &DEFAULT_DE
-  services:
-    title: "Leistungen"
-    text: "So unterstützen wir dich"
-    section: Leistungen
-    list:
-      - title: 'Effektive Kollaboration'
-        desc: 'Wir helfen dir, deine Meetings und Workshops effektiv, interaktiv und kollaborativ zu gestalten.<br/>Du wirst überrascht sein, wie viel Energie das bei deinen Mitarbeiter:innen freisetzt.'
-        image: /assets/img/services/bumblespace_effective-workshop.jpg
-      - title: 'Online Big-Room-Meetings'
-        desc: 'Wir organisieren für dich dein nächstes Big-Room-Meeting (z.B. PI-Planning) für alle deine Teams. Egal ob 20, 200 oder mehr Personen.<br/>Wir sorgen für den produktiven Rahmen, damit ihr euch auf die Inhalte konzentrieren könnt.'
-        image: /assets/img/services/bumblespace_pi-planning.png
-      - title: 'Online Events'
-        desc: 'Wir organisieren für dich ein Event, bei dem Teambuilding, Austausch und Spaß im Vordergrund stehen.<br/>Ihr habt euch seit einem Jahr nicht mehr gesehen und sucht den Kontakt zu den Kollegen? Dann ist das genau das richtige.'
-        image: /assets/img/services/bumblespace_online-events.jpg
-
   about:
     title: "Über uns"
     text: "Wir sind bumbleflies"
     body: "bumbleflies ist eine Mischung aus den Wörtern bumblebee und butterfly. Die beiden Erscheinungen eines Open Space. Wir, Chris, nochmal Chris und Sebastian lieben das Open Space Format für Meetings, Konferenzen und Community Veranstaltungen. Vielleicht kennen uns einige als ein Teil des Organisationsteams der früheren Open Space Scrum München Veranstaltung. Nach 2 Jahren wollen wir endlich wieder Open Spaces vor Ort machen. Wir haben uns als die bumbleflies UG gegründet und starten mit dieser Veranstaltung endlich wieder Open Spaces von Angesicht zu Angesicht in München."
     section: about
-
-  clients:
-    section: Kunden
-    max-height: 100px
-    horizontal-scrolling: "" #"yes/no"
-    list:
-      - title: "BSH"
-        url: 'https://www.bsh-group.com/'
-        logo: assets/img/clients/bsh-logo.png
-      - title: "Siemens AG"
-        url: 'https://www.siemens.com/de/de.html'
-        logo: assets/img/clients/siemens-logo.png
-      - title: "Wohnungshelden"
-        url: 'https://www.wohnungshelden.de/'
-        logo: assets/img/clients/wohnungshelden-logo.png
 
   team:
     title: "Wir sind bumbleflies"
