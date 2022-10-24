@@ -1,0 +1,7 @@
+.navbar-brand {
+    color: #fff !important;
+}
+
+a.navbar-brand:first-letter {
+    color: #fbc02d;
+}

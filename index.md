@@ -1,9 +1,16 @@
 ---
-layout: bumble
-landing-title: 'Willkommen bei den bumbleflies'
-action:
-    text: 'schreib uns'
-    ref: '#contact'
-
-show_tile: false
+layout: bumbleflies
+navigation:
+    de: &DEFAULT_DE
+      nav:
+        - title: "Leistungen"
+          section: Leistungen
+        - title: "Über uns"
+          section: about
+        - title: "Team"
+          section: Team
+        - title: "open:bumble:space"
+          url: "/obs"
+    de-DE:
+      <<: *DEFAULT_DE
 ---

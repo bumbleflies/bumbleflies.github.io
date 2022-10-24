@@ -1,0 +1,14 @@
+# Deutsch
+# -----------------
+de: &DEFAULT_DE
+  nav:
+    - title: "Leistungen"
+      section: Leistungen
+    - title: "Über uns"
+      section: Ueber
+    - title: "Team"
+      section: Team
+    - title: "open:bumble:space"
+      url: "/obs"
+de-DE:
+  <<: *DEFAULT_DE
