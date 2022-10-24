@@ -6,17 +6,21 @@ styles:
     - url: https://pretix.eu/bumbleevent/obs/widget/v1.css
 scripts:
     - url: https://pretix.eu/widget/v1.de.js
-navigation:
-    de: &DEFAULT_DE
-      nav:
-        - title: "Info"
-          section: info
-        - title: "Tickets"
-          section: tickets
-        - title: "Über uns"
-          section: about
-    de-DE:
-      <<: *DEFAULT_DE
+de: &DEFAULT_DE
+  nav:
+    - title: "Info"
+      section: info
+    - title: "Tickets"
+      section: tickets
+    - title: "Über uns"
+      section: about
+  header:
+    title: Anmeldung zum open:bumble:space
+    text: Wir freuen uns dich zu treffen!
+    button: Melde dich an
+    buttonlink: "#tickets"
+de-DE:
+  <<: *DEFAULT_DE
 ---
 
 # Alle Infos zum nächsten Event

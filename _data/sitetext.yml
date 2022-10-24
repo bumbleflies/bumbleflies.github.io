@@ -10,12 +10,6 @@
 # Deutsch
 # -----------------
 de: &DEFAULT_DE
-  header:
-    title: Willkommen bei den bumbleflies
-    text: WIR LIEBEN OPEN SPACE!
-    button: Schreib uns
-    buttonlink: "mailto:info@bumbleflies.de"
-
   services:
     title: "Leistungen"
     text: "So unterstützen wir dich"
