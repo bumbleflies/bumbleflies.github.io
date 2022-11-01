@@ -1,5 +1,4 @@
 requests
 pytest
-pytest_nginx
 beautifulsoup4
 more-itertools
