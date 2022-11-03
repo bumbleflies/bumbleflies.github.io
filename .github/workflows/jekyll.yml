@@ -44,6 +44,8 @@ jobs:
           path: "test_requirements.txt"
       - name: Test with pytest
         uses: dariocurr/pytest-summary@main
+        with:
+          paths: _tests
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
     env:
