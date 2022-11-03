@@ -11,7 +11,7 @@ de: &DEFAULT_DE
     - title: "open:bumble:space"
       url: "/obs"
   header:
-    title: Willkommen bei den bumbleflies!!!
+    title: Willkommen bei den bumbleflies
     text: WIR LIEBEN OPEN SPACE!
     button: Schreib uns
     buttonlink: "mailto:info@bumbleflies.de"
