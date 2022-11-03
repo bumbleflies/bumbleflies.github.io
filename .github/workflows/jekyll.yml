@@ -36,16 +36,10 @@ jobs:
         with:
           enable_cache: true
       - name: 🐍 setup python for test
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: "3.10"
           cache: "pip"
-      - name: 📄 install test requirements
-        uses: py-actions/py-dependency-install@v3
-        with:
-          path: "test_requirements.txt"
-          update-setuptools: "false"
-          update-wheel: "false"
       - name: 🧪 test with pytest
         uses: dariocurr/pytest-summary@main
         with:
