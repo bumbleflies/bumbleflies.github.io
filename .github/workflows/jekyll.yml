@@ -48,7 +48,8 @@ jobs:
         uses: dariocurr/pytest-summary@main
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   # Deployment job
   deploy:
     environment:
