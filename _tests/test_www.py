@@ -41,7 +41,7 @@ def path_to_site():
 
 @pytest.fixture(scope='session')
 def bumblebuild(path_to_site: Path):
-    result = subprocess.run(['bundle', 'exec', 'jekyll', 'build', '-d', path_to_site], cwd='..',
+    result = subprocess.run(['bundle', 'exec', 'jekyll', 'build', '-d', path_to_site],
                             capture_output=True, text=True)
     assert 'done in' in result.stdout
 
