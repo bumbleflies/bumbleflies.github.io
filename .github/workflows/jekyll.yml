@@ -42,8 +42,6 @@ jobs:
         uses: py-actions/py-dependency-install@v3
         with:
           path: "test_requirements.txt"
-      - name: Lint with flake8
-        uses: julianwachholz/flake8-action@v2
       - name: Test with pytest
         uses: dariocurr/pytest-summary@main
       - name: Upload artifact
