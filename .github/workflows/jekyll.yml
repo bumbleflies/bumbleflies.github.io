@@ -40,6 +40,12 @@ jobs:
         with:
           python-version: "3.10"
           cache: "pip"
+      - name: 📄 install test requirements
+        uses: py-actions/py-dependency-install@v3
+        with:
+          path: "requirements.txt"
+          update-setuptools: "false"
+          update-wheel: "false"
       - name: 🧪 test with pytest
         uses: dariocurr/pytest-summary@main
         with:
