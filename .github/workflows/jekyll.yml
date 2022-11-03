@@ -43,7 +43,7 @@ jobs:
       - name: 📄 install test requirements
         uses: py-actions/py-dependency-install@v3
         with:
-          path: "requirements.txt"
+          path: "_tests/requirements.txt"
           update-setuptools: "false"
           update-wheel: "false"
       - name: 🧪 test with pytest
