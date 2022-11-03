@@ -35,18 +35,22 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
-      - uses: actions/setup-python@v2
+      - name: 🐍 setup python for test
+        uses: actions/setup-python@v2
         with:
           python-version: "3.10"
-      - name: Install test requirements
+          cache: "pip"
+      - name: 📄 install test requirements
         uses: py-actions/py-dependency-install@v3
         with:
           path: "test_requirements.txt"
-      - name: Test with pytest
+          update-setuptools: "false"
+          update-wheel: "false"
+      - name: 🧪 test with pytest
         uses: dariocurr/pytest-summary@main
         with:
           paths: _tests
-      - name: Upload artifact
+      - name: ⛅ upload artifact
         uses: actions/upload-pages-artifact@v1
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
