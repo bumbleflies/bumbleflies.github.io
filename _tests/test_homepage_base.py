@@ -14,6 +14,12 @@ def test_stylesheets_for_theme_present(bumbleserve, stylesheet):
     assert_stylesheet_present(stylesheet, stylesheets)
 
 
+def test_no_external_stylesheet(bumbleserve):
+    stylesheets = query_site(bumbleserve).find_all(rel='stylesheet')
+    external_stylesheet = list(filter(lambda s: s.attrs['href'].startswith('http'), stylesheets))
+    assert len(external_stylesheet) == 0, f'External Stylesheets not allowed: {external_stylesheet}'
+
+
 @pytest.mark.parametrize('display, url', [('Leistungen', '#Leistungen'),
                                           ('Über uns', '#about'),
                                           ('Team', '#Team'),
