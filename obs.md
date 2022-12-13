@@ -21,6 +21,9 @@ de: &DEFAULT_DE
     buttonlink: "#tickets"
 de-DE:
   <<: *DEFAULT_DE
+
+redirect_from:
+  - /participate
 ---
 
 # Alle Infos zum nächsten Event

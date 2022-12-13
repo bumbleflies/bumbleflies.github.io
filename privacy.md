@@ -1,5 +1,8 @@
 ---
 layout: page
+redirect_from:
+  - /datenschutz
+
 ---
 
 # Datenschutz

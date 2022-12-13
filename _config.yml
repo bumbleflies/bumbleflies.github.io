@@ -26,3 +26,7 @@ exclude:
   - vendor/ruby/
   - README.md
   - 404.html
+
+plugins:
+  - jekyll-redirect-from
+  - 
