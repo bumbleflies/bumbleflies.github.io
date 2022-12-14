@@ -35,6 +35,11 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
+      - name: Archive Site
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-without-markdown
+          path: _site
       - name: 🐍 setup python for test
         uses: actions/setup-python@v4
         with:
