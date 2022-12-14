@@ -24,6 +24,7 @@ de-DE:
 
 redirect_from:
   - /participate
+  - /stayintheloop
 ---
 
 # Alle Infos zum nächsten Event

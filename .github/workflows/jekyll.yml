@@ -38,7 +38,7 @@ jobs:
       - name: Archive Site
         uses: actions/upload-artifact@v3
         with:
-          name: dist-without-markdown
+          name: site
           path: _site
       - name: 🐍 setup python for test
         uses: actions/setup-python@v4

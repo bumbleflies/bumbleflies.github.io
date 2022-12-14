@@ -46,4 +46,7 @@ de: &DEFAULT_DE
 
 de-DE:
   <<: *DEFAULT_DE
+
+redirect_from:
+  - /online-treffen
 ---
