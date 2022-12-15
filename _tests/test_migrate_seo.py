@@ -1,10 +1,11 @@
 import pytest as pytest
 
-from _tests.helper import query_site, assert_stylesheet_present, assert_link_present
+from _tests.helper import query_site
+
 
 # https://www.google.com/search?q=+site%3Abumbleflies.de
 @pytest.mark.parametrize('page',
-                         ['datenschutz', 'impressum', 'stayintheloop', 'participate', 'online-treffen'])
+                         ['datenschutz', 'impressum', 'stayintheloop', 'participate', 'online-treffen',
+                          'open-space-checkliste', 'open-space-prinzipien-uebersicht'])
 def test_page_is_redirecting(bumbleserve, page):
     assert query_site(bumbleserve, page).find(name='title').text == 'Redirecting…'
-
