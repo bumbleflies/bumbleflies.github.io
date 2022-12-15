@@ -8,6 +8,8 @@ scripts:
     - url: https://pretix.eu/widget/v1.de.js
 de: &DEFAULT_DE
   nav:
+    - title: "Home"
+      url: "/"
     - title: "Info"
       section: info
     - title: "Tickets"

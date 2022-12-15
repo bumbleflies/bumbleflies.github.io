@@ -1,10 +1,21 @@
 ---
-layout: page
+layout: standard
+de: &DEFAULT_DE
+  nav:
+    - title: "Home"
+      url: "/"
+    - title: "OS-Prinzipien"
+      url: "/os-principles"
+    - title: "open:bumble:space"
+      url: "/obs"
+  header:
+    text: Open Space Checkliste
+de-DE:
+  <<: *DEFAULT_DE
 redirect_from:
   - /open-space-checkliste
 ---
-# Open Space Checkliste
-## Vorbereitung
+# Vorbereitung
 - Veranstaltung bekannt machen
   - Dauer festlegen
   - Termin festlegen
@@ -20,7 +31,7 @@ redirect_from:
   - Open Space Prinzipien, das Gesetz und die Erscheinungen visualisieren
   - Für leibliches Wohl sorgen
 
-## Durchführung
+# Durchführung
 - TeilgeberInnen in Empfang nehmen
   - TeilgeberInnen beim Ankommen begrüßen und Orientierung geben
   - Small-Talk betreiben
@@ -42,6 +53,6 @@ redirect_from:
   - Check-Out durchführen
   - TeilgeberInnen verabschieden
 
-## Nachbereitung
+# Nachbereitung
 - Räume und Marktplatz aufräumen
 - Sessiondokumentation verteilen
