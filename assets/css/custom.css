@@ -5,3 +5,7 @@
 a.navbar-brand:first-letter {
     color: #fbc02d;
 }
+
+.nav-link-section {
+    font-style: italic;
+}
