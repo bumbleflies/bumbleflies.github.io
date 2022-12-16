@@ -1,10 +1,10 @@
 ---
 layout: obs
 pretix:
-    url: 'https://pretix.eu/bumbleevent/obs-2/'
+    url: 'https://events.bumbleflies.de/obs-3/'
 head:
   styles:
-    - url: https://pretix.eu/bumbleevent/obs/widget/v1.css
+    - url: https://events.bumbleflies.de/obs-3/widget/v1.css
 foot:  
   scripts:
     - url: https://pretix.eu/widget/v1.de.js
@@ -14,6 +14,8 @@ de: &DEFAULT_DE
       url: "/"
     - title: "Info"
       section: info
+    - title: "Event"
+      section: next
     - title: "Tickets"
       section: tickets
     - title: "Über uns"
@@ -23,6 +25,11 @@ de: &DEFAULT_DE
     text: Wir freuen uns dich zu treffen!
     button: Melde dich an
     buttonlink: "#tickets"
+  about:
+    title: Was ist ein open:bumble:space?
+    text: Der open:bumble:space ist der Ort, an dem sich  die Münchner User Group zum Thema 'Agile' versammelt. Wir treffen uns alle zwei Monate zu einem Open Space. Wir wissen, dass Agilität auf ständigem Lernen basiert. Wir glauben, dass wir besser und schneller lernen, wenn wir unsere Erfahrungen miteinander austauschen, in einem ungezwungenen Rahmen, kein Vortrag sondern AdHoc.
+  next:
+    title: Alle Infos zum nächsten Event
 de-DE:
   <<: *DEFAULT_DE
 
@@ -31,12 +38,14 @@ redirect_from:
   - /stayintheloop
 ---
 
-# Alle Infos zum nächsten Event
+Es ist endlich wieder so weit: wir veranstalten wieder einen open:bumble:space!
+Diesmal zusammen mit [Martin](https://www.linkedin.com/in/martin-aigner-865064193/) von [jambit](https://www.jambit.com/).
 
-Es ist endlich wieder soweit, wir veranstalten wieder ein open:bumble:space. Diesmal zusammen mit [Robert](https://www.linkedin.com/in/robertkuerzinger/) von der LV 1871.
+### am 26.01.2023
+### ab 18:00
+### bei jambit GmbH
+**Friedenheimer Brücke 20, 80639 München.**
 
-- **am 27.10.2022**
-- **ab 18:00**
-- **in LV 1871, Maximilianspl. 5, 80333 München.**
-
-#### Die Location, das Essen und das Trinken ist diesmal von der LV 1871 gesponsert! Vielen Dank!
+## Wer ist eigentlich jambit?
+jambit ist ein innovatives Softwareunternehmen mit Sitz in München, Stuttgart, Leipzig, Erfurt und Jerewan/Armenien. Seit 1999 kreieren wir zukunftsweisende Software, die auf die individuellen Bedürfnisse unserer Kunden maßgeschneidert ist. In enger Zusammenarbeit mit unseren Kunden beraten, konzipieren und entwickeln wir individuelle Lösungen mit modernsten Technologien und umfangreicher Branchenexpertise.
+Auf der Mission nach 100 % Begeisterung leben wir das Miteinander auf Augenhöhe und fördern die Individualität unserer jambitees in einem flexiblen Arbeitsumfeld.

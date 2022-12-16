@@ -1,12 +1,17 @@
 <!-- Info -->
-<section class="page-section" id="info" }}">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        {{ content | raw }}
-      </div>
-    </div>
+<section class="page-section bg-light" id="info">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">{{ page[site.locale].about.title}}</h2>
 
-  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="large text-muted">{{ page[site.locale].about.text }}</div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- End Info -->
