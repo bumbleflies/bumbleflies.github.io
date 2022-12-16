@@ -51,7 +51,7 @@
 {% endif %}
 
 <!-- additional scripts -->
-{% for script in page.scripts %}
+{% for script in page.foot.scripts %}
 <script type="text/javascript" src="{{ script.url }}" async></script>
 {% endfor %}
 

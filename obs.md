@@ -2,9 +2,11 @@
 layout: obs
 pretix:
     url: 'https://pretix.eu/bumbleevent/obs-2/'
-styles:
+head:
+  styles:
     - url: https://pretix.eu/bumbleevent/obs/widget/v1.css
-scripts:
+foot:  
+  scripts:
     - url: https://pretix.eu/widget/v1.de.js
 de: &DEFAULT_DE
   nav:
