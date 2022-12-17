@@ -47,5 +47,5 @@ Diesmal zusammen mit [Martin](https://www.linkedin.com/in/martin-aigner-86506419
 **Friedenheimer Brücke 20, 80639 München.**
 
 ## Wer ist eigentlich jambit?
-jambit ist ein innovatives Softwareunternehmen mit Sitz in München, Stuttgart, Leipzig, Erfurt und Jerewan/Armenien. Seit 1999 kreieren wir zukunftsweisende Software, die auf die individuellen Bedürfnisse unserer Kunden maßgeschneidert ist. In enger Zusammenarbeit mit unseren Kunden beraten, konzipieren und entwickeln wir individuelle Lösungen mit modernsten Technologien und umfangreicher Branchenexpertise.
-Auf der Mission nach 100 % Begeisterung leben wir das Miteinander auf Augenhöhe und fördern die Individualität unserer jambitees in einem flexiblen Arbeitsumfeld.
+jambit ist ein innovatives Softwareunternehmen mit Sitz in München, Stuttgart, Leipzig, Erfurt und Jerewan/Armenien. Seit 1999 kreieren sie zukunftsweisende Software, die auf die individuellen Bedürfnisse ihrer Kunden maßgeschneidert ist. In enger Zusammenarbeit mit ihren Kunden beraten, konzipieren und entwickeln sie individuelle Lösungen mit modernsten Technologien und umfangreicher Branchenexpertise.
+Auf der Mission nach 100 % Begeisterung leben sie das Miteinander auf Augenhöhe und fördern die Individualität ihrer jambitees in einem flexiblen Arbeitsumfeld.
