@@ -4,4 +4,4 @@ highlight: "#fbc02d"
 #black: "#000"
 
 #Image Customization
-header-image: "../img/header-bg.jpg"
+header-image: "/assets/img/header-bg.jpg"
