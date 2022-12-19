@@ -76,7 +76,7 @@ jobs:
     needs: build
     environment:
       name: deployment-site
-      url: bumbleflies.de
+      url: https://bumbleflies.de
     steps:
       - name: Invoke deployment hook
         uses: distributhor/workflow-webhook@v2
