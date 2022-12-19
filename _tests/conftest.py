@@ -36,7 +36,7 @@ def path_to_site():
 
 @pytest.fixture(scope='session')
 def path_to_source():
-    return Path(__file__).parent.parent.absolute()
+    return Path(__file__).parent.parent.joinpath('site').absolute()
 
 
 @pytest.fixture(scope='session')
