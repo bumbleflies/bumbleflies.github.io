@@ -26,17 +26,22 @@ de: &DEFAULT_DE
     list:
       - title: 'Effektive Kollaboration'
         desc: 'Wir helfen dir, deine Meetings und Workshops effektiv, interaktiv und kollaborativ zu gestalten.<br/>Du wirst überrascht sein, wie viel Energie das bei deinen Mitarbeiter:innen freisetzt.'
-        image: /assets/img/services/bumblespace_effective-workshop.jpg
+        image: 
+            url: /assets/img/services/bumblespace_effective-workshop.jpg
+            copyright: bumbleflies UG
       - title: 'Online Big-Room-Meetings'
         desc: 'Wir organisieren für dich dein nächstes Big-Room-Meeting (z.B. PI-Planning) für alle deine Teams. Egal ob 20, 200 oder mehr Personen.<br/>Wir sorgen für den produktiven Rahmen, damit ihr euch auf die Inhalte konzentrieren könnt.'
-        image: /assets/img/services/bumblespace_pi-planning.png
+        image: 
+          url: /assets/img/services/bumblespace_pi-planning.png
+          copyright: bumbleflies UG
       - title: 'Online Events'
         desc: 'Wir organisieren für dich ein Event, bei dem Teambuilding, Austausch und Spaß im Vordergrund stehen.<br/>Ihr habt euch seit einem Jahr nicht mehr gesehen und sucht den Kontakt zu den Kollegen? Dann ist das genau das richtige.'
-        image: /assets/img/services/bumblespace_online-events.jpg
+        image: 
+          url: /assets/img/services/bumblespace_online-events.jpg
+          copyright: bumbleflies UG
   clients:
     section: Kunden
     max-height: 100px
-    horizontal-scrolling: "" #"yes/no"
     list:
       - title: "BSH"
         url: 'https://www.bsh-group.com/'
