@@ -28,5 +28,5 @@ exclude:
   - 404.html
 
 plugins:
+  - jekyll-github-metadata
   - jekyll-redirect-from
-  - 
