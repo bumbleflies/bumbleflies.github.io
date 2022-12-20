@@ -7,12 +7,6 @@ def test_title(bumbleserve):
     assert 'bumbleflies | 🦋' in query_site(bumbleserve).find(name='title').text
 
 
-@pytest.mark.parametrize('stylesheet', ['bootstrap.min.css', 'all.min.css', 'agency.css', 'custom.css'])
-def test_stylesheets_for_theme_present(bumbleserve, stylesheet):
-    stylesheets = query_site(bumbleserve, 'obs').find_all(rel='stylesheet')
-    assert_stylesheet_present(stylesheet, stylesheets)
-
-
 @pytest.mark.parametrize('display, url', [('Info', '#info'),
                                           ('Tickets', '#tickets'),
                                           ('Über uns', '#about')])

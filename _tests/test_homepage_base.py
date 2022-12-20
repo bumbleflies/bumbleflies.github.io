@@ -8,7 +8,7 @@ def test_title(bumbleserve):
 
 
 @pytest.mark.parametrize('stylesheet',
-                         ['bootstrap.min.css', 'all.min.css', 'agency.css', 'custom.css', 'font-faces.css'])
+                         ['bootstrap.min.css', 'all.min.css', 'bumble.css', 'custom.css', 'font-faces.css'])
 def test_stylesheets_for_theme_present(bumbleserve, stylesheet):
     stylesheets = query_site(bumbleserve).find_all(rel='stylesheet')
     assert_stylesheet_present(stylesheet, stylesheets)

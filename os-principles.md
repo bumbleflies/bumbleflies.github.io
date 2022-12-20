@@ -18,21 +18,39 @@ de: &DEFAULT_DE
       - desc: Wer auch immer kommt, es sind die richtigen
         image:
             url: /assets/img/os/1.jpg
+            hover:
+                title: Bild runterladen
+                big: /assets/img/os/OS - Prinzip 1.jpg
       - desc: Was auch immer passiert, ist das einzige was passieren konnte
         image: 
             url: /assets/img/os/2.jpg
+            hover:
+                title: Bild runterladen
+                big: /assets/img/os/OS - Prinzip 2.jpg
       - desc: Es beginnt, wenn die Zeit reif ist
         image: 
             url: /assets/img/os/3.jpg
+            hover:
+                title: Bild runterladen
+                big: /assets/img/os/OS - Prinzip 3.jpg
       - desc: Es ist vorbei, wenn es vorbei ist
         image: 
             url: /assets/img/os/4.jpg
+            hover:
+                title: Bild runterladen
+                big: /assets/img/os/OS - Prinzip 4.jpg
       - desc: Wo auch immer es passiert, ist der richtige Ort
         image: 
             url: /assets/img/os/5.jpg
+            hover:
+                title: Bild runterladen
+                big: /assets/img/os/OS - Prinzip 5.jpg
       - desc: Wann immer du dich an einem Ort befindet, an dem du weder lernst, noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
         image: 
             url: /assets/img/os/law.jpg
+            hover:
+                title: Bild runterladen
+                big: /assets/img/os/OS - Gesetz.jpg
 de-DE:
   <<: *DEFAULT_DE
 redirect_from:

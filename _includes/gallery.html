@@ -15,9 +15,74 @@
 
         <div class="row text-center">
             {% for entry in page[site.locale].gallery.list %}
-            <div class="col-md-4">
+            <div class="col-md-4 gallery-item">
                 <h4 class="entry-heading">{{ entry.title | markdownify }}</h4>
+                {% if entry.image.hover %}
+                <a class="gallery-link" data-toggle="modal" href="#p{{ forloop.index }}">
+                    <div class="gallery-hover">
+                        <div class="gallery-hover-content">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="{{ entry.image.url }}"/>
+                </a>
+                <div
+                        class="gallery-modal modal fade"
+                        id="p{{ forloop.index }}"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-hidden="true"
+                >
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="close-modal" data-dismiss="modal">
+                                <div class="lr">
+                                    <div class="rl"></div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 mx-auto">
+                                        <div class="modal-body">
+                                            <!-- Project Details Go Here -->
+                                            <h2 class="text-uppercase">{{ entry.image.hover.title }}</h2>
+                                            <p class="item-intro text-muted">{{ entry.desc }}</p>
+                                            <img
+                                                    class="img-fluid d-block mx-auto"
+                                                    src="{{ entry.image.hover.big }}"
+                                                    alt="{{ entry.desc }}"
+                                            />
+                                            <footer>
+                                                <small>
+                                                    {{ entry.image.copyright | default: site.copyright
+                                                    | prepend: '&copy;'
+                                                    | markdownify | remove: '<p>' | remove: '</p>' }}
+                                                </small>
+                                            </footer>
+                                            <p>{{ entry.image.hover.explanation }}</p>
+                                            <a class="btn btn-primary"
+                                               role="button"
+                                               href="{{ entry.image.hover.big | uri_escape }}"
+                                               download="{{ entry.image.hover.big | split: '/' | last }}">
+                                                <i class="fas fa-download"></i>
+                                                Download
+                                            </a>
+                                            <button class="btn btn-secondary"
+                                                    data-dismiss="modal"
+                                                    type="button">
+                                                <i class="fas fa-times"></i>
+                                                Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
                 <img class="img-fluid" src="{{ entry.image.url }}"/>
+                {% endif %}
                 <footer>
                     <small>
                         {{ entry.image.copyright | default: site.copyright | prepend: '&copy; '
