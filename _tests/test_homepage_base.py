@@ -20,7 +20,7 @@ def test_no_external_stylesheet(bumbleserve):
     assert len(external_stylesheet) == 0, f'External Stylesheets not allowed: {external_stylesheet}'
 
 
-@pytest.mark.parametrize('display, url', [('Leistungen', '#Leistungen'),
+@pytest.mark.parametrize('display, url', [('Leistungen', '#services'),
                                           ('Über uns', '#about'),
                                           ('Team', '#Team'),
                                           ('open:bumble:space', 'obs')])
