@@ -1,5 +1,8 @@
 ---
 layout: principles
+redirect_from:
+  - /open-space-prinzipien-uebersicht
+
 de: &DEFAULT_DE
   nav:
     - title: "Home"
@@ -53,7 +56,5 @@ de: &DEFAULT_DE
                 big: /assets/img/os/OS - Gesetz.jpg
 de-DE:
   <<: *DEFAULT_DE
-redirect_from:
-  - /open-space-prinzipien-uebersicht
 ---
 # Open Space Prinzipien

@@ -1,5 +1,7 @@
 ---
 layout: standard
+redirect_from:
+  - /open-space-checkliste
 de: &DEFAULT_DE
   nav:
     - title: "Home"
@@ -12,8 +14,6 @@ de: &DEFAULT_DE
     text: Open Space Checkliste
 de-DE:
   <<: *DEFAULT_DE
-redirect_from:
-  - /open-space-checkliste
 ---
 # Vorbereitung
 - Veranstaltung bekannt machen

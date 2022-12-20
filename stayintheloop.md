@@ -1,5 +1,7 @@
 ---
 layout: google-form
+form:
+  link: https://docs.google.com/forms/d/e/1FAIpQLSfXGqCSXlfuB_fEYOLfVkn-LkHqQV0VehzMGigKHsg2UnGRmw/viewform
 de: &DEFAULT_DE
   nav:
     - title: Home
@@ -8,7 +10,4 @@ de: &DEFAULT_DE
       url: "/obs"
 de-DE:
   <<: *DEFAULT_DE
-
-form:
-  link: https://docs.google.com/forms/d/e/1FAIpQLSfXGqCSXlfuB_fEYOLfVkn-LkHqQV0VehzMGigKHsg2UnGRmw/viewform
 ---

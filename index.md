@@ -1,5 +1,7 @@
 ---
 layout: bumbleflies
+redirect_from:
+  - /online-treffen
 de: &DEFAULT_DE
   nav:
     - title: "Leistungen"
@@ -55,7 +57,4 @@ de: &DEFAULT_DE
 
 de-DE:
   <<: *DEFAULT_DE
-
-redirect_from:
-  - /online-treffen
 ---

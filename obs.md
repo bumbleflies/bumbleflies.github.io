@@ -8,6 +8,8 @@ head:
 foot:  
   scripts:
     - url: https://pretix.eu/widget/v1.de.js
+redirect_from:
+  - /participate
 de: &DEFAULT_DE
   nav:
     - title: "Home"
@@ -32,9 +34,6 @@ de: &DEFAULT_DE
     title: Alle Infos zum nächsten Event
 de-DE:
   <<: *DEFAULT_DE
-
-redirect_from:
-  - /participate
 ---
 
 Es ist endlich wieder so weit: wir veranstalten wieder einen open:bumble:space!
