@@ -19,37 +19,37 @@ de: &DEFAULT_DE
         image:
             url: /assets/img/os/1.jpg
             hover:
-                title: Bild runterladen
+                title: Prinzip 1
                 big: /assets/img/os/OS - Prinzip 1.jpg
       - desc: Was auch immer passiert, ist das einzige was passieren konnte
         image: 
             url: /assets/img/os/2.jpg
             hover:
-                title: Bild runterladen
+                title: Prinzip 2
                 big: /assets/img/os/OS - Prinzip 2.jpg
       - desc: Es beginnt, wenn die Zeit reif ist
         image: 
             url: /assets/img/os/3.jpg
             hover:
-                title: Bild runterladen
+                title: Prinzip 3
                 big: /assets/img/os/OS - Prinzip 3.jpg
       - desc: Es ist vorbei, wenn es vorbei ist
         image: 
             url: /assets/img/os/4.jpg
             hover:
-                title: Bild runterladen
+                title: Prinzip 4
                 big: /assets/img/os/OS - Prinzip 4.jpg
       - desc: Wo auch immer es passiert, ist der richtige Ort
         image: 
             url: /assets/img/os/5.jpg
             hover:
-                title: Bild runterladen
+                title: Prinzip 5
                 big: /assets/img/os/OS - Prinzip 5.jpg
       - desc: Wann immer du dich an einem Ort befindet, an dem du weder lernst, noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
         image: 
             url: /assets/img/os/law.jpg
             hover:
-                title: Bild runterladen
+                title: Gesetz der Mobilität
                 big: /assets/img/os/OS - Gesetz.jpg
 de-DE:
   <<: *DEFAULT_DE
