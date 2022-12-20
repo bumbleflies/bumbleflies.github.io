@@ -1,20 +1,4 @@
 <head>
-    {% if site.analytics.google %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "{{ site.analytics.google }}");
-
-    </script>
-    <!-- End Google Analytics -->
-    {% endif %}
-
     <meta charset="utf-8">
     <meta name="revision" content="{{ site.github.build_revision }}">
     <meta name="date.created" content="{{ 'now' | date: '%Y-%m-%d %H:%M' }}">
