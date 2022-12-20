@@ -1,5 +1,5 @@
 ---
-layout: standard
+layout: principles
 de: &DEFAULT_DE
   nav:
     - title: "Home"
@@ -10,6 +10,29 @@ de: &DEFAULT_DE
       url: "/obs"
   header:
     text: Open Space Prinzipien
+
+  gallery:
+    title: "5 Prinzipien und ein Gesetz"
+    section: principles
+    list:
+      - desc: Wer auch immer kommt, es sind die richtigen
+        image:
+            url: /assets/img/os/1.jpg
+      - desc: Was auch immer passiert, ist das einzige was passieren konnte
+        image: 
+            url: /assets/img/os/2.jpg
+      - desc: Es beginnt, wenn die Zeit reif ist
+        image: 
+            url: /assets/img/os/3.jpg
+      - desc: Es ist vorbei, wenn es vorbei ist
+        image: 
+            url: /assets/img/os/4.jpg
+      - desc: Wo auch immer es passiert, ist der richtige Ort
+        image: 
+            url: /assets/img/os/5.jpg
+      - desc: Wann immer du dich an einem Ort befindet, an dem du weder lernst, noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
+        image: 
+            url: /assets/img/os/law.jpg
 de-DE:
   <<: *DEFAULT_DE
 redirect_from:

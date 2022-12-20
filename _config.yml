@@ -4,10 +4,8 @@ description: Wir lieben Open Space!
 author: bumbleflies UG
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter:
-  username: bumbleflies_OS
-github:
-  username:  bumbleflies
+
+copyright: 'bumbleflies UG [CC by 4.0](https://creativecommons.org/licenses/by/4.0/)'
 
 locale: "de-DE"
 

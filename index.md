@@ -3,7 +3,7 @@ layout: bumbleflies
 de: &DEFAULT_DE
   nav:
     - title: "Leistungen"
-      section: Leistungen
+      section: services
     - title: "Über uns"
       section: about
     - title: "Team"
@@ -19,10 +19,10 @@ de: &DEFAULT_DE
     text: WIR LIEBEN OPEN SPACE!
     button: Schreib uns
     buttonlink: "mailto:info@bumbleflies.de"
-  services:
+  gallery:
     title: "Leistungen"
     text: "So unterstützen wir dich"
-    section: Leistungen
+    section: services
     list:
       - title: 'Effektive Kollaboration'
         desc: 'Wir helfen dir, deine Meetings und Workshops effektiv, interaktiv und kollaborativ zu gestalten.<br/>Du wirst überrascht sein, wie viel Energie das bei deinen Mitarbeiter:innen freisetzt.'
