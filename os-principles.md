@@ -2,6 +2,9 @@
 layout: principles
 redirect_from:
   - /open-space-prinzipien-uebersicht
+foot:
+  scripts:
+    - url: /assets/js/lazy-load.js
 
 de: &DEFAULT_DE
   nav:
