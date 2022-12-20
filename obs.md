@@ -37,7 +37,7 @@ de-DE:
 ---
 
 Es ist endlich wieder so weit: wir veranstalten wieder einen open:bumble:space!
-Diesmal zusammen mit [Martin](https://www.linkedin.com/in/martin-aigner-865064193/) von [jambit](https://www.jambit.com/).
+Diesmal zusammen mit [Martin](https://www.linkedin.com/in/martin-aigner-865064193/){:target="_blank"} von [jambit](https://www.jambit.com/){:target="_blank"}.
 
 ### am 26.01.2023
 ### ab 18:00

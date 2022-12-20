@@ -5,7 +5,7 @@ author: bumbleflies UG
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-copyright: 'bumbleflies UG [CC by 4.0](https://creativecommons.org/licenses/by/4.0/)'
+copyright: 'bumbleflies UG [CC by 4.0](https://creativecommons.org/licenses/by/4.0/){:target="_blank"}'
 
 locale: "de-DE"
 

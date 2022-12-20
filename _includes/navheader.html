@@ -47,7 +47,10 @@
             {%- endif -%}
             {%- if page[site.locale].header.button -%}
             <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-               href="{{ page[site.locale].header.buttonlink }}">{{ page[site.locale].header.button }}</a>
+               href="{{ page[site.locale].header.buttonlink }}"
+               target="_blank">
+                {{ page[site.locale].header.button }}
+            </a>
             {%- endif -%}
         </div>
     </div>

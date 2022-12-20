@@ -4,7 +4,7 @@
         <div class="row">
             {% for client in page[site.locale].clients.list %}
             <div class="col-md-3 col-sm-6">
-                <a href="{{ client.url }}">
+                <a href="{{ client.url }}" target="_blank">
                     <img class="img-fluid d-block mx-auto" src="{{ client.logo }}" alt="{{ client.title }}"
                          style="max-height: {{ page[site.locale].clients.max-height | default: '100px' }}">
                 </a>

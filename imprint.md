@@ -15,7 +15,7 @@ Telefon: [+49 1567 8451908](tel:+4915678451908)
 
 Wir bevorzugen die Kommunikation via Mail
 <br />
-E-Mail: [info@bumbleflies.de](mailto:info@bumbleflies.de)
+E-Mail: [info@bumbleflies.de](mailto:info@bumbleflies.de){:target="_blank"}
 
 ##### Vertretungsberechtigter Geschäftsführer:
 Christoph Kämpfe
@@ -53,4 +53,4 @@ Die Darstellung dieser Website in fremden Frames ist nur mit schriftlicher Erlau
 ##### § 4 Besondere Nutzungsbedingungen
 Soweit besondere Bedingungen für einzelne Nutzungen dieser Website von den vorgenannten Paragraphen abweichen, wird an entsprechender Stelle ausdrücklich darauf hingewiesen. In diesem Falle gelten im jeweiligen Einzelfall die besonderen Nutzungsbedingungen.
 
-Quelle: [Impressum Muster von JuraForum.de](https://www.juraforum.de/impressum-generator/)
+Quelle: [Impressum Muster von JuraForum.de](https://www.juraforum.de/impressum-generator/){:target="_blank"}
