@@ -51,7 +51,7 @@ de: &DEFAULT_DE
             hover:
                 title: Prinzip 5
                 big: /assets/img/os/OS - Prinzip 5.jpg
-      - desc: Wann immer du dich an einem Ort befindet, an dem du weder lernst, noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
+      - desc: Wann immer du dich an einem Ort befindest, an dem du weder lernst noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
         image: 
             url: /assets/img/os/law.jpg
             hover:
