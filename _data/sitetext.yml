@@ -61,6 +61,8 @@ de: &DEFAULT_DE
         icon: "fab fa-linkedin-in"
       - url: https://github.com/bumbleflies
         icon: "fab fa-github"
+      - url: https://social.bumbleflies.de
+        icon: "fab fa-mastodon"
 de-DE:
   <<: *DEFAULT_DE
 
