@@ -7,8 +7,8 @@ highlight: "#fbc02d"
 header-image: "/assets/img/header-bg.webp"
 
 sheets:
-  - bootstrap.min.css # Core bootstrap
-  - all.min.css # custom fonts
-  - font-faces.css # custom fonts faces
-  - custom.css # custom link styling
-  - bumble.css # custom master file
+  - name: bootstrap.min.css # Core bootstrap
+  - name: all.min.css # custom fonts
+  - name: font-faces.css # custom fonts faces
+  - name: custom.css # custom link styling
+  - name: bumble.css # custom master file
