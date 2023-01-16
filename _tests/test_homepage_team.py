@@ -7,14 +7,14 @@ from more_itertools import one
 from _tests.helper import query_site
 
 member_data = [
-    ('Christian Dähn', 'assets/img/team/1.jpg', {
+    ('Christian Dähn', 'assets/img/team/1.webp', {
         'fa-twitter': 'https://twitter.com/da_chrisch',
         'fa-github': 'https://github.com/dachrisch',
         'fa-linkedin-in': 'https://www.linkedin.com/in/christiandaehn/'}),
-    ('Sebastian Keller', 'assets/img/team/2.jpg', {
+    ('Sebastian Keller', 'assets/img/team/2.webp', {
         'fa-twitter': 'https://twitter.com/se_keller',
         'fa-linkedin-in': 'https://www.linkedin.com/in/sebastian-keller-166a83ba/'}),
-    ('Christoph Kämpfe', 'assets/img/team/3.jpg', {
+    ('Christoph Kämpfe', 'assets/img/team/3.webp', {
         'fa-twitter': 'https://twitter.com/kaempfechris',
         'fa-linkedin-in': 'https://www.linkedin.com/in/christoph-k%C3%A4mpfe/'})
 ]
