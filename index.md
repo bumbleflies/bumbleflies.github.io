@@ -29,17 +29,17 @@ de: &DEFAULT_DE
       - title: 'Effektive Kollaboration'
         desc: 'Wir helfen dir, deine Meetings und Workshops effektiv, interaktiv und kollaborativ zu gestalten.<br/>Du wirst überrascht sein, wie viel Energie das bei deinen Mitarbeiter:innen freisetzt.'
         image: 
-            url: /assets/img/services/bumblespace_effective-workshop.jpg
+            url: /assets/img/services/bumblespace_effective-workshop.webp
             copyright: bumbleflies UG
       - title: 'Online Big-Room-Meetings'
         desc: 'Wir organisieren für dich dein nächstes Big-Room-Meeting (z.B. PI-Planning) für alle deine Teams. Egal ob 20, 200 oder mehr Personen.<br/>Wir sorgen für den produktiven Rahmen, damit ihr euch auf die Inhalte konzentrieren könnt.'
         image: 
-          url: /assets/img/services/bumblespace_pi-planning.png
+          url: /assets/img/services/bumblespace_pi-planning.webp
           copyright: bumbleflies UG
       - title: 'Online Events'
         desc: 'Wir organisieren für dich ein Event, bei dem Teambuilding, Austausch und Spaß im Vordergrund stehen.<br/>Ihr habt euch seit einem Jahr nicht mehr gesehen und sucht den Kontakt zu den Kollegen? Dann ist das genau das richtige.'
         image: 
-          url: /assets/img/services/bumblespace_online-events.jpg
+          url: /assets/img/services/bumblespace_online-events.webp
           copyright: bumbleflies UG
   clients:
     section: Kunden

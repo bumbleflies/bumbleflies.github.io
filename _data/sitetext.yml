@@ -23,7 +23,7 @@ de: &DEFAULT_DE
     people:
       - name: "Christian Dähn"
         role: "Co-Founder"
-        image: assets/img/team/1.jpg
+        image: assets/img/team/1.webp
         social:
           - icon: fab fa-twitter
             url: 'https://twitter.com/da_chrisch'
@@ -33,7 +33,7 @@ de: &DEFAULT_DE
             url: 'https://github.com/dachrisch'
       - name: "Sebastian Keller"
         role: "Co-Founder"
-        image: assets/img/team/2.jpg
+        image: assets/img/team/2.webp
         social:
           - url: 'https://twitter.com/se_keller'
             icon: fab fa-twitter
@@ -41,7 +41,7 @@ de: &DEFAULT_DE
             icon: fab fa-linkedin-in
       - name: "Christoph Kämpfe"
         role: "Co-Founder"
-        image: assets/img/team/3.jpg
+        image: assets/img/team/3.webp
         social:
           - url: 'https://twitter.com/kaempfechris'
             icon: fab fa-twitter
