@@ -17,7 +17,7 @@
 		<ul class="list-inline social-buttons">
 		{% for network in person.social %}
 		  <li class="list-inline-item">
-			<a href="{{ network.url }}" target="_blank">
+			<a href="{{ network.url }}" target="_blank" aria-label="Social Link {{person.name}} {{ network.url | urlsplit('hostname') }}">
 			  <i class="{{ network.icon }}"></i>
 			</a>
 		  </li>
