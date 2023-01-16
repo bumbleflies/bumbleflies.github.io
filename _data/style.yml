@@ -5,3 +5,10 @@ highlight: "#fbc02d"
 
 #Image Customization
 header-image: "/assets/img/header-bg.webp"
+
+sheets:
+  - bootstrap.min.css # Core bootstrap
+  - all.min.css # custom fonts
+  - font-faces.css # custom fonts faces
+  - custom.css # custom link styling
+  - bumble.css # custom master file
