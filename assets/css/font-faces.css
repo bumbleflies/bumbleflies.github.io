@@ -14,6 +14,7 @@ https://gwfh.mranftl.com/api/fonts/montserrat?download=zip&subsets=latin&variant
        url('../font/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('../font/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../font/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+  font-display: swap; /* https://developer.chrome.com/docs/lighthouse/performance/font-display/?utm_source=lighthouse&utm_medium=lr */
 }
 /* montserrat-700 - latin */
 @font-face {
@@ -27,6 +28,7 @@ https://gwfh.mranftl.com/api/fonts/montserrat?download=zip&subsets=latin&variant
        url('../font/montserrat-v25-latin-700.woff') format('woff'), /* Modern Browsers */
        url('../font/montserrat-v25-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../font/montserrat-v25-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 /*
 Noto Serif
@@ -44,6 +46,7 @@ https://gwfh.mranftl.com/api/fonts/noto-serif?download=zip&subsets=latin&variant
        url('../font/noto-serif-v21-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('../font/noto-serif-v21-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../font/noto-serif-v21-latin-regular.svg#NotoSerif') format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 /* noto-serif-italic - latin */
 @font-face {
@@ -57,6 +60,7 @@ https://gwfh.mranftl.com/api/fonts/noto-serif?download=zip&subsets=latin&variant
        url('../font/noto-serif-v21-latin-italic.woff') format('woff'), /* Modern Browsers */
        url('../font/noto-serif-v21-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../font/noto-serif-v21-latin-italic.svg#NotoSerif') format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 /* noto-serif-700 - latin */
 @font-face {
@@ -70,6 +74,7 @@ https://gwfh.mranftl.com/api/fonts/noto-serif?download=zip&subsets=latin&variant
        url('../font/noto-serif-v21-latin-700.woff') format('woff'), /* Modern Browsers */
        url('../font/noto-serif-v21-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../font/noto-serif-v21-latin-700.svg#NotoSerif') format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 /* noto-serif-700italic - latin */
 @font-face {
@@ -83,6 +88,7 @@ https://gwfh.mranftl.com/api/fonts/noto-serif?download=zip&subsets=latin&variant
        url('../font/noto-serif-v21-latin-700italic.woff') format('woff'), /* Modern Browsers */
        url('../font/noto-serif-v21-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../font/noto-serif-v21-latin-700italic.svg#NotoSerif') format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 
 /*
@@ -101,4 +107,5 @@ https://gwfh.mranftl.com/api/fonts/roboto-condensed?download=zip&subsets=latin&v
        url('../font/roboto-condensed-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('../font/roboto-condensed-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../font/roboto-condensed-v25-latin-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
