@@ -29,7 +29,7 @@ de: &DEFAULT_DE
     buttonlink: "#tickets"
   about:
     title: Was ist ein open:bumble:space?
-    text: Der open:bumble:space ist der Ort, an dem sich  die Münchner User Group zum Thema 'Agile' versammelt. Wir treffen uns alle zwei Monate zu einem Open Space. Wir wissen, dass Agilität auf ständigem Lernen basiert. Wir glauben, dass wir besser und schneller lernen, wenn wir unsere Erfahrungen miteinander austauschen, in einem ungezwungenen Rahmen, kein Vortrag sondern AdHoc.
+    text: Der open:bumble:space ist der Ort, an dem sich die Münchner User Group zum Thema 'Agile' versammelt. Wir treffen uns alle zwei Monate zu einem Open Space. Wir wissen, dass Agilität auf ständigem Lernen basiert. Wir glauben, dass wir besser und schneller lernen, wenn wir unsere Erfahrungen miteinander austauschen, in einem ungezwungenen Rahmen, kein Vortrag sondern AdHoc.
   next:
     title: Alle Infos zum nächsten Event
 de-DE:
