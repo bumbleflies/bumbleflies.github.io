@@ -8,6 +8,8 @@ head:
 foot:  
   scripts:
     - url: https://pretix.eu/widget/v1.de.js
+    - url: /assets/js/lazy-load.js
+
 redirect_from:
   - /participate
 de: &DEFAULT_DE
@@ -30,6 +32,19 @@ de: &DEFAULT_DE
   about:
     title: Was ist ein open:bumble:space?
     text: Der open:bumble:space ist der Ort, an dem sich die Münchner User Group zum Thema 'Agile' versammelt. Wir treffen uns alle zwei Monate zu einem Open Space. Wir wissen, dass Agilität auf ständigem Lernen basiert. Wir glauben, dass wir besser und schneller lernen, wenn wir unsere Erfahrungen miteinander austauschen, in einem ungezwungenen Rahmen, kein Vortrag sondern AdHoc.
+    gallery:
+      - slides:
+        - assets/img/impressions/obs-3-1.webp
+        - assets/img/impressions/obs-3-2.webp
+        - assets/img/impressions/obs-3-3.webp
+      - slides:
+        - assets/img/impressions/obs-2-1.webp
+        - assets/img/impressions/obs-2-2.webp
+        - assets/img/impressions/obs-2-3.webp
+      - slides:
+        - assets/img/impressions/obs-1-1.webp
+        - assets/img/impressions/obs-1-2.webp
+        - assets/img/impressions/obs-1-3.webp
   next:
     title: Alle Infos zum nächsten Event
 de-DE:

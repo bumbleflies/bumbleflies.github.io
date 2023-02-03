@@ -12,6 +12,81 @@
                 <div class="large text-muted">{{ page[site.locale].about.text }}</div>
             </div>
         </div>
+        <!--Carousel Wrapper-->
+        <div id="impression-gallery" class="carousel slide carousel-multi-item carousel-multi-item-2"
+             data-ride="carousel" data-interval="false">
+
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+            {% for page in page[site.locale].about.gallery %}
+
+                <!-- slide {{ forloop.index }}-->
+                {% if forloop.index == 1 %}
+                <div class="carousel-item active">
+                {% else %}
+                <div class="carousel-item">
+                {% endif %}
+                {% assign outer_index = forloop.index %}
+                {% for item in page.slides %}
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <a class="gallery-link" data-toggle="modal" href="#p{{ outer_index }}_{{ forloop.index }}">
+                                <img class="img-fluid" src="{{ item }}">
+                            </a>
+                            <div class="gallery-modal modal fade" id="p{{ outer_index }}_{{ forloop.index }}" tabindex="-1" role="dialog"
+                                 style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="close-modal" data-dismiss="modal">
+                                            <div class="lr">
+                                                <div class="rl"></div>
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-8 mx-auto">
+                                                    <div class="modal-body">
+                                                        <img class="img-fluid d-block mx-auto lazy_load"
+                                                             data-src="{{ item }}"
+                                                             alt="">
+                                                        <footer>
+                                                            <small>
+                                                                {{ site.copyright
+                                                                | prepend: '&copy;'
+                                                                | markdownify | remove: '<p>' | remove: '</p>' }}
+                                                            </small>
+                                                        </footer>
+                                                        <button class="btn btn-secondary" data-dismiss="modal"
+                                                                type="button">
+                                                            <i class="fas fa-times"></i>
+                                                            Close
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!--/.{{ forloop.index }} slide-->
+                {% endfor %}
+            </div>
+            <!--/.Slides-->
+            <!--Controls-->
+            <div class="controls-top text-center">
+                <a class="black-text" href="#impression-gallery" data-slide="prev"><i
+                        class="fas fa-angle-left fa-3x pr-3"></i></a>
+                <a class="black-text" href="#impression-gallery" data-slide="next"><i
+                        class="fas fa-angle-right fa-3x pl-3"></i></a>
+            </div>
+            <!--/.Controls-->
+
+        </div>
+        <!--/.Carousel Wrapper-->
     </div>
 </section>
 <!-- End Info -->
