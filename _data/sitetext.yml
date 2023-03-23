@@ -13,7 +13,12 @@ de: &DEFAULT_DE
   about:
     title: "Über uns"
     text: "Wir sind bumbleflies"
-    body: "bumbleflies ist eine Mischung aus den Wörtern bumblebee und butterfly. Die beiden Erscheinungen eines Open Space. Wir, Chris, nochmal Chris und Sebastian lieben das Open Space Format für Meetings, Konferenzen und Community Veranstaltungen. Vielleicht kennen uns einige als ein Teil des Organisationsteams der früheren Open Space Scrum München Veranstaltung. Nach 2 Jahren wollen wir endlich wieder Open Spaces vor Ort machen. Wir haben uns als die bumbleflies UG gegründet und starten mit dieser Veranstaltung endlich wieder Open Spaces von Angesicht zu Angesicht in München."
+    body: |
+      Wir sind Chris, nochmal Chris und Sebastian, die bumbleflies. Unser Name ist eine Anspielung auf die beiden Erscheinungen des Open Space: die Hummeln, die für das Verbreiten von Ideen stehen, und die Schmetterlinge, die für das Schöne und Unerwartete stehen. Als Teil des Organisationsteams der Open Space Scrum München Veranstaltung haben wir viel Erfahrung gesammelt und sind dazu bereit, diese Erfahrungen weiterzugeben.
+
+      Mit der bumbleflies UG bieten wir Organisationen Unterstützung beim Einsatz des Open Space Formats an. Wir glauben, dass Open Space ein mächtiges Werkzeug für die Zusammenarbeit und den Wissensaustausch ist und wollen gemeinsam mit Euch die Idee voranbringen. Deshalb bieten wir nicht nur die Organisation von Open Spaces an, sondern auch Schulungen und Workshops, um Unternehmen und Organisationen bei der Implementierung von Open Space zu unterstützen.
+
+      Wir sind überzeugt, dass jeder von der offenen und partizipativen Arbeitsweise profitieren kann, die Open Space ermöglicht, und wir freuen uns darauf, unsere Leidenschaft für Open Space und eine offene, kollaborative Arbeitskultur mit Euch zu teilen."
     section: about
 
   team:
