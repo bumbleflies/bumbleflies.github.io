@@ -3,7 +3,6 @@ layout: page
 permalink: privacy
 redirect_from:
   - /datenschutz
-
 ---
 
 # Datenschutz

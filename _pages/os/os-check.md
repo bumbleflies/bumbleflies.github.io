@@ -7,8 +7,10 @@ de: &DEFAULT_DE
   nav:
     - title: "Home"
       url: "/"
-    - title: "OS-Prinzipien"
-      url: "/os-principles"
+    - title: "Open Space"
+      submenu:
+        - title: "Prinzipen"
+          url: "/os-principles"
     - title: "open:bumble:space"
       url: "/obs"
   header:

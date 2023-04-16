@@ -11,8 +11,10 @@ de: &DEFAULT_DE
   nav:
     - title: "Home"
       url: "/"
-    - title: "OS-Checkliste"
-      url: "/os-check"
+    - title: "Open Space"
+      submenu:
+        - title: "Checkliste"
+          url: "/os-check"
     - title: "open:bumble:space"
       url: "/obs"
   header:
