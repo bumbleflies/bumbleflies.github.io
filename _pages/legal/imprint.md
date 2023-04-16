@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: imprint
 redirect_from:
   - /impressum
 ---

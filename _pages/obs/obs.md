@@ -1,5 +1,6 @@
 ---
 layout: obs
+permalink: obs
 pretix:
     url: 'https://events.bumbleflies.de/obs-3/'
 head:
@@ -60,7 +61,7 @@ Diesmal zusammen mit [Martin](https://www.linkedin.com/in/martin-aigner-86506419
 **Birketweg 21, 13. Stock, 80639 München.**
 
 ## Du kannst nicht teilnehmen?
-Schreib dich auf [unsere Liste](/stayintheloop), dann informieren wir dich, sobald wir den nächsten Open Space planen.
+Schreib dich auf [unsere Liste](/_pages/obs/stayintheloop.md), dann informieren wir dich, sobald wir den nächsten Open Space planen.
 
 ## Wer ist eigentlich jambit?
 jambit ist ein innovatives Softwareunternehmen mit Sitz in München, Stuttgart, Leipzig, Erfurt und Jerewan/Armenien. Seit 1999 kreieren sie zukunftsweisende Software, die auf die individuellen Bedürfnisse ihrer Kunden maßgeschneidert ist. In enger Zusammenarbeit mit ihren Kunden beraten, konzipieren und entwickeln sie individuelle Lösungen mit modernsten Technologien und umfangreicher Branchenexpertise.

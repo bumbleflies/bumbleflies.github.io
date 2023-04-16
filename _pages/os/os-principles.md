@@ -1,5 +1,6 @@
 ---
 layout: principles
+permalink: os-principles
 redirect_from:
   - /open-space-prinzipien-uebersicht
 foot:

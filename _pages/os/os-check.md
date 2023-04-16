@@ -1,5 +1,6 @@
 ---
 layout: standard
+permalink: os-check
 redirect_from:
   - /open-space-checkliste
 de: &DEFAULT_DE

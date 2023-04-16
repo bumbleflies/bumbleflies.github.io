@@ -14,6 +14,8 @@ remote_theme: raviriley/agency-jekyll-theme
 
 repository: bumbleflies/bumbleflies.github.io
 
+include: ['_pages']
+
 # https://jekyllrb.com/docs/troubleshooting/#configuration-problems
 exclude:
   - Gemfile
