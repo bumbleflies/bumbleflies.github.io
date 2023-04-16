@@ -17,16 +17,29 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
                 {% for link in page[site.locale].nav %}
-                <li class="nav-item">
-                    {%- if link.url -%}
-                    <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
-                    {%- else if link.section -%}
-                    <a class="nav-link nav-link-section js-scroll-trigger" href="#{{ link.section }}">{{ link.title
-                        }}</a>
-                    {%- else -%}
-                    <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
-                    {%- endif -%}
-                </li>
+                {%- if link.submenu -%}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ link.title }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% for submenu in link.submenu %}
+                            <a class="nav-link" href="{{ submenu.url }}">{{ submenu.title }}</a>
+                            {% endfor %}
+                        </div>
+                    </li>
+                {%- else -%}
+                    <li class="nav-item">
+                        {%- if link.url -%}
+                        <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
+                        {%- else if link.section -%}
+                        <a class="nav-link nav-link-section js-scroll-trigger" href="#{{ link.section }}">{{ link.title}}</a>
+                        {%- else -%}
+                        <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+                        {%- endif -%}
+                    </li>
+                {%- endif -%}
                 {% endfor %}
             </ul>
         </div>

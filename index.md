@@ -10,10 +10,12 @@ de: &DEFAULT_DE
       section: about
     - title: "Team"
       section: Team
-    - title: "OS-Prinzipien"
-      url: "/os-principles"
-    - title: "OS-Checkliste"
-      url: "/os-check"
+    - title: "Open Space"
+      submenu:
+        - title: "Prinzipen"
+          url: "/os-principles"
+        - title: "Checkliste"
+          url: "/os-check"
     - title: "open:bumble:space"
       url: "/obs"
   header:
