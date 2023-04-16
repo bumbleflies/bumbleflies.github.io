@@ -18,8 +18,10 @@ Wir bevorzugen die Kommunikation via Mail
 <br />
 E-Mail: [info@bumbleflies.de](mailto:info@bumbleflies.de){:target="_blank"}
 
-##### Vertretungsberechtigter Geschäftsführer:
-Christoph Kämpfe
+##### Vertretungsberechtigte Geschäftsführer:
+* Christoph Kämpfe
+* Christian Dähn
+* Sebastian Keller
 
 ##### Registereintrag:
 Registergericht: München
