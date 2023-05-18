@@ -1,0 +1,41 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="revision" content="{{ site.github.build_revision }}">
+    <meta name="date.created" content="{{ site.time }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif
+        %}</title>
+
+    <!-- preload styles -->
+    {% for style in site.data.style.sheets %}
+    <link rel="preload" type="text/css" href="assets/css/{{ style.name }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    {% endfor %}
+    <noscript>
+        {% for style in site.data.style.sheets %}
+        <link rel="stylesheet" type="text/css" href="assets/css/{{ style.name }}"/>
+        {% endfor %}
+    </noscript>
+
+    <!-- additional styles -->
+    {% for style in page.head.styles %}
+    <link rel="stylesheet" type="text/css" href="{{ style.url }}">
+    {% endfor %}
+
+    {% if page.layout == "page" %}
+    <!-- Page container change top padding when nav shrinks -->
+    <style>
+    #pagecontainer {
+      padding-top: 150px;
+    }
+    @media only screen and (max-width: 991px) {
+      #pagecontainer {
+        padding-top: 100px;
+      }
+    }
+    </style>
+    {% endif %}
+</head>

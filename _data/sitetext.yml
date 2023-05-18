@@ -1,0 +1,73 @@
+#
+# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
+#
+# Configuration: Add to _config.yml
+# locale: "en-US"  [YOUR PREFERRED LOCALE]
+#
+# How to use:
+# {{ site.data.ui-text[site.locale].<var_name> | default: 'text' }}
+
+# Deutsch
+# -----------------
+de: &DEFAULT_DE
+  about:
+    title: "Über uns"
+    text: "Wir sind bumbleflies"
+    body: |
+      Wir sind Chris, nochmal Chris und Sebastian, die bumbleflies. Unser Name ist eine Anspielung auf die beiden Erscheinungen des Open Space: die Hummeln, die für das Verbreiten von Ideen stehen, und die Schmetterlinge, die für das Schöne und Unerwartete stehen. Als Teil des Organisationsteams der Open Space Scrum München Veranstaltung haben wir viel Erfahrung gesammelt und sind dazu bereit, diese Erfahrungen weiterzugeben.
+
+      Mit der bumbleflies UG bieten wir Organisationen Unterstützung beim Einsatz des Open Space Formats an. Wir glauben, dass Open Space ein mächtiges Werkzeug für die Zusammenarbeit und den Wissensaustausch ist und wollen gemeinsam mit Euch die Idee voranbringen. Deshalb bieten wir nicht nur die Organisation von Open Spaces an, sondern auch Schulungen und Workshops, um Unternehmen und Organisationen bei der Implementierung von Open Space zu unterstützen.
+
+      Wir sind überzeugt, dass jeder von der offenen und partizipativen Arbeitsweise profitieren kann, die Open Space ermöglicht, und wir freuen uns darauf, unsere Leidenschaft für Open Space und eine offene, kollaborative Arbeitskultur mit Euch zu teilen."
+    section: about
+
+  team:
+    title: "Wir sind bumbleflies"
+    subtext: Wir lieben Open Space! Wir vereinen die Erfahrung von mehr als 200 Großgruppen-Moderationen.
+    section: Team
+    people:
+      - name: "Christian Dähn"
+        role: "Co-Founder"
+        image: assets/img/team/1.webp
+        social:
+          - icon: fab fa-twitter
+            url: 'https://twitter.com/da_chrisch'
+          - icon: fab fa-linkedin-in
+            url: 'https://www.linkedin.com/in/christiandaehn/'
+          - icon: fab fa-github
+            url: 'https://github.com/dachrisch'
+      - name: "Sebastian Keller"
+        role: "Co-Founder"
+        image: assets/img/team/2.webp
+        social:
+          - url: 'https://twitter.com/se_keller'
+            icon: fab fa-twitter
+          - url: 'https://www.linkedin.com/in/sebastian-keller-166a83ba/'
+            icon: fab fa-linkedin-in
+      - name: "Christoph Kämpfe"
+        role: "Co-Founder"
+        image: assets/img/team/3.webp
+        social:
+          - url: 'https://twitter.com/kaempfechris'
+            icon: fab fa-twitter
+          - url: 'https://www.linkedin.com/in/christoph-k%C3%A4mpfe/'
+            icon: fab fa-linkedin-in
+
+  footer:
+    quicklinks:
+      - name: "Impressum"
+        url: "/imprint"
+      - name: "Datenschutzerklärung"
+        url: "/privacy"
+    social:
+      - url: https://twitter.com/bumbleflies_OS
+        icon: "fab fa-twitter"
+      - url: https://de.linkedin.com/company/bumbleflies
+        icon: "fab fa-linkedin-in"
+      - url: https://github.com/bumbleflies
+        icon: "fab fa-github"
+      - url: https://social.bumbleflies.de
+        icon: "fab fa-mastodon"
+de-DE:
+  <<: *DEFAULT_DE
+

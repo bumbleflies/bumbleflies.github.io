@@ -1,33 +1,20 @@
-# https://mmistakes.github.io/minimal-mistakes/docs/configuration/
 title: bumbleflies | 🦋
 email: info@bumbleflies.de
 description: Wir lieben Open Space!
-name: bumbleflies
-baseurl: ""
-url: ""
-twitter:
-  username: bumbleflies_OS
-github:
-  username:  bumbleflies
+author: bumbleflies UG
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://bumbleflies.de" # the base hostname & protocol for your site, e.g. http://example.com
+
+copyright: 'bumbleflies UG [CC by 4.0](https://creativecommons.org/licenses/by/4.0/){:target="_blank"}'
 
 locale: "de-DE"
 
 # Build settings
-#remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-remote_theme: "andrewbanchich/forty-jekyll-theme"
+remote_theme: raviriley/agency-jekyll-theme
 
 repository: bumbleflies/bumbleflies.github.io
 
-# Business Info
-author: bumbleflies UG
-street_address: Gleiwitzer Straße 6-d
-city: MÜnchen
-zip_code: 81929
-phone: +49 1567 8451908
-
-# homepage tiles
-tiles-source: pages # accepts "posts" or "pages"
-tiles-count: 3
+include: ['_pages']
 
 # https://jekyllrb.com/docs/troubleshooting/#configuration-problems
 exclude:
@@ -35,8 +22,12 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor/bundle/
-  - vendor/cache/
+  - vendor/cache/bumbleflies.jekyll.agency
   - vendor/gems/
   - vendor/ruby/
   - README.md
   - 404.html
+
+plugins:
+  - jekyll-github-metadata
+  - jekyll-redirect-from

@@ -1,7 +1,10 @@
 _site
+_test_site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
-/.idea/
-/.env
+_agency-jekyll-theme/
+.idea/*
+/_tests/_test_site/
+*.zip
