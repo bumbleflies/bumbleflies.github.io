@@ -8,3 +8,5 @@ _agency-jekyll-theme/
 .idea/*
 /_tests/_test_site/
 *.zip
+venv/
+.lock
