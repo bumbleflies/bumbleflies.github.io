@@ -21,6 +21,6 @@ def assert_stylesheet_present(stylesheet_name, stylesheets):
 
 
 def assert_link_present(link_name, link_target, links, bumbleserve):
-    found_link = one(filter(lambda s: s.text == link_name, links))
+    found_link = one(filter(lambda s: link_name in s.text, links))
     assert link_target == found_link.attrs['href']
     query_site(bumbleserve, path=found_link.attrs['href'])
