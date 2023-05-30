@@ -22,7 +22,7 @@ member_data = [
 
 @pytest.mark.parametrize('name, image, social_links', member_data)
 def test_team_member(bumbleserve, name, image, social_links):
-    team_member: List[bs4.element.Tag] = query_site(bumbleserve).find(id='Team').findChildren('div',
+    team_member: List[bs4.element.Tag] = query_site(bumbleserve).find(id='team').findChildren('div',
                                                                                               {'class': 'team-member'})
     found_member = one(filter(lambda t: t.find('h4').text == name, team_member))
     assert found_member

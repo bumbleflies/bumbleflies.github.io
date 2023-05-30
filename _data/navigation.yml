@@ -11,7 +11,7 @@ nav:
         url: "https://openchat.bumbleflies.de/"
   - title: "Open Space"
     submenu:
-      - title: "Prinzipen"
+      - title: "Prinzipien"
         url: "/os-principles"
       - title: "Checkliste"
         url: "/os-check"

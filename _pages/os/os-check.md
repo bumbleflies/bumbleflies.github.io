@@ -4,7 +4,7 @@ permalink: os-check
 redirect_from:
   - /open-space-checkliste
 nav_highlight: Open Space
-
+title: Checkliste
 ---
 # Vorbereitung
 - Veranstaltung bekannt machen

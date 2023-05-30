@@ -4,6 +4,7 @@ permalink: os-principles
 redirect_from:
   - /open-space-prinzipien-uebersicht
 nav_highlight: Open Space
+title: Prinzipien
 
 foot:
   scripts:

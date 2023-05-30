@@ -3,6 +3,7 @@ layout: standard
 permalink: imprint
 redirect_from:
   - /impressum
+title: Impressum
 ---
 
 # Impressum

@@ -4,13 +4,13 @@ from more_itertools import one
 from _tests.helper import query_site
 
 
-@pytest.mark.parametrize('section, name', [('info', 'Was ist ein open:bumble:space?'),
-                                           ('next', 'Alle Infos zum nächsten Event'),
-                                           ('tickets', ''),
-                                           ('about', 'Über uns')
+@pytest.mark.parametrize('section, name', [('services', 'Leistungen'),
+                                           ('customer', ''),
+                                           ('about', 'Über uns'),
+                                           ('team', 'Wir sind bumbleflies')
                                            ])
 def test_sections(bumbleserve, section, name):
-    sections = query_site(bumbleserve, '/obs').find_all('section')
+    sections = query_site(bumbleserve, '/').find_all('section')
 
     found_section = one(filter(lambda s: s.attrs['id'] == section, sections))
 

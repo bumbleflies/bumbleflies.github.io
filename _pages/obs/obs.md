@@ -2,6 +2,7 @@
 layout: obs
 permalink: obs
 nav_highlight: Events
+title: obs
 
 pretix:
     url: 'https://events.bumbleflies.de/obs-3/'

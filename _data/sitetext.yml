@@ -24,7 +24,7 @@ de: &DEFAULT_DE
   team:
     title: "Wir sind bumbleflies"
     subtext: Wir lieben Open Space! Wir vereinen die Erfahrung von mehr als 200 Großgruppen-Moderationen.
-    section: Team
+    section: team
     people:
       - name: "Christian Dähn"
         role: "Co-Founder"

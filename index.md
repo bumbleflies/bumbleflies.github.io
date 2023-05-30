@@ -3,6 +3,7 @@ layout: bumbleflies
 redirect_from:
   - /online-treffen
 nav_highlight: Home
+title: Home
 
 de: &DEFAULT_DE
   header:
@@ -31,7 +32,7 @@ de: &DEFAULT_DE
           url: /assets/img/services/bumblespace_online-events.webp
           copyright: bumbleflies UG
   clients:
-    section: Kunden
+    section: customer
     max-height: 100px
     list:
       - title: "BSH"
