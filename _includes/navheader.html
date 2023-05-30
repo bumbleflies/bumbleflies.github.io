@@ -16,10 +16,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
-                {% for link in page[site.locale].nav %}
+                {% for link in site.data.navigation.nav %}
                 {%- if link.submenu -%}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle {% if link.title == page.nav_highlight %}current{% endif %}" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ link.title }}
                         </a>
@@ -32,9 +32,7 @@
                 {%- else -%}
                     <li class="nav-item">
                         {%- if link.url -%}
-                        <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
-                        {%- else if link.section -%}
-                        <a class="nav-link nav-link-section js-scroll-trigger" href="#{{ link.section }}">{{ link.title}}</a>
+                        <a class="nav-link js-scroll-trigger {% if link.title == page.nav_highlight %}current{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
                         {%- else -%}
                         <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
                         {%- endif -%}

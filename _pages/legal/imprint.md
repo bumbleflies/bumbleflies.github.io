@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: standard
 permalink: imprint
 redirect_from:
   - /impressum

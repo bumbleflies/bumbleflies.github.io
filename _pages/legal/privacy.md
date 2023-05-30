@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: standard
 permalink: privacy
 redirect_from:
   - /datenschutz

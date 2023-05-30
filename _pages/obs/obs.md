@@ -1,6 +1,8 @@
 ---
 layout: obs
 permalink: obs
+nav_highlight: Events
+
 pretix:
     url: 'https://events.bumbleflies.de/obs-3/'
 head:
@@ -14,17 +16,6 @@ foot:
 redirect_from:
   - /participate
 de: &DEFAULT_DE
-  nav:
-    - title: "Home"
-      url: "/"
-    - title: "Info"
-      section: info
-    - title: "Event"
-      section: next
-    - title: "Tickets"
-      section: tickets
-    - title: "Über uns"
-      section: about
   header:
     title: Anmeldung zum open:bumble:space
     text: Wir freuen uns dich zu treffen!

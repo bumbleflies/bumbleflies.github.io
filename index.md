@@ -2,26 +2,9 @@
 layout: bumbleflies
 redirect_from:
   - /online-treffen
+nav_highlight: Home
+
 de: &DEFAULT_DE
-  nav:
-    - title: "Home"
-      url: "/"
-    - title: "Veranstaltungen"
-      submenu:
-        - title: "Übersicht"
-          url: "https://events.bumbleflies.de/"
-        - title: "open:bumble:space"
-          url: "/obs"
-        - title: "open:chat"
-          url: "https://openchat.bumbleflies.de/"
-    - title: "Open Space"
-      submenu:
-        - title: "Prinzipen"
-          url: "/os-principles"
-        - title: "Checkliste"
-          url: "/os-check"
-    - title: "Über uns"
-      url: "/"
   header:
     title: Willkommen bei den bumbleflies
     text: WIR LIEBEN OPEN SPACE!

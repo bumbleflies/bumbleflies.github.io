@@ -3,23 +3,13 @@ layout: principles
 permalink: os-principles
 redirect_from:
   - /open-space-prinzipien-uebersicht
+nav_highlight: Open Space
+
 foot:
   scripts:
     - url: /assets/js/lazy-load.js
 
 de: &DEFAULT_DE
-  nav:
-    - title: "Home"
-      url: "/"
-    - title: "Open Space"
-      submenu:
-        - title: "Checkliste"
-          url: "/os-check"
-    - title: "open:bumble:space"
-      url: "/obs"
-  header:
-    text: Open Space Prinzipien
-
   gallery:
     title: "5 Prinzipien und ein Gesetz"
     section: principles

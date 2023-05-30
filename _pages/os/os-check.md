@@ -3,20 +3,8 @@ layout: standard
 permalink: os-check
 redirect_from:
   - /open-space-checkliste
-de: &DEFAULT_DE
-  nav:
-    - title: "Home"
-      url: "/"
-    - title: "Open Space"
-      submenu:
-        - title: "Prinzipen"
-          url: "/os-principles"
-    - title: "open:bumble:space"
-      url: "/obs"
-  header:
-    text: Open Space Checkliste
-de-DE:
-  <<: *DEFAULT_DE
+nav_highlight: Open Space
+
 ---
 # Vorbereitung
 - Veranstaltung bekannt machen
