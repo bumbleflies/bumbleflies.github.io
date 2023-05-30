@@ -25,7 +25,10 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             {% for submenu in link.submenu %}
-                            <a class="nav-link" href="{{ submenu.url }}">{{ submenu.title }}</a>
+                            <a class="nav-link" href="{{ submenu.url }}">
+                                <i class="fas fa-solid fa-chevron-right"></i>
+                                <span>{{ submenu.title }}</span>
+                            </a>
                             {% endfor %}
                         </div>
                     </li>
