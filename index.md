@@ -1,5 +1,13 @@
 ---
-layout: bumbleflies
+layout: compose
+includes:
+  - path: gallery.html
+    css_class: bg-light
+  - path: clients.html
+  - path: about.html 
+    css_class: bg-light
+  - path: team.html
+
 redirect_from:
   - /online-treffen
 nav_highlight: Home

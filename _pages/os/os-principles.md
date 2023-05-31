@@ -1,5 +1,10 @@
 ---
-layout: principles
+layout: compose
+includes:
+  - path: gallery.html
+    css_class: bg-light
+  - path: about.html 
+
 permalink: os-principles
 redirect_from:
   - /open-space-prinzipien-uebersicht

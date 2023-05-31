@@ -1,5 +1,13 @@
 ---
-layout: obs
+layout: compose
+includes:
+  - path: obs/info.html
+    css_class: bg-light
+  - path: obs/next.html 
+  - path: obs/tickets.html
+    css_class: bg-light
+  - path: about.html
+
 permalink: obs
 nav_highlight: Events
 title: obs

@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{% include navheader.html %}
+
+<!-- include compose -->
+{% for include_file in page.includes %}
+<!-- include: {{ include_file }} -->
+{% include {{ include_file.path }} css_class=include_file.css_class %}
+{% endfor %}
