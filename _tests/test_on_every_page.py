@@ -38,7 +38,7 @@ class TestOnEveryPage:
                                               # Open Space
                                               ('Prinzipien', '/os-principles'),
                                               ('Checkliste', '/os-check'),
-                                              ('Über uns', '#'),
+                                              ('Über uns', '/about'),
                                               ])
     def test_navigation(self, bumbleserve, title, page, allowed_stylesheets, display, url):
         nav_links = query_site(bumbleserve, page).find_all('a', {'class': 'nav-link'})
