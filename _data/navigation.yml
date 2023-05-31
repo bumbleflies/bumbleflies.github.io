@@ -16,3 +16,4 @@ nav:
       - title: "Checkliste"
         url: "/os-check"
   - title: "Über uns"
+    url: "/about"
