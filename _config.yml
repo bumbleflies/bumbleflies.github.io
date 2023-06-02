@@ -14,7 +14,7 @@ default_locale_in_subfolder: false
 exclude_from_localizations: ["assets", "favicon.ico"]
 
 # Build settings
-remote_theme: raviriley/agency-jekyll-theme
+theme: jekyll-agency
 
 repository: bumbleflies/bumbleflies.github.io
 
