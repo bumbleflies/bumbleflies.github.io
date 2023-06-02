@@ -15,7 +15,8 @@ from _tests.helper import query_site, assert_link_present, assert_stylesheet_pre
 class TestOnEveryPage:
 
     @pytest.mark.parametrize('stylesheet',
-                             ['bootstrap.min.css', 'all.min.css', 'bumble.css', 'custom.css', 'font-faces.css'])
+                             ['bootstrap.min.css', 'all.min.css', 'bumble.css', 'custom.css', 'font-faces.css',
+                              'flag-icons.min.css'])
     def test_stylesheets_for_theme_present(self, bumbleserve, title, page, allowed_stylesheets, stylesheet):
         stylesheets = query_site(bumbleserve, page).find_all(rel='stylesheet')
         assert_stylesheet_present(stylesheet, stylesheets)
@@ -24,7 +25,7 @@ class TestOnEveryPage:
         stylesheets = query_site(bumbleserve, page).find_all(rel='stylesheet')
         external_stylesheets = list(filter(lambda s: s.attrs['href'].startswith('http'), stylesheets))
 
-        not_allowed=list(filter(lambda s: s.attrs['href'] not in allowed_stylesheets, external_stylesheets))
+        not_allowed = list(filter(lambda s: s.attrs['href'] not in allowed_stylesheets, external_stylesheets))
         assert len(not_allowed) == 0, f'External Stylesheets not allowed: {not_allowed}'
 
     def test_title(self, bumbleserve, title, page, allowed_stylesheets):
