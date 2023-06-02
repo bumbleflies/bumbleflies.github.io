@@ -19,6 +19,20 @@ header:
     text: pages.home.header.text
     button: pages.home.header.button
     buttonlink: "mailto:info@bumbleflies.de"
+
+clients:
+    section: customer
+    max-height: 100px
+    list:
+      - title: "BSH"
+        url: 'https://www.bsh-group.com/'
+        logo: /assets/img/clients/bsh-logo.png
+      - title: "Siemens AG"
+        url: 'https://www.siemens.com/de/de.html'
+        logo: /assets/img/clients/siemens-logo.png
+      - title: "Wohnungshelden"
+        url: 'https://www.wohnungshelden.de/'
+        logo: /assets/img/clients/wohnungshelden-logo.png
 de: &DEFAULT_DE
   gallery:
     title: "Leistungen"
@@ -40,19 +54,6 @@ de: &DEFAULT_DE
         image: 
           url: /assets/img/services/bumblespace_online-events.webp
           copyright: bumbleflies UG
-  clients:
-    section: customer
-    max-height: 100px
-    list:
-      - title: "BSH"
-        url: 'https://www.bsh-group.com/'
-        logo: /assets/img/clients/bsh-logo.png
-      - title: "Siemens AG"
-        url: 'https://www.siemens.com/de/de.html'
-        logo: /assets/img/clients/siemens-logo.png
-      - title: "Wohnungshelden"
-        url: 'https://www.wohnungshelden.de/'
-        logo: /assets/img/clients/wohnungshelden-logo.png
 
 de-DE:
   <<: *DEFAULT_DE
