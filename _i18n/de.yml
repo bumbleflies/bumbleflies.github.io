@@ -1,18 +1,28 @@
 pages:
   home:
     title: Startseite
+    header:
+      title: Willkommen bei den bumbleflies
+      text: WIR LIEBEN OPEN SPACE!
+      button: Schreib uns
   events:
     title: Veranstaltungen
     overview:
       title: Übersicht
     obs:
       title: open:bumble:space
+      header:
+          title: Anmeldung zum open:bumble:space
+          text: Wir freuen uns dich zu treffen!
+          button: Melde dich an
     openchat:
       title: open:chat
   openspace:
     title: Open Space
     applications:
       title: Anwendungsgebiete
+      header:
+        title: Open Space Anwendungsgebiete
     checklist:
       title: Checkliste
     principles:

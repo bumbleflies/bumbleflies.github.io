@@ -14,12 +14,12 @@ permalink_en: /
 nav_highlight: pages.home.title
 title: pages.home.title
 
-de: &DEFAULT_DE
-  header:
-    title: Willkommen bei den bumbleflies
-    text: WIR LIEBEN OPEN SPACE!
-    button: Schreib uns
+header:
+    title: pages.home.header.title
+    text: pages.home.header.text
+    button: pages.home.header.button
     buttonlink: "mailto:info@bumbleflies.de"
+de: &DEFAULT_DE
   gallery:
     title: "Leistungen"
     text: "So unterstützen wir dich"

@@ -1,12 +1,20 @@
 pages:
   home:
     title: Home
+    header:
+      title: Welcome to the bumbleflies
+      text: WE LOVE OPEN SPACE!
+      button: Contact us
   events:
     title: Events
     overview:
       title: Overview
     obs:
       title: open:bumble:space
+      header:
+          title: Register for open:bumble:space
+          text: We look forward to meeting you!
+          button: Register now
     openchat:
       title: open:chat
   openspace:

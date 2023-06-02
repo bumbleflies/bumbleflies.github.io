@@ -3,11 +3,9 @@ layout: standard
 permalink: open-space-anwendungsgebiete
 permalink_en: open-space-applications
 title: pages.openspace.applications.title
-de: &DEFAULT_DE
-  header:
-    text: Open Space Anwendungsgebiete
-de-DE:
-  <<: *DEFAULT_DE
+header:
+  text: pages.openspace.applications.header.title
+  
 ---
 # Vorbereitung
 - Veranstaltung bekannt machen

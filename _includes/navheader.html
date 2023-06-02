@@ -79,21 +79,21 @@
 <!-- End Navigation -->
 
 <!-- Header -->
-{%- if page[site.locale].header -%}
+{%- if page.header -%}
 <header class="masthead">
     <div class="container">
         <div class="intro-text">
-            {%- if page[site.locale].header.title -%}
-            <div class="intro-lead-in">{{ page[site.locale].header.title | markdownify }}</div>
+            {%- if page.header.title -%}
+            <div class="intro-lead-in">{% t page.header.title %}</div>
             {%- endif -%}
-            {%- if page[site.locale].header.text -%}
-            <div class="intro-heading text-uppercase">{{ page[site.locale].header.text | markdownify }}</div>
+            {%- if page.header.text -%}
+            <div class="intro-heading text-uppercase">{% t page.header.text %}</div>
             {%- endif -%}
-            {%- if page[site.locale].header.button -%}
+            {%- if page.header.button -%}
             <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-               href="{{ page[site.locale].header.buttonlink }}"
+               href="{{ page.header.buttonlink }}"
                target="_blank">
-                {{ page[site.locale].header.button }}
+                {% t page.header.button %}
             </a>
             {%- endif -%}
         </div>
