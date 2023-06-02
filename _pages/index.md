@@ -11,7 +11,7 @@ includes:
 namespace: home
 permalink: /
 permalink_en: /
-nav_highlight: Home
+nav_highlight: pages.home.title
 title: pages.home.title
 
 de: &DEFAULT_DE

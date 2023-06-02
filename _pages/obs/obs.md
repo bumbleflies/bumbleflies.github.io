@@ -11,7 +11,7 @@ includes:
 namespace: obs
 permalink: /open-bumble-space
 permalink_en: /open-bumble-space
-nav_highlight: Events
+nav_highlight: pages.events.title
 title: pages.events.obs.title
 
 pretix:

@@ -8,7 +8,7 @@ includes:
 namespace: os-principles
 permalink: /open-space-prinzipien-uebersicht
 permalink_en: /open-space-principles
-nav_highlight: Open Space
+nav_highlight: pages.openspace.title
 title: pages.openspace.principles.title
 
 foot:

@@ -8,5 +8,6 @@ includes:
 namespace: about
 permalink: /ueber-uns
 permalink_en: /about
+nav_highlight: pages.about.title
 title: pages.about.title
 ---

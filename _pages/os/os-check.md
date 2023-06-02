@@ -4,7 +4,7 @@ namespace: os-check
 permalink: /open-space-checkliste
 permalink_en: /open-space-check
 
-nav_highlight: Open Space
+nav_highlight: pages.openspace.title
 title: pages.openspace.checklist.title
 ---
 # Vorbereitung
