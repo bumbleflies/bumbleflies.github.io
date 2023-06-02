@@ -50,18 +50,15 @@
                             <i class="fa fa-language" aria-hidden="true"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                      <!-- Adds links to other languages on the post -->
+                      <!-- language menu -->
                       {% for lang in site.languages %}
                         {% unless site.lang == lang %}
 
-                          {% assign lang_code = site.data.sitetext.languages.codes[{{lang}}] %}
-                        <!-- {{ page.namespace }}
-                        {% tl {{page.namespace}} {{lang}} %} -->
                           {% capture page_url %}{% tl {{page.namespace}} {{lang}} %}{% endcapture %}
                           {% assign lang_link = site.baseurl_root | append: page_url  %}
                           <a class="nav-link" href="{{ lang_link }}" >
-                                <span class="fi fi-{{ lang_code }}"></span>
-                                {% t langs.{{ lang }} %}
+                                <span class="fi fi-{{ site.data.navigation.languages[lang].code }}"></span>
+                                {{ site.data.navigation.languages[lang].text }}
                           </a>
 
                           {% assign next = forloop.index | plus: 1 %}
@@ -72,6 +69,7 @@
 
                         {% endunless %}
                       {% endfor %}
+                      <!-- End language menu -->
                     </div>
                 </li>
             </ul>

@@ -70,8 +70,3 @@ de: &DEFAULT_DE
         icon: "fab fa-mastodon"
 de-DE:
   <<: *DEFAULT_DE
-
-languages:
-  codes:
-    de: "de"
-    en: "gb"

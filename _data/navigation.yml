@@ -17,3 +17,11 @@ nav:
         url: "os-check"
   - title: "Über uns"
     url: "about"
+
+languages:
+  de:
+    text: Deutsch
+    code: de
+  en:
+    text: English
+    code: gb
