@@ -1,7 +1,8 @@
 ---
 layout: standard
-permalink: impressum
-permalink_en: imprint
+namespace: imprint
+permalink: /impressum
+permalink_en: /imprint
 title: pages.imprint.title
 ---
 

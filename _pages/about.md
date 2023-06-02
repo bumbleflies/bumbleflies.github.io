@@ -5,7 +5,8 @@ includes:
     css_class: bg-light
   - path: team.html
 
-permalink: ueber-uns
-permalink_en: about
+namespace: about
+permalink: /ueber-uns
+permalink_en: /about
 title: pages.about.title
 ---

@@ -17,7 +17,7 @@ def query_site(bumbleserve, path=''):
 
 def assert_stylesheet_present(stylesheet_name, stylesheets):
     found_stylesheet = one(filter(lambda s: stylesheet_name in s.attrs['href'], stylesheets))
-    assert Path(Path(__file__).parent.parent.joinpath('_test_site'), found_stylesheet.attrs['href']).exists()
+    assert Path(Path(__file__).parent.parent.joinpath('_test_site'), found_stylesheet.attrs['href'].lstrip('/')).exists()
 
 
 def assert_link_present(link_name, link_target, links, bumbleserve):

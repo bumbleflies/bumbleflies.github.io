@@ -8,7 +8,9 @@ includes:
     css_class: bg-light
   - path: about.html
 
-permalink: open-bumble-space
+namespace: obs
+permalink: /open-bumble-space
+permalink_en: /open-bumble-space
 nav_highlight: Events
 title: pages.obs.title
 
@@ -33,17 +35,17 @@ de: &DEFAULT_DE
     text: Der open:bumble:space ist der Ort, an dem sich die Münchner User Group zum Thema 'Agile' versammelt. Wir treffen uns alle zwei Monate zu einem Open Space. Wir wissen, dass Agilität auf ständigem Lernen basiert. Wir glauben, dass wir besser und schneller lernen, wenn wir unsere Erfahrungen miteinander austauschen, in einem ungezwungenen Rahmen, kein Vortrag sondern AdHoc.
     gallery:
       - slides:
-        - assets/img/impressions/obs-3-1.webp
-        - assets/img/impressions/obs-3-2.webp
-        - assets/img/impressions/obs-3-3.webp
+        - /assets/img/impressions/obs-3-1.webp
+        - /assets/img/impressions/obs-3-2.webp
+        - /assets/img/impressions/obs-3-3.webp
       - slides:
-        - assets/img/impressions/obs-2-1.webp
-        - assets/img/impressions/obs-2-2.webp
-        - assets/img/impressions/obs-2-3.webp
+        - /assets/img/impressions/obs-2-1.webp
+        - /assets/img/impressions/obs-2-2.webp
+        - /assets/img/impressions/obs-2-3.webp
       - slides:
-        - assets/img/impressions/obs-1-1.webp
-        - assets/img/impressions/obs-1-2.webp
-        - assets/img/impressions/obs-1-3.webp
+        - /assets/img/impressions/obs-1-1.webp
+        - /assets/img/impressions/obs-1-2.webp
+        - /assets/img/impressions/obs-1-3.webp
   next:
     title: Alle Infos zum nächsten Event
 de-DE:

@@ -1,7 +1,8 @@
 ---
 layout: standard
-permalink: open-space-checkliste
-permalink_en: open-space-check
+namespace: os-check
+permalink: /open-space-checkliste
+permalink_en: /open-space-check
 
 nav_highlight: Open Space
 title: pages.os_check.title

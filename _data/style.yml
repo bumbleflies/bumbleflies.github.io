@@ -12,3 +12,4 @@ sheets:
   - name: font-faces.css # custom fonts faces
   - name: custom.css # custom link styling
   - name: bumble.css # custom master file
+  - name: flag-icons.min.css # flag icons for languages

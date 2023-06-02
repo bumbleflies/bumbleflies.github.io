@@ -8,6 +8,9 @@ includes:
     css_class: bg-light
   - path: team.html
 
+namespace: home
+permalink: /
+permalink_en: /
 nav_highlight: Home
 title: pages.home.title
 
@@ -43,13 +46,13 @@ de: &DEFAULT_DE
     list:
       - title: "BSH"
         url: 'https://www.bsh-group.com/'
-        logo: assets/img/clients/bsh-logo.png
+        logo: /assets/img/clients/bsh-logo.png
       - title: "Siemens AG"
         url: 'https://www.siemens.com/de/de.html'
-        logo: assets/img/clients/siemens-logo.png
+        logo: /assets/img/clients/siemens-logo.png
       - title: "Wohnungshelden"
         url: 'https://www.wohnungshelden.de/'
-        logo: assets/img/clients/wohnungshelden-logo.png
+        logo: /assets/img/clients/wohnungshelden-logo.png
 
 de-DE:
   <<: *DEFAULT_DE

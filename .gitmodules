@@ -1,3 +1,6 @@
 [submodule "_forty-theme"]
 	path = _forty-theme
 	url = https://github.com/andrewbanchich/forty-jekyll-theme.git
+[submodule "_externals/flag-icons"]
+	path = _externals/flag-icons
+	url = https://github.com/lipis/flag-icons

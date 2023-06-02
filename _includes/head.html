@@ -9,16 +9,15 @@
 
     {% capture title %}{% t page.title %}{% endcapture %}
 
-    <title>{% if title %}{{ title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif
-        %}</title>
+    <title>{% if title %}{{ title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <!-- preload styles -->
     {% for style in site.data.style.sheets %}
-    <link rel="preload" type="text/css" href="assets/css/{{ style.name }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" type="text/css" href="{{ site.baseurl_root }}/assets/css/{{ style.name }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     {% endfor %}
     <noscript>
         {% for style in site.data.style.sheets %}
-        <link rel="stylesheet" type="text/css" href="assets/css/{{ style.name }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl_root }}/assets/css/{{ style.name }}"/>
         {% endfor %}
     </noscript>
 

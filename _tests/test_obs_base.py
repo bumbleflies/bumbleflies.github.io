@@ -10,7 +10,7 @@ from _tests.helper import query_site
                                            ('about', 'Über uns')
                                            ])
 def test_sections(bumbleserve, section, name):
-    sections = query_site(bumbleserve, '/obs').find_all('section')
+    sections = query_site(bumbleserve, '/open-bumble-space').find_all('section')
 
     found_section = one(filter(lambda s: s.attrs['id'] == section, sections))
 

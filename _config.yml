@@ -11,6 +11,7 @@ locale: "de-DE"
 # https://github.com/kurtsson/jekyll-multiple-languages-plugin#31-using-the-gem
 languages: ["de", "en"]
 default_locale_in_subfolder: false
+exclude_from_localizations: ["assets", "favicon.ico"]
 
 # Build settings
 remote_theme: raviriley/agency-jekyll-theme

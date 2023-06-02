@@ -17,3 +17,7 @@ pages:
     title: Privacy
   stayintheloop:
     title: Stay in the loop
+
+langs:
+  de: German
+  en: English

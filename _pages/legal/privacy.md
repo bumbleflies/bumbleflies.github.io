@@ -1,7 +1,8 @@
 ---
 layout: standard
-permalink: datenschutz
-permalink_en: privacy
+namespace: privacy
+permalink: /datenschutz
+permalink_en: /privacy
 title: pages.privacy.title
 ---
 
