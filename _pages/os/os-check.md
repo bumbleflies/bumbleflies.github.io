@@ -5,7 +5,7 @@ permalink: /open-space-checkliste
 permalink_en: /open-space-check
 
 nav_highlight: Open Space
-title: pages.os_check.title
+title: pages.openspace.checklist.title
 ---
 # Vorbereitung
 - Veranstaltung bekannt machen

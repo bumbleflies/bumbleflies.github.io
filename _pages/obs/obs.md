@@ -12,7 +12,7 @@ namespace: obs
 permalink: /open-bumble-space
 permalink_en: /open-bumble-space
 nav_highlight: Events
-title: pages.obs.title
+title: pages.events.obs.title
 
 pretix:
     url: 'https://events.bumbleflies.de/obs-3/'

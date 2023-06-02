@@ -1,20 +1,28 @@
 pages:
   home:
     title: Startseite
-  about:
-    title: Über uns
-  imprint:
-    title: Impressum
-  obs:
-    title: open:bumble:space
-  os_applications:
-    title: Anwendungsgebiete
-  os_check:
-    title: Checkliste
-  os_principles:
-    title: Prinzipien
+  events:
+    title: Veranstaltungen
+    overview:
+      title: Übersicht
+    obs:
+      title: open:bumble:space
+    openchat:
+      title: open:chat
+  openspace:
+    title: Open Space
+    applications:
+      title: Anwendungsgebiete
+    checklist:
+      title: Checkliste
+    principles:
+      title: Prinzipien
   privacy:
     title: Datenschutz
+  imprint:
+    title: Impressum
+  about:
+    title: Über uns
   stayintheloop:
     title: Informiert bleiben
 

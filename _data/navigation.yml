@@ -1,21 +1,23 @@
 nav:
-  - title: "Home"
+    # title is resolved on language yml file
+  - title: pages.home.title
+    # url is a namespace, defined in md file
     url: "home"
-  - title: "Events"
+  - title: pages.events.title
     submenu:
-      - title: "Übersicht"
+      - title: pages.events.overview.title
         url: "https://events.bumbleflies.de/"
-      - title: "open:bumble:space"
+      - title: pages.events.obs.title
         url: "obs"
-      - title: "open:chat"
+      - title: pages.events.openchat.title
         url: "https://openchat.bumbleflies.de/"
-  - title: "Open Space"
+  - title: pages.openspace.title
     submenu:
-      - title: "Prinzipien"
+      - title: pages.openspace.principles.title
         url: "os-principles"
-      - title: "Checkliste"
+      - title: pages.openspace.checklist.title
         url: "os-check"
-  - title: "Über uns"
+  - title: pages.about.title
     url: "about"
 
 languages:

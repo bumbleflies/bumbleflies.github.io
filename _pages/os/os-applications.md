@@ -2,7 +2,7 @@
 layout: standard
 permalink: open-space-anwendungsgebiete
 permalink_en: open-space-applications
-title: pages.os_applications.title
+title: pages.openspace.applications.title
 de: &DEFAULT_DE
   header:
     text: Open Space Anwendungsgebiete

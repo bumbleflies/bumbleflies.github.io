@@ -21,14 +21,14 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle {% if link.title == page.nav_highlight %}current{% endif %}" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ link.title }}
+                            {% t link.title %}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             {% for submenu in link.submenu %}
                             {% capture link_url %}{% tl submenu.url %}{% endcapture %}
                             <a class="nav-link" href="{{ link_url | default: submenu.url }}">
                                 <i class="arrow fas fa-solid fa-chevron-right"></i>
-                                <span>{{ submenu.title }}</span>
+                                <span>{% t submenu.title %}</span>
                             </a>
                             {% endfor %}
                         </div>
@@ -37,7 +37,7 @@
                     <li class="nav-item">
                         {%- if link.url -%}
                         {% capture link_url %}{% tl link.url %}{% endcapture %}
-                        <a class="nav-link js-scroll-trigger {% if link.title == page.nav_highlight %}current{% endif %}" href="{{ link_url | default: link.url }}">{{ link.title }}</a>
+                        <a class="nav-link js-scroll-trigger {% if link.title == page.nav_highlight %}current{% endif %}" href="{{ link_url | default: link.url }}">{% t link.title %}</a>
                         {%- else -%}
                         <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
                         {%- endif -%}
