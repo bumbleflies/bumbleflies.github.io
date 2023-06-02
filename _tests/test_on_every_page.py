@@ -31,7 +31,7 @@ class TestOnEveryPage:
     def test_title(self, bumbleserve, title, page, allowed_stylesheets):
         assert f'{title} | bumbleflies | 🦋' in query_site(bumbleserve, page).find(name='title').text
 
-    @pytest.mark.parametrize('display, url', [('Home', '/'),
+    @pytest.mark.parametrize('display, url', [('Startseite', '/'),
                                               # Events
                                               ('Übersicht', 'https://events.bumbleflies.de/'),
                                               ('open:bumble:space', '/open-bumble-space'),
