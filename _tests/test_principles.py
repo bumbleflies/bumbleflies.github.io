@@ -18,7 +18,7 @@ gallery_data = [
 
 @pytest.mark.parametrize('text_start, image', gallery_data)
 def test_all_principles_and_law_displayed(bumbleserve, text_start, image):
-    principles: List[bs4.element.Tag] = query_site(bumbleserve, 'os-principles').find(id='principles').findChildren(
+    principles: List[bs4.element.Tag] = query_site(bumbleserve, 'open-space-prinzipien-uebersicht').find(id='principles').findChildren(
         'div', {'class': 'col-md-4'})
     found_principle = one(
         filter(lambda t: t.find('div', {'class': 'text-muted'}).text.startswith(text_start), principles))
