@@ -8,9 +8,9 @@ includes:
     css_class: bg-light
   - path: about.html
 
-permalink: obs
+permalink: open-bumble-space
 nav_highlight: Events
-title: obs
+title: pages.obs.title
 
 pretix:
     url: 'https://events.bumbleflies.de/obs-3/'
@@ -22,8 +22,6 @@ foot:
     - url: https://pretix.eu/widget/v1.de.js
     - url: /assets/js/lazy-load.js
 
-redirect_from:
-  - /participate
 de: &DEFAULT_DE
   header:
     title: Anmeldung zum open:bumble:space

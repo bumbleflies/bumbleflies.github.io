@@ -1,0 +1,19 @@
+pages:
+  home:
+    title: Startseite
+  about:
+    title: Über uns
+  imprint:
+    title: Impressum
+  obs:
+    title: open:bumble:space
+  os_applications:
+    title: Anwendungsgebiete
+  os_check:
+    title: Checkliste
+  os_principles:
+    title: Prinzipien
+  privacy:
+    title: Datenschutz
+  stayintheloop:
+    title: Informiert bleiben

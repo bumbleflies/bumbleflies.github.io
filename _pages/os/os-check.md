@@ -1,10 +1,10 @@
 ---
 layout: standard
-permalink: os-check
-redirect_from:
-  - /open-space-checkliste
+permalink: open-space-checkliste
+permalink_en: open-space-check
+
 nav_highlight: Open Space
-title: Checkliste
+title: pages.os_check.title
 ---
 # Vorbereitung
 - Veranstaltung bekannt machen

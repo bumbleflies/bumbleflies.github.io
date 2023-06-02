@@ -5,11 +5,10 @@ includes:
     css_class: bg-light
   - path: about.html 
 
-permalink: os-principles
-redirect_from:
-  - /open-space-prinzipien-uebersicht
+permalink: open-space-prinzipien-uebersicht
+permalink_en: open-space-principles
 nav_highlight: Open Space
-title: Prinzipien
+title: pages.os_principles.title
 
 foot:
   scripts:

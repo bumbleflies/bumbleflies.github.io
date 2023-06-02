@@ -1,9 +1,8 @@
 ---
 layout: standard
-permalink: privacy
-redirect_from:
-  - /datenschutz
-title: Datenschutz
+permalink: datenschutz
+permalink_en: privacy
+title: pages.privacy.title
 ---
 
 # Datenschutz

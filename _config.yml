@@ -8,6 +8,9 @@ url: "https://bumbleflies.de" # the base hostname & protocol for your site, e.g.
 copyright: 'bumbleflies UG [CC by 4.0](https://creativecommons.org/licenses/by/4.0/){:target="_blank"}'
 
 locale: "de-DE"
+# https://github.com/kurtsson/jekyll-multiple-languages-plugin#31-using-the-gem
+languages: ["de", "en"]
+default_locale_in_subfolder: false
 
 # Build settings
 remote_theme: raviriley/agency-jekyll-theme
@@ -31,3 +34,4 @@ exclude:
 plugins:
   - jekyll-github-metadata
   - jekyll-redirect-from
+  - jekyll-multiple-languages-plugin

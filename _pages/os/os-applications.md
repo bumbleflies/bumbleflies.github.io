@@ -1,20 +1,9 @@
 ---
 layout: standard
-permalink: os-applications
+permalink: open-space-anwendungsgebiete
+permalink_en: open-space-applications
+title: pages.os_applications.title
 de: &DEFAULT_DE
-  nav:
-    - title: "Home"
-      url: "/"
-    - title: "Open Space"
-      submenu:
-        - title: "Anwendungsgebiete"
-          url: "/os-applications"
-        - title: "Prinzipen"
-          url: "/os-principles"
-        - title: "Checkliste"
-          url: "/os-check"
-    - title: "open:bumble:space"
-      url: "/obs"
   header:
     text: Open Space Anwendungsgebiete
 de-DE:

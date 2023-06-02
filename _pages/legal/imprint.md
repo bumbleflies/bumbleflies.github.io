@@ -1,9 +1,8 @@
 ---
 layout: standard
-permalink: imprint
-redirect_from:
-  - /impressum
-title: Impressum
+permalink: impressum
+permalink_en: imprint
+title: pages.imprint.title
 ---
 
 # Impressum

@@ -8,10 +8,8 @@ includes:
     css_class: bg-light
   - path: team.html
 
-redirect_from:
-  - /online-treffen
 nav_highlight: Home
-title: Home
+title: pages.home.title
 
 de: &DEFAULT_DE
   header:
