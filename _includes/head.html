@@ -3,11 +3,11 @@
     <meta name="revision" content="{{ site.github.build_revision }}">
     <meta name="date.created" content="{{ site.time }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{% t slogan %}">
     <meta name="author" content="{{ site.author }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:description" content="{% t slogan %}" />
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:type" content="website" />
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@{{ site.data.social.twitter.handle }}" />
 
-    <meta name="twitter:image" content="/assets/bumblefly - blue.png" />
+    <meta name="twitter:image" content="{{ site.url }}{{ site.data.social.twitter.image }}" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
 
