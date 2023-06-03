@@ -36,3 +36,4 @@ plugins:
   - jekyll-github-metadata
   - jekyll-redirect-from
   - jekyll-multiple-languages-plugin
+  - jekyll-sitemap
