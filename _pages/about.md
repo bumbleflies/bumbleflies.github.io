@@ -7,6 +7,7 @@ includes:
       title: pages.about.title
       text: pages.about.text
       body: pages.about.body
+      markdownify: true
   - path: team.html
     options:
       title: pages.team.title

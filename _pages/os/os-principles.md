@@ -9,6 +9,7 @@ includes:
       title: pages.about.title
       text: pages.about.text
       body: pages.about.body
+      markdownify: true
 
 namespace: os-principles
 permalink: /open-space-prinzipien-uebersicht
