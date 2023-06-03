@@ -1,5 +1,5 @@
 ---
-layout: standard
+layout: default
 permalink: open-space-anwendungsgebiete
 permalink_en: open-space-applications
 title: pages.openspace.applications.title

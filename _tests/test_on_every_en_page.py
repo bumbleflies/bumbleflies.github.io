@@ -4,13 +4,13 @@ from _tests.helper import query_site, assert_link_present, assert_stylesheet_pre
 
 
 @pytest.mark.parametrize('title, page, allowed_stylesheets', [
-    ('Startseite', '/', ()),
-    ('open:bumble:space', '/open-bumble-space', ('https://events.bumbleflies.de/obs-3/widget/v1.css',)),
-    ('Impressum', '/impressum', ()),
-    ('Datenschutzerklärung', '/datenschutz', ()),
-    ('Checkliste', '/open-space-checkliste', ()),
-    ('Prinzipien', '/open-space-prinzipien-uebersicht', ()),
-    ('Informiert bleiben', '/informiert-bleiben', ()),
+    ('Home', '/en', ()),
+    ('open:bumble:space', '/en/open-bumble-space', ('https://events.bumbleflies.de/obs-3/widget/v1.css',)),
+    ('Imprint', '/en/imprint', ()),
+    ('Privacy', '/en/privacy', ()),
+    ('Checklist', '/en/open-space-checklist', ()),
+    ('Principles', '/en/open-space-principles', ()),
+    ('Stay in the loop', '/en/stayintheloop', ()),
 ])
 class TestOnEveryPage:
 
@@ -24,22 +24,22 @@ class TestOnEveryPage:
     def test_title(self, bumbleserve, title, page, allowed_stylesheets):
         assert f'{title} | bumbleflies | 🦋' in query_site(bumbleserve, page).find(name='title').text
 
-    @pytest.mark.parametrize('display, url', [('Startseite', '/'),
+    @pytest.mark.parametrize('display, url', [('Home', '/en/'),
                                               # Events
-                                              ('Übersicht', 'https://events.bumbleflies.de/'),
-                                              ('open:bumble:space', '/open-bumble-space'),
+                                              ('Overview', 'https://events.bumbleflies.de/'),
+                                              ('open:bumble:space', '/en/open-bumble-space'),
                                               ('open:chat', 'https://openchat.bumbleflies.de/'),
                                               # Open Space
-                                              ('Prinzipien', '/open-space-prinzipien-uebersicht'),
-                                              ('Checkliste', '/open-space-checkliste'),
-                                              ('Über uns', '/ueber-uns'),
+                                              ('Principles', '/en/open-space-principles'),
+                                              ('Checklist', '/en/open-space-checklist'),
+                                              ('About us', '/en/about'),
                                               ])
     def test_navigation(self, bumbleserve, title, page, allowed_stylesheets, display, url):
         nav_links = query_site(bumbleserve, page).find_all('a', {'class': 'nav-link'})
         assert_link_present(display, url, nav_links, bumbleserve)
 
-    @pytest.mark.parametrize('display, url', [('Impressum', '/impressum'),
-                                              ('Datenschutzerklärung', '/datenschutz')])
+    @pytest.mark.parametrize('display, url', [('Imprint', '/en/imprint'),
+                                              ('Privacy', '/en/privacy')])
     def test_legal(self, bumbleserve, title, page, allowed_stylesheets, display, url):
         legal_links = query_site(bumbleserve, page).find('ul', {'class': 'quicklinks'}).findChildren('a')
         assert_link_present(display, url, legal_links, bumbleserve)

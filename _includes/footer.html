@@ -24,7 +24,7 @@
       <div class="col-md-4">
         <ul class="list-inline quicklinks">
         {% for link in site.data.footer.quicklinks %}
-          <!-- {{ link.name }} -->
+          <!-- {t % link.name %} -->
           <li class="list-inline-item">
             <a href="{% tl link.url %}"
               >{% t link.name %}</a
