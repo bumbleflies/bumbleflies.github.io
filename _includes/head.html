@@ -19,7 +19,9 @@
     <meta property="og:title" content="{{ page_title }}" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@bumbleflies_OS" />
+    <meta name="twitter:site" content="@{{ site.data.sitetext.social.twitter.handle }}" />
+
+    <meta name="twitter:image" content="/assets/bumblefly - blue.png" />
 
     <!-- preload styles -->
     {% for style in site.data.style.sheets %}

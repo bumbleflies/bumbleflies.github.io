@@ -1,0 +1,5 @@
+quicklinks:
+  - name: "Impressum"
+    url: "imprint"
+  - name: "Datenschutzerklärung"
+    url: "privacy"
