@@ -1,12 +1,13 @@
 <!-- Clients -->
-<section class="py-5" id="{{ page.clients.section | default: 'clients' }}">
+<!-- {{include}} -->
+<section class="py-5" id="{{ include.options.section | default: 'clients' }}">
     <div class="container">
         <div class="row">
-            {% for client in page.clients.list %}
+            {% for client in include.options.clients %}
             <div class="col-md-3 col-sm-6">
                 <a href="{{ client.url }}" target="_blank">
                     <img class="img-fluid d-block mx-auto" src="{{ site.baseurl_root }}{{ client.logo }}" alt="{{ client.title }}"
-                         style="max-height: {{ page[site.locale].clients.max-height | default: '100px' }}">
+                         style="max-height: {{ include.options.max-height | default: '100px' }}">
                 </a>
             </div>
             {% endfor %}

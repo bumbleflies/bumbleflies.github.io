@@ -2,7 +2,11 @@
 layout: compose
 includes:
   - path: about.html 
-    css_class: bg-light
+    options:
+      css_class: bg-light
+      title: pages.about.title
+      text: pages.about.text
+      body: pages.about.body
   - path: team.html
 
 namespace: about

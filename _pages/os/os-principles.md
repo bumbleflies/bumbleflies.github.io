@@ -4,6 +4,11 @@ includes:
   - path: gallery.html
     css_class: bg-light
   - path: about.html 
+    options:
+      css_class: bg-light
+      title: pages.about.title
+      text: pages.about.text
+      body: pages.about.body
 
 namespace: os-principles
 permalink: /open-space-prinzipien-uebersicht

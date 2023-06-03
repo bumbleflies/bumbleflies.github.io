@@ -7,5 +7,5 @@ layout: default
 <!-- include compose -->
 {% for include_file in page.includes %}
 <!-- include: {{ include_file }} -->
-{% include {{ include_file.path }} css_class=include_file.css_class %}
+{% include {{ include_file.path }} options=include_file.options css_class=include_file.css_class %}
 {% endfor %}

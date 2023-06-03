@@ -4,8 +4,26 @@ includes:
   - path: gallery.html
     css_class: bg-light
   - path: clients.html
+    options:
+      section: customer
+      max-height: 100px
+      clients:
+        - title: "BSH"
+          url: 'https://www.bsh-group.com/'
+          logo: /assets/img/clients/bsh-logo.png
+        - title: "Siemens AG"
+          url: 'https://www.siemens.com/de/de.html'
+          logo: /assets/img/clients/siemens-logo.png
+        - title: "Wohnungshelden"
+          url: 'https://www.wohnungshelden.de/'
+          logo: /assets/img/clients/wohnungshelden-logo.png
+
   - path: about.html 
-    css_class: bg-light
+    options:
+      css_class: bg-light
+      title: pages.about.title
+      text: pages.about.text
+      body: pages.about.body
   - path: team.html
 
 namespace: home

@@ -7,6 +7,10 @@ includes:
   - path: obs/tickets.html
     css_class: bg-light
   - path: about.html
+    options:
+      title: pages.about.title
+      text: pages.about.text
+      body: pages.about.body
 
 namespace: obs
 permalink: /open-bumble-space
