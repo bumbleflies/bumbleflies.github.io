@@ -5,6 +5,19 @@ pages:
       title: Willkommen bei den bumbleflies
       text: WIR LIEBEN OPEN SPACE!
       button: Schreib uns
+    gallery:
+      title: Leistungen
+      text: So unterstützen wir dich
+      items:
+        effective_collaboration:
+          title: Effektive Kollaboration
+          desc: Wir helfen dir, deine Meetings und Workshops effektiv, interaktiv und kollaborativ zu gestalten. Du wirst überrascht sein, wie viel Energie das bei deinen Mitarbeiter:innen freisetzt.
+        big_room:
+          title: Online Big-Room-Meetings
+          desc: Wir organisieren für dich dein nächstes Big-Room-Meeting (z.B. PI-Planning) für alle deine Teams. Egal ob 20, 200 oder mehr Personen. Wir sorgen für den produktiven Rahmen, damit ihr euch auf die Inhalte konzentrieren könnt.
+        online_events:
+          title: Online Events
+          desc: Wir organisieren für dich ein Event, bei dem Teambuilding, Austausch und Spaß im Vordergrund stehen. Ihr habt euch lange nicht mehr gesehen und sucht den Kontakt zu den Kollegen? Dann ist das genau das richtige.
   events:
     title: Veranstaltungen
     overview:
@@ -27,6 +40,32 @@ pages:
       title: Checkliste
     principles:
       title: Prinzipien
+      gallery:
+        title: 5 Prinzipien und ein Gesetz
+        one:
+          title: Prinzip 1
+          desc: Wer auch immer kommt, es sind die richtigen
+          big_image: /assets/img/os/de/OS - Prinzip 1.jpg
+        two:
+          title: Prinzip 2
+          desc: Was auch immer passiert, ist das einzige was passieren konnte
+          big_image: /assets/img/os/de/OS - Prinzip 2.jpg
+        three:
+          title: Prinzip 3
+          desc: Es beginnt, wenn die Zeit reif ist
+          big_image: /assets/img/os/de/OS - Prinzip 3.jpg
+        four:
+          title: Prinzip 4
+          desc: Es ist vorbei, wenn es vorbei ist
+          big_image: /assets/img/os/de/OS - Prinzip 4.jpg
+        five:
+          title: Prinzip 5
+          desc: Wo auch immer es passiert, ist der richtige Ort
+          big_image: /assets/img/os/de/OS - Prinzip 5.jpg
+        law:
+          title: Gesetz der Mobilität
+          desc: Wann immer du dich an einem Ort befindest, an dem du weder lernst noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
+          big_image: /assets/img/os/de/OS - Gesetz.jpg
   privacy:
     title: Datenschutz
   imprint:

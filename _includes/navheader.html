@@ -19,11 +19,11 @@
                 {% for link in site.data.navigation.nav %}
                 {%- if link.submenu -%}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if link.title == page.nav_highlight %}current{% endif %}" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle {% if link.title == page.nav_highlight %}current{% endif %}" href="#" id="navbarDropdown_{{ forloop.index }}" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {% t link.title %}
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown_{{ forloop.index }}">
                             {% for submenu in link.submenu %}
                             {% capture link_url %}{% tl submenu.url %}{% endcapture %}
                             <a class="nav-link" href="{{ link_url | default: submenu.url }}">

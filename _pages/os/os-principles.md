@@ -15,48 +15,44 @@ foot:
   scripts:
     - url: /assets/js/lazy-load.js
 
-de: &DEFAULT_DE
-  gallery:
-    title: "5 Prinzipien und ein Gesetz"
+gallery:
+    title: pages.openspace.principles.gallery.title
     section: principles
     list:
-      - desc: Wer auch immer kommt, es sind die richtigen
+      - desc: pages.openspace.principles.gallery.one.desc
         image:
             url: /assets/img/os/1.jpg
             hover:
-                title: Prinzip 1
-                big: /assets/img/os/OS - Prinzip 1.jpg
-      - desc: Was auch immer passiert, ist das einzige was passieren konnte
+                title: pages.openspace.principles.gallery.one.title
+                big: pages.openspace.principles.gallery.one.big_image
+      - desc: pages.openspace.principles.gallery.two.desc
         image: 
             url: /assets/img/os/2.jpg
             hover:
-                title: Prinzip 2
-                big: /assets/img/os/OS - Prinzip 2.jpg
-      - desc: Es beginnt, wenn die Zeit reif ist
+                title: pages.openspace.principles.gallery.two.title
+                big: pages.openspace.principles.gallery.two.big_image
+      - desc: pages.openspace.principles.gallery.three.desc
         image: 
             url: /assets/img/os/3.jpg
             hover:
-                title: Prinzip 3
-                big: /assets/img/os/OS - Prinzip 3.jpg
-      - desc: Es ist vorbei, wenn es vorbei ist
+                title: pages.openspace.principles.gallery.three.title
+                big: pages.openspace.principles.gallery.three.big_image
+      - desc: pages.openspace.principles.gallery.four.desc
         image: 
             url: /assets/img/os/4.jpg
             hover:
-                title: Prinzip 4
-                big: /assets/img/os/OS - Prinzip 4.jpg
-      - desc: Wo auch immer es passiert, ist der richtige Ort
+                title: pages.openspace.principles.gallery.four.title
+                big: pages.openspace.principles.gallery.four.big_image
+      - desc: pages.openspace.principles.gallery.five.desc
         image: 
             url: /assets/img/os/5.jpg
             hover:
-                title: Prinzip 5
-                big: /assets/img/os/OS - Prinzip 5.jpg
-      - desc: Wann immer du dich an einem Ort befindest, an dem du weder lernst noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
+                title: pages.openspace.principles.gallery.five.title
+                big: pages.openspace.principles.gallery.five.big_image
+      - desc: pages.openspace.principles.gallery.law.desc
         image: 
             url: /assets/img/os/law.jpg
             hover:
-                title: Gesetz der Mobilität
-                big: /assets/img/os/OS - Gesetz.jpg
-de-DE:
-  <<: *DEFAULT_DE
+                title: pages.openspace.principles.gallery.law.title
+                big: pages.openspace.principles.gallery.law.big_image
 ---
-# Open Space Prinzipien

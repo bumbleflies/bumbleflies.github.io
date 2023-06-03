@@ -5,6 +5,19 @@ pages:
       title: Welcome to the bumbleflies
       text: WE LOVE OPEN SPACE!
       button: Contact us
+    gallery:
+      title: Services
+      text: This is how we support you
+      items:
+        effective_collaboration:
+          title: Effective Collaboration
+          desc: We help you make your meetings and workshops effective, interactive, and collaborative. You'll be surprised at how much energy this unleashes in your employees.
+        big_room:
+          title: Online Big-Room-Meetings
+          desc: We organize your next big room meeting (e.g., PI Planning) for all your teams, whether it's 20, 200, or more people. We provide the productive framework, so you can focus on the content.
+        online_events:
+          title: Online Events
+          desc: We organize an event for you where team building, exchange, and fun are the focus. Haven't seen each other for a year and looking for contact with colleagues? Then this is exactly the right thing.
   events:
     title: Events
     overview:
@@ -21,10 +34,32 @@ pages:
     title: Open Space
     applications:
       title: Applications
+      header:
+        title: Open Space Applications
     checklist:
       title: Checklist
     principles:
       title: Principles
+      gallery:
+        title: 5 principles and 1 law
+        one:
+          title: Principle 1
+          desc: Whoever comes are the right people
+        two:
+          title: Principle 2
+          desc: Whatever happens is the only thing that could have
+        three:
+          title: Principle 3
+          desc: Whenever it starts is the right time
+        four:
+          title: Principle 4
+          desc: When it is over, it is over
+        five:
+          title: Principle 5
+          desc: Wherever it happens is the right place
+        law:
+          title: Gesetz der Mobilität
+          desc: Wann immer du dich an einem Ort befindest, an dem du weder lernst noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
   privacy:
     title: Privacy
   imprint:

@@ -1,22 +1,28 @@
 <!-- Gallery -->
-<section class="{{ include.css_class }} page-section" id="{{ page[site.locale].gallery.section | default: 'gallery' }}">
+<section class="{{ include.css_class }} page-section" id="{{ page.gallery.section | default: 'gallery' }}">
     <div class="container">
 
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">
-                    {{ page[site.locale].gallery.title | default: "gallery" }}
+                    {% if page.gallery.title %}
+                    {% t page.gallery.title %}
+                    {% else %}
+                    Gallery
+                    {% endif %}
                 </h2>
-                {% if page[site.locale].gallery.text %}
-                <h3 class="section-subheading text-muted">{{ page[site.locale].gallery.text }}</h3>
+                {% if page.gallery.text %}
+                <h3 class="section-subheading text-muted">{% t page.gallery.text %}</h3>
                 {% endif %}
             </div>
         </div>
 
         <div class="row text-center">
-            {% for entry in page[site.locale].gallery.list %}
+            {% for entry in page.gallery.list %}
             <div class="col-md-4 gallery-item">
-                <h4 class="entry-heading">{{ entry.title | markdownify }}</h4>
+                {% if entry.title %}
+                <h4 class="entry-heading">{% t entry.title %}</h4>
+                {% endif %}
                 {% if entry.image.hover %}
                 <a class="gallery-link" data-toggle="modal" href="#p{{ forloop.index }}">
                     <div class="gallery-hover">
@@ -42,11 +48,12 @@
                                 <div class="row">
                                     <div class="col-lg-8 mx-auto">
                                         <div class="modal-body">
-                                            <!-- Project Details Go Here -->
-                                            <h2 class="text-uppercase">{{ entry.image.hover.title }}</h2>
-                                            <p class="item-intro text-muted">{{ entry.desc }}</p>
+                                            <!-- Modal body -->
+                                            {% capture image_src %}{% t entry.image.hover.big %}{% endcapture %}
+                                            <h2 class="text-uppercase">{% t entry.image.hover.title %}</h2>
+                                            <p class="item-intro text-muted">{% t entry.desc %}</p>
                                             <img class="img-fluid d-block mx-auto lazy_load"
-                                                 data-src="{{ entry.image.hover.big }}"
+                                                 data-src="{{ image_src }}"
                                                  alt="{{ entry.desc }}"/>
                                             <footer>
                                                 <small>
@@ -55,11 +62,10 @@
                                                     | markdownify | remove: '<p>' | remove: '</p>' }}
                                                 </small>
                                             </footer>
-                                            <p>{{ entry.image.hover.explanation }}</p>
                                             <a class="btn btn-primary"
                                                role="button"
-                                               href="{{ entry.image.hover.big | uri_escape }}"
-                                               download="{{ entry.image.hover.big | split: '/' | last }}">
+                                               href="{{ image_src | uri_escape }}"
+                                               download="{{ image_src | split: '/' | last }}">
                                                 <i class="fas fa-download"></i>
                                                 Download
                                             </a>
@@ -86,7 +92,7 @@
                     </small>
                 </footer>
                 {% if entry.desc %}
-                <div class="text-muted">{{ entry.desc | markdownify }}</div>
+                <div class="text-muted">{% t entry.desc %}</div>
                 {% endif %}
             </div>
             {% endfor %}
