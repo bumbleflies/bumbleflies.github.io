@@ -93,3 +93,7 @@ In order to fix this, you need to use the `capture` function
 ```
 ### Navigation
 The navigation is constructed from [navigation template file](_data/navigation.yml), also containing i18n lookup keys.
+
+## Next Event
+
+The information text for the next event can be found in the [i18n folder](_i18n) in the `next.md` file
