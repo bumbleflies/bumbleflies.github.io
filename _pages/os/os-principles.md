@@ -21,38 +21,38 @@ gallery:
     list:
       - desc: pages.openspace.principles.gallery.one.desc
         image:
-            url: /assets/img/os/1.jpg
+            url: pages.openspace.principles.gallery.one.image.small
             hover:
                 title: pages.openspace.principles.gallery.one.title
-                big: pages.openspace.principles.gallery.one.big_image
+                big: pages.openspace.principles.gallery.one.image.big
       - desc: pages.openspace.principles.gallery.two.desc
         image: 
-            url: /assets/img/os/2.jpg
+            url: pages.openspace.principles.gallery.two.image.small
             hover:
                 title: pages.openspace.principles.gallery.two.title
-                big: pages.openspace.principles.gallery.two.big_image
+                big: pages.openspace.principles.gallery.two.image.big
       - desc: pages.openspace.principles.gallery.three.desc
         image: 
-            url: /assets/img/os/3.jpg
+            url: pages.openspace.principles.gallery.three.image.small
             hover:
                 title: pages.openspace.principles.gallery.three.title
-                big: pages.openspace.principles.gallery.three.big_image
+                big: pages.openspace.principles.gallery.three.image.big
       - desc: pages.openspace.principles.gallery.four.desc
         image: 
-            url: /assets/img/os/4.jpg
+            url: pages.openspace.principles.gallery.four.image.small
             hover:
                 title: pages.openspace.principles.gallery.four.title
-                big: pages.openspace.principles.gallery.four.big_image
+                big: pages.openspace.principles.gallery.four.image.big
       - desc: pages.openspace.principles.gallery.five.desc
         image: 
-            url: /assets/img/os/5.jpg
+            url: pages.openspace.principles.gallery.five.image.small
             hover:
                 title: pages.openspace.principles.gallery.five.title
-                big: pages.openspace.principles.gallery.five.big_image
+                big: pages.openspace.principles.gallery.five.image.big
       - desc: pages.openspace.principles.gallery.law.desc
         image: 
-            url: /assets/img/os/law.jpg
+            url: pages.openspace.principles.gallery.law.image.small
             hover:
                 title: pages.openspace.principles.gallery.law.title
-                big: pages.openspace.principles.gallery.law.big_image
+                big: pages.openspace.principles.gallery.law.image.big
 ---

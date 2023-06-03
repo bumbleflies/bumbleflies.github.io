@@ -45,21 +45,39 @@ pages:
         one:
           title: Principle 1
           desc: Whoever comes are the right people
+          image:
+            small: /assets/img/os/en/1.jpg
+            big: /assets/img/os/en/OS - Principle 1.jpg
         two:
           title: Principle 2
           desc: Whatever happens is the only thing that could have
+          image:
+            small: /assets/img/os/en/2.jpg
+            big: /assets/img/os/en/OS - Principle 2.jpg
         three:
           title: Principle 3
           desc: Whenever it starts is the right time
+          image:
+            small: /assets/img/os/en/3.jpg
+            big: /assets/img/os/en/OS - Principle 3.jpg
         four:
           title: Principle 4
           desc: When it is over, it is over
+          image:
+            small: /assets/img/os/en/4.jpg
+            big: /assets/img/os/en/OS - Principle 4.jpg
         five:
           title: Principle 5
           desc: Wherever it happens is the right place
+          image:
+            small: /assets/img/os/en/5.jpg
+            big: /assets/img/os/en/OS - Principle 5.jpg
         law:
-          title: Gesetz der Mobilität
+          title: Law of mobility
           desc: Wann immer du dich an einem Ort befindest, an dem du weder lernst noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
+          image:
+            small: /assets/img/os/en/law.jpg
+            big: /assets/img/os/en/OS - Law.jpg
   privacy:
     title: Privacy
   imprint:

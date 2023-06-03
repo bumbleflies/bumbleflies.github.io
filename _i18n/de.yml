@@ -45,27 +45,39 @@ pages:
         one:
           title: Prinzip 1
           desc: Wer auch immer kommt, es sind die richtigen
-          big_image: /assets/img/os/de/OS - Prinzip 1.jpg
+          image:
+            small: /assets/img/os/de/1.jpg
+            big: /assets/img/os/de/OS - Prinzip 1.jpg
         two:
           title: Prinzip 2
           desc: Was auch immer passiert, ist das einzige was passieren konnte
-          big_image: /assets/img/os/de/OS - Prinzip 2.jpg
+          image:
+            small: /assets/img/os/de/2.jpg
+            big: /assets/img/os/de/OS - Prinzip 2.jpg
         three:
           title: Prinzip 3
           desc: Es beginnt, wenn die Zeit reif ist
-          big_image: /assets/img/os/de/OS - Prinzip 3.jpg
+          image:
+            small: /assets/img/os/de/3.jpg
+            big: /assets/img/os/de/OS - Prinzip 3.jpg
         four:
           title: Prinzip 4
           desc: Es ist vorbei, wenn es vorbei ist
-          big_image: /assets/img/os/de/OS - Prinzip 4.jpg
+          image:
+            small: /assets/img/os/de/4.jpg
+            big: /assets/img/os/de/OS - Prinzip 4.jpg
         five:
           title: Prinzip 5
           desc: Wo auch immer es passiert, ist der richtige Ort
-          big_image: /assets/img/os/de/OS - Prinzip 5.jpg
+          image:
+            small: /assets/img/os/de/5.jpg
+            big: /assets/img/os/de/OS - Prinzip 5.jpg
         law:
           title: Gesetz der Mobilität
           desc: Wann immer du dich an einem Ort befindest, an dem du weder lernst noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
-          big_image: /assets/img/os/de/OS - Gesetz.jpg
+          image:
+            small: /assets/img/os/de/law.jpg
+            big: /assets/img/os/de/OS - Gesetz.jpg
   privacy:
     title: Datenschutz
   imprint:
