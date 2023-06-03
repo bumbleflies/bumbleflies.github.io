@@ -7,12 +7,12 @@ from more_itertools import one
 from _tests.helper import query_site
 
 gallery_data = [
-    ('Wer auch immer kommt', '/assets/img/os/1.jpg'),
-    ('Was auch immer passiert', '/assets/img/os/2.jpg'),
-    ('Es beginnt', '/assets/img/os/3.jpg'),
-    ('Es ist vorbei', '/assets/img/os/4.jpg'),
-    ('Wo auch immer', '/assets/img/os/5.jpg'),
-    ('Wann immer du dich', '/assets/img/os/law.jpg'),
+    ('Wer auch immer kommt', '/assets/img/os/de/1.jpg'),
+    ('Was auch immer passiert', '/assets/img/os/de/2.jpg'),
+    ('Es beginnt', '/assets/img/os/de/3.jpg'),
+    ('Es ist vorbei', '/assets/img/os/de/4.jpg'),
+    ('Wo auch immer', '/assets/img/os/de/5.jpg'),
+    ('Wann immer du dich', '/assets/img/os/de/law.jpg'),
 ]
 
 

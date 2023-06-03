@@ -1,5 +1,5 @@
 <!-- Clients -->
-<section class="py-5" id="{{ page[site.locale].clients.section | default: 'clients' }}">
+<section class="py-5" id="{{ page.clients.section | default: 'clients' }}">
     <div class="container">
         <div class="row">
             {% for client in page.clients.list %}

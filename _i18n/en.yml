@@ -74,7 +74,7 @@ pages:
             big: /assets/img/os/en/OS - Principle 5.jpg
         law:
           title: Law of mobility
-          desc: Wann immer du dich an einem Ort befindest, an dem du weder lernst noch etwas beitragen kannst, bewege dich dorthin, wo du das kannst
+          desc: 'If at any time you find yourself in any situation where you are neither learning nor contributing: go someplace else.'
           image:
             small: /assets/img/os/en/law.jpg
             big: /assets/img/os/en/OS - Law.jpg
