@@ -25,6 +25,10 @@ includes:
       text: pages.about.text
       body: pages.about.body
   - path: team.html
+    options:
+      title: pages.team.title
+      subtext: pages.team.subtext
+      section: team
 
 namespace: home
 permalink: /
