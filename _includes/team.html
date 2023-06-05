@@ -13,7 +13,11 @@
   {% for person in site.data.team.people %}
 	<div class="col-sm-4">
 	  <div class="team-member">
-		<img class="mx-auto rounded-circle" src="{{ site.baseurl_root }}{{ person.image }}" alt="Profile image of {{ person.name }}">
+		<img class="mx-auto rounded-circle"
+			 src="{{ site.baseurl_root }}{{ person.image }}"
+			 alt="Profile image of {{ person.name }}"
+			 width="225px"
+			 height="225px">
 		<h3>{{ person.name }}</h3>
 		<p class="text-muted">{{ person.role }}</p>
 		<ul class="list-inline social-buttons">

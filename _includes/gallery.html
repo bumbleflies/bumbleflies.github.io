@@ -30,7 +30,10 @@
                             <i class="fas fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="{{ site.baseurl_root }}{% t entry.image.url %}"/>
+                    <img class="img-fluid"
+                         src="{{ site.baseurl_root }}{% t entry.image.url %}"
+                         width="{{site.data.image.gallery.width }}px"
+                         height="{{ site.data.image.gallery.height }}px"/>
                 </a>
                 <div class="gallery-modal modal fade"
                      id="p{{ forloop.index }}"
@@ -54,7 +57,9 @@
                                             <p class="item-intro text-muted">{% t entry.desc %}</p>
                                             <img class="img-fluid d-block mx-auto lazy_load"
                                                  data-src="{{ image_src }}"
-                                                 alt="{% t entry.desc %}"/>
+                                                 alt="{% t entry.desc %}"
+                                                 width="{{site.data.image.hover.width }}px"
+                                                 height="{{ site.data.image.hover.height }}px" src=""/>
                                             <footer>
                                                 <small>
                                                     {{ entry.image.copyright | default: site.copyright
@@ -84,7 +89,9 @@
                 </div>
                 {% else %}
                 <!-- no entry.image.hover -->
-                <img class="img-fluid" src="{{ entry.image.url }}" alt="{% t entry.desc %}"/>
+                <img class="img-fluid" src="{{ entry.image.url }}" alt="{% t entry.desc %}"
+                     width="{{site.data.image.gallery.width }}px"
+                     height="{{ site.data.image.gallery.height }}px"/>
                 {% endif %}
                 <footer>
                     <small>

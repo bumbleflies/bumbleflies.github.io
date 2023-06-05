@@ -6,7 +6,6 @@ includes:
   - path: clients.html
     options:
       section: customer
-      max-height: 100px
       clients:
         - title: "BSH"
           url: 'https://www.bsh-group.com/'
@@ -45,7 +44,6 @@ header:
 
 clients:
   section: customer
-  max-height: 100px
   list:
     - title: "BSH"
       url: 'https://www.bsh-group.com/'
@@ -67,14 +65,20 @@ gallery:
       image: 
         url: /assets/img/services/bumblespace_effective-workshop.webp
         copyright: bumbleflies UG
+        width: 300
+        height: 270
     - title: pages.home.gallery.items.big_room.title
       desc: pages.home.gallery.items.big_room.desc
       image: 
         url: /assets/img/services/bumblespace_pi-planning.webp
         copyright: bumbleflies UG
+        width: 300
+        height: 270
     - title: pages.home.gallery.items.online_events.title
       desc: pages.home.gallery.items.online_events.desc
       image: 
         url: /assets/img/services/bumblespace_online-events.webp
         copyright: bumbleflies UG
+        width: 300
+        height: 270
 ---

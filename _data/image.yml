@@ -1,0 +1,15 @@
+gallery:
+  width: 290
+  height: 205
+
+hover:
+  width: 600
+  height: 424
+
+carousel:
+  width: 290
+  height: 205
+
+modal:
+  width: 800
+  height: 600
