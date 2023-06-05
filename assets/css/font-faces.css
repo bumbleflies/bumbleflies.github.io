@@ -109,23 +109,3 @@ https://gwfh.mranftl.com/api/fonts/roboto-condensed?download=zip&subsets=latin&v
        url('../font/roboto-condensed-v25-latin-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
   font-display: swap;
 }
-
-@font-face {
-  font-family: "FontAwesome";
-  font-weight: normal;
-  font-style : normal;
-         src : url("webfonts/fa-brands-400.eot");
-         src : url("webfonts/fa-brands-400.woff") format('woff'),
-               url("webfonts/fa-brands-400.woff2") format('woff2'),
-               url("webfonts/fa-brands-400.ttf") format('truetype'),
-               url("webfonts/fa-brands-400.eot") format('embedded-opentype'),
-               url("webfonts/fa-regular-400.woff") format('woff'),
-               url("webfonts/fa-regular-400.woff2") format('woff2'),
-               url("webfonts/fa-regular-400.ttf") format('truetype'),
-               url("webfonts/fa-regular-400.eot") format('embedded-opentype'),
-               url("webfonts/fa-solid-900.woff") format('woff'),
-               url("webfonts/fa-solid-900.woff2") format('woff2'),
-               url("webfonts/fa-solid-900.ttf") format('truetype'),
-               url("webfonts/fa-solid-900.eot") format('embedded-opentype'),
-  font-display: block;
-}
