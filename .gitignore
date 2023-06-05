@@ -11,3 +11,5 @@ _agency-jekyll-theme/
 venv/
 .lock
 __pycache__
+/_purge/node_modules/*
+/_purge/package*.json
