@@ -32,8 +32,8 @@
                     </div>
                     <img class="img-fluid"
                          src="{{ site.baseurl_root }}{% t entry.image.url %}"
-                         width="{{site.data.image.gallery.width }}px"
-                         height="{{ site.data.image.gallery.height }}px"/>
+                         width="{{ page.gallery.width | default: site.data.image.gallery.width }}px"
+                         height="{{ page.gallery.height | default: site.data.image.gallery.height }}px"/>
                 </a>
                 <div class="gallery-modal modal fade"
                      id="p{{ forloop.index }}"
@@ -58,7 +58,7 @@
                                             <img class="img-fluid d-block mx-auto lazy_load"
                                                  data-src="{{ image_src }}"
                                                  alt="{% t entry.desc %}"
-                                                 width="{{site.data.image.hover.width }}px"
+                                                 width="{{ site.data.image.hover.width }}px"
                                                  height="{{ site.data.image.hover.height }}px" src=""/>
                                             <footer>
                                                 <small>
@@ -90,8 +90,8 @@
                 {% else %}
                 <!-- no entry.image.hover -->
                 <img class="img-fluid" src="{{ entry.image.url }}" alt="{% t entry.desc %}"
-                     width="{{site.data.image.gallery.width }}px"
-                     height="{{ site.data.image.gallery.height }}px"/>
+                     width="{{ page.gallery.width | default: site.data.image.gallery.width }}px"
+                     height="{{ page.gallery.height | default: site.data.image.gallery.height }}px"/>
                 {% endif %}
                 <footer>
                     <small>
