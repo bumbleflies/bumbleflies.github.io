@@ -38,6 +38,9 @@
         {% endfor %}
     </noscript>
 
+    <!-- preload background image -->
+    <link rel="preload" as="image" fetchpriority="high" href="{{ site.data.style.header-image }}" type="image/webp">
+
     <!-- additional styles -->
     {% for style in page.head.styles %}
     <link rel="stylesheet" type="text/css" href="{{ style.url }}">
