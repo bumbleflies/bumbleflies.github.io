@@ -17,6 +17,12 @@ bundle exec jekyll build
 bundle exec jekyll serve
 ```
 
+### Purge css and font
+```bash
+cd _purge
+./purge.sh
+```
+new font awesome tags must be added to [purge-fa.py](_purge/purge-fa.py)
 ## Conventions
 ### Location of markdown files
 Pages are located in [_pages](_pages) directory

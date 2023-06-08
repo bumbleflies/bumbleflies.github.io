@@ -2,10 +2,38 @@
 <div class="row">
     <div class="col-lg-8 mx-auto text-center">
         <div class="large text-muted">
-            {% capture next_event %}
-            {% tf next.md %}
-            {% endcapture %}
-            {{ next_event | markdownify }}
+            <!-- Intro -->
+            {% capture intro %}{% t page.event.intro %}{% endcapture %}
+            {{ intro | markdownify }}
+            <h3 class="text-muted">{% t words.when %} {{ page.event.date.start | date: "%d.%m.%Y" }}</h3>
+            <h3 class="text-muted">{% t words.at %} {{ page.event.date.start | date: "%H:%M" }} {% t words.clock %}</h3>
+            <h3 class="text-muted">{% t words.where %} {% t page.event.location.name %}</h3>
+            {% assign address = page.event.location.address.street
+            | append: ', '
+            | append: page.event.location.address.code
+            |append: ' '
+            | append: page.event.location.address.locality %}
+            <a href="https://www.google.com/maps/place/{{ address | url_encode }}">{{ address }}</a>
+        </div>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-lg-8 mx-auto text-center">
+        <div class="large text-muted">
+            <!-- cant make it -->
+            <h2>{% t page.event.cant.title %}</h2>
+            {% capture cant_body %}{% t page.event.cant.body %}{% endcapture %}
+            {{ cant_body | markdownify }}
+        </div>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-lg-8 mx-auto text-center">
+        <div class="large text-muted">
+            <!-- about organizer -->
+            <h2>{% t page.event.location.header %}</h2>
+            {% capture location_body %}{% t page.event.location.body %}{% endcapture %}
+            {{ location_body | markdownify }}
         </div>
     </div>
 </div>

@@ -11,7 +11,7 @@ includes:
         - file: obs/carousel.html
           options:
             gallery:
-              - slides:
+              - slides: &slides_1
                 - /assets/img/impressions/obs-3-1.webp
                 - /assets/img/impressions/obs-3-2.webp
                 - /assets/img/impressions/obs-3-3.webp
@@ -29,8 +29,6 @@ includes:
       section: next
       more_includes:
         - file: obs/next.html
-          options:
-            info_file: _events/next.md
   - path: obs/tickets.html
     css_class: bg-light
   - path: about.html
@@ -46,7 +44,7 @@ permalink_en: /open-bumble-space
 nav_highlight: pages.events.title
 title: pages.events.obs.title
 
-pretix:
+pretix: &offer
     url: 'https://events.bumbleflies.de/obs-3/'
 head:
   styles:
@@ -57,13 +55,34 @@ foot:
     - url: /assets/js/lazy-load.js
 
 header:
-    title: pages.events.obs.header.title
-    text: pages.events.obs.header.text
-    button: pages.events.obs.header.button
-    buttonlink: "#tickets"
-de: &DEFAULT_DE
-  next:
-    title: Alle Infos zum nächsten Event
-de-DE:
-  <<: *DEFAULT_DE
+  title: pages.events.obs.header.title
+  text: pages.events.obs.header.text
+  button: pages.events.obs.header.button
+  buttonlink: "#tickets"
+
+event: 
+  name: pages.events.obs.title
+  description: pages.events.obs.about.body
+  intro: pages.events.obs.next.intro
+  date:
+      start: 2023-01-26T18:00+01:00
+      end: 2023-01-26T22:00+01:00
+  location:
+    name: pages.events.obs.next.location.name
+    url: pages.events.obs.next.location.url
+    header: pages.events.obs.next.location.header
+    body: pages.events.obs.next.location.body
+    address:
+      street: "Birketweg 21, 13. Stock"
+      locality: München
+      code: 80639
+      country: DE
+  images: *slides_1
+  offer: 
+    <<: *offer
+    from: 2023-01-01T01:02+01:00
+    price: 10
+  cant:
+    title: pages.events.obs.cant.title
+    body: pages.events.obs.cant.body
 ---

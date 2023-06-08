@@ -46,17 +46,56 @@
     <link rel="stylesheet" type="text/css" href="{{ style.url }}">
     {% endfor %}
 
-    {% if page.layout == "page" %}
-    <!-- Page container change top padding when nav shrinks -->
-    <style>
-    #pagecontainer {
-      padding-top: 150px;
-    }
-    @media only screen and (max-width: 991px) {
-      #pagecontainer {
-        padding-top: 100px;
+    {% if page.event %}
+    <!-- Event infos https://developers.google.com/search/docs/appearance/structured-data/event#standard-event -->
+    <!--
+    {{ page.published_at }}
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "{% t page.event.name %}",
+      "startDate": "{{ page.event.date.start }}",
+      "endDate": "{{ page.event.date.end }}",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "{% t page.event.location.name %}",
+        "url": "{{ page.event.location.url }}",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "{{ page.event.location.address.street }}",
+          "addressLocality": "{{ page.event.location.address.locality }}",
+          "postalCode": "{{ page.event.location.address.code }}",
+          "addressCountry": "{{ page.event.location.address.country }}"
+        }
+      },
+      "image": [
+          "{{ page.event.images | join: '", "' }}"
+       ],
+      "description": "{% t page.event.description %}",
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ page.event.offer.url }}",
+        "price": "{{ page.event.offer.price }}",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "{{ page.event.offer.from | date: '%Y-%m-%dT%H:%M' }}",
+        "validThrough": "{{ page.event.date.end | date: '%Y-%m-%dT%H:%M' }}"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "{{ site.author }}",
+        "url": "{{ site.url }}"
+      },
+      "performer": {
+        "@type": "Organization",
+        "name": "{{ site.author }}",
+        "url": "{{ site.url }}"
       }
     }
-    </style>
+    </script>
     {% endif %}
 </head>

@@ -31,8 +31,23 @@ pages:
       about:
         title: What is an open:bumble:space?
         body: The open:bumble:space is the place where the Munich User Group on the topic of 'Agile' gathers. We meet every two months for an Open Space. We know that agility is based on continuous learning. We believe that we learn better and faster when we share our experiences with each other, in an informal setting, not a lecture but ad hoc.
+      cant:
+        title: You can't attend?
+        body: |
+          Sign up for [our list](stayintheloop) and we'll let you know as soon as we plan the next Open Space.
       next:
         title: Everything about the event
+        intro: |
+          It's finally that time again: we're hosting another open:bumble:space!
+          This time together with [Martin](https://www.linkedin.com/in/martin-aigner-865064193/){:target="_blank"} from [jambit](https://www.jambit.com/){:target="_blank"}.
+        location:
+          name: jambit GmbH
+          url: https://www.jambit.com/
+          header: Who is jambit?
+          body: |
+            jambit is an innovative software company based in Munich, Stuttgart, Leipzig, Erfurt and Yerevan/Armenia. Since 1999, they have been creating forward-looking software that is tailored to the individual needs of their customers. In close cooperation with their customers, they advise, design and develop individual solutions with state-of-the-art technologies and extensive industry expertise.
+            On a mission for 100% enthusiasm, they live to work together as equals and promote the individuality of their jambitees in a flexible working environment.
+
     openchat:
       title: open:chat
   openspace:
@@ -104,3 +119,8 @@ pages:
 
 slogan: We love Open Space!
 language_selector: Select language
+words:
+  when: "on"
+  at: "from"
+  where: "at"
+  clock: "o'clock"
