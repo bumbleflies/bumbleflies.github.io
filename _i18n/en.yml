@@ -50,6 +50,25 @@ pages:
 
     openchat:
       title: open:chat
+    accceu:
+      title: ACCCEU23
+      header:
+        title: Agile Camper Coach Camp 2023
+        text: Outside. Camping. Coaching
+        button: How can I be there?
+      about:
+        title: What is an Agile Camper Coach Camp?
+        body: "The Camper Coach Camp is like an [Agile Coach Camp](https://agilecoachcamp.org/), with the difference that we do not build on an existing location, but build it ourselves (through campers [and tents, etc.]). In other words, genuinely self-organized. But words are just words, better to look at the pictures to get an impression of what awaits you there. Just one thing in advance: it will blow you away!"
+      next:
+        title: When and where does the ACCCEU23 take place?
+        intro: |
+          The organization team around the Camper Coach Camp is currently working intensively to find a location and thus determine a date.
+          We are planning the event for October/November in Turkey, near Antalya.
+          Follow us on [Twitter](https://twitter.com/accceu) or [Mastodon](https://social.bumbleflies.de/) to not miss an update or if you want to express your interest.
+      cant:
+        title: Interested?
+        body: Then sign up on [our list](stay-informed) and we will inform you as soon as it starts.
+
   openspace:
     title: Open Space
     applications:
