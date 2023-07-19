@@ -46,10 +46,10 @@ pages:
           body: |
             jambit ist ein innovatives Softwareunternehmen mit Sitz in München, Stuttgart, Leipzig, Erfurt und Jerewan/Armenien. Seit 1999 kreieren sie zukunftsweisende Software, die auf die individuellen Bedürfnisse ihrer Kunden maßgeschneidert ist. In enger Zusammenarbeit mit ihren Kunden beraten, konzipieren und entwickeln sie individuelle Lösungen mit modernsten Technologien und umfangreicher Branchenexpertise.
             Auf der Mission nach 100 % Begeisterung leben sie das Miteinander auf Augenhöhe und fördern die Individualität ihrer jambitees in einem flexiblen Arbeitsumfeld.
-
-
     openchat:
       title: open:chat
+    accceu:
+      title: ACCCEU23
   openspace:
     title: Open Space
     applications:
