@@ -26,7 +26,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown_{{ forloop.index }}">
                             {% for submenu in link.submenu %}
                             {% capture link_url %}{% tl submenu.url %}{% endcapture %}
-                            <a class="nav-link" href="{{ link_url | default: submenu.url }}">
+                            {% capture link_url %}{{ link_url | default: submenu.url }}{% endcapture %}
+                            <a class="nav-link" href="{{ link_url | default: submenu.url }}" {% if link_url contains '://'%}target="_blank"{% endif %}>
                                 <i class="arrow fas fa-chevron-right"></i>
                                 <span>{% t submenu.title %}</span>
                             </a>
