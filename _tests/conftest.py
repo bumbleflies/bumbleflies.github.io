@@ -11,7 +11,7 @@ def http_server_process(directory: str) -> subprocess.Popen:
     Call python's http.server module as a child process, wait for initialization and yield server for tests.
     """
 
-    server = subprocess.Popen(['python', '-m', 'http.server', '--directory', directory],
+    server = subprocess.Popen(['python3', '-m', 'http.server', '--directory', directory],
                               encoding='utf-8',
                               universal_newlines=True)
 
