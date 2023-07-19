@@ -11,6 +11,8 @@ nav:
         url: "obs"
       - title: pages.events.openchat.title
         url: "https://openchat.bumbleflies.de/"
+      - title: pages.events.accceu.title
+        url: "accceu23"
       - title: pages.stayintheloop.title
         url: "stayintheloop"
   - title: pages.openspace.title
