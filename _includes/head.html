@@ -46,7 +46,7 @@
     <link rel="stylesheet" type="text/css" href="{{ style.url }}">
     {% endfor %}
 
-    {% if page.event %}
+    {% if page.event and page.event.date and page.event.location %}
     <!-- Event infos https://developers.google.com/search/docs/appearance/structured-data/event#standard-event -->
     <!--
     {{ page.published_at }}

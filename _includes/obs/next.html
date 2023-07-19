@@ -7,6 +7,7 @@
             {{ intro | markdownify }}
             <h3 class="text-muted">{% t words.when %} {{ page.event.date.start | date: "%d.%m.%Y" }}</h3>
             <h3 class="text-muted">{% t words.at %} {{ page.event.date.start | date: "%H:%M" }} {% t words.clock %}</h3>
+            {% if page.event.location %}
             <h3 class="text-muted">{% t words.where %} {% t page.event.location.name %}</h3>
             {% assign address = page.event.location.address.street
             | append: ', '
@@ -14,6 +15,7 @@
             |append: ' '
             | append: page.event.location.address.locality %}
             <a href="https://www.google.com/maps/place/{{ address | url_encode }}">{{ address }}</a>
+            {% endif %}
         </div>
     </div>
 </div>
@@ -27,6 +29,8 @@
         </div>
     </div>
 </div>
+
+{% if page.event.location %}
 <div class="row ">
     <div class="col-lg-8 mx-auto text-center">
         <div class="large text-muted">
@@ -37,4 +41,5 @@
         </div>
     </div>
 </div>
+{% endif %}
 <!-- End Event Info -->

@@ -57,6 +57,15 @@ pages:
       about:
         title: Was ist ein Agiles Camper Coach Camp?
         body: "Das Camper Coach Camp ist wie ein [Agile Coach Camp](https://agilecoachcamp.org/), mit dem Unterschied, dass wir nicht auf eine bestehende Location aufbauen, sondern diese (eben durch Camper [und Zelte, etc.]) selbst aufbauen. Sozusagen echt-selbstorganisiert. Aber was sind schon Worte, schaut euch lieber die Bilder an, damit ihr einen Eindruck bekommt, was euch da erwartet. Nur soviel vorweg: es wird euch umhauen!"
+      next:
+        title: Wann und wo findest das ACCCEU23 statt?
+        intro: |
+          Das Orga-Team rund um das Camper Coach Camp arbeitet derzeit intensiv daran, eine Location zu finden und damit ein Datum festzulegen.
+          Wir planen das Event für Oktober/November in der Türkei, Nähe Antalia.
+          Folge und auf [Twitter](https://twitter.com/accceu) oder [Mastodon](https://social.bumbleflies.de/) um kein Update zu verpassen oder wenn du schonmal dein Interesse bekunden möchtest.
+      cant:
+        title: Interessiert?
+        body: Dann schreib dich auf [unsere Liste](informiert-bleiben) und wir informieren dich, sobald es losgeht.
   openspace:
     title: Open Space
     applications:
