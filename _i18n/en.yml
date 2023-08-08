@@ -68,7 +68,9 @@ pages:
       cant:
         title: Interested?
         body: Then sign up on [our list](stay-informed) and we will inform you as soon as it starts.
-
+    pretix:
+      widget: https://pretix.eu/widget/v1.en.js
+      problems: If you have problems registering for an event, contact us at [events@bumbleflies.de](mailto:events@bumbleflies.de)
   openspace:
     title: Open Space
     applications:

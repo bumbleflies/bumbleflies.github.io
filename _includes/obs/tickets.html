@@ -1,12 +1,13 @@
 <!-- Tickets -->
 <section id="tickets" class="section bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-          <pretix-widget event="{{ page.pretix.url }}"></pretix-widget>
-          <p class="text-muted">Hast du Probleme bei der Anmeldung, melde dich unter <a href="mailto:info@bumbleflies.de">info@bumbleflies.de</a></p>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <pretix-widget event="{{ page.pretix.url }}"></pretix-widget>
+                {% capture problem_text %}{% t pages.events.pretix.problems %}{% endcapture %}
+                <p class="text-muted">{{ problem_text | markdownify }}</a></p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 <!-- End Tickets -->

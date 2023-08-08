@@ -56,8 +56,8 @@ head:
     - url: https://events.bumbleflies.de/accceu23/widget/v1.css
 foot:  
   scripts:
-    - url: https://pretix.eu/widget/v1.de.js
     - url: /assets/js/lazy-load.js
+  translatable: pages.events.pretix.widget
 
 header:
   title: pages.events.accceu.header.title
@@ -70,8 +70,8 @@ event:
   description: pages.events.accceu.about.body
   intro: pages.events.accceu.next.intro
   date:
-      start: 2023-10-31T15:00+01:00
-      end: 2023-11-05T22:00+01:00
+      start: 2023-10-06T13:00+01:00
+      end: 2023-10-09T18:00+01:00
   images: *slides_1
   offer: 
     <<: *offer

@@ -55,5 +55,8 @@
 {% for script in page.foot.scripts %}
 <script type="text/javascript" src="{{ script.url }}" async></script>
 {% endfor %}
-
+<!-- translatable: {{ page.foot.translatable }} -->
+{% if page.foot.translatable %}
+<script type="text/javascript" src="{% t page.foot.translatable %}" async></script>
+{% endif %}
 <!-- End Footer -->
