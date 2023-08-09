@@ -21,6 +21,8 @@ nav:
         url: "os-principles"
       - title: pages.openspace.checklist.title
         url: "os-check"
+      - title: pages.openspace.fast_agile.title
+        url: "fast_agile"
   - title: pages.about.title
     url: "about"
 

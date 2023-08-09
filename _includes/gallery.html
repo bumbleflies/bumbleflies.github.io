@@ -23,6 +23,7 @@
                 {% if entry.title %}
                 <h4 class="entry-heading">{% t entry.title %}</h4>
                 {% endif %}
+                {% if entry.image %}
                 {% if entry.image.hover %}
                 <a class="gallery-link" data-toggle="modal" href="#p{{ forloop.index }}">
                     <div class="gallery-hover">
@@ -52,7 +53,13 @@
                                     <div class="col-lg-8 mx-auto">
                                         <div class="modal-body">
                                             <!-- Modal body -->
+                                            {% if entry.image.hover.big_download %}
+                                            {% capture image_src %}{% t entry.image.url %}{% endcapture %}
+                                            {% assign download_src = entry.image.hover.big_download | uri_escape %}
+                                            {% else %}
                                             {% capture image_src %}{% t entry.image.hover.big %}{% endcapture %}
+                                            {% assign download_src = image_src | uri_escape %}
+                                            {% endif %}
                                             <h2 class="text-uppercase">{% t entry.image.hover.title %}</h2>
                                             <p class="item-intro text-muted">{% t entry.desc %}</p>
                                             <img class="img-fluid d-block mx-auto lazy_load"
@@ -69,7 +76,7 @@
                                             </footer>
                                             <a class="btn btn-primary"
                                                role="button"
-                                               href="{{ image_src | uri_escape }}"
+                                               href="{{ download_src }}"
                                                download="{{ image_src | split: '/' | last }}">
                                                 <i class="fas fa-download"></i>
                                                 Download
@@ -99,6 +106,7 @@
                         | markdownify | remove: '<p>' | remove: '</p>' }}
                     </small>
                 </footer>
+                {% endif %}
                 {% if entry.desc %}
                 <div class="text-muted">{% t entry.desc %}</div>
                 {% endif %}

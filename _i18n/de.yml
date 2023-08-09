@@ -117,6 +117,37 @@ pages:
           image:
             small: /assets/img/os/de/law.jpg
             big: /assets/img/os/de/OS - Gesetz.jpg
+    fast_agile:
+      title: FaST Agile
+      header:
+        title: Fluid-Scaling-Technology
+        text: Für einfache und skalierte Agilität
+        button: FaST-Guide
+      about:
+        title: Was ist FaST Agile?
+        body: | 
+          Wir freuen uns, dass wir, als bumbleflies, den [aktuellen FaST-Guide](https://www.fastagile.io/fast-guide) aus dem Englischen ins Deutsche übersetzen durften.
+          
+          Die Fluid-Scaling-Technology kombiniert Open Space Technology und Open Allocation zu einer leichtgewichtigen, einfach zu verstehenden und einfach zu beherrschenden, skalierbaren Methode für die Organisation von Menschen rund um Arbeit.
+          Das Open Space Format ist in vielen Situationen einsetzbar. Man kann es alleinstehend nutzen, um z.B. komplexe, potentiell konfliktreiche Probleme mit einer diversen Gruppe zu lösen oder eingebettet in größere Modelle, wie z.B. Open Space Agility oder Open Space Beta.
+          
+          FaST-Agile ist ein Beispiel für das Einbetten und Zusammenspiel von Open Space in einen speziellen Kontext. Die Fluid-Scaling-Technology kombiniert Open Space Technology und Open Allocation zu einer leichtgewichtigen, einfach zu verstehenden und einfach zu beherrschenden, skalierbaren Methode für die Organisation von Menschen rund um Arbeit.
+      gallery:
+        title: FaST Ressourcen zum Download
+        value_cycle:
+          title: FaST Schaubild
+          desc: Der Value Cycle von FaST
+          image:
+            small: /assets/img/fast_agile/fast_agile_small.webp
+            big: /assets/img/fast_agile/fast_agile_big.png
+        user_guide:
+          de:
+            title: FaST Guide (Deutsch)
+            desc: Erfahre, was FaST ist
+            image:
+              small: /assets/img/fast_agile/fa_logo_de_small.webp
+
+
   privacy:
     title: Datenschutzerklärung
   imprint:

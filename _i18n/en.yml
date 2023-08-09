@@ -119,6 +119,8 @@ pages:
           image:
             small: /assets/img/os/en/law.jpg
             big: /assets/img/os/en/OS - Law.jpg
+    fast_agile:
+      title: FaST Agile
   privacy:
     title: Privacy
   imprint:
