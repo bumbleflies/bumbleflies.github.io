@@ -132,20 +132,52 @@ pages:
           Das Open Space Format ist in vielen Situationen einsetzbar. Man kann es alleinstehend nutzen, um z.B. komplexe, potentiell konfliktreiche Probleme mit einer diversen Gruppe zu lösen oder eingebettet in größere Modelle, wie z.B. Open Space Agility oder Open Space Beta.
           
           FaST-Agile ist ein Beispiel für das Einbetten und Zusammenspiel von Open Space in einen speziellen Kontext. Die Fluid-Scaling-Technology kombiniert Open Space Technology und Open Allocation zu einer leichtgewichtigen, einfach zu verstehenden und einfach zu beherrschenden, skalierbaren Methode für die Organisation von Menschen rund um Arbeit.
+      explain:
+        title: Der Kern von FaST Agile
+        body: |
+          FaST-Agile eignet sich besonders für Softwareentwicklung, Produktentwicklung und agiles Arbeiten im großen Umfang. Darüber hinaus kann FaST auf viele komplexe, kollaborative Projekte angewendet werden und ist nicht ausschließlich auf den Bereich der Softwareentwicklung beschränkt.
+          Es beschreibt
+          # 6 Werte <!-- two spaces, to render as list without bullets -->
+          Autonomie  
+          Geteilter Zweck (Purpose)  
+          Beherrschung (Mastery)  
+          Technische Exzellenz  
+          Kollaboration  
+          Selbst-Organisation  
+          # 5 Prinzipien
+          Mach das Richtige  
+          Seien ein Mentor und ein Mentee  
+          Sei eine T-förmige Personen - eine  generalisierender Spezialist  
+          Emergentes Design und emergente Architektur  
+          Gesetz der Mobilität (Die Freiheit, jederzeit das Team zu wechseln, wenn es sinnvoll ist)  
+          # 7 Säulen
+          Selbstorganisierende Systeme (einschließlich natürliche Ordnung und Emergenz)  
+          Open Space Technology  
+          Offene Zuteilung (Open Allocation)  
+          Theorie Y Governance  
+          Agilität/Anpassungsfähigkeit  
+          Lean Startup/Experimentieren  
+          Selbstmanagement  
+
       gallery:
         title: FaST Ressourcen zum Download
         value_cycle:
-          title: FaST Schaubild
-          desc: Der Value Cycle von FaST
+          title: Der Value Cycle von FaST
+          desc: FaST Schaubild
           image:
             small: /assets/img/fast_agile/fast_agile_small.webp
             big: /assets/img/fast_agile/fast_agile_big.png
         user_guide:
           de:
-            title: FaST Guide (Deutsch)
-            desc: Erfahre, was FaST ist
+            title: Erfahre, was FaST ist
+            desc: FaST Guide (Deutsch)
             image:
-              small: /assets/img/fast_agile/fa_logo_de_small.webp
+              small: /assets/img/fast_agile/guide_logo_de.webp
+          en:
+            title: Erfahre, was FaST ist
+            desc: FaST Guide (Englisch)
+            image:
+              small: /assets/img/fast_agile/guide_logo_en.webp
 
 
   privacy:
