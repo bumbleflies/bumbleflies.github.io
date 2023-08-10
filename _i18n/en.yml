@@ -121,6 +121,64 @@ pages:
             big: /assets/img/os/en/OS - Law.jpg
     fast_agile:
       title: FaST Agile
+      header:
+        title: Fluid Scaling Technology
+        text: For agile and agile at scale
+        button: FaST Guide
+      about:
+        title: What is FaST Agile?
+        body: | 
+          We are happy to announce that we, as bumbleflies, were allowed to translate the [current FaST-Guide](https://www.fastagile.io/fast-guide) from English into German.
+          
+          Fluid Scaling Technology combines Open Space Technology and Open Allocation into a lightweight, easy to understand and easy to master, scalable method for organizing people around work.
+          The Open Space format can be used in many situations. You can use it standalone, for example, to solve complex, potentially conflicting problems with a diverse group, or embedded in larger models, such as Open Space Agility or Open Space Beta.
+          
+          FaST-Agile is an example of embedding and interacting Open Space in a specific context. Fluid Scaling Technology combines Open Space Technology and Open Allocation into a lightweight, easy to understand and easy to master, scalable method for organizing people around work.
+      explain:
+        title: The core of FaST Agile
+        body: |
+          FaST-Agile is particularly suitable for software development, product development and agile working on a large scale. Furthermore, FaST can be applied to many complex, collaborative projects and is not exclusively limited to the field of software development.
+          It describes
+          # 6 values <!-- two spaces, to render as list without bullets -->
+          Autonomy  
+          Shared purpose  
+          Mastery  
+          Technical Excellence  
+          Collaboration  
+          Self-Organization  
+          # 5 Principles
+          Do the right thing  
+          Be a mentor and a mentee  
+          Be a T-shaped person - a generalizing specialist  
+          Emergent design and emergent architecture  
+          Law of mobility (The freedom to change teams whenever it makes sense)  
+          # 7 pillars
+          Self-Organizing Systems (including natural order and emergence)  
+          Open Space Technology  
+          Open Allocation  
+          Theory Y Governance  
+          Agility/Adaptability  
+          Lean Startup/Experimentation  
+          Self-Management
+      gallery:
+        title: FaST resources for download
+        value_cycle:
+          title: The FaST Value Cycle
+          desc: FaST diagram
+          image:
+            small: /assets/img/fast_agile/fast_agile_small.webp
+            big: /assets/img/fast_agile/fast_agile_big.png
+        user_guide:
+          de:
+            title: Learn what FaST is
+            desc: FaST Guide (German)
+            image:
+              small: /assets/img/fast_agile/guide_logo_de.webp
+          en:
+            title: Learn what FaST is
+            desc: FaST Guide (English)
+            image:
+              small: /assets/img/fast_agile/guide_logo_en.webp
   privacy:
     title: Privacy
   imprint:

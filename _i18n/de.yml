@@ -157,8 +157,7 @@ pages:
           Theorie Y Governance  
           Agilität/Anpassungsfähigkeit  
           Lean Startup/Experimentieren  
-          Selbstmanagement  
-
+          Selbstmanagement
       gallery:
         title: FaST Ressourcen zum Download
         value_cycle:
@@ -178,8 +177,6 @@ pages:
             desc: FaST Guide (Englisch)
             image:
               small: /assets/img/fast_agile/guide_logo_en.webp
-
-
   privacy:
     title: Datenschutzerklärung
   imprint:
