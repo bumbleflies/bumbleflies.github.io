@@ -49,7 +49,7 @@ gallery:
     - desc: pages.openspace.fast_agile.gallery.user_guide.en.desc
       image:
         url: pages.openspace.fast_agile.gallery.user_guide.en.image.small
-        copyright: "[Cron Technologies LLC](https://www.fastagile.io/), bumbleflies UG"
+        copyright: "[Cron Technologies LLC](https://www.fastagile.io/)"
         hover:
           title: pages.openspace.fast_agile.gallery.user_guide.en.title
           big_download: /assets/img/fast_agile/FASTGuide2.12.pdf
