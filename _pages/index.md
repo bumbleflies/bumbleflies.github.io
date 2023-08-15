@@ -12,7 +12,6 @@ includes:
           logo: /assets/img/clients/bsh-logo.png
         - title: "Siemens AG"
           url: 'https://www.siemens.com/de/de.html'
-          logo: /assets/img/clients/siemens-logo.png
         - title: "Wohnungshelden"
           url: 'https://www.wohnungshelden.de/'
           logo: /assets/img/clients/wohnungshelden-logo.png
@@ -41,19 +40,6 @@ header:
   text: pages.home.header.text
   button: pages.home.header.button
   buttonlink: "mailto:info@bumbleflies.de"
-
-clients:
-  section: customer
-  list:
-    - title: "BSH"
-      url: 'https://www.bsh-group.com/'
-      logo: /assets/img/clients/bsh-logo.png
-    - title: "Siemens AG"
-      url: 'https://www.siemens.com/de/de.html'
-      logo: /assets/img/clients/siemens-logo.png
-    - title: "Wohnungshelden"
-      url: 'https://www.wohnungshelden.de/'
-      logo: /assets/img/clients/wohnungshelden-logo.png
 
 gallery:
   title: pages.home.gallery.title
