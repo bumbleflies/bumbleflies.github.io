@@ -55,10 +55,27 @@ pages:
       header:
         title: Agile Camper Coach Camp 2023
         text: Outside. Camping. Coaching
-        button: How can I be there?
+        button: book my ticket
       about:
         title: What is an Agile Camper Coach Camp?
         body: "The Camper Coach Camp is like an [Agile Coach Camp](https://agilecoachcamp.org/), with the difference that we do not build on an existing location, but build it ourselves (through campers [and tents, etc.]). In other words, genuinely self-organized. But words are just words, better to look at the pictures to get an impression of what awaits you there. Just one thing in advance: it will blow you away!"
+      schedule:
+        title: What can I expect at the Camp?
+        body: |
+          The Agile Camper Coach Camp is not just another Agile Coach Camp – it's a unique experience of self-organization and collaboration. Imagine a camp where you not only share your knowledge and experiences but also design the very place where it happens. Through campers, tents, and the community of participants, a dynamic environment is created that embodies the principles of agility and self-organization.
+      
+          #### Arrival and Setup
+          Start the day by setting up your camper or tent and get to know other enthusiastic Agile Coaches.
+          #### Open Space Kickoff
+          Once everyone is settled in, we kick off with an Open Space introduction where every participant can suggest topics and plan sessions.
+          #### Self-organized Sessions
+          Throughout the day, there are multiple slots for sessions that are organized and led by the participants themselves. This can range from workshops to discussions to hands-on exercises.
+          #### Networking and Relaxation
+          Use the breaks between sessions to connect with other participants, enjoy the beautiful surroundings of the "Wanderheaven" campsite, or simply relax.
+          #### Conclusion and Reflection
+          At the end of the day, all participants come together to share their experiences, provide feedback, and reflect on what they've learned.
+      
+          The Agile Camper Coach Camp offers a perfect blend of learning, networking, and nature. It's an opportunity to dive deep into the world of agile coaching while simultaneously experiencing the freedom and adventure of camping life. Be ready to be amazed and let this unique experience inspire you!
       next:
         title: When and where does the ACCCEU23 take place?
         intro: |

@@ -38,6 +38,13 @@ includes:
     css_class: bg-light
   - path: about.html
     options:
+      section: schedule
+      title: pages.events.accceu.schedule.title
+      body: pages.events.accceu.schedule.body
+      markdownify: true
+  - path: about.html
+    options:
+      css_class: bg-light
       title: pages.about.title
       text: pages.about.text
       body: pages.about.body
