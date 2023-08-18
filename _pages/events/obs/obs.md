@@ -45,10 +45,10 @@ nav_highlight: pages.events.title
 title: pages.events.obs.title
 
 pretix: &offer
-    url: 'https://events.bumbleflies.de/obs-3/'
+    url: 'https://events.bumbleflies.de/obs-4/'
 head:
   styles:
-    - url: https://events.bumbleflies.de/obs-3/widget/v1.css
+    - url: https://events.bumbleflies.de/obs-4/widget/v1.css
 foot:  
   scripts:
     - url: https://pretix.eu/widget/v1.de.js
@@ -65,22 +65,22 @@ event:
   description: pages.events.obs.about.body
   intro: pages.events.obs.next.intro
   date:
-      start: 2023-01-26T18:00+01:00
-      end: 2023-01-26T22:00+01:00
+      start: 2023-10-11T18:00+01:00
+      end: 2023-10-11T22:00+01:00
   location:
     name: pages.events.obs.next.location.name
     url: pages.events.obs.next.location.url
     header: pages.events.obs.next.location.header
     body: pages.events.obs.next.location.body
     address:
-      street: "Birketweg 21, 13. Stock"
+      street: "Schleißheimer Str. 25"
       locality: München
-      code: 80639
+      code: 80333
       country: DE
   images: *slides_1
   offer: 
     <<: *offer
-    from: 2023-01-01T01:02+01:00
+    from: 2023-08-19T01:02+01:00
     price: 10
   cant:
     title: pages.events.obs.cant.title

@@ -39,14 +39,14 @@ pages:
         title: Everything about the event
         intro: |
           It's finally that time again: we're hosting another open:bumble:space!
-          This time together with [Martin](https://www.linkedin.com/in/martin-aigner-865064193/){:target="_blank"} from [jambit](https://www.jambit.com/){:target="_blank"}.
+          This time together with [Dorita](https://www.linkedin.com/in/dorita-zvinyte-98b289a8/){:target="_blank"} from [appdafür](https://www.appdafuer.com/){:target="_blank"}.
         location:
-          name: jambit GmbH
-          url: https://www.jambit.com/
-          header: Who is jambit?
+          name: Appdafuer GmbH
+          url: https://www.appdafuer.com/
+          header: Who is appdafuer?
           body: |
-            jambit is an innovative software company based in Munich, Stuttgart, Leipzig, Erfurt and Yerevan/Armenia. Since 1999, they have been creating forward-looking software that is tailored to the individual needs of their customers. In close cooperation with their customers, they advise, design and develop individual solutions with state-of-the-art technologies and extensive industry expertise.
-            On a mission for 100% enthusiasm, they live to work together as equals and promote the individuality of their jambitees in a flexible working environment.
+            Appdafür was born out of enthusiasm - for mobile technologies. The idea: Two friends, Michael and Daniel, wanting to code together, build a company that creates value and makes the world a slightly better place to live.
+            This enthusiasm drives us every day - with the belief that digital innovations are crucial for sustainable development.
 
     openchat:
       title: open:chat
@@ -88,7 +88,7 @@ pages:
         header: We will stay at the beautiful Wanderheaven campsite.
         body: |
           With various social areas, they have taken their camping experience beyond just spending the night.
-          ​You can stay in our Tiny Houses in our camp adorned with tangerine trees, sip your coffee in front of your bungalow, experience our glamping tents, and taste different experiences in our event area!
+          You can stay in our Tiny Houses in our camp adorned with tangerine trees, sip your coffee in front of your bungalow, experience our glamping tents, and taste different experiences in our event area!
           
           Wanderheaven Camping is in the heart of Gümüşlük, only 50 meters to the beach!
       cant:
@@ -96,7 +96,7 @@ pages:
         body: Then book your ticket directly in our [ticket shop](https://events.bumbleflies.de/accceu23/) or right below on the page.
     pretix:
       widget: https://pretix.eu/widget/v1.en.js
-      problems: If you have problems registering for an event, contact us at [accceu23@bumbleflies.de](mailto:accceu23@bumbleflies.de)
+      problems: If you have problems registering for an event, contact us at [events@bumbleflies.de](mailto:events@bumbleflies.de)
   openspace:
     title: Open Space
     applications:

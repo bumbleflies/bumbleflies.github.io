@@ -38,14 +38,14 @@ pages:
         title: Alle Infos zum nächsten Event
         intro: |
           Es ist endlich wieder so weit: wir veranstalten wieder einen open:bumble:space!
-          Diesmal zusammen mit [Martin](https://www.linkedin.com/in/martin-aigner-865064193/){:target="_blank"} von [jambit](https://www.jambit.com/){:target="_blank"}.
+          Diesmal zusammen mit [Dorita](https://www.linkedin.com/in/dorita-zvinyte-98b289a8/){:target="_blank"} von [appdafür](https://www.appdafuer.com/){:target="_blank"}.
         location:
-          name: jambit GmbH
-          url: https://www.jambit.com/
-          header: Wer ist eigentlich jambit?
+          name: Appdafuer GmbH
+          url: https://www.appdafuer.com/
+          header: Wer ist eigentlich appdafür?
           body: |
-            jambit ist ein innovatives Softwareunternehmen mit Sitz in München, Stuttgart, Leipzig, Erfurt und Jerewan/Armenien. Seit 1999 kreieren sie zukunftsweisende Software, die auf die individuellen Bedürfnisse ihrer Kunden maßgeschneidert ist. In enger Zusammenarbeit mit ihren Kunden beraten, konzipieren und entwickeln sie individuelle Lösungen mit modernsten Technologien und umfangreicher Branchenexpertise.
-            Auf der Mission nach 100 % Begeisterung leben sie das Miteinander auf Augenhöhe und fördern die Individualität ihrer jambitees in einem flexiblen Arbeitsumfeld.
+            Appdafür ist aus Begeisterung entstanden - für mobile Technologien. Die Idee: Zwei Freunde, Michael und Daniel, die zusammen coden möchten, bauen ein Unternehmen auf, das Werte schafft und die Welt ein kleines bisschen lebenswerter macht.
+            Diese Begeisterung treibt uns Tag für Tag weiter an - mit der Überzeugung, dass digitale Innovationen entscheidend sind für eine nachhaltige Entwicklung.
     openchat:
       title: open:chat
     accceu:
@@ -94,7 +94,7 @@ pages:
         body: Dann buche dir direkt dein Ticket in unserem [Ticketshop](https://events.bumbleflies.de/accceu23/) oder direkt unten auf der Seite.
     pretix:
       widget: https://pretix.eu/widget/v1.de.js
-      problems: Hast du Probleme bei der Anmeldung, melde dich unter [accceu23@bumbleflies.de](mailto:accceu23@bumbleflies.de)
+      problems: Hast du Probleme bei der Anmeldung, melde dich unter [events@bumbleflies.de](mailto:events@bumbleflies.de)
   openspace:
     title: Open Space
     applications:
