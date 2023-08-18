@@ -62,12 +62,11 @@ pages:
       next:
         title: When and where does the ACCCEU23 take place?
         intro: |
-          The organization team around the Camper Coach Camp is currently working intensively to find a location and thus determine a date.
-          We are planning the event for October/November in Turkey, near Antalya.
-          Follow us on [Twitter](https://twitter.com/accceu) or [Mastodon](https://social.bumbleflies.de/) to not miss an update or if you want to express your interest.
+          The organizing team for the Camper Coach Camp has found the wonderful campsite [Wanderheaven](https://www.wanderheaven.com/) that provides us with everything needed for this event: Nice camping spots, a friendly atmosphere, and ample space for an Open Space.
+          Follow us on [Twitter](https://twitter.com/accceu) or [Mastodon](https://social.bumbleflies.de/) to not miss any updates.
       cant:
-        title: Interested?
-        body: Then sign up on [our list](stay-informed) and we will inform you as soon as it starts.
+        title: Excited?
+        body: Then book your ticket directly in our [ticket shop](https://events.bumbleflies.de/accceu23/) or right below on the page.
     pretix:
       widget: https://pretix.eu/widget/v1.en.js
       problems: If you have problems registering for an event, contact us at [events@bumbleflies.de](mailto:events@bumbleflies.de)

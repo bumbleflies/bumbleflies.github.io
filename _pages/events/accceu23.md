@@ -76,7 +76,7 @@ event:
   offer: 
     <<: *offer
     from: 2023-01-01T01:02+01:00
-    price: 100
+    price: 90
   cant:
     title: pages.events.accceu.cant.title
     body: pages.events.accceu.cant.body
