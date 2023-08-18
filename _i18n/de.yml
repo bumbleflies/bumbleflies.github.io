@@ -67,7 +67,7 @@ pages:
         body: Dann buche dir direkt dein Ticket in unserem [Ticketshop](https://events.bumbleflies.de/accceu23/) oder direkt unten auf der Seite.
     pretix:
       widget: https://pretix.eu/widget/v1.de.js
-      problems: Hast du Probleme bei der Anmeldung, melde dich unter [events@bumbleflies.de](mailto:events@bumbleflies.de)
+      problems: Hast du Probleme bei der Anmeldung, melde dich unter [accceu23@bumbleflies.de](mailto:accceu23@bumbleflies.de)
   openspace:
     title: Open Space
     applications:
