@@ -72,6 +72,16 @@ event:
   date:
       start: 2023-10-06T13:00+01:00
       end: 2023-10-09T18:00+01:00
+  location:
+    name: pages.events.accceu.location.name
+    url: pages.events.accceu.location.url
+    header: pages.events.accceu.location.header
+    body: pages.events.accceu.location.body
+    address:
+      street: "Gümüşlük, Kilimci Sk. No:35 D:12"
+      locality: Bodrum/Muğla
+      code: 48970
+      country: TR
   images: *slides_1
   offer: 
     <<: *offer

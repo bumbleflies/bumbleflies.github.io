@@ -62,6 +62,15 @@ pages:
         intro: |
           Das Orga-Team rund um das Camper Coach Camp hat den wundervollen Campingplatz [Wanderheaven](https://www.wanderheaven.com/) gefunden, der uns alles bietet, was für dieses Event erforderlich ist: Nette Plätzen zum Campen, eine freundliche Atmosphäre und ausreichend Platz für einen Open Space.
           Folge uns auf [Twitter](https://twitter.com/accceu) oder [Mastodon](https://social.bumbleflies.de/) um keine Updates zu verpassen.
+      location:
+        name: Wanderheaven Camping, Bodrum
+        url: https://en.wanderheaven.com/
+        header: Wir werden auf dem wunderschönen Wanderheaven-Campingplatz übernachten
+        body: |
+          Mit verschiedenen Gemeinschaftsbereichen haben sie ihr Camping-Erlebnis über das bloße Übernachten hinaus erweitert.
+          Du kannst in unseren Tiny Houses in unserem Camp, das mit Mandarinenbäumen geschmückt ist, übernachten, deinen Kaffee vor deinem Bungalow genießen, unsere Glamping-Zelte erleben und verschiedene Erfahrungen in unserem Eventbereich sammeln!
+          
+          Wanderheaven Camping liegt im Herzen von Gümüşlük, nur 50 Meter vom Strand entfernt!
       cant:
         title: Begeistert?
         body: Dann buche dir direkt dein Ticket in unserem [Ticketshop](https://events.bumbleflies.de/accceu23/) oder direkt unten auf der Seite.
