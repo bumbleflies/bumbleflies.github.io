@@ -55,6 +55,7 @@ permalink: /agiles-camper-coach-camp-23
 permalink_en: /agile-camper-coach-camp-23
 nav_highlight: pages.events.title
 title: pages.events.accceu.title
+slogan: pages.events.accceu.slogan
 
 pretix: &offer
     url: 'https://events.bumbleflies.de/accceu23/'
