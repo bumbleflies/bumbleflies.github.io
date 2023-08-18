@@ -14,7 +14,7 @@
             | append: page.event.location.address.code
             |append: ' '
             | append: page.event.location.address.locality %}
-            <a href="https://www.google.com/maps/place/{{ address | url_encode }}">{{ address }}</a>
+            <a href="https://www.google.com/maps/place/{{ address | url_encode }}" target="_blank">{{ address }}</a>
             {% endif %}
         </div>
     </div>
