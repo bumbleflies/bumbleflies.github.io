@@ -9,9 +9,9 @@
         <!-- slide {{ forloop.index }}-->
         {% if forloop.index == 1 %}
         <div class="carousel-item active text-center">
-            {% else %}
-            <div class="carousel-item">
-                {% endif %}
+        {% else %}
+        <div class="carousel-item text-center">
+        {% endif %}
                 {% assign outer_index = forloop.index %}
                 {% for item in page.slides %}
                 <div class="col-md-3 mb-3">
