@@ -47,9 +47,50 @@ pages:
           body: |
             Appdafür was born out of enthusiasm - for mobile technologies. The idea: Two friends, Michael and Daniel, wanting to code together, build a company that creates value and makes the world a slightly better place to live.
             This enthusiasm drives us every day - with the belief that digital innovations are crucial for sustainable development.
-
     openchat:
       title: open:chat
+      slogan: Discover the future of agile coaching in a world shaped by innovative technologies like ChatGPT.
+      header:
+        title: The Next Chapter of Agility
+        subtitle: How smart chat systems revolutionize coaching and transformation.
+        button: Book Ticket
+      about:
+        title: Why should I attend?
+        body: |
+          Discover the future of agile coaching in a world shaped by innovative technologies like ChatGPT. This unique un-conference introduces you to the opportunities and challenges that arise from integrating smart chat systems into coaching and organizational development processes. Dive into interactive Open Space sessions where you can learn new skills, develop concrete products, and collaboratively create strategies for dealing with this groundbreaking technology. Join experts and like-minded individuals from the fields of agility, coaching, and organizational development to shape the next stage of agility together.
+          
+          Register now and secure your spot at this trailblazing 2-day event.
+      next:
+        title: When and where is the conference taking place?
+        intro: |
+          The conference will be held in Munich's Werksviertel. We have secured [Codecentric](https://www.codecentric.de/) as our location sponsor, who will provide their wonderful premises.
+      location:
+        name: Codecentric AG
+        url: https://www.codecentric.de/en
+        header: Who is codecentric?
+        body: |
+          codecentric combines excellent people and excellent software
+          
+          We enable our customers in all german-speaking regions to quickly develop high-quality solutions. Through our technologically excellent IT consulting, we solve the challenges of their digital future together with them. 
+          
+          With over 550 employees at 13 German locations, we see ourselves first and foremost as a network where people can come together. It allows freedom and time for learning and thus promotes constant growth - with the goal of continually inspiring our customers, motivating each other and creating real value.
+      cant:
+        title: Excited?
+        body: Then book your ticket directly in our [Ticketshop](https://events.bumbleflies.de/openchat/) or right below on the page.
+      schedule:
+        title: What can I expect at the conference?
+        body: |
+          When you come to the conference, you can expect a dynamic and interactive experience centered around ChatGPT and agile coaching.
+    
+          The **first day starts at 9:30 AM with arrival and registration**, where you'll have the opportunity to mingle with other participants and prepare for the upcoming sessions.
+    
+          At 10:00 AM, we kick off with the Marketplace. Here, the Open Space concept will be introduced, and you'll have the chance to propose your own topics or choose from already planned sessions. Throughout the day, there will be multiple session rounds where you can delve deep into various topics, ask questions, and collaboratively find solutions. Between sessions, we'll ensure you're refreshed and refueled with food and drinks.
+    
+          The first day wraps up with the Evening News at 5:30 PM, summarizing the day's highlights and providing a glimpse into the next day. At 6 PM, we'll transition into the evening program.
+    
+          The **second day** follows a similar pattern: After arriving and a brief morning start at 9:30 AM, we'll have the Marketplace for the second day. Again, there will be multiple session rounds for active participation and learning from others' experiences and knowledge. The second day concludes at **5 PM with a closing discussion and feedback round**, where we'll reflect on our learnings and discuss how to implement them in practice.
+    
+          Overall, you can look forward to a conference characterized by active participation, collective learning, and the exchange of experiences. It promises to be exciting, inspiring, and above all, highly interactive!
     accceu:
       title: ACCCEU23
       slogan: Outside. Camping. Coaching - Learn all about the Agile Camper Coach Camp now and secure your ticket

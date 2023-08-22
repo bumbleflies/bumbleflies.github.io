@@ -28,7 +28,7 @@ class TestOnEveryPage:
                                               # Events
                                               ('Overview', 'https://events.bumbleflies.de/'),
                                               ('open:bumble:space', '/en/open-bumble-space'),
-                                              ('open:chat', 'https://openchat.bumbleflies.de/'),
+                                              ('open:chat', '/en/openchat'),
                                               # Open Space
                                               ('Principles', '/en/open-space-principles'),
                                               ('Checklist', '/en/open-space-checklist'),

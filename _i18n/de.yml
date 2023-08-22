@@ -48,6 +48,45 @@ pages:
             Diese Begeisterung treibt uns Tag für Tag weiter an - mit der Überzeugung, dass digitale Innovationen entscheidend sind für eine nachhaltige Entwicklung.
     openchat:
       title: open:chat
+      slogan: Entdecke die Zukunft des agilen Coachings in einer Welt, die durch innovative Technologien wie ChatGPT geprägt ist.
+      header:
+        title: Das nächste Kapitel der Agilität
+        subtitle: Wie smarte Chatsysteme Coaching und Transformation revolutionieren.
+        button: Ticket buchen
+      about:
+        title: Warum sollte ich teilnehmen?
+        body: |
+          Entdecke die Zukunft des agilen Coachings in einer Welt, die durch innovative Technologien wie ChatGPT geprägt ist.
+          Diese einzigartige Unkonferenz führt dich in die Möglichkeiten und Herausforderungen ein, die sich durch die Integration von smarten Chatsystemen in Coaching- und Organisationsentwicklungsprozesse ergeben. Tauche ein in interaktive Open Space Sessions, in denen du neue Fähigkeiten erlernen, konkrete Produkte entwickeln und gemeinsam Strategien für den Umgang mit dieser bahnbrechenden Technologie erarbeiten kannst. Schließ dich Expert:innen und Gleichgesinnten aus den Bereichen Agilität, Coaching und Organisationsentwicklung an und gestaltet gemeinsam die nächste Stufe der Agilität.
+
+          Melde dich jetzt an und sichere dir deinen Platz für diese wegweisende 2-tägige Veranstaltung.
+      next:
+        title: Wann und wo findet die Konferenz statt?
+        intro: |
+          Die Konferenz findet im Münchner-Werksviertel statt. Als Location-Sponsor konnten wir [Codecentric](https://www.codecentric.de/) gewinnen, die ihre wunderbaren Räumlichkeiten zur Verfügung stellen.
+      location:
+        name: Codecentric AG
+        url: https://www.codecentric.de/
+        header: Wer ist eigentlich codecentric?
+        body: |
+          codecentric steht für exzellente Menschen und exzellente Software, die unsere Kunden im deutschsprachigen Raum dazu befähigen, schnell hochwertige Software-Lösungen zu entwickeln.
+      cant:
+        title: Begeistert?
+        body: Dann buche dir direkt dein Ticket in unserem [Ticketshop](https://events.bumbleflies.de/openchat/) oder direkt unten auf der Seite.
+      schedule:
+        title: Was wird mich auf der Konferenz erwarten?
+        body: |
+          Wenn du zur Konferenz kommst, erwartet dich eine dynamische und interaktive Erfahrung, die sich rund um das Thema ChatGPT und agiles Coaching dreht. 
+          
+          Der **erste Tag beginnt um 9:30 Uhr mit der Ankunft und Registrierung**, wo du die Gelegenheit hast, dich mit anderen Teilnehmern auszutauschen und dich auf die bevorstehenden Sessions vorzubereiten.
+          
+          Um 10:00 Uhr starten wir mit der Marktplatz Eröffnung. Hier wird das Open Space Konzept vorgestellt und du hast die Möglichkeit, eigene Themen vorzuschlagen oder dich für bereits geplante Sessions zu entscheiden. Im Laufe des Tages gibt es mehrere Session-Runden, in denen du tief in verschiedene Themen eintauchen, Fragen stellen und gemeinsam mit anderen Lösungen erarbeiten kannst. Zwischen den Sessions sorgen wir natürlich für Verpflegung und Getränke, sodass du dich stärken und weiterhin produktiv am Geschehen teilnehmen kannst.
+          
+          Der erste Tag endet mit den Evening News um 17:30 Uhr, in denen die Highlights und Erkenntnisse des Tages zusammengefasst werden und ein Ausblick auf den nächsten Tag gegeben wird. Um 18 Uhr starten wir dann in das Abendprogramm.
+          
+          Am **zweiten Tag** geht es ähnlich weiter: Nach der Ankunft und einem kurzen Tagesstart um 9:30 Uhr folgt die Marktplatz Eröffnung für den zweiten Tag. Auch hier gibt es wieder mehrere Session-Runden, in denen du dich aktiv einbringen und von den Erfahrungen und Kenntnissen anderer profitieren kannst. Der zweite Tag klingt um **17 Uhr mit einer Abschlussdiskussion und Feedbackrunde** aus, in der wir gemeinsam reflektieren, was wir gelernt haben und wie wir das Gelernte in die Praxis umsetzen können.
+          
+          Insgesamt erwartet dich eine Konferenz, die von aktiver Teilnahme, gemeinsamem Lernen und dem Austausch von Erfahrungen geprägt ist. Es wird spannend, inspirierend und vor allem sehr interaktiv!
     accceu:
       title: ACCCEU23
       slogan: Draußen. Campen. Coachen - Erfahre jetzt alles über das Agile Camper Coach Camp und sicher dir dein Ticket

@@ -10,7 +10,7 @@ nav:
       - title: pages.events.obs.title
         url: "obs"
       - title: pages.events.openchat.title
-        url: "https://openchat.bumbleflies.de/"
+        url: "openchat"
       - title: pages.events.accceu.title
         url: "accceu23"
       - title: pages.stayintheloop.title
