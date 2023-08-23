@@ -263,7 +263,6 @@ DEPENDENCIES
   jekyll-include-cache
   jekyll-multiple-languages-plugin
   jekyll-redirect-from
-  jekyll-sitemap
   webrick
 
 BUNDLED WITH
