@@ -20,12 +20,6 @@ def all_pages(path_to_site):
         return load_locs(sitemap)
 
 
-@pytest.fixture(scope='session')
-def all_en_pages(path_to_site):
-    with open(path.join(path_to_site, 'en', 'sitemap.xml')) as sitemap:
-        return load_locs(sitemap)
-
-
 @pytest.mark.parametrize('stylesheet',
                          ['bootstrap.min.css', 'all.min.css', 'bumble.css', 'custom.css', 'font-faces.css',
                           'flag-icons.min.css'])
@@ -35,11 +29,5 @@ class TestWithSitemap:
         for page in all_pages:
             print(page)
             print(page.startswith('/assets'))
-            stylesheets = query_site(bumbleserve, page).find_all(rel='stylesheet')
-            assert_stylesheet_present(stylesheet, stylesheets)
-
-    def test_stylesheets_for_en_page_present(self, bumbleserve, all_en_pages, stylesheet):
-        for page in all_en_pages:
-            print(page)
             stylesheets = query_site(bumbleserve, page).find_all(rel='stylesheet')
             assert_stylesheet_present(stylesheet, stylesheets)
