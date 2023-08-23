@@ -36,11 +36,6 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
-      - name: Archive Site
-        uses: actions/upload-artifact@v3
-        with:
-          name: site
-          path: _site
       - name: 🐍 setup python for test
         uses: actions/setup-python@v4
         with:
@@ -65,6 +60,7 @@ jobs:
           BRANCH: stable
           FOLDER: _site
           # https://github.com/ad-m/github-push-action/issues/96
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
