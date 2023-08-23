@@ -1,11 +1,11 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: build-test-stage
+name: build-test-live
 
 on:
   # Runs on pushes targeting the default branch
   push:
     branches:
-      - "*"
+      - "master"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,7 +18,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "branch"
+  group: "live"
   cancel-in-progress: true
 
 jobs:
@@ -58,16 +58,27 @@ jobs:
           paths: _tests
       - name: ⛅ upload artifact
         uses: actions/upload-pages-artifact@v1
+      - name: Push to build branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: stable
+          FOLDER: _site
+          # https://github.com/ad-m/github-push-action/issues/96
+          MESSAGE: "Build: ({sha}) {msg}" # The commit message
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   # Deployment job
-  deploy_github:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
+  deploy_live:
     runs-on: ubuntu-latest
     needs: build
+    environment:
+      name: deployment-site
+      url: https://bumbleflies.de
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Invoke deployment hook
+        uses: distributhor/workflow-webhook@v2
+        env:
+          webhook_url: ${{ secrets.WEBSITE_HOOK_URL }}
+          webhook_secret: ${{ secrets.WEBSITE_HOOK_SECRET }}
