@@ -63,9 +63,9 @@ pages:
       next:
         title: When and where is the conference taking place?
         intro: |
-          The conference will be held in Munich's Werksviertel. We have secured [Codecentric](https://www.codecentric.de/) as our location sponsor, who will provide their wonderful premises.
+          The conference will be held in Munich's Werksviertel. We have secured [codecentric](https://www.codecentric.de/) as our location sponsor, who will provide their wonderful premises.
       location:
-        name: Codecentric AG
+        name: codecentric AG
         url: https://www.codecentric.de/en
         header: Who is codecentric?
         body: |

@@ -63,9 +63,9 @@ pages:
       next:
         title: Wann und wo findet die Konferenz statt?
         intro: |
-          Die Konferenz findet im Münchner-Werksviertel statt. Als Location-Sponsor konnten wir [Codecentric](https://www.codecentric.de/) gewinnen, die ihre wunderbaren Räumlichkeiten zur Verfügung stellen.
+          Die Konferenz findet im Münchner-Werksviertel statt. Als Location-Sponsor konnten wir [codecentric](https://www.codecentric.de/) gewinnen, die ihre wunderbaren Räumlichkeiten zur Verfügung stellen.
       location:
-        name: Codecentric AG
+        name: codecentric AG
         url: https://www.codecentric.de/
         header: Wer ist eigentlich codecentric?
         body: |
