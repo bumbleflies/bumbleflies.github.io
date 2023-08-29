@@ -256,6 +256,10 @@ pages:
           Dieser zweitägige, von einem Kursleiter geleitete und auf Aktivitäten basierende Kurs ist auf ein tiefes Verständnis der Fluid Scaling Technology (FaST) ausgerichtet. Es wird das Was, Warum und Wie von FaST behandelt, einschließlich der Frage, wie man anfängt und welche Fallstricke man vermeiden sollte.
 
           Der Stil dieses Kurses folgt einem Plan, aber nicht in einer stark kontrollierten oder strukturierten Weise. Stattdessen werden wir es den Interessen und Bedürfnissen der Gruppe überlassen, den Inhalt und das Tempo zu bestimmen - und wir lassen Raum für neue Entwicklungen.
+      book:
+        problem: Hast du Probleme bei der Anmeldung, melde dich unter [trainings@bumbleflies.de](mailto:trainings@bumbleflies.de)
+        widget: https://pretix.eu/widget/v1.de.js
+
       contents:
         title: Kursinhalte
         body: |

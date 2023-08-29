@@ -7,7 +7,13 @@ includes:
       body: pages.learning.fast.about.body
       markdownify: true
       section: overview
+  - path: pretix.html
+    options:
+      section: book
       css_class: bg-light
+      pretix:
+        url: https://trainings.bumbleflies.de/fast/
+        problems: pages.learning.fast.book.problem
   - path: about.html
     options:
       title: pages.learning.fast.contents.title
@@ -26,33 +32,9 @@ header:
   button: pages.learning.fast.header.button
   buttonlink: "#book"
 
-gallery:
-  height: 283
-  title: pages.openspace.fast_agile.gallery.title
-  section: download
-  list:
-    - desc: pages.openspace.fast_agile.gallery.user_guide.de.desc
-      image:
-        url: pages.openspace.fast_agile.gallery.user_guide.de.image.small
-        copyright: "[Cron Technologies LLC](https://www.fastagile.io/), bumbleflies UG"
-        hover:
-          title: pages.openspace.fast_agile.gallery.user_guide.de.title
-          big_download: /assets/img/fast_agile/FASTGuide2.12 - GERMAN.pdf
-    - desc: pages.openspace.fast_agile.gallery.value_cycle.desc
-      image:
-        url: pages.openspace.fast_agile.gallery.value_cycle.image.small
-        hover:
-          title: pages.openspace.fast_agile.gallery.value_cycle.title
-          big: pages.openspace.fast_agile.gallery.value_cycle.image.big
-    - desc: pages.openspace.fast_agile.gallery.user_guide.en.desc
-      image:
-        url: pages.openspace.fast_agile.gallery.user_guide.en.image.small
-        copyright: "[Cron Technologies LLC](https://www.fastagile.io/)"
-        hover:
-          title: pages.openspace.fast_agile.gallery.user_guide.en.title
-          big_download: /assets/img/fast_agile/FASTGuide2.12.pdf
-
-foot:
-  scripts:
-    - url: /assets/js/lazy-load.js
+head:
+  styles:
+    - url: https://trainings.bumbleflies.de/fast/widget/v1.css
+foot:  
+  translatable: pages.learning.fast.book.widget
 ---
