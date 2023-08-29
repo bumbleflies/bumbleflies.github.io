@@ -3,30 +3,28 @@ layout: compose
 includes:
   - path: about.html
     options:
-      title: pages.openspace.fast_agile.about.title
-      body: pages.openspace.fast_agile.about.body
+      title: pages.learning.fast.about.title
+      body: pages.learning.fast.about.body
       markdownify: true
-      section: info
+      section: overview
       css_class: bg-light
-  - path: gallery.html
   - path: about.html
     options:
-      title: pages.openspace.fast_agile.explain.title
-      body: pages.openspace.fast_agile.explain.body
+      title: pages.learning.fast.contents.title
+      body: pages.learning.fast.contents.body
       markdownify: true
-      section: info
-      css_class: bg-light
+      section: content
 
-namespace: fast-agile
-permalink: /fast-agile
-nav_highlight: pages.openspace.title
-title: pages.openspace.fast_agile.title
+namespace: fast-training
+permalink: /fast-training
+nav_highlight: pages.learning.title
+title: pages.learning.fast.title
 
 header:
-  title: pages.openspace.fast_agile.header.title
-  text: pages.openspace.fast_agile.header.text
-  button: pages.openspace.fast_agile.header.button
-  buttonlink: "#download"
+  title: pages.learning.fast.header.title
+  text: pages.learning.fast.header.text
+  button: pages.learning.fast.header.button
+  buttonlink: "#book"
 
 gallery:
   height: 283

@@ -22,7 +22,12 @@ nav:
       - title: pages.openspace.checklist.title
         url: "os-check"
       - title: pages.openspace.fast_agile.title
-        url: "fast_agile"
+        url: "fast-agile"
+  - title: pages.learning.title
+    url: "pages.about"
+    submenu:
+      - title: pages.learning.fast.title
+        url: "fast-training"
   - title: pages.about.title
     url: "about"
 

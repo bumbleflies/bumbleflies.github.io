@@ -242,6 +242,51 @@ pages:
             desc: FaST Guide (Englisch)
             image:
               small: /assets/img/fast_agile/guide_logo_en.webp
+  learning:
+    title: Ausbildung
+    fast:
+      title: FaST-Training
+      header:
+        title: Ein zweitägiger Präsenzschulungskurs
+        text: FaST verstehen und implementieren
+        button: Kurs buchen
+      about:
+        title: Kursübersicht
+        body: |
+          Dieser zweitägige, von einem Kursleiter geleitete und auf Aktivitäten basierende Kurs ist auf ein tiefes Verständnis der Fluid Scaling Technology (FaST) ausgerichtet. Es wird das Was, Warum und Wie von FaST behandelt, einschließlich der Frage, wie man anfängt und welche Fallstricke man vermeiden sollte.
+
+          Der Stil dieses Kurses folgt einem Plan, aber nicht in einer stark kontrollierten oder strukturierten Weise. Stattdessen werden wir es den Interessen und Bedürfnissen der Gruppe überlassen, den Inhalt und das Tempo zu bestimmen - und wir lassen Raum für neue Entwicklungen.
+      contents:
+        title: Kursinhalte
+        body: |
+          ## FaST im Kern
+          Was ist FaST?  
+          Rollen  
+          Besprechungen  
+          Flusszyklus  
+          Komplexität  
+          Dynamisches Team-Neubilden und wie es sich auswirkt  
+          ## Dinge, die helfen, dass FaST funktioniert (Nicht-Kernkomponenten)
+          Modernes Produktmanagement  
+          Visualisierung von Arbeit (und Komplexität)  
+          Vorhersage-Mechanismen  
+          Reflektieren und Verbessern in einer dynamischen Umgebung  
+          Selbstmanagement und neue Arbeitsweisen (Teal)  
+          Kleiner Maßstab, großer Maßstab, Portfolioskala FaST  
+          Mastery  
+          ## Mit FaST beginnen
+          Aufbau eines Kollektivs  
+          Experimente und Methoden zur Einführung und zum Start eines FaST-Experiments in Ihrer Organisation  
+          Fallstricke, auf die Sie achten sollten und die Ihr Experiment zerstören können  
+          FaST als Ersatz für Scrum  
+          FaST und SAFe?  
+          ## Warum FaST funktioniert, so anders ist als alles andere und warum es heute gebraucht wird
+          Netzwerk-Organisationstheorie  
+          Dynamische Teamarbeit  
+          Weisheit der Menge, kollektive Intelligenz  
+          Die überraschende Wahrheit darüber, was uns motiviert  
+          Anpassungsfähigkeit von Unternehmen  
+
   privacy:
     title: Datenschutzerklärung
   imprint:
