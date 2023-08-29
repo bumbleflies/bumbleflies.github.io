@@ -260,6 +260,9 @@ pages:
       book:
         problem: Hast du Probleme bei der Anmeldung, melde dich unter [trainings@bumbleflies.de](mailto:trainings@bumbleflies.de)
         widget: https://pretix.eu/widget/v1.de.js
+      location:
+        name: München
+        url: '#'
 
       contents:
         title: Kursinhalte

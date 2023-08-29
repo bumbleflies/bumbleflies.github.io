@@ -264,6 +264,9 @@ pages:
       book:
         problem: If you have problems registering for an event, contact us at [trainings@bumbleflies.de](mailto:trainings@bumbleflies.de)
         widget: https://pretix.eu/widget/v1.en.js
+      location:
+        name: Munich
+        url: '#'
 
       contents:
         title: What Will be Covered
