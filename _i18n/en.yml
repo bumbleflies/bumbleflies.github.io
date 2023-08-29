@@ -246,6 +246,58 @@ pages:
             desc: FaST Guide (English)
             image:
               small: /assets/img/fast_agile/guide_logo_en.webp
+  learning:
+    title: Learning
+    fast:
+      title: FaST-Training
+      header:
+        title: A Two-day In-person Class
+        text: Understanding and Implementing FAST Agile
+        button: Book seat
+      about:
+        title: Course Overview
+        body: |
+          This two-day, in-person, instructor-led, activity-based class is geared to deeply understanding Fluid Scaling Technology (FAST). It will cover FAST's what, why, and how, including how to start and common pitfalls to avoid.
+
+          The style of this class will follow a plan but not in a highly controlled or structured way. Instead, we will allow for the group's interests and needs to determine the content and pace - and allow for emergence.
+      book:
+        problem: If you have problems registering for an event, contact us at [trainings@bumbleflies.de](mailto:trainings@bumbleflies.de)
+        widget: https://pretix.eu/widget/v1.en.js
+
+      contents:
+        title: What Will be Covered
+        body: |
+          ## FaST at its Core
+          What is FAST  
+          Roles  
+          Meeting  
+          Flow Cycle  
+          Complexity  
+          Dynamic Reteaming and how it plays out
+
+          ## Things to Help Make FAST Work (Non-core Components)
+          Modern Product Management  
+          Visualizing Work (and Complexity)  
+          Forecasting Mechanisms  
+          Reflect and Improve in a dynamic reteaming environment  
+          Self-management and New Ways of Working (Teal)  
+          Small scale, Large Scale, Portfolio Scale FAST  
+          Mastery  
+
+          ## Where to Start
+          Small or Large Scale?  
+          Building a Collective  
+          Experiments and Methods to introduce and start a FAST experiment in your org  
+          Pitfalls to look out for & what can kill your experiment  
+          FAST as a Replacement for Scrum  
+          FAST and SAFe?  
+
+          ## Why FAST Works, is So Different to Everything Else, And Why It is Needed Today
+          Network Organizational Theory  
+          Dynamic Teaming  
+          Wisdom of crowds, Collective Intelligence  
+          The Surprising Truth About What Motivates Us  
+          Business Adaptability
   privacy:
     title: Privacy
   imprint:
