@@ -12,7 +12,7 @@ includes:
       section: book
       css_class: bg-light
       pretix: &offer
-        url: https://trainings.bumbleflies.de/fast/
+        url: https://trainings.bumbleflies.de/fast-2/
         problems: pages.learning.fast.book.problem
   - path: about.html
     options:
@@ -35,7 +35,7 @@ header:
 
 head:
   styles:
-    - url: https://trainings.bumbleflies.de/fast/widget/v1.css
+    - url: https://trainings.bumbleflies.de/fast-2/widget/v1.css
 foot:  
   translatable: pages.learning.fast.book.widget
 
