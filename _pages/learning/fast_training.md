@@ -25,6 +25,7 @@ namespace: fast-training
 permalink: /fast-training
 nav_highlight: pages.learning.title
 title: pages.learning.fast.title
+slogan: pages.learning.fast.slogan
 
 header:
   title: pages.learning.fast.header.title
