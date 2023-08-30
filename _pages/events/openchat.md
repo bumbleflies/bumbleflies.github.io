@@ -72,7 +72,7 @@ event:
     header: pages.events.openchat.location.header
     body: pages.events.openchat.location.body
     address:
-      street: "August-Everdings-Str. 20"
+      street: "August-Everding-Str. 20"
       locality: München
       code: 81671
       country: DE
