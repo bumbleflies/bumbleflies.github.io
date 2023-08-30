@@ -1,0 +1,6 @@
+---
+layout: none
+languages: ["de"]
+---
+User-agent: *
+Sitemap: {{ site.url }}/sitemap.xml
