@@ -1,0 +1,5 @@
+pytest
+more_itertools
+requests
+bs4
+lxml
