@@ -37,15 +37,14 @@ pages:
       next:
         title: Alle Infos zum nächsten Event
         intro: |
-          Es ist endlich wieder so weit: wir veranstalten wieder einen open:bumble:space!
-          Diesmal zusammen mit [Michael](https://de.linkedin.com/in/michael-kugler-604b503a){:target="_blank"} und [Daniel](https://de.linkedin.com/in/daniel-leberle-5971a889){:target="_blank"} von [appdafür](https://www.appdafuer.com/){:target="_blank"}.
+          Es ist wieder so weit: wir veranstalten wieder einen open:bumble:space!
+          Diesmal zusammen mit [Anita](https://www.linkedin.com/in/anita-l-6ba7b571){:target="_blank"} von [Unite](https://www.unite.eu/){:target="_blank"}.
         location:
-          name: Appdafuer GmbH
-          url: https://www.appdafuer.com/
-          header: Wer ist eigentlich appdafür?
+          name: Unite
+          url: https://www.unite.eu/
+          header: Aninat, was macht ihr bei Unite?
           body: |
-            Appdafür ist aus Begeisterung entstanden - für mobile Technologien. Die Idee: Zwei Freunde, Michael und Daniel, die zusammen coden möchten, bauen ein Unternehmen auf, das Werte schafft und die Welt ein kleines bisschen lebenswerter macht.
-            Diese Begeisterung treibt uns Tag für Tag weiter an - mit der Überzeugung, dass digitale Innovationen entscheidend sind für eine nachhaltige Entwicklung.
+            Wir bei Unite ver­net­zen die Wirt­schaft für nach­hal­ti­ges Business. Un­se­re weg­wei­sen­de B2B-Platt­form ver­eint Ein­käu­fer und An­bie­ter zu ge­gen­sei­ti­gem Nut­zen, und un­se­re di­gi­ta­len Lö­sun­gen ma­chen Be­schaf­fung, Ein­kauf und Ver­trieb, Ab­wick­lung und Zu­sam­men­ar­beit ein­fach und ef­fi­zi­ent. Das star­ke Fun­da­ment von Unite ruht auf der so­li­den Er­fah­rung von Mercateo mit dem B2B-Markt­platz und auf sei­ner Ge­schich­te, die im Jahr 2000 be­gann. Mit un­se­rer Er­fah­rung und Ex­per­ti­se ge­stal­ten wir den B2B-Han­del neu und stär­ken die re­gi­o­na­le Wirt­schaft. Unser Hauptsitz befindet sich in Leipzig. Wir sind in 15 europäischen Ländern aktiv. Mehr als 700 Menschen arbeiten für Unite - an den Bürostandorten und remote. Im Jahr 2022 erzielte Unite einen Umsatz von 447 Millionen Euro.
     openchat:
       title: open:chat
       slogan: Entdecke die Zukunft des agilen Coachings in einer Welt, die durch innovative Technologien wie ChatGPT geprägt ist.

@@ -38,15 +38,14 @@ pages:
       next:
         title: Everything about the event
         intro: |
-          It's finally that time again: we're hosting another open:bumble:space!
-          This time together with [Michael](https://de.linkedin.com/in/michael-kugler-604b503a){:target="_blank"} und [Daniel](https://de.linkedin.com/in/daniel-leberle-5971a889){:target="_blank"} from [appdafür](https://www.appdafuer.com/){:target="_blank"}.
+          It's that time again: we're hosting another open:bumble:space!
+          This time together with [Anita](https://www.linkedin.com/in/anita-l-6ba7b571){:target="_blank"} von [Unite](https://www.unite.eu/){:target="_blank"}.
         location:
-          name: Appdafuer GmbH
-          url: https://www.appdafuer.com/
-          header: Who is appdafuer?
+          name: Unite
+          url: https://www.unite.eu/
+          header: Anita, what does unite do?
           body: |
-            Appdafür was born out of enthusiasm - for mobile technologies. The idea: Two friends, Michael and Daniel, wanting to code together, build a company that creates value and makes the world a slightly better place to live.
-            This enthusiasm drives us every day - with the belief that digital innovations are crucial for sustainable development.
+            At Unite, we connect the economy for sustainable business. Our pioneering B2B platform unites buyers and suppliers for mutual benefit, and our digital solutions make procurement, purchasing and distribution, fulfillment and collaboration simple and efficient. Unite's strong foundation rests on Mercateo's solid experience with the B2B marketplace and its history that began in 2000. With our experience and expertise, we are reshaping B2B trade and strengthening the regional economy. Our headquarters are in Leipzig. We are active in 15 European countries. More than 700 people work for Unite - at the office locations and remotely. In 2022, Unite achieved sales of 447 million euros.
     openchat:
       title: open:chat
       slogan: Discover the future of agile coaching in a world shaped by innovative technologies like ChatGPT.
