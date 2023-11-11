@@ -5,8 +5,12 @@
   - Einladungstext erstellen
   - Einladungen versenden (Mail, intern, social media)
   - Räume festlegen
+
 ## Host
   - Für leibliches Wohl sorgen: Trinken & (veganes) Essen
+  - ggf. Toiletten ausschildern
+  - ggf. an Eingangstür und im Treppenhaus Orientierungsschilder anbringen
+
 ## Facilitator
 - Räume gestalten
   - Dauer der Zeitslots festlegen
@@ -18,10 +22,12 @@
   
 
 # Durchführung
+
 ## Facilitator & Host
 - TeilgeberInnen in Empfang nehmen
   - TeilgeberInnen beim Ankommen begrüßen und Orientierung geben
   - Small-Talk betreiben
+
 ## Facilitator
 - Open Space eröffnen
   - Alle zusammenrufen
@@ -42,7 +48,9 @@
   - TeilgeberInnen verabschieden
 
 # Nachbereitung
+
 ## Facilitator & Host
 - Räume und Marktplatz aufräumen
+
 ## Facilitator
 - Sessiondokumentation verteilen

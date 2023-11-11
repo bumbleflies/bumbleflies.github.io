@@ -13,3 +13,4 @@ venv/
 __pycache__
 /_purge/node_modules/*
 /_purge/package*.json
+.DS_Store
