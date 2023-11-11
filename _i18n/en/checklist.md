@@ -1,41 +1,58 @@
 # Preparation
-- Publicise event
-  - Determine duration
-  - Set date
-  - Create invitation text
-  - Send out invitations
-- Design rooms
-  - Set duration of time slots
-  - Set rooms
-  - Assign room names
-  - Visualise marketplace with rooms and time slots
-  - Provide material for marketplace creation
-  - Equip rooms with material
-  - Visualise Open Space principles, the law and appearances
-  - Provide food and drink
+## Facilitator & Host
+   - Set total OS duration
+   - Set a date
+   - Create invitation text
+   - Send invitations (email, internal, social media)
+   - Define rooms
 
-# Implementation
-- Receive participants
-  - Greet participants as they arrive and give them orientation
-  - Make small talk
-- Open Space
-  - Call everyone together
-  - Conduct check-in
-  - Explain the theme of the Open Space
-  - Introduce Open Space principles, law and phenomena and explain marketplace
-  - Ask for session documentation
+##Host
+   - Take care of your physical well-being: drink & (vegan) food
+   - If necessary, signpost toilets
+   - If necessary, attach orientation signs to the entrance door and in the stairwell
+   - Provide flipcharts or whiteboards in rooms for participants
+   - If necessary, equip rooms with pens and Post-Its
+
+## Facilitator
+- Design rooms
+   - Set the duration of the time slots
+   - Assign room names
+   - Visualize the marketplace with rooms and time slots
+   - Provide material for marketplace creation
+   - Stock rooms with materials
+   - Visualize open space principles, the law and the phenomena
+  
+
+# Execution
+
+## Facilitator & Host
+- Welcome participants
+   - Greet participants when they arrive and give them orientation
+   - Engage in small talk
+
+## Facilitator
+- Open open space
+   - Gather
+   - Carry out check-in
+   - Explain the theme of the Open Space
+   - Introduce open space principles, the law and phenomena and explain the marketplace
+   - Ask for session documentation
 - Create marketplace
-  - Give time to think about sessions
-  - Introduce sessions in turn and fill marketplace
-  - Rearrange sessions if necessary
+   - Allow time for sessions to be considered
+   - Introduce sessions one after the other and fill the marketplace
+   - Rearrange sessions if necessary
 - Start sessions
 - Close Open Space
-  - Make session documentation visible
-  - Allow time to view session documentation
-  - Agree if, and if so which actions are started from the sessions
-  - Carry out check-out
-  - Say goodbye to participants
+   - Make session documentation visible
+   - Allow time to view session documentation
+   - Agree whether, and if so, which actions will be started from the sessions
+   - Carry out check-out
+   - Say goodbye to the donors
 
-# Follow-up
-- Clean up rooms and market place
+# Postprocessing
+
+## Facilitator & Host
+- Clean up rooms and marketplace
+
+## Facilitator
 - Distribute session documentation
