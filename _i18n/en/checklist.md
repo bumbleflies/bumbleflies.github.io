@@ -6,7 +6,7 @@
    - Send invitations (email, internal, social media)
    - Define rooms
 
-##Host
+## Host
    - Take care of your physical well-being: drink & (vegan) food
    - If necessary, signpost toilets
    - If necessary, attach orientation signs to the entrance door and in the stairwell
