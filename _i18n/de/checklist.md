@@ -1,23 +1,28 @@
 # Vorbereitung
-- Veranstaltung bekannt machen
-  - Dauer festlegen
+## Facilitator & Host
+  - Gesamtdauer des OS festlegen
   - Termin festlegen
   - Einladungstext erstellen
-  - Einladungen versenden
+  - Einladungen versenden (Mail, intern, social media)
+  - Räume festlegen
+## Host
+  - Für leibliches Wohl sorgen: Trinken & (veganes) Essen
+## Facilitator
 - Räume gestalten
   - Dauer der Zeitslots festlegen
-  - Räume festlegen
   - Raumnamen vergeben
   - Marktplatz mit Räumen und Zeitslot visualisieren
   - Material für Markplatzerstellung bereitstellen
   - Räume mit Material bestücken
   - Open Space Prinzipien, das Gesetz und die Erscheinungen visualisieren
-  - Für leibliches Wohl sorgen
+  
 
 # Durchführung
+## Facilitator & Host
 - TeilgeberInnen in Empfang nehmen
   - TeilgeberInnen beim Ankommen begrüßen und Orientierung geben
   - Small-Talk betreiben
+## Facilitator
 - Open Space eröffnen
   - Alle zusammenrufen
   - Check-In durchführen
@@ -37,5 +42,7 @@
   - TeilgeberInnen verabschieden
 
 # Nachbereitung
+## Facilitator & Host
 - Räume und Marktplatz aufräumen
+## Facilitator
 - Sessiondokumentation verteilen
