@@ -48,8 +48,14 @@ event:
   location:
     name: pages.learning.ai.location.name
     url: pages.learning.ai.location.url
-  offer: 
-    <<: *offer
-    from: 2024-01-15T00:00+01:00
-    price: 70
+  offers:
+    - url: https://trainings.bumbleflies.de/master-gpt/4003783/
+      from: 2024-01-15T00:00+01:00
+      price: 70
+    - url: https://trainings.bumbleflies.de/master-gpt/4003815/
+      from: 2024-01-15T00:00+01:00
+      price: 200
+    - url: https://trainings.bumbleflies.de/master-gpt/4003815/
+      from: 2024-01-15T00:00+01:00
+      price: 200
 ---

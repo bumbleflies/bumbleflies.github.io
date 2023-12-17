@@ -82,13 +82,32 @@
        ],
       "description": "{% t page.event.description %}",
       "offers": {
+        "priceCurrency": "EUR",
+    {% if page.event.offer %}
         "@type": "Offer",
         "url": "{{ page.event.offer.url }}",
         "price": "{{ page.event.offer.price }}",
-        "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
         "validFrom": "{{ page.event.offer.from | date: '%Y-%m-%dT%H:%M' }}",
         "validThrough": "{{ page.event.date.end | date: '%Y-%m-%dT%H:%M' }}"
+    {% else if page.event.offers.size > 1 %}
+        "@type": "AggregateOffer",
+        "highPrice": "{{ page.event.offers | sort_natural: price | first | map: 'price'}}"
+        "lowPrice": "{{ page.event.offers  | sort_natural: price | last | map: 'price'}}"
+        "offerCount": " {{ page.event.offers.size }}",
+        "offers" : [
+          {% for offer in page.event.offers %}
+          {
+            "@type": "Offer",
+            "url": " {{ offer.url }}",
+            "price": "{{ offer.price }}",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "{{ offer.from | date: '%Y-%m-%dT%H:%M' }}",
+            "validThrough": "{{ page.event.date.end | date: '%Y-%m-%dT%H:%M' }}"
+          },
+          {% endfor %}
+        ]
+    {% endif %}
       },
       "organizer": {
         "@type": "Organization",
