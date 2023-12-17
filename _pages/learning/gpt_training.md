@@ -57,5 +57,5 @@ event:
       price: 200
     - url: https://trainings.bumbleflies.de/master-gpt/4003815/
       from: 2024-01-15T00:00+01:00
-      price: 200
+      price: 500
 ---

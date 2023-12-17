@@ -52,6 +52,8 @@
     {% endfor %}
 
     {% if page.event and page.event.date and page.event.location %}
+    {% capture event_name %}{% t page.event.name %}{% endcapture %}
+    {% capture event_description %}{% t page.event.description %}{% endcapture %}
     <!-- Event infos https://developers.google.com/search/docs/appearance/structured-data/event#standard-event -->
     <!--
     {{ page.published_at }}
@@ -60,7 +62,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Event",
-      "name": "{% t page.event.name %}",
+      "name": "{{ event_name | escape }}",
       "startDate": "{{ page.event.date.start }}",
       "endDate": "{{ page.event.date.end }}",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -80,7 +82,7 @@
       "image": [
           "{{ page.event.images | join: '", "' }}"
        ],
-      "description": "{% t page.event.description %}",
+      "description": "{{ event_description | escape}}",
       "offers": {
         "priceCurrency": "EUR",
     {% if page.event.offer %}
