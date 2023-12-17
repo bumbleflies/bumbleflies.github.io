@@ -262,7 +262,6 @@ pages:
       location:
         name: München
         url: '#'
-
       contents:
         title: Kursinhalte
         body: |
@@ -292,7 +291,102 @@ pages:
           Dynamische Teamarbeit  
           Weisheit der Menge, kollektive Intelligenz  
           Die überraschende Wahrheit darüber, was uns motiviert  
-          Anpassungsfähigkeit von Unternehmen  
+          Anpassungsfähigkeit von Unternehmen
+    ai:
+      title: 'GPT-Training'
+      slogan: "ChatGPT Meistern: Dein Weg zum GPT-Experten"
+      header:
+        title: Dein Weg zum GPT-Experten
+        text: ChatGPT Meistern
+        button: Kurs buchen
+      about:
+        title: Willkommen zur Workshop-Reihe "ChatGPT Meistern"!
+        body: |
+          In einer Zeit, in der künstliche Intelligenz (KI) und Chatbots immer mehr an Bedeutung gewinnen, bieten wir Dir eine maßgeschneiderte Workshop-Reihe, die Dich in die Welt der smarten Chat-Systeme einführt. Egal, ob Du ein kreativer Kopf, ein Produktexperte oder ein erfahrener Moderator bist, unsere Kurse sind speziell darauf ausgelegt, Dir das nötige Rüstzeug zu geben, um ChatGPT effektiv und kreativ zu nutzen.
+          
+          ## Basis-Kurs: "Einführung in ChatGPT"
+          Starte Deine Reise mit unserem Basis-Kurs, der ideal für spielerische und kreative Menschen ist. In diesem Kurs lernst Du, wie Du ChatGPT für die Erstellung von Comics und anderen kreativen Inhalten einsetzen kannst. Es ist der perfekte Einstieg, um die Grundlagen von ChatGPT spielerisch zu erlernen.
+          
+          ## Produkt-Kurs: "Erfolgreicher Produkt-Launch mit ChatGPT"
+          Dieser Kurs ist für alle Produkt-Manager und Marketing-Experten, die lernen möchten, wie ChatGPT in der Produktentwicklung und -vermarktung eingesetzt werden kann. Von der Marktforschung bis zur Logo-Entwicklung – dieser Kurs deckt alle Aspekte ab, die für einen erfolgreichen Produkt-Launch wichtig sind.
+          
+          ## Moderatoren-Kurs: "Workshop-Konzeption und -Durchführung"
+          Für Moderatoren und Trainer, die ihre Fähigkeiten erweitern möchten, ist dieser Kurs genau das Richtige. Lerne, wie Du mit ChatGPT effektive und interaktive Workshops planen, durchführen und auswerten kannst.
+          
+          Mach Dich bereit, ChatGPT zu meistern!
+          Egal, ob Du Deine kreativen Fähigkeiten erweitern, Dein Produkt effektiver vermarkten oder Deine Moderationstechniken verbessern möchtest – diese Workshop-Reihe bietet Dir die Tools und Kenntnisse, die Du benötigst, um in der Welt der Chatbots und KI erfolgreich zu sein.
+          
+          **Kursprache ist bei allen Kursen Deutsch**
+      book:
+        problem: Hast du Probleme bei der Anmeldung, melde dich unter [trainings@bumbleflies.de](mailto:trainings@bumbleflies.de)
+        widget: https://pretix.eu/widget/v1.de.js
+      location:
+        name: Online
+        url: '#'
+      contents:
+        title: Kursinhalte
+        body: |
+          ## Basis-Kurs: Einführung in ChatGPT
+          **Dieser Workshop ist ideal, um spielerisch die Grundlagen von ChatGPT zu erlernen und Deine Kreativität zu entfalten.**
+          
+          Tauche ein in die Welt von ChatGPT und erlebe, was durch diese Technologie möglich ist.
+          
+          In nur 90 Minuten, perfekt für einen inspirierenden und kurzweiligen Einstieg.
+          
+          #### Erste Schritte mit ChatGPT
+          Lerne, wie ChatGPT funktioniert und was es kann.
+          #### Content-Erstellung leicht gemacht
+          Erstelle unterhaltsame und ansprechende Inhalte wie Comics oder Blogbeiträge.
+          #### Mehrsprachige Inhalte
+          Entdecke, wie Du mit ChatGPT Inhalte in verschiedenen Sprachen kreieren kannst.
+          #### Kreative Visualisierung
+          Erfahre, wie Du Deine Ideen visuell umsetzen kannst.
+          #### Hands-on Erfahrung
+          Setze Dein neu erlerntes Wissen direkt um und erstelle Deinen eigenen Comic.
+          
+          ## Produkt-Kurs: Erfolgreicher Produkt-Launch mit ChatGPT
+          **Dieser Workshop ist ideal, um die Fähigkeiten von ChatGPT in Tiefe zu erleben und für typische Anwendungsfälle in der Produktentwicklung auszuprobieren.**
+          
+          Erlebe, wie diese Technologie die Arbeitsweise verändert, mit der du Produkte erstellst und wie du am meisten davon profitierst.
+          
+          In 3 x 50 Minuten führen wir dich durch einen fiktiven Produkt-Entwicklungs-Prozess, durch den du spielerisch die Fähigkeiten im Detail erleben kannst.
+          
+          #### Erweiterte Content-Erstellung
+          Erzeuge beeindruckende Produktbeschreibungen und Blogbeiträge.
+          #### Marktforschung mit KI
+          Nutze ChatGPT, um wertvolle Marktdaten zu sammeln und zu analysieren.
+          #### Feedback-Strategien
+          Lerne, Kundenfeedback effektiv zu sammeln und zu nutzen.
+          #### Persona-Entwicklung
+          Erstelle präzise Käuferpersonas mit Hilfe von ChatGPT.
+          #### Logo-Design mit KI
+          Experimentiere mit KI-generierten Logo-Entwürfen.
+          ### Voraussetzungen
+          Basis-Kurs: Einführung in ChatGPT oder gleichwertiges
+          
+          Nach erfolgreicher Teilnahme erhältst du dein Abschluss-Zertifikat.
+          
+          ## Moderatoren-Kurs: Workshop-Konzeption und -Durchführung
+          **Dieser Workshop ist ideal für Dich, wenn Du lernen möchtest, wie man effektive und interaktive Workshops plant und durchführt. Entwickle Deine Fähigkeiten weiter und werde ein Meister der Moderation.**
+          
+          Erlebe, wie diese Technologie die Arbeitsweise verändert, mit der du Workshops oder Trainings erstellst und wie du am meisten davon profitierst.
+          
+          In 3 x 50 Minuten führen wir dich durch eine fiktive Workshop-Planung, durch den du spielerisch die Fähigkeiten von ChatGPT im Detail erleben kannst.
+          
+          #### Workshop-Planung
+          Lerne, wie Du eine spannende und informative Agenda gestaltest.
+          #### Logistische Organisation
+          Erfahre alles über die Planung von Anreise und Unterkunft.
+          #### Moderationstechniken
+          Verbessere Deine Fähigkeiten in der Leitung von Workshops.
+          #### Feedback-Management
+          Lerne, wie Du Feedback einholst und nutzt, um Dich stetig zu verbessern.
+          #### Einsatz von ChatGPT in der Moderation
+          Integriere ChatGPT in Deine Moderationsstrategie.
+          ### Voraussetzungen
+          Basis-Kurs: Einführung in ChatGPT oder gleichwertiges
+          
+          Nach erfolgreicher Teilnahme erhältst du dein Abschluss-Zertifikat.
   privacy:
     title: Datenschutzerklärung
   imprint:

@@ -28,6 +28,8 @@ nav:
     submenu:
       - title: pages.learning.fast.title
         url: "fast-training"
+      - title: pages.learning.ai.title
+        url: 'gpt-training'
   - title: pages.about.title
     url: "about"
 
