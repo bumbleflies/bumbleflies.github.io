@@ -82,7 +82,7 @@
       "image": [
           "{{ page.event.images | join: '", "' }}"
        ],
-      "description": "{{ event_description | escape}}",
+      "description": "{{ event_description | escape | strip_newlines}}",
       "offers": {
         "priceCurrency": "EUR",
     {% if page.event.offer %}
@@ -94,8 +94,8 @@
         "validThrough": "{{ page.event.date.end | date: '%Y-%m-%dT%H:%M' }}"
     {% else if page.event.offers.size > 1 %}
         "@type": "AggregateOffer",
-        "highPrice": "{{ page.event.offers | sort_natural: price | first | map: 'price'}}"
-        "lowPrice": "{{ page.event.offers  | sort_natural: price | last | map: 'price'}}"
+        "highPrice": "{{ page.event.offers | sort_natural: price | first | map: 'price'}}",
+        "lowPrice": "{{ page.event.offers  | sort_natural: price | last | map: 'price'}}",
         "offerCount": " {{ page.event.offers.size }}",
         "offers" : [
           {% for offer in page.event.offers %}
@@ -108,6 +108,7 @@
             "validThrough": "{{ page.event.date.end | date: '%Y-%m-%dT%H:%M' }}"
           },
           {% endfor %}
+          {}
         ]
     {% endif %}
       },
