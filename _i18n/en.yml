@@ -309,23 +309,26 @@ pages:
         text: Mastering ChatGPT
         button: Book Course
       about:
-        title: Welcome to the Workshop Series "Mastering ChatGPT"!
+        title: Welcome to the "Mastering ChatGPT" Workshop Series!
         body: |
-          In an era where artificial intelligence (AI) and chatbots are becoming increasingly important, we offer you a tailor-made workshop series that introduces you to the world of smart chat systems. Whether you're a creative mind, a product expert, or an experienced facilitator, our courses are specifically designed to equip you with the necessary tools to use ChatGPT effectively and creatively.
-    
+          In an era where artificial intelligence (AI) and chatbots are increasingly important, we offer you a tailored workshop series that introduces you to the world of smart chat systems. Whether you are a creative mind, a product expert, or an experienced moderator, our courses are specially designed to equip you with the tools to effectively and creatively use ChatGPT.
+          
           ## Basic Course: "Introduction to ChatGPT"
-          Start your journey with our Basic Course, ideal for playful and creative people. In this course, you'll learn how to use ChatGPT to create comics and other creative content. It's the perfect start to playfully learn the basics of ChatGPT.
-    
-          ## Product Course: "Successful Product Launch with ChatGPT"
-          This course is for all product managers and marketing experts who want to learn how ChatGPT can be used in product development and marketing. From market research to logo development – this course covers all aspects important for a successful product launch.
-    
-          ## Facilitation Course: "Workshop Conceptualization and Execution"
-          For facilitators and trainers looking to expand their skills, this course is just right. Learn how to plan, conduct, and evaluate effective and interactive workshops with ChatGPT.
-    
+          Start your journey with our Basic Course, specially designed for playful and creative people. In this introductory course, you will learn how to use the basic version of ChatGPT for creating text content like dialogues, stories, or creative writing exercises. It's the ideal way to explore the basics and versatility of ChatGPT in an entertaining manner.
+          
+          ## Plus Course: "Advanced Capabilities with ChatGPT Plus"
+          Dive deeper into the world of ChatGPT Plus and discover how you can create not only texts but also impressive visual content with this enhanced version. In the Plus Course, you will learn how to use ChatGPT Plus for developing visually appealing projects such as illustrated stories or creative image compositions. Experience how this advanced technology expands your creative possibilities.
+          
+          ## Product Course: "Successful Product Launch with ChatGPT Plus"
+          This course is for all product managers and marketing experts who want to learn how to use ChatGPT in product development and marketing. From market research to logo development – this course covers all aspects important for a successful product launch.
+          
+          ## Moderators Course: "Workshop Design and Execution with ChatGPT Plus"
+          For moderators and trainers who want to expand their skills, this course is just right. Learn how to plan, conduct, and evaluate effective and interactive workshops using ChatGPT.
+          
           Get ready to master ChatGPT!
-          Whether you want to expand your creative skills, market your product more effectively, or improve your facilitation techniques – this workshop series offers you the tools and knowledge you need to succeed in the world of chatbots and AI.
-    
-          **All courses are conducted in German**
+          Whether you want to expand your creative skills, market your product more effectively, or improve your moderation techniques – this workshop series provides you with the tools and knowledge you need to be successful in the world of chatbots and AI.
+          
+          **The course language for all courses is German**
       book:
         problem: If you have problems registering, contact us at [trainings@bumbleflies.de](mailto:trainings@bumbleflies.de)
         widget: https://pretix.eu/widget/v1.en.js
@@ -333,27 +336,45 @@ pages:
         name: Online
         url: '#'
       contents:
-        title: Course Content
+        title: Course Contents
         body: |
           ## Basic Course: Introduction to ChatGPT
           **This workshop is ideal for playfully learning the basics of ChatGPT and unleashing your creativity.**
-      
-          Dive into the world of ChatGPT and experience what is possible with this technology.
-      
-          In just 90 minutes, perfect for an inspiring and entertaining start.
-      
+          
+          Dive into the world of ChatGPT and experience what this technology makes possible.
+          
+          In just 90 minutes, perfect for an inspiring and quick start.
+          
           #### First Steps with ChatGPT
           Learn how ChatGPT works and what it can do.
-          #### Content Creation Made Easy
-          Create entertaining and engaging content like comics or blog posts.
+          #### Easy Content Creation
+          Create entertaining and engaging content like emails or blog posts.
           #### Multilingual Content
           Discover how you can create content in different languages with ChatGPT.
-          #### Creative Visualization
-          Learn how you can visually realize your ideas.
           #### Hands-on Experience
-          Apply your newly learned knowledge directly and create your own comic.
+          Apply your newly learned knowledge directly and create your own content.
+          
+          ## Plus Course: Advanced Capabilities with ChatGPT Plus
+          **This workshop is ideal for expanding your ChatGPT Plus abilities and fully understanding its benefits.**
+          
+          Explore the advanced capabilities of ChatGPT Plus and discover how this advanced technology can elevate your creativity and productivity to a new level.
       
-          ## Product Course: Successful Product Launch with ChatGPT
+          In two hours, you'll gain deep insights into possibilities that can lift your creativity and productivity to a new level.
+          
+          #### Overview of ChatGPT Plus
+          Discover the extended functions and benefits of the Plus version.
+          #### Advanced Content Creation
+          Use the enhanced capabilities of ChatGPT Plus for more sophisticated content.
+          #### Practical Exercises
+          Apply your knowledge and create advanced projects with ChatGPT Plus.
+          #### Creative Visualization
+          Learn how you can visually implement your ideas.
+          ### Requirements
+          ChatGPT Basic Course or equivalent
+          
+          Upon successful completion, you will receive your completion certificate.
+          
+          ## Product Course: Successful Product Launch with ChatGPT Plus
           **This workshop is ideal for experiencing the capabilities of ChatGPT in depth and trying them out for typical use cases in product development.**
       
           Experience how this technology changes the way you create products and how you can benefit the most from it.
