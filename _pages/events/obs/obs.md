@@ -29,8 +29,13 @@ includes:
       section: next
       more_includes:
         - file: obs/next.html
-  - path: obs/tickets.html
-    css_class: bg-light
+  - path: pretix.html
+    options:
+      section: tickets
+      css_class: bg-light
+      pretix: &offer
+        url: 'https://events.bumbleflies.de/obs-5/'
+        problems: pages.events.pretix.problems
   - path: about.html
     options:
       title: pages.about.title
@@ -44,8 +49,6 @@ permalink_en: /open-bumble-space
 nav_highlight: pages.events.title
 title: pages.events.obs.title
 
-pretix: &offer
-    url: 'https://events.bumbleflies.de/obs-5/'
 head:
   styles:
     - url: https://events.bumbleflies.de/obs-5/widget/v1.css

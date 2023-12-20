@@ -21,8 +21,13 @@ includes:
                 - /assets/img/impressions/openchat-1-1.webp
                 - /assets/img/impressions/openchat-1-2.webp
                 - /assets/img/impressions/openchat-1-3.webp
-  - path: obs/tickets.html
-    css_class: bg-light
+  - path: pretix.html
+    options:
+      section: tickets
+      css_class: bg-light
+      pretix: &offer
+        url: 'https://events.bumbleflies.de/openchat/'
+        problems: pages.events.pretix.problems
   - path: about.html
     options:
       section: schedule
@@ -43,8 +48,6 @@ nav_highlight: pages.events.title
 title: pages.events.openchat.title
 slogan: pages.events.openchat.slogan
 
-pretix: &offer
-    url: 'https://events.bumbleflies.de/openchat/'
 head:
   styles:
     - url: https://events.bumbleflies.de/openchat/widget/v1.css
