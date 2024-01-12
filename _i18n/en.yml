@@ -18,6 +18,53 @@ pages:
         online_events:
           title: Online Events
           desc: We organize an event for you where team building, exchange, and fun are the focus. Haven't seen each other for a year and looking for contact with colleagues? Then this is exactly the right thing.
+  retreats:
+    title: Retreats
+    bumbleretreat:
+      title: bumble:retreat
+      header:
+        title: bumble:retreat
+        text: The retreat that ignites creativity and team spirit
+        button: Contact us
+      about:
+        title: "What is a bumble:retreat?"
+        body: |
+          *A retreat is a planned period of time away from one's usual routine, often in a quiet or peaceful setting, to evolve.*
+  
+          At bumbleflies, we understand that organizing team retreats can be challenging. Different ideas and needs within the organizing team can lead to conflicts that prolong the process and cause dissatisfaction. That's why we are excited to introduce our new product: bumble:retreat.
+      info:
+        title: "How a bumble:retreat works"
+        body: |
+          # The Challenge: Diverse Needs, One Goal
+          Every team and organization is unique, and so are their needs and ideas when it comes to retreats. The challenge lies in harmonizing this diversity to create an event that enriches and motivates everyone. The different desires and expectations often lead to lengthy decision-making processes that cost both time and energy.
+          
+          # bumble:retreat: Our Solution for Your Team
+          With bumble:retreat, we are by your side in every phase of the retreat. We accompany you from the initial decision-making to the execution and follow-up. Our team has extensive experience in organizing both the content and the logistics of a retreat.
+          
+          Our concept is based on the principles of Open Space and places great emphasis on the involvement of all participants. Participation is at the forefront with us: We ensure that every voice is heard and every contribution counts. This creates an atmosphere in which everyone feels comfortable and can actively contribute.
+          
+          # What does bumble:retreat offer?
+          #### Professional Moderation 
+          Our experienced moderators guide the planning process, ensuring that all voices are heard and helping to find consensus.
+          #### Custom Retreat Concepts
+          We develop retreat experiences that are tailored specifically to the needs of your team.
+          #### Efficient Decision-Making
+          With our proven methods, you will arrive at decisions that satisfy the entire team more quickly.
+          #### Conflict Resolution
+          Our experts assist you in constructively resolving any conflicts and achieving a positive outcome.
+          
+          # The Benefits of bumble:retreat
+          #### Time Saving
+          Our efficient processes significantly reduce the time needed for organization.
+          #### Team Satisfaction
+          A harmonious and inclusive planning process ensures higher satisfaction and motivation in the team.
+          #### High-Quality Retreats
+          With our support, you organize retreats that are not only fun but also promote team spirit and productivity.
+          
+          # Conclusion
+          With bumble:retreat, we ensure that organizing your next team retreat is not only efficient but also an enriching experience for all involved. Contact us to learn more about how we can support your team.
+          
+          **[Contact us today](mailto:info+retreat@bumbleflies.de) to begin your journey to a successful team retreat!**
   events:
     title: Events
     overview:

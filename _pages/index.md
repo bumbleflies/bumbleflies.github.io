@@ -12,6 +12,7 @@ includes:
           logo: /assets/img/clients/bsh-logo.png
         - title: "Siemens AG"
           url: 'https://www.siemens.com/de/de.html'
+          logo: /assets/img/clients/siemens-logo.png
         - title: "Wohnungshelden"
           url: 'https://www.wohnungshelden.de/'
           logo: /assets/img/clients/wohnungshelden-logo.png

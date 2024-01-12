@@ -18,6 +18,54 @@ pages:
         online_events:
           title: Online Events
           desc: Wir organisieren für dich ein Event, bei dem Teambuilding, Austausch und Spaß im Vordergrund stehen. Ihr habt euch lange nicht mehr gesehen und sucht den Kontakt zu den Kollegen? Dann ist das genau das richtige.
+  retreats:
+    title: Retreats
+    bumbleretreat:
+      title: bumble:retreat
+      header:
+        title: bumble:retreat
+        text: Das Retreat, das Kreativität und Teamgeist entfacht
+        button: Schreib uns
+      about:
+        title: "Was ist ein bumble:retreat?"
+        body: |
+          *Ein Retreat ist ein geplanter Zeitraum, in dem man sich von seiner gewohnten Routine entfernt, oft in einer ruhigen oder friedlichen Umgebung, um sich weiterzuentwickeln.*
+
+          Bei bumbleflies wissen wir, dass die Organisation von Team-Retreats eine Herausforderung sein kann. Unterschiedliche Vorstellungen und Bedürfnisse innerhalb des Organisationsteams können zu Konflikten führen, die den Prozess in die Länge ziehen und Unzufriedenheit hervorrufen. Deshalb freuen wir uns, Euch unser neues Produkt vorzustellen: bumble:retreat.
+      info:
+        title: "So funktioniert ein bumble:retreat"
+        body: |
+          # Die Herausforderung: Unterschiedliche Bedürfnisse, ein Ziel
+          Jedes Team und jede Organisation ist einzigartig, und das gilt auch für ihre Bedürfnisse und Vorstellungen, wenn es um Retreats geht. Die Herausforderung liegt darin, diese Vielfalt in Einklang zu bringen, um eine Veranstaltung zu kreieren, die alle bereichert und motiviert. Die unterschiedlichen Wünsche und Erwartungen führen oft zu langwierigen Entscheidungsprozessen, die sowohl Zeit als auch Energie kosten.
+          
+          # bumble:retreat: Unsere Lösung für Euer Team
+          Mit bumble:retreat sind wir an eurer Seite in jeder Phase des Retreats. Wir begleiten Euch von der ersten Entscheidungsfindung über die Durchführung bis hin zur Nachbereitung. Unser Team verfügt über umfangreiche Erfahrung in der Organisation sowohl der inhaltlichen Aspekte als auch des „Drumherums“ eines Retreats.
+          
+          Unser Konzept basiert auf den Prinzipien von Open Space und legt großen Wert auf die Einbeziehung aller Teilnehmenden. Bei uns steht die Partizipation im Mittelpunkt: Wir sorgen dafür, dass jede Stimme gehört wird und jeder Beitrag zählt. So schaffen wir eine Atmosphäre, in der sich alle wohlfühlen und aktiv einbringen können.
+          
+          # Was bietet bumble:retreat?
+          #### Professionelle Moderation 
+          Unsere erfahrenen Moderatoren leiten den Planungsprozess, sorgen dafür, dass alle Stimmen gehört werden, und helfen, Konsens zu finden.
+          #### Individuelle Retreat-Konzepte
+          Wir entwickeln Retreat-Erlebnisse, die speziell auf die Bedürfnisse Eures Teams zugeschnitten sind.
+          #### Effiziente Entscheidungsfindung
+          Mit unseren bewährten Methoden kommt Ihr schneller zu Entscheidungen, die das gesamte Team zufriedenstellen.
+          #### Konfliktlösung
+          Unsere Experten unterstützen Euch dabei, eventuelle Konflikte konstruktiv zu lösen und ein positives Ergebnis zu erzielen.
+          
+          # Der Nutzen von bumble:retreat
+          #### Zeitersparnis
+          Durch unsere effizienten Prozesse wird die Zeit, die für die Organisation benötigt wird, deutlich reduziert.
+          #### Zufriedenheit im Team
+          Ein harmonischer und inklusiver Planungsprozess sorgt für höhere Zufriedenheit und Motivation im Team.
+          #### Qualitativ hochwertige Retreats
+          Mit unserer Unterstützung organisiert Ihr Retreats, die nicht nur Spaß machen, sondern auch den Teamgeist und die Produktivität fördern.
+          
+          # Fazit
+          Mit bumble:retreat stellen wir sicher, dass die Organisation Eures nächsten Team-Retreats nicht nur effizient, sondern auch eine bereichernde Erfahrung für alle Beteiligten wird. Kontaktiert uns, um mehr darüber zu erfahren, wie wir Euer Team unterstützen können.
+          
+          **[Kontaktiert uns heute](mailto:info+retreat@bumbleflies.de), um Euren Weg zu einem erfolgreichen Team-Retreat zu beginnen!**
+
   events:
     title: Veranstaltungen
     overview:

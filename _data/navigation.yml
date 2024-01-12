@@ -1,8 +1,9 @@
 nav:
     # title is resolved on language yml file
-  - title: pages.home.title
-    # url is a namespace, defined in md file
-    url: "home"
+  - title: pages.retreats.title
+    submenu:
+      - title: pages.retreats.bumbleretreat.title
+        url: "bumble-retreat"
   - title: pages.events.title
     submenu:
       - title: pages.events.overview.title

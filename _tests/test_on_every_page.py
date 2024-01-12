@@ -4,7 +4,7 @@ from _tests.helper import query_site, assert_link_present, assert_stylesheet_pre
 
 
 @pytest.mark.parametrize('title, page, allowed_stylesheets', [
-    ('Startseite', '/', ()),
+    ('bumble:retreat', '/bumble-retreat', ()),
     ('open:bumble:space', '/open-bumble-space', ('https://events.bumbleflies.de/obs-5/widget/v1.css',)),
     ('Impressum', '/impressum', ()),
     ('Datenschutzerklärung', '/datenschutz', ()),
@@ -24,7 +24,7 @@ class TestOnEveryPage:
     def test_title(self, bumbleserve, title, page, allowed_stylesheets):
         assert f'{title} | bumbleflies | 🦋' in query_site(bumbleserve, page).find(name='title').text
 
-    @pytest.mark.parametrize('display, url', [('Startseite', '/'),
+    @pytest.mark.parametrize('display, url', [('bumble:retreat', '/bumble-retreat'),
                                               # Events
                                               ('Übersicht', 'https://events.bumbleflies.de/'),
                                               ('open:bumble:space', '/open-bumble-space'),
