@@ -8,6 +8,19 @@ made possible with
 ```bash
 bundle install
 ```
+
+#### PermissionError
+
+When using bundler 2.4.x, the silent permission upgrade feature got removed and bundler can't write to its cache anymore: https://github.com/rubygems/rubygems/issues/6272 
+```text
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.1.0/cache/ffi-1.15.5.gem`. It is likely that you need to grant write permissions for that path.
+````
+to fix this, create a user writable directory like so
+```bash
+mkdir ~/.gems_cache
+bundle config path ~/.gems_cache
+```
+
 ### Build site
 ```bash
 bundle exec jekyll build
