@@ -457,6 +457,8 @@ pages:
           Nach erfolgreicher Teilnahme erhältst du dein Abschluss-Zertifikat.
   privacy:
     title: Datenschutzerklärung
+  app_privacy:
+    title: Datenschutzerklärung
   imprint:
     title: Impressum
   about:

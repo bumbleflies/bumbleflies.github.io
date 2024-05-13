@@ -467,6 +467,8 @@ pages:
 
   privacy:
     title: Privacy
+  app_privacy:
+    title: Privacy Policy
   imprint:
     title: Imprint
   about:
