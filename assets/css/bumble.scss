@@ -11,9 +11,13 @@ $primary: {{ site.data.style.highlight | default: "#fed136" }} !default;
 $white: {{ site.data.style.white | default: "#fff" }} !default;
 $black: {{ site.data.style.black | default: "#000" }} !default;
 
+$contact-image: "{{ site.data.style.contact-image }}";
+
 // Custom Images
 $header-image: "{{ site.data.style.header-image }}";
-$contact-image: "{{ site.data.style.contact-image }}";
+$accceu-image: "{{ site.data.style.accceu-image }}";
+
+@import "header_images.scss";
 
 // Global CSS
 @import "base/page.scss";

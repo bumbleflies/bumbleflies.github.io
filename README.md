@@ -116,3 +116,20 @@ The navigation is constructed from [navigation template file](_data/navigation.y
 ## Next Event
 
 The information text for the next event can be found in the [i18n folder](_i18n) in the `next.md` file
+
+## Background image
+Background images are tricky: they are introduced via CSS, which means they are accessible by simply putting a css-class attribute to the item. But for generating the code, it's a mess.
+The process of adding a new image to a page is as follows:
+1. Add a new yaml-entry for the image to [the yaml style file](_data/style.yml)
+   - `accceu-image: "/assets/img/accceu-header.webp"`
+2. Transform this yaml variable into a scss variable in the [bumble.scss preprocessor](assets/css/bumble.scss)
+   - `$accceu-image: "{{ site.data.style.accceu-image }}";`
+3. Create a new style definition in [the header images scss](_sass/_header_images.scss)
+   - `  &.accceu-image {
+    background-image: url("#{$accceu-image}");
+  }`
+4. (optional) Add a preload entry to [the head html](_includes/head.html)
+   - `<link rel="preload" as="image" href="{{ site.data.style.accceu-image }}" type="image/webp">`
+5. Now you're ready to use the image class in your templates
+   - `header:
+  image-class: accceu-image`

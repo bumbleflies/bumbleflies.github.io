@@ -75,6 +75,7 @@ header:
   text: pages.events.accceu.header.text
   button: pages.events.accceu.header.button
   buttonlink: "#tickets"
+  image-class: accceu-image
 
 event: 
   name: pages.events.accceu.title

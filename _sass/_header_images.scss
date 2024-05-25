@@ -1,0 +1,10 @@
+// Custom Images
+
+header.masthead {
+  &.default-image {
+    background-image: url("#{$header-image}");
+  }
+  &.accceu-image {
+    background-image: url("#{$accceu-image}");
+  }
+}

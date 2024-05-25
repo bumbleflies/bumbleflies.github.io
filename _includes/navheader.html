@@ -81,7 +81,7 @@
 
 <!-- Header -->
 {%- if page.header -%}
-<header class="masthead">
+<header class="masthead {% if page.header.image-class %}{{ page.header.image-class }}{% else %}default-image{% endif %}">
     <div class="container">
         <div class="intro-text">
             {%- if page.header.title -%}
@@ -101,7 +101,7 @@
     </div>
 </header>
 {%- else -%}
-<header class="masthead" style="height: 100px">
+<header class="masthead default-image" style="height: 100px">
 </header>
 {%- endif -%}
 <!-- End Header -->
