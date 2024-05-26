@@ -59,7 +59,7 @@ foot:
 header:
   title: pages.events.openchat.header.subtitle
   text: pages.events.openchat.header.title
-  button: pages.events.accceu.header.button
+  button: pages.events.openchat.header.button
   buttonlink: "#tickets"
 
 event: 

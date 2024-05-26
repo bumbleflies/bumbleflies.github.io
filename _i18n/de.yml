@@ -135,49 +135,77 @@ pages:
           
           Insgesamt erwartet dich eine Konferenz, die von aktiver Teilnahme, gemeinsamem Lernen und dem Austausch von Erfahrungen geprägt ist. Es wird spannend, inspirierend und vor allem sehr interaktiv!
     accceu:
-      title: ACCCEU23
-      slogan: ACCCEU - Draußen. Campen. Coachen - Erfahre jetzt alles über das Agile Camper Coach Camp und sicher dir dein Ticket
-      header:
-        title: Agiles Camper Coach Camp 2023
-        text: Draußen. Campen. Coachen
-        button: Ticket buchen
-      about:
-        title: Was ist ein Agiles Camper Coach Camp?
-        body: "Das Camper Coach Camp ist wie ein [Agile Coach Camp](https://agilecoachcamp.org/), mit dem Unterschied, dass wir nicht auf eine bestehende Location aufbauen, sondern diese (eben durch Camper [und Zelte, etc.]) selbst aufbauen. Sozusagen echt-selbstorganisiert. Aber was sind schon Worte, schaut euch lieber die Bilder an, damit ihr einen Eindruck bekommt, was euch da erwartet. Nur soviel vorweg: es wird euch umhauen!"
-      schedule:
-        title: Was erwartet mich auf dem Camp?
-        body: |
-          Das Agile Camper Coach Camp Europa (ACCCEU) ist nicht nur ein weiteres Agile Coach Camp – es ist eine einzigartige Erfahrung der Selbstorganisation und Zusammenarbeit. Stell Dir ein Camp vor, bei dem Du nicht nur Dein Wissen und Deine Erfahrungen teilst, sondern auch den Ort selbst gestaltest, an dem dies geschieht. Durch Camper, Zelte und die Gemeinschaft der Teilnehmer entsteht ein dynamisches Umfeld, das die Prinzipien von Agilität und Selbstorganisation verkörpert.
+      23:
+        title: ACCCEU23
+        slogan: ACCCEU - Draußen. Campen. Coachen - So war das Camp
+        header:
+          title: Agiles Camper Coach Camp 2023
+          text: Draußen. Campen. Coachen
+          button: Impressionen
+        about:
+          title: Was ist ein Agiles Camper Coach Camp?
+          body: "Das Camper Coach Camp ist wie ein [Agile Coach Camp](https://agilecoachcamp.org/), mit dem Unterschied, dass wir nicht auf eine bestehende Location aufbauen, sondern diese (eben durch Camper [und Zelte, etc.]) selbst aufbauen. Sozusagen echt-selbstorganisiert. Aber was sind schon Worte, schaut euch lieber die Bilder an, damit ihr einen Eindruck bekommt, was euch da erwartet. Nur soviel vorweg: es wird euch umhauen!"
+        schedule:
+          title: Wie war das Camp?
+          body: |
+            Das Agile Camper Coach Camp Europa (ACCCEU) ist nicht nur ein weiteres Agile Coach Camp – es ist eine einzigartige Erfahrung der Selbstorganisation und Zusammenarbeit. Stell Dir ein Camp vor, bei dem Du nicht nur Dein Wissen und Deine Erfahrungen teilst, sondern auch den Ort selbst gestaltest, an dem dies geschieht. Durch Camper, Zelte und die Gemeinschaft der Teilnehmer entsteht ein dynamisches Umfeld, das die Prinzipien von Agilität und Selbstorganisation verkörpert.
+  
+            #### Ankunft und Aufbau
+            Beginne den Tag mit dem Aufbau Deines Campers oder Zeltes und lerne dabei andere begeisterte Agile Coaches kennen.  
+            #### Open Space Eröffnung
+            Nachdem alle sich eingerichtet haben, starten wir mit einer Open Space-Eröffnung, bei der jeder Teilnehmer Themen vorschlagen und Sessions planen kann.  
+            #### Selbstorganisierte Sessions
+            Während des Tages gibt es mehrere Slots für Sessions, die von den Teilnehmern selbst organisiert und geleitet werden. Dies kann von Workshops über Diskussionen bis hin zu praktischen Übungen reichen.  
+            #### Networking und Entspannung
+            Nutze die Pausen zwischen den Sessions, um Dich mit anderen Teilnehmern auszutauschen, die wunderschöne Umgebung des Campingplatzes "Wanderheaven" zu genießen oder einfach zu entspannen.  
+            #### Abschluss und Reflexion
+            Am Ende des Tages kommen alle Teilnehmer zusammen, um ihre Erfahrungen zu teilen, Feedback zu geben und das Gelernte zu reflektieren.  
+            
+            Das Agile Camper Coach Camp bietet eine perfekte Kombination aus Lernen, Netzwerken und Natur. Es ist eine Gelegenheit, tief in die Welt des agilen Coachings einzutauchen, während Du gleichzeitig die Freiheit und das Abenteuer des Campinglebens erlebst. Sei bereit, beeindruckt zu werden und Dich von dieser einzigartigen Erfahrung inspirieren zu lassen!
+        next:
+          title: Wann und wo findest das nächste ACCCEU statt?
+          intro: |
+            Das Orga-Team rund um das Camper Coach Camp ist gerade dabei, das nächste Camp zu organisieren. Schau auf [ACCCEU24](/agiles-camper-coach-camp-24) vorbei, um nichts zu verpassen.
+      24:
+        title: ACCCEU24
+        slogan: ACCCEU - Draußen. Campen. Coachen - Erfahre jetzt alles über das Agile Camper Coach Camp und sicher dir dein Ticket
+        header:
+          title: Agiles Camper Coach Camp 2024
+          text: Draußen. Campen. Coachen
+          button: Registrieren
+        about:
+          title: Was ist ein Agiles Camper Coach Camp?
+          body: |
+            Das Camper Coach Camp ist wie ein [Agile Coach Camp](https://agilecoachcamp.org/), mit dem Unterschied, dass wir nicht auf eine bestehende Location aufbauen, sondern diese (eben durch Camper [und Zelte, etc.]) selbst aufbauen. Sozusagen echt-selbstorganisiert. Aber was sind schon Worte, schaut euch lieber die Bilder an, damit ihr einen Eindruck bekommt, was euch da erwartet. Nur soviel vorweg: es wird euch umhauen!
+            Letztes Jahr waren wir in Bodrum. Hier kannst du dir die [Impressionen anschauen](/agiles-camper-coach-camp-23).
+        schedule:
+          title: Was erwartet mich auf dem Camp?
+          body: |
+            Das Agile Camper Coach Camp Europa (ACCCEU) ist nicht nur ein weiteres Agile Coach Camp – es ist eine einzigartige Erfahrung der Selbstorganisation und Zusammenarbeit. Stell Dir ein Camp vor, bei dem Du nicht nur Dein Wissen und Deine Erfahrungen teilst, sondern auch den Ort selbst gestaltest, an dem dies geschieht. Durch Camper, Zelte und die Gemeinschaft der Teilnehmer entsteht ein dynamisches Umfeld, das die Prinzipien von Agilität und Selbstorganisation verkörpert.
+  
+            #### Ankunft und Aufbau
+            Beginne den Tag mit dem Aufbau Deines Campers oder Zeltes und lerne dabei andere begeisterte Agile Coaches kennen.  
+            #### Open Space Eröffnung
+            Nachdem alle sich eingerichtet haben, starten wir mit einer Open Space-Eröffnung, bei der jeder Teilnehmer Themen vorschlagen und Sessions planen kann.  
+            #### Selbstorganisierte Sessions
+            Während des Tages gibt es mehrere Slots für Sessions, die von den Teilnehmern selbst organisiert und geleitet werden. Dies kann von Workshops über Diskussionen bis hin zu praktischen Übungen reichen.  
+            #### Networking und Entspannung
+            Nutze die Pausen zwischen den Sessions, um Dich mit anderen Teilnehmern auszutauschen, die wunderschöne Umgebung des Campingplatzes "Wanderheaven" zu genießen oder einfach zu entspannen.  
+            #### Abschluss und Reflexion
+            Am Ende des Tages kommen alle Teilnehmer zusammen, um ihre Erfahrungen zu teilen, Feedback zu geben und das Gelernte zu reflektieren.  
+            
+            Das Agile Camper Coach Camp bietet eine perfekte Kombination aus Lernen, Netzwerken und Natur. Es ist eine Gelegenheit, tief in die Welt des agilen Coachings einzutauchen, während Du gleichzeitig die Freiheit und das Abenteuer des Campinglebens erlebst. Sei bereit, beeindruckt zu werden und Dich von dieser einzigartigen Erfahrung inspirieren zu lassen!
+        next:
+          title: Wann und wo findest das ACCCEU24 statt?
+          intro: |
+            Das Orga-Team rund um das Camper Coach Camp hat die Vision, das nächste Camp am Gardasee / Norditalien stattfinden zu lassen. Wir sind derzeit noch auf der Suche nach einer geeigneten Location.
+        register:
+          title: Bist du dabei?
+          body: |
 
-          #### Ankunft und Aufbau
-          Beginne den Tag mit dem Aufbau Deines Campers oder Zeltes und lerne dabei andere begeisterte Agile Coaches kennen.  
-          #### Open Space Eröffnung
-          Nachdem alle sich eingerichtet haben, starten wir mit einer Open Space-Eröffnung, bei der jeder Teilnehmer Themen vorschlagen und Sessions planen kann.  
-          #### Selbstorganisierte Sessions
-          Während des Tages gibt es mehrere Slots für Sessions, die von den Teilnehmern selbst organisiert und geleitet werden. Dies kann von Workshops über Diskussionen bis hin zu praktischen Übungen reichen.  
-          #### Networking und Entspannung
-          Nutze die Pausen zwischen den Sessions, um Dich mit anderen Teilnehmern auszutauschen, die wunderschöne Umgebung des Campingplatzes "Wanderheaven" zu genießen oder einfach zu entspannen.  
-          #### Abschluss und Reflexion
-          Am Ende des Tages kommen alle Teilnehmer zusammen, um ihre Erfahrungen zu teilen, Feedback zu geben und das Gelernte zu reflektieren.  
-          
-          Das Agile Camper Coach Camp bietet eine perfekte Kombination aus Lernen, Netzwerken und Natur. Es ist eine Gelegenheit, tief in die Welt des agilen Coachings einzutauchen, während Du gleichzeitig die Freiheit und das Abenteuer des Campinglebens erlebst. Sei bereit, beeindruckt zu werden und Dich von dieser einzigartigen Erfahrung inspirieren zu lassen!  
-      next:
-        title: Wann und wo findest das ACCCEU23 statt?
-        intro: |
-          Das Orga-Team rund um das Camper Coach Camp hat den wundervollen Campingplatz [Wanderheaven](https://www.wanderheaven.com/) gefunden, der uns alles bietet, was für dieses Event erforderlich ist: Nette Plätzen zum Campen, eine freundliche Atmosphäre und ausreichend Platz für einen Open Space.
-          Folge uns auf [Twitter](https://twitter.com/accceu) oder [Mastodon](https://social.bumbleflies.de/) um keine Updates zu verpassen.
-      location:
-        name: Wanderheaven Camping, Bodrum
-        url: https://en.wanderheaven.com/
-        header: Wir werden auf dem wunderschönen Wanderheaven-Campingplatz übernachten
-        body: |
-          Mit verschiedenen Gemeinschaftsbereichen haben sie ihr Camping-Erlebnis über das bloße Übernachten hinaus erweitert.
-          Du kannst in unseren Tiny Houses in unserem Camp, das mit Mandarinenbäumen geschmückt ist, übernachten, deinen Kaffee vor deinem Bungalow genießen, unsere Glamping-Zelte erleben und verschiedene Erfahrungen in unserem Eventbereich sammeln!
-          
-          Wanderheaven Camping liegt im Herzen von Gümüşlük, nur 50 Meter vom Strand entfernt!
-      cant:
-        title: Begeistert?
-        body: Dann buche dir direkt dein Ticket in unserem [Ticketshop](https://events.bumbleflies.de/accceu23/) oder direkt unten auf der Seite.
+        cant:
+          title: Begeistert?
+          body: Dann fülle gerne die folgende Umfrage für uns aus.
     pretix:
       widget: https://pretix.eu/widget/v1.de.js
       problems: Hast du Probleme bei der Anmeldung, melde dich unter [events@bumbleflies.de](mailto:events@bumbleflies.de)

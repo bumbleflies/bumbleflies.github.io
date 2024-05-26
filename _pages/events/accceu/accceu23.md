@@ -3,8 +3,8 @@ layout: compose
 includes:
   - path: about.html 
     options:
-      title: pages.events.accceu.about.title
-      body: pages.events.accceu.about.body
+      title: pages.events.accceu.23.about.title
+      body: pages.events.accceu.23.about.body
       markdownify: true
       section: info
       css_class: bg-light
@@ -30,26 +30,19 @@ includes:
                 - /assets/img/impressions/accceu-2-3.webp
   - path: about.html 
     options:
-      title: pages.events.accceu.next.title
+      title: pages.events.accceu.23.next.title
+      body: pages.events.accceu.23.next.intro
+      markdownify: true
       section: next
-      more_includes:
-        - file: obs/next.html
-  - path: pretix.html
-    options:
-      section: tickets
-      css_class: bg-light
-      pretix: &offer
-        url: 'https://events.bumbleflies.de/accceu23/'
-        problems: pages.events.pretix.problems
   - path: about.html
     options:
+      css_class: bg-light
       section: schedule
-      title: pages.events.accceu.schedule.title
-      body: pages.events.accceu.schedule.body
+      title: pages.events.accceu.23.schedule.title
+      body: pages.events.accceu.23.schedule.body
       markdownify: true
   - path: about.html
     options:
-      css_class: bg-light
       title: pages.about.title
       text: pages.about.text
       body: pages.about.body
@@ -59,47 +52,22 @@ namespace: accceu23
 permalink: /agiles-camper-coach-camp-23
 permalink_en: /agile-camper-coach-camp-23
 nav_highlight: pages.events.title
-title: pages.events.accceu.title
-slogan: pages.events.accceu.slogan
-
-head:
-  styles:
-    - url: https://events.bumbleflies.de/accceu23/widget/v1.css
-foot:  
-  scripts:
-    - url: /assets/js/lazy-load.js
-  translatable: pages.events.pretix.widget
+title: pages.events.accceu.23.title
+slogan: pages.events.accceu.23.slogan
 
 header:
-  title: pages.events.accceu.header.title
-  text: pages.events.accceu.header.text
-  button: pages.events.accceu.header.button
-  buttonlink: "#tickets"
+  title: pages.events.accceu.23.header.title
+  text: pages.events.accceu.23.header.text
+  button: pages.events.accceu.23.header.button
+  buttonlink: "#info"
   image-class: accceu-image
 
 event: 
-  name: pages.events.accceu.title
-  description: pages.events.accceu.about.body
-  intro: pages.events.accceu.next.intro
-  date:
-      start: 2023-10-06T13:00+01:00
-      end: 2023-10-09T18:00+01:00
-  location:
-    name: pages.events.accceu.location.name
-    url: pages.events.accceu.location.url
-    header: pages.events.accceu.location.header
-    body: pages.events.accceu.location.body
-    address:
-      street: "Gümüşlük, Kilimci Sk. No:35 D:12"
-      locality: Bodrum/Muğla
-      code: 48970
-      country: TR
+  name: pages.events.accceu.23.title
+  description: pages.events.accceu.23.about.body
+  intro: pages.events.accceu.23.next.intro
   images: *slides_1
-  offer: 
-    <<: *offer
-    from: 2023-01-01T01:02+01:00
-    price: 90
   cant:
-    title: pages.events.accceu.cant.title
-    body: pages.events.accceu.cant.body
+    title: pages.events.accceu.23.cant.title
+    body: pages.events.accceu.23.cant.body
 ---
