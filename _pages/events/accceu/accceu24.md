@@ -13,21 +13,17 @@ includes:
           options:
             gallery:
               - slides: &slides_1
-                - /assets/img/impressions/accceu-1-1.webp
-                - /assets/img/impressions/accceu-1-2.webp
-                - /assets/img/impressions/accceu-1-3.webp
+                - /assets/img/impressions/accceu24/accceu-3-1.webp
+                - /assets/img/impressions/accceu24/accceu-1-1.webp                
+                - /assets/img/impressions/accceu24/accceu-3-3.webp
               - slides:
-                - /assets/img/impressions/accceu-3-1.webp
-                - /assets/img/impressions/accceu-3-2.webp
-                - /assets/img/impressions/accceu-3-3.webp
+                - /assets/img/impressions/accceu24/accceu-2-1.webp
+                - /assets/img/impressions/accceu24/accceu-2-2.webp
+                - /assets/img/impressions/accceu24/accceu-2-3.webp
               - slides:
-                - /assets/img/impressions/accceu-4-1.webp
-                - /assets/img/impressions/accceu-4-2.webp
-                - /assets/img/impressions/accceu-4-3.webp
-              - slides:
-                - /assets/img/impressions/accceu-2-1.webp
-                - /assets/img/impressions/accceu-2-2.webp
-                - /assets/img/impressions/accceu-2-3.webp
+                - /assets/img/impressions/accceu24/accceu-3-2.webp
+                - /assets/img/impressions/accceu24/accceu-1-2.webp
+                - /assets/img/impressions/accceu24/accceu-1-3.webp
   - path: about.html 
     options:
       title: pages.events.accceu.24.next.title
