@@ -36,10 +36,10 @@ gallery:
     - desc: pages.openspace.fast_agile.gallery.user_guide.de.desc
       image:
         url: pages.openspace.fast_agile.gallery.user_guide.de.image.small
-        copyright: "[Cron Technologies LLC](https://www.fastagile.io/), bumbleflies UG"
+        copyright: "[CC BY-NC-ND 4.0.](http://creativecommons.org/licenses/by-nc-nd/4.0/)"
         hover:
           title: pages.openspace.fast_agile.gallery.user_guide.de.title
-          big_download: /assets/img/fast_agile/FASTGuide2.12 - GERMAN.pdf
+          big_download: /assets/pdf/FASTGuide3.0 - GERMAN.pdf
     - desc: pages.openspace.fast_agile.gallery.value_cycle.desc
       image:
         url: pages.openspace.fast_agile.gallery.value_cycle.image.small
@@ -49,10 +49,10 @@ gallery:
     - desc: pages.openspace.fast_agile.gallery.user_guide.en.desc
       image:
         url: pages.openspace.fast_agile.gallery.user_guide.en.image.small
-        copyright: "[Cron Technologies LLC](https://www.fastagile.io/)"
+        copyright: "[CC BY-NC-ND 4.0.](http://creativecommons.org/licenses/by-nc-nd/4.0/)"
         hover:
           title: pages.openspace.fast_agile.gallery.user_guide.en.title
-          big_download: /assets/img/fast_agile/FASTGuide2.12.pdf
+          big_download: /assets/pdf/FaST Guide - v3.00 - en-GB.pdf
 
 foot:
   scripts:

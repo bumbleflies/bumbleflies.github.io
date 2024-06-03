@@ -266,7 +266,7 @@ pages:
       about:
         title: Was ist FaST Agile?
         body: | 
-          Wir freuen uns, dass wir, als bumbleflies, den [aktuellen FaST-Guide](https://www.fastagile.io/fast-guide) aus dem Englischen ins Deutsche übersetzen durften.
+          Wir freuen uns, dass wir, als bumbleflies, den [aktuellen FaST-Guide](https://www.fastagile.io/guide){:target="_blank"} aus dem Englischen ins Deutsche übersetzen durften.
           
           Die Fluid-Scaling-Technology kombiniert Open Space Technology und Open Allocation zu einer leichtgewichtigen, einfach zu verstehenden und einfach zu beherrschenden, skalierbaren Methode für die Organisation von Menschen rund um Arbeit.
           Das Open Space Format ist in vielen Situationen einsetzbar. Man kann es alleinstehend nutzen, um z.B. komplexe, potentiell konfliktreiche Probleme mit einer diversen Gruppe zu lösen oder eingebettet in größere Modelle, wie z.B. Open Space Agility oder Open Space Beta.
