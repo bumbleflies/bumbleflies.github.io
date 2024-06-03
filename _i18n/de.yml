@@ -202,7 +202,7 @@ pages:
         register:
           title: Bist du dabei?
           body: |
-
+            Fülle die Umfrage aus
         cant:
           title: Begeistert?
           body: Dann fülle gerne die folgende Umfrage für uns aus.

@@ -205,7 +205,7 @@ pages:
         register:
           title: Are you in?
           body: |
-
+            Fill out the form
         cant:
           title: Excited?
           body: Then please fill out the following survey for us.
