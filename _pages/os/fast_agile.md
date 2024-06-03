@@ -27,7 +27,8 @@ header:
   text: pages.openspace.fast_agile.header.text
   button: pages.openspace.fast_agile.header.button
   buttonlink: "#download"
-
+  image-class: fast-image
+  
 gallery:
   height: 283
   title: pages.openspace.fast_agile.gallery.title

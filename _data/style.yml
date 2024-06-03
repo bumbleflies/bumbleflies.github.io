@@ -6,6 +6,7 @@ highlight: "#fbc02d"
 #Image Customization
 header-image: "/assets/img/header-bg.webp"
 accceu-image: "/assets/img/accceu-header.webp"
+fast-image: "/assets/img/fast-header.webp"
 
 sheets:
   - name: bootstrap.min.css # Core bootstrap

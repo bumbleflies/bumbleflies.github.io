@@ -131,5 +131,4 @@ The process of adding a new image to a page is as follows:
 4. (optional) Add a preload entry to [the head html](_includes/head.html)
    - `<link rel="preload" as="image" href="{{ site.data.style.accceu-image }}" type="image/webp">`
 5. Now you're ready to use the image class in your templates
-   - `header:
-  image-class: accceu-image`
+   - `header: image-class: accceu-image`

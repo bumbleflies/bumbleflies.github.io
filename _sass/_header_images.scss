@@ -7,4 +7,7 @@ header.masthead {
   &.accceu-image {
     background-image: url("#{$accceu-image}");
   }
+  &.fast-image {
+    background-image: url("#{$fast-image}");
+  }
 }

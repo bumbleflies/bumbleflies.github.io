@@ -16,6 +16,7 @@ $contact-image: "{{ site.data.style.contact-image }}";
 // Custom Images
 $header-image: "{{ site.data.style.header-image }}";
 $accceu-image: "{{ site.data.style.accceu-image }}";
+$fast-image: "{{ site.data.style.fast-image }}";
 
 @import "header_images.scss";
 
