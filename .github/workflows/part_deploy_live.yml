@@ -47,6 +47,6 @@ jobs:
         with:
           webhook_url: ${{ secrets.WEBSITE_HOOK_URL }}
           webhook_secret: ${{ secrets.WEBSITE_HOOK_SECRET }}
-          curl_opts: --resolve 'webhook.bumbleflies.servyy.bumbleflies.de:443:${{ outputs.webhook_ip }}'
+          curl_opts: --resolve 'webhook.bumbleflies.servyy.bumbleflies.de:443:${{ jobs.live.outputs.webhook_ip }}'
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
