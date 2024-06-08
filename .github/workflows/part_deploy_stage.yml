@@ -15,7 +15,6 @@ jobs:
         with:
           name: site
           path: _site
-      - run: ls _site
       - name: ⛅ upload artifact
         uses: actions/upload-pages-artifact@v3
       - name: Deploy to GitHub Pages
