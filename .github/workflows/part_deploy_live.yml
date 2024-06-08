@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 jobs:
-  deploy_live:
+  live:
     runs-on: ubuntu-latest
     environment:
       name: deployment-site
@@ -14,6 +14,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
+          path: .
       - name: ⛅ upload artifact
         uses: actions/upload-pages-artifact@v1
       - name: Invoke deployment hook
