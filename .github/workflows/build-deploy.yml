@@ -29,4 +29,5 @@ jobs:
     uses: ./.github/workflows/part_deploy_stage.yml
   deploy-live:
     needs: build-test
+    secrets: inherit
     uses: ./.github/workflows/part_deploy_live.yml

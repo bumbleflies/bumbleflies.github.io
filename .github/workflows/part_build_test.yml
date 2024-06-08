@@ -17,6 +17,16 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
+      - name: 🫱 Upload site
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: |
+            _site
+          retention-days: 1
+  test:
+    runs-on: ubuntu-latest
+    steps:
       - name: 🐍 setup python for test
         uses: actions/setup-python@v5
         with:
@@ -32,10 +42,3 @@ jobs:
         uses: dariocurr/pytest-summary@main
         with:
           paths: _tests
-      - name: 🫱 Upload site
-        uses: actions/upload-artifact@v4
-        with:
-          name: site
-          path: |
-            _site
-          retention-days: 1
