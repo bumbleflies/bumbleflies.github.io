@@ -26,6 +26,7 @@ jobs:
           retention-days: 1
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: 🐍 setup python for test
         uses: actions/setup-python@v5
