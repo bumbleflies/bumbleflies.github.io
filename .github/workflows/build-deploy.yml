@@ -23,10 +23,10 @@ concurrency:
 
 jobs:
   build-test:
-    uses: ./.github/part_build_test.yml
+    uses: ./.github/workflows/part_build_test.yml
   deploy-stage:
     needs: build-test
-    uses: ./.github/part_deploy_stage.yml
+    uses: ./.github/workflows/part_deploy_stage.yml
   deploy-lvie:
     needs: build-test
-    uses: ./.github/part_deploy_live.yml
+    uses: ./.github/workflows/part_deploy_live.yml
