@@ -1,4 +1,6 @@
 pages:
+  404:
+    title: Das ist nicht die Seite die Du gesucht hast
   home:
     title: Startseite
     header:
