@@ -27,6 +27,6 @@ jobs:
   deploy-stage:
     needs: build-test
     uses: ./.github/workflows/part_deploy_stage.yml
-  deploy-lvie:
+  deploy-live:
     needs: build-test
     uses: ./.github/workflows/part_deploy_live.yml

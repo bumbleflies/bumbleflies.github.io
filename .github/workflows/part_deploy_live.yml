@@ -1,4 +1,4 @@
-name: Build and Test Jekyll Site
+name: Deploy site to live page
 
 on:
   workflow_call:
