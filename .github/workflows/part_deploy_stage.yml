@@ -14,7 +14,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
-          path: .
+          path: _site
+      - run: ls _site
       - name: ⛅ upload artifact
         uses: actions/upload-pages-artifact@v1
       - name: Deploy to GitHub Pages
