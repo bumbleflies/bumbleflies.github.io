@@ -14,7 +14,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
-          path: .
+          path: _site
       - name: ⛅ upload artifact
         uses: actions/upload-pages-artifact@v1
       - name: Invoke deployment hook
