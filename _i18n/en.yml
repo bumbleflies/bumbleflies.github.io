@@ -1,6 +1,4 @@
 pages:
-  404:
-    title: This is not the page you're looking for
   home:
     title: Home
     header:
