@@ -42,11 +42,5 @@ jobs:
         run: echo "webhook_ip=$(dig +short servyy.bumbleflies.de)" >> "$GITHUB_OUTPUT"
       - name: Trigger deployment
         run: curl -X POST ${{ secrets.WEBSITE_HOOK_URL }}/${{ secrets.WEBSITE_HOOK_SECRET }} --resolve 'webhook.bumbleflies.servyy.bumbleflies.de:443:${{ steps.pre-resolve.outputs.webhook_ip }}'
-      - name: Invoke deployment hook
-        uses: distributhor/workflow-webhook@v3
-        with:
-          webhook_url: ${{ secrets.WEBSITE_HOOK_URL }}
-          webhook_secret: ${{ secrets.WEBSITE_HOOK_SECRET }}
-          curl_opts: '--resolve webhook.bumbleflies.servyy.bumbleflies.de:443:${{ steps.pre-resolve.outputs.webhook_ip }}'
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
