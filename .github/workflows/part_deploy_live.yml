@@ -22,6 +22,8 @@ jobs:
     environment:
       name: deployment-site
       url: https://bumbleflies.de
+    outputs:
+      webhook_ip: ${{ steps.pre-resolve.outputs.webhook_ip }}
     steps:
       - name: 🫲 Download site
         uses: actions/download-artifact@v4
@@ -38,11 +40,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
       - name: pre-resolve webhook
-        run: echo "$(dig +short servyy.bumbleflies.de) webhook.bumbleflies.servyy.duckdns.org" | sudo tee -a /etc/hosts
+        id: pre-resolve
+        run: echo "webhook_ip=$(dig +short servyy.bumbleflies.de)" >> "$GITHUB_OUTPUT"
       - name: Invoke deployment hook
-        uses: distributhor/workflow-webhook@v2
-        env:
+        uses: distributhor/workflow-webhook@v3
+        with:
           webhook_url: ${{ secrets.WEBSITE_HOOK_URL }}
           webhook_secret: ${{ secrets.WEBSITE_HOOK_SECRET }}
+          curl_opts: --resolve 'webhook.bumbleflies.servyy.bumbleflies.de:443:${{ outputs.webhook_ip }}'
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
