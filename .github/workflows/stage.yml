@@ -31,7 +31,7 @@ jobs:
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.0"
+          ruby-version: "3.2"
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
         with:
@@ -44,7 +44,7 @@ jobs:
       - name: 🐍 setup python for test
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: "3.12"
           cache: "pip"
       - name: 📄 install test requirements
         uses: py-actions/py-dependency-install@v3

@@ -1,0 +1,24 @@
+name: Build and Test Jekyll Site
+
+on:
+  workflow_call:
+
+jobs:
+  deploy_live:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: deployment-site
+      url: https://bumbleflies.de
+    steps:
+      - name: 🫲 Download site
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+      - name: ⛅ upload artifact
+        uses: actions/upload-pages-artifact@v1
+      - name: Invoke deployment hook
+        uses: distributhor/workflow-webhook@v2
+        env:
+          webhook_url: ${{ secrets.WEBSITE_HOOK_URL }}
+          webhook_secret: ${{ secrets.WEBSITE_HOOK_SECRET }}

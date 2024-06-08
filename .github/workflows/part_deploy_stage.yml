@@ -1,0 +1,22 @@
+name: Build and Test Jekyll Site
+
+on:
+  workflow_call:
+
+jobs:
+  deploy_live:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 🫲 Download site
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+      - name: ⛅ upload artifact
+        uses: actions/upload-pages-artifact@v1
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

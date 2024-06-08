@@ -1,0 +1,41 @@
+name: Build and Test Jekyll Site
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+      - name: 🐍 setup python for test
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: 📄 install test requirements
+        uses: py-actions/py-dependency-install@v3
+        with:
+          path: "_tests/requirements.txt"
+          update-setuptools: "false"
+          update-wheel: "false"
+      - name: 🧪 test with pytest
+        uses: dariocurr/pytest-summary@main
+        with:
+          paths: _tests
+      - name: 🫱 Upload site
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: |
+            site
+          retention-days: 1
