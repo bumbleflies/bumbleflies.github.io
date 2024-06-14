@@ -3,28 +3,35 @@
   
       <url>
       <loc>https://bumbleflies.de/assets/pdf/FASTGuide2.12 - GERMAN.pdf</loc>
-      <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+      <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
     </url>
   
       <url>
       <loc>https://bumbleflies.de/assets/pdf/FASTGuide2.12.pdf</loc>
-      <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+      <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
     </url>
   
       <url>
       <loc>https://bumbleflies.de/assets/pdf/FASTGuide3.0 - GERMAN.pdf</loc>
-      <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+      <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
     </url>
   
       <url>
       <loc>https://bumbleflies.de/assets/pdf/FaST Guide - v3.00 - en-GB.pdf</loc>
-      <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+      <lastmod>2024-06-14T12:29:36+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.3</priority>
+    </url>
+  
+      <url>
+      <loc>https://bumbleflies.de/assets/pdf/Single-Team Guide-1.0 - GERMAN.pdf</loc>
+      <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
     </url>
@@ -35,7 +42,7 @@
       <url>
       <loc>https://bumbleflies.de</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -44,7 +51,7 @@
       <url>
       <loc>https://bumbleflies.de</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -55,7 +62,7 @@
       <url>
       <loc>https://bumbleflies.de/ueber-uns</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -64,7 +71,7 @@
       <url>
       <loc>https://bumbleflies.de/en/about</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -75,7 +82,7 @@
       <url>
       <loc>https://bumbleflies.de/agiles-camper-coach-camp-23</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -84,7 +91,7 @@
       <url>
       <loc>https://bumbleflies.de/en/agile-camper-coach-camp-23</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -95,7 +102,7 @@
       <url>
       <loc>https://bumbleflies.de/agiles-camper-coach-camp-24</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -104,7 +111,7 @@
       <url>
       <loc>https://bumbleflies.de/en/agile-camper-coach-camp-24</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -115,7 +122,7 @@
       <url>
       <loc>https://bumbleflies.de/app_datenschutz</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -124,7 +131,7 @@
       <url>
       <loc>https://bumbleflies.de/en/app_privacy</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -135,7 +142,7 @@
       <url>
       <loc>https://bumbleflies.de/bumble-retreat</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -144,7 +151,7 @@
       <url>
       <loc>https://bumbleflies.de/en/bumble-retreat</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -155,7 +162,7 @@
       <url>
       <loc>https://bumbleflies.de/fast-agile</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -164,7 +171,7 @@
       <url>
       <loc>https://bumbleflies.de/en/fast-agile</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -175,7 +182,7 @@
       <url>
       <loc>https://bumbleflies.de/fast-training</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -184,7 +191,7 @@
       <url>
       <loc>https://bumbleflies.de/en/fast-training</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -195,7 +202,7 @@
       <url>
       <loc>https://bumbleflies.de/gpt-training</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -204,7 +211,7 @@
       <url>
       <loc>https://bumbleflies.de/en/gpt-training</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -215,7 +222,7 @@
       <url>
       <loc>https://bumbleflies.de/impressum</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -224,7 +231,7 @@
       <url>
       <loc>https://bumbleflies.de/en/imprint</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -235,7 +242,7 @@
       <url>
       <loc>https://bumbleflies.de/</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -244,7 +251,7 @@
       <url>
       <loc>https://bumbleflies.de/en/</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -255,7 +262,7 @@
       <url>
       <loc>https://bumbleflies.de/open-bumble-space</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -264,7 +271,7 @@
       <url>
       <loc>https://bumbleflies.de/en/open-bumble-space</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -275,7 +282,7 @@
       <url>
       <loc>https://bumbleflies.de/openchat</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -284,7 +291,7 @@
       <url>
       <loc>https://bumbleflies.de/en/openchat</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -295,7 +302,7 @@
       <url>
       <loc>https://bumbleflies.de</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -304,7 +311,7 @@
       <url>
       <loc>https://bumbleflies.de</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -315,7 +322,7 @@
       <url>
       <loc>https://bumbleflies.de/open-space-checkliste</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -324,7 +331,7 @@
       <url>
       <loc>https://bumbleflies.de/en/open-space-checklist</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -335,7 +342,7 @@
       <url>
       <loc>https://bumbleflies.de/open-space-prinzipien-uebersicht</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -344,7 +351,7 @@
       <url>
       <loc>https://bumbleflies.de/en/open-space-principles</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -355,7 +362,7 @@
       <url>
       <loc>https://bumbleflies.de/datenschutz</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -364,7 +371,7 @@
       <url>
       <loc>https://bumbleflies.de/en/privacy</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -375,7 +382,7 @@
       <url>
       <loc>https://bumbleflies.de</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -384,7 +391,7 @@
       <url>
       <loc>https://bumbleflies.de</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -395,7 +402,7 @@
       <url>
       <loc>https://bumbleflies.de/informiert-bleiben</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -404,7 +411,7 @@
       <url>
       <loc>https://bumbleflies.de/en/stayintheloop</loc>
       
-        <lastmod>2024-06-14T12:09:41+00:00</lastmod>
+        <lastmod>2024-06-14T12:29:36+00:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
