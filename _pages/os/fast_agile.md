@@ -47,13 +47,13 @@ gallery:
         hover:
           title: pages.openspace.fast_agile.gallery.value_cycle.title
           big: pages.openspace.fast_agile.gallery.value_cycle.image.big
-    - desc: pages.openspace.fast_agile.gallery.user_guide.en.desc
+    - desc: pages.openspace.fast_agile.gallery.user_guide.single.desc
       image:
-        url: pages.openspace.fast_agile.gallery.user_guide.en.image.small
+        url: pages.openspace.fast_agile.gallery.user_guide.single.image.small
         copyright: "[CC BY-NC-ND 4.0.](http://creativecommons.org/licenses/by-nc-nd/4.0/)"
         hover:
-          title: pages.openspace.fast_agile.gallery.user_guide.en.title
-          big_download: /assets/pdf/FaST Guide - v3.00 - en-GB.pdf
+          title: pages.openspace.fast_agile.gallery.user_guide.single.title
+          big_download: /assets/pdf/Single-Team Guide-1.0 - GERMAN.pdf
 
 foot:
   scripts:

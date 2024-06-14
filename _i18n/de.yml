@@ -324,14 +324,14 @@ pages:
         user_guide:
           de:
             title: Erfahre, was FaST ist
-            desc: FaST Guide (Deutsch)
+            desc: FaST Guide
             image:
               small: /assets/img/fast_agile/guide_logo_de.webp
-          en:
-            title: Erfahre, was FaST ist
-            desc: FaST Guide (Englisch)
+          single:
+            title: Lerne, wie FaST für ein Team funktioniert
+            desc: Ein-Team FaST Guide
             image:
-              small: /assets/img/fast_agile/guide_logo_en.webp
+              small: /assets/img/fast_agile/guide_logo_single.webp
   learning:
     title: Ausbildung
     fast:

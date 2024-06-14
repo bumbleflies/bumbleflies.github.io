@@ -325,15 +325,15 @@ pages:
             big: /assets/img/fast_agile/fast_agile_big.png
         user_guide:
           de:
-            title: Learn what FaST is
-            desc: FaST Guide (German)
+            title: Learn about the FaST method
+            desc: FaST Guide
             image:
               small: /assets/img/fast_agile/guide_logo_de.webp
-          en:
-            title: Learn what FaST is
-            desc: FaST Guide (English)
+          single:
+            title: Learn about Single Team FaST
+            desc: Single Team FaST
             image:
-              small: /assets/img/fast_agile/guide_logo_en.webp
+              small: /assets/img/fast_agile/guide_logo_single.webp
   learning:
     title: Learning
     fast:
