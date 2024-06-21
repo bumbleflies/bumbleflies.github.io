@@ -221,6 +221,31 @@ pages:
         cant:
           title: Begeistert?
           body: Dann fülle gerne die folgende Umfrage für uns aus.
+    facilitation:
+      title: Bei euch
+      slogan: Wir moderieren eure nächste Konferenz und eure nächste Community-Veranstaltung.
+      header:
+        title: Wir moderieren deine Events
+        subtitle: Unser Moderationsansgebot für dich
+        button: Schreib uns
+      about:
+        title: Unser Angebot
+        body: |
+          Unsere erfahrenen Moderatoren begleiten dich durch deine nächste Konferenz oder Community-Veranstaltung und sorgen dafür, dass alles reibungslos abläuft. Mit unserem einzigartigen Open Bumble Space Format schaffen wir eine offene und dynamische Atmosphäre, in der alle Teilnehmer aktiv eingebunden werden und ihre Ideen frei austauschen können. 
+          
+          #### Konferenzmoderation 
+          Wir übernehmen die komplette Moderation deiner Konferenz, von der Begrüßung über die Leitung der Diskussionen bis hin zur Schlussansprache. Dabei sorgen wir für einen strukturierten Ablauf und eine angenehme Atmosphäre, in der sich alle Teilnehmer wohlfühlen.
+          
+          #### Community-Veranstaltungen
+          Egal ob Meetups, Networking-Events oder Workshops – wir gestalten und moderieren deine Community-Veranstaltungen so, dass sie inspirierend und produktiv sind. Unser Fokus liegt darauf, den Austausch zwischen den Teilnehmern zu fördern und wertvolle Verbindungen zu schaffen.
+          
+          #### Technische Unterstützung
+          Wir kümmern uns um die technische Umsetzung deiner Veranstaltung. Von der Wahl der richtigen Plattform bis hin zur Sicherstellung eines störungsfreien Ablaufs stehen wir dir zur Seite.
+          
+          #### Individuelle Beratung
+          Jedes Event ist einzigartig. Deshalb bieten wir eine individuelle Beratung und Anpassung unseres Angebots an deine spezifischen Bedürfnisse und Ziele.
+          
+          Mit unserem Moderationsangebot machen wir deine Events zu einem vollen Erfolg und sorgen dafür, dass sie nachhaltig in Erinnerung bleiben. Lass uns gemeinsam deine nächste Konferenz oder Community-Veranstaltung unvergesslich machen!
     pretix:
       widget: https://pretix.eu/widget/v1.de.js
       problems: Hast du Probleme bei der Anmeldung, melde dich unter [events@bumbleflies.de](mailto:events@bumbleflies.de)

@@ -14,6 +14,8 @@ nav:
         url: "openchat"
       - title: pages.events.accceu.24.title
         url: "accceu24"
+      - title: pages.events.facilitation.title
+        url: "facilitation"
       - title: pages.stayintheloop.title
         url: "stayintheloop"
   - title: pages.openspace.title

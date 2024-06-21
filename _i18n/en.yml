@@ -222,6 +222,31 @@ pages:
         cant:
           title: Enthusiastic?
           body: Then feel free to fill out the following survey for us.
+    facilitation:
+      title: At Your Place
+      slogan: We facilitate your next conference and community event.
+      header:
+        title: We Facilitate Your Events
+        subtitle: Our Facilitation Offer for You
+        button: Contact Us
+      about:
+        title: Our Offer
+        body: |
+          Our experienced facilitators guide you through your next conference or community event, ensuring everything runs smoothly. With our unique Open Bumble Space format, we create an open and dynamic atmosphere where all participants are actively engaged and can freely exchange their ideas.
+    
+          #### Conference Facilitation
+          We take care of the complete facilitation of your conference, from the welcome to the discussion management to the closing speech. We ensure a structured process and a pleasant atmosphere where all participants feel comfortable.
+    
+          #### Community Events
+          Whether it's meetups, networking events, or workshops, we design and facilitate your community events to be inspiring and productive. Our focus is on fostering exchange between participants and creating valuable connections.
+    
+          #### Technical Support
+          We handle the technical implementation of your event. From choosing the right platform to ensuring a smooth process, we support you every step of the way.
+    
+          #### Individual Consultation
+          Every event is unique. That's why we offer individual consultation and customization of our offer to your specific needs and goals.
+    
+          With our facilitation offer, we make your events a full success and ensure they remain memorable. Let's make your next conference or community event unforgettable together!
 
     pretix:
       widget: https://pretix.eu/widget/v1.en.js
