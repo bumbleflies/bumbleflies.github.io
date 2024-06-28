@@ -17,6 +17,7 @@ $contact-image: "{{ site.data.style.contact-image }}";
 $header-image: "{{ site.data.style.header-image }}";
 $accceu-image: "{{ site.data.style.accceu-image }}";
 $fast-image: "{{ site.data.style.fast-image }}";
+$nvc-image: "{{ site.data.style.nvc-image }}";
 
 @import "header_images.scss";
 

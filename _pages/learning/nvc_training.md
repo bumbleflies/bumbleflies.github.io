@@ -20,6 +20,7 @@ header:
   text: pages.learning.nvc.header.text
   button: pages.learning.nvc.header.button
   buttonlink: "#book"
+  image-class: nvc-image
 
 event: 
   name: pages.learning.nvc.about.title
