@@ -33,6 +33,8 @@ nav:
         url: "fast-training"
       - title: pages.learning.ai.title
         url: 'gpt-training'
+      - title: pages.learning.nvc.title
+        url: 'nvc-training'
   - title: pages.about.title
     url: "about"
 
