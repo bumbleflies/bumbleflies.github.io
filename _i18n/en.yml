@@ -531,7 +531,41 @@ pages:
           Basic Course: Introduction to ChatGPT or equivalent
       
           After successful participation, you will receive your completion certificate.
-
+    nvc:
+      title: NVC Practice Group
+      slogan: The Special NVC Practice Group - Deepen Your "Giraffe" Knowledge
+      header:
+        title: The Special NVC Practice Group
+        text: Deepen Your "Giraffe" Knowledge
+        button: Info
+      location:
+        name: Akademie Blickwinkel (Munich)
+        url: https://www.akademie-blickwinkel.de
+        header: What is Akademie Blickwinkel?
+        body: >
+          "Blickwinkel" has been professionally and empathetically supporting you for over 10 years with all challenges around communication. Whether in our seminars or in our mediation and coaching training courses, in individual coaching sessions or in mediations - based on Nonviolent Communication (NVC) and using other proven approaches.
+      about:
+        title: 6x6 The Special NVC Practice Group
+        body: |
+          You already have experience with Nonviolent Communication and now want to stay engaged, delve deeper, or just "practice" to ...
+    
+          _clarify open questions?_  
+          _apply NVC more confidently in your daily life?_  
+          _prepare for or follow up on challenging situations?_  
+          _bring more fun and ease into your life together with other NVC enthusiasts?_  
+    
+          To this end, we now offer you the 6 x 6 practice group, where everything you want to deepen "giraffe-style" has a place.
+          ### Dates
+          16.09./ 21.10./ 18.11./ 16.12.2024/ 20.01./ 17.02.2025
+          each from 18:30 - 21:00
+    
+          ### Seminar Fee
+          190 € (self-paying individuals)  
+          173 € (early bird price for self-paying individuals)  
+          266 € (corporate clients)  
+    
+          ### Registration
+          Registration is done through [Akademie Blickwinkel](https://www.akademie-blickwinkel.de/anmeldung.html){:target="_blank"}.
   privacy:
     title: Privacy
   app_privacy:
