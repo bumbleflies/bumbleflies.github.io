@@ -12,6 +12,10 @@ includes:
           options:
             gallery:
               - slides: &slides_1
+                - /assets/img/impressions/openchat-1-1.webp
+                - /assets/img/impressions/openchat-1-2.webp
+                - /assets/img/impressions/openchat-1-3.webp
+              - slides: 
                 - /assets/img/impressions/obs-3-1.webp
                 - /assets/img/impressions/obs-3-2.webp
                 - /assets/img/impressions/obs-3-3.webp
@@ -34,7 +38,7 @@ includes:
       section: tickets
       css_class: bg-light
       pretix: &offer
-        url: 'https://events.bumbleflies.de/obs-6/'
+        url: 'https://events.bumbleflies.de/obs-7/'
         problems: pages.events.pretix.problems
   - path: about.html
     options:
@@ -54,8 +58,8 @@ head:
     - url: https://events.bumbleflies.de/obs-6/widget/v1.css
 foot:  
   scripts:
-    - url: https://pretix.eu/widget/v1.de.js
     - url: /assets/js/lazy-load.js
+  translatable: pages.events.pretix.widget
 
 header:
   title: pages.events.obs.header.title
@@ -68,22 +72,22 @@ event:
   description: pages.events.obs.about.body
   intro: pages.events.obs.next.intro
   date:
-      start: 2024-03-07T18:00+01:00
-      end: 2024-03-07T22:00+01:00
+      start: 2024-08-01T18:00+01:00
+      end: 2024-08-01T22:00+01:00
   location:
     name: pages.events.obs.next.location.name
     url: pages.events.obs.next.location.url
     header: pages.events.obs.next.location.header
     body: pages.events.obs.next.location.body
     address:
-      street: "Maximilianspl. 5"
+      street: "August-Everding-Str. 20"
       locality: München
-      code: 80333
+      code: 81671
       country: DE
   images: *slides_1
   offer: 
     <<: *offer
-    from: 2023-08-19T01:02+01:00
+    from: 2024-07-04T01:02+01:00
     price: 10
   cant:
     title: pages.events.obs.cant.title

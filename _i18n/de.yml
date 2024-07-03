@@ -88,13 +88,13 @@ pages:
         title: Alle Infos zum nächsten Event
         intro: |
           Es ist wieder so weit: wir veranstalten wieder einen open:bumble:space!
-          Wir freuen uns, dass [Robert](https://www.linkedin.com/in/robertkuerzinger/){:target="_blank"} von der [LV1871](https://www.lv1871.de/){:target="_blank"} uns wieder einläd.
+          Wir freuen uns, dass [Bea](https://www.linkedin.com/in/bea-kusnitzoff-71760917a/){:target="_blank"} von [Codecentric](https://www.codecentric.de/){:target="_blank"} uns wieder einläd.
         location:
-          name: LV1871
-          url: https://www.lv1871.de/
-          header: Robert, was macht ihr bei der LV1871?
+          name: Codecentric
+          url: https://www.codecentric.de/
+          header: Bea, was macht ihr bei Codecentric?
           body: |
-            Die Lebensversicherung von 1871 a. G. München (LV 1871) ist Spezialist und Top-10-Anbieter für innovative Berufsunfähigkeitsversicherungen sowie für Lebens- und Rentenversicherungen. Rund 500 Mitarbeiter arbeiten im Herzen Münchens für den ebenso modernen wie traditionsreichen Versicherungsverein, der seine Marktposition seit 150 Jahren kontinuierlich ausbaut. Die LV 1871 basiert auf dem Prinzip der Gegenseitigkeit und verpflichtet sich den Interessen ihrer Kunden. Dafür arbeitet das Unternehmen mit unabhängigen Versicherungsvermittlern zusammen. Renommierte Ratingagenturen bewerten die Produkte und Lösungen seit Jahren mit Höchstnoten. Mit einer Solvenzquote von über 400 Prozent gehört die LV 1871 zu den finanzstärksten und sichersten Lebensversicherungsunternehmen Deutschlands.
+            codecentric steht für exzellente Menschen und exzellente Software, die unsere Kunden im deutschsprachigen Raum dazu befähigen, schnell hochwertige Software-Lösungen zu entwickeln.
     openchat:
       title: open:chat
       slogan: Entdecke die Zukunft des agilen Coachings in einer Welt, die durch innovative Technologien wie ChatGPT geprägt ist.
