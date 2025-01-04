@@ -42,7 +42,7 @@ jobs:
         run: echo "webhook_ip=$(dig +short servyy.bumbleflies.de)" >> "$GITHUB_OUTPUT"
       - name: Trigger deployment
         run: |
-          response=$(curl -s -o /dev/null -w "%{http_code}" -X POST ${{ secrets.WEBSITE_HOOK_URL }}/${{ secrets.WEBSITE_HOOK_SECRET }} --resolve 'webhook.bumbleflies.servyy.bumbleflies.de:443:${{ steps.pre-resolve.outputs.webhook_ip }}')
+          response=$(curl -s -o /dev/null -w "%{http_code}" -X POST ${{ secrets.WEBSITE_HOOK_URL }}/${{ secrets.WEBSITE_HOOK_SECRET }} --resolve 'webhook.bumbleflies.lehel.xyz:443:${{ steps.pre-resolve.outputs.webhook_ip }}')
           if [ "$response" -ne 200 ]; then
             echo "Deployment trigger failed with status code $response"
             exit 1
