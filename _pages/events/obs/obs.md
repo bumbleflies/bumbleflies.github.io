@@ -38,7 +38,7 @@ includes:
       section: tickets
       css_class: bg-light
       pretix: &offer
-        url: 'https://events.bumbleflies.de/obs-7/'
+        url: 'https://events.bumbleflies.de/obs-8/'
         problems: pages.events.pretix.problems
   - path: about.html
     options:
@@ -55,7 +55,7 @@ title: pages.events.obs.title
 
 head:
   styles:
-    - url: https://events.bumbleflies.de/obs-6/widget/v1.css
+    - url: https://events.bumbleflies.de/obs-8/widget/v1.css
 foot:  
   scripts:
     - url: /assets/js/lazy-load.js
@@ -72,22 +72,22 @@ event:
   description: pages.events.obs.about.body
   intro: pages.events.obs.next.intro
   date:
-      start: 2024-08-01T18:00+01:00
-      end: 2024-08-01T22:00+01:00
+      start: 2025-02-20T18:00+01:00
+      end: 2025-02-20T22:00+01:00
   location:
     name: pages.events.obs.next.location.name
     url: pages.events.obs.next.location.url
     header: pages.events.obs.next.location.header
     body: pages.events.obs.next.location.body
     address:
-      street: "August-Everding-Str. 20"
+      street: "Drygalski-Allee 25"
       locality: München
-      code: 81671
+      code: 81477
       country: DE
   images: *slides_1
   offer: 
     <<: *offer
-    from: 2024-07-04T01:02+01:00
+    from: 2025-01-21T01:02+01:00
     price: 10
   cant:
     title: pages.events.obs.cant.title

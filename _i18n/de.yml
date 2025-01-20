@@ -75,9 +75,9 @@ pages:
     obs:
       title: open:bumble:space
       header:
-          title: Anmeldung zum open:bumble:space
-          text: Wir freuen uns dich zu treffen!
-          button: Melde dich an
+        title: Anmeldung zum open:bumble:space
+        text: Wir freuen uns dich zu treffen!
+        button: Melde dich an
       about:
         title: Was ist ein open bumble space?
         body: Der open:bumble:space ist der Ort, an dem sich die Münchner User Group zum Thema 'Agile' versammelt. Wir treffen uns alle zwei Monate zu einem Open Space. Wir wissen, dass Agilität auf ständigem Lernen basiert. Wir glauben, dass wir besser und schneller lernen, wenn wir unsere Erfahrungen miteinander austauschen, in einem ungezwungenen Rahmen, kein Vortrag sondern AdHoc.
@@ -88,13 +88,14 @@ pages:
         title: Alle Infos zum nächsten Event
         intro: |
           Es ist wieder so weit: wir veranstalten wieder einen open:bumble:space!
-          Wir freuen uns, dass [Bea](https://www.linkedin.com/in/bea-kusnitzoff-71760917a/){:target="_blank"} von [Codecentric](https://www.codecentric.de/){:target="_blank"} uns wieder einläd.
+          Wir freuen uns, dass [Jana](https://www.linkedin.com/in/jana-hanrieder-2016b4170){:target="_blank"} von [MaibornWolff](https://www.maibornwolff.de/){:target="_blank"} uns wieder einläd.
         location:
-          name: Codecentric
+          name: MaibornWolff im Kraftwerk
           url: https://www.codecentric.de/
-          header: Bea, was macht ihr bei Codecentric?
+          header: Jana, was macht ihr bei MaibornWolff?
           body: |
-            codecentric steht für exzellente Menschen und exzellente Software, die unsere Kunden im deutschsprachigen Raum dazu befähigen, schnell hochwertige Software-Lösungen zu entwickeln.
+            Wir von MaibornWolff unterstützen Kunden von Anfang bis Ende bei Ihren digitalen Herausforderungen. Wir entwickeln, bauen und testen Software-Lösungen. User stehen dabei bei uns im Fokus.
+            Von Menschen für Menschen: bei uns dreht sich alles um den Menschen – in Projekten und unserer Firmen-Kultur. Mehr infos unter https://www.maibornwolff.de
     openchat:
       title: open:chat
       slogan: Entdecke die Zukunft des agilen Coachings in einer Welt, die durch innovative Technologien wie ChatGPT geprägt ist.

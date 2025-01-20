@@ -72,9 +72,9 @@ pages:
     obs:
       title: open:bumble:space
       header:
-          title: Register for open:bumble:space
-          text: We look forward to meeting you!
-          button: Register now
+        title: Register for open:bumble:space
+        text: We look forward to meeting you!
+        button: Register now
       about:
         title: What is an open bumble space?
         body: The open:bumble:space is the place where the Munich User Group on the topic of 'Agile' gathers. We meet every two months for an Open Space. We know that agility is based on continuous learning. We believe that we learn better and faster when we share our experiences with each other, in an informal setting, not a lecture but ad hoc.
@@ -83,16 +83,17 @@ pages:
         body: |
           Sign up for [our list](stayintheloop) and we'll let you know as soon as we plan the next Open Space.
       next:
-        title: Everything about the event
+        title: All the Info About the Next Event
         intro: |
-          It's that time again: we're hosting another open:bumble:space!
-          This time together with [Robert](https://www.linkedin.com/in/robertkuerzinger/){:target="_blank"} from [LV1871](https://www.lv1871.de/){:target="_blank"}.
+          It's that time again: we are hosting another open:bumble:space!
+          We are excited that [Jana](https://www.linkedin.com/in/jana-hanrieder-2016b4170){:target="_blank"} from [MaibornWolff](https://www.maibornwolff.de/){:target="_blank"} is inviting us again.
         location:
-          name: LV1871
-          url: https://www.lv1871.de/
-          header: Robert, what does LV1871 do?
+          name: MaibornWolff at Kraftwerk
+          url: https://www.codecentric.de/
+          header: Jana, what do you do at MaibornWolff?
           body: |
-            The Lebensversichrung von 1871 a.G. München (LV 1871) is a specialist and top 10 provider of innovative Berufsunfähigkeitsversicherungen as well as life and pension insurance. Around 500 employees work in the heart of Munich for the modern and traditional insurance association, which has been continuously expanding its market position for 150 years. LV 1871 is based on the principle of reciprocity and is committed to the interests of its customers.
+            At MaibornWolff, we support our clients from start to finish with their digital challenges. We design, build, and test software solutions, always keeping the user in focus.
+            From people for people: everything we do revolves around people—both in our projects and in our company culture. More info at https://www.maibornwolff.de
     openchat:
       title: open:chat
       slogan: Discover the future of agile coaching in a world shaped by innovative technologies like ChatGPT.
