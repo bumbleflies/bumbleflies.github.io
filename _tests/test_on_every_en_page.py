@@ -5,7 +5,7 @@ from _tests.helper import query_site, assert_link_present, assert_stylesheet_pre
 
 @pytest.mark.parametrize('title, page, allowed_stylesheets', [
     ('bumble:retreat', '/en/bumble-retreat', ()),
-    ('open:bumble:space', '/en/open-bumble-space', ('https://events.bumbleflies.de/obs-6/widget/v1.css',)),
+    ('open:bumble:space', '/en/open-bumble-space', ('https://events.bumbleflies.de/obs-8/widget/v1.css',)),
     ('Imprint', '/en/imprint', ()),
     ('Privacy', '/en/privacy', ()),
     ('Checklist', '/en/open-space-checklist', ()),
