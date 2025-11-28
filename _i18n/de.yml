@@ -578,6 +578,42 @@ pages:
   team:
     title: "Wir sind bumbleflies"
     subtext: Wir lieben Open Space! Wir vereinen die Erfahrung von mehr als 200 Großgruppen-Moderationen.
+    fun_fact_label: "Fun Fact"
+    christian:
+      bio: "Leidenschaftlicher Open Space Facilitator mit über 10 Jahren Erfahrung in agiler Transformation und Software-Engineering."
+      fun_fact: "Liebt es, mit dem Wohnmobil durch Europa zu reisen und dabei neue Open Space Communities zu entdecken."
+    sebastian:
+      bio: "Experte für Team-Coaching und Produktmanagement mit dem Fokus auf nachhaltige Organisationsentwicklung."
+      fun_fact: "Kocht gerne für große Gruppen und sieht Kochen als eine Form der Facilitation."
+    christoph:
+      bio: "Spezialisiert auf Leadership-Entwicklung und organisatorisches Design mit systemischem Ansatz."
+      fun_fact: "Spielt in einer Jazz-Band und zieht Parallelen zwischen Improvisation und agiler Arbeitsweise."
+  metrics:
+    title: "Unsere Wirkung in Zahlen"
+    events_hosted: "Veranstaltungen moderiert"
+    events_hosted_desc: "Open Spaces, Workshops und Konferenzen"
+    participants: "Teilnehmer:innen"
+    participants_desc: "Menschen, die wir begleiten durften"
+    organizations: "Organisationen"
+    organizations_desc: "Unternehmen, die wir unterstützt haben"
+    countries: "Länder"
+    countries_desc: "In denen wir tätig waren"
+    years_experience: "Jahre Erfahrung"
+    years_experience_desc: "Gemeinsame Expertise im Team"
+    satisfaction: "Zufriedenheit"
+    satisfaction_desc: "Der Teilnehmer:innen würden uns weiterempfehlen"
+  testimonials:
+    title: "Was unsere Kunden sagen"
+    client1:
+      quote: "Die bumbleflies haben unsere agile Transformation mit ihrer professionellen Moderation und ihrem tiefen Verständnis für Open Space nachhaltig geprägt. Die Energie und das Engagement, das sie in unsere Events gebracht haben, war beeindruckend."
+    client2:
+      quote: "Dank der bumbleflies konnten wir unser erstes groß angelegtes PI-Planning mit über 150 Teilnehmern erfolgreich durchführen. Ihre strukturierte Herangehensweise und die warmherzige Art haben den Unterschied gemacht."
+    client3:
+      quote: "Die Zusammenarbeit mit den bumbleflies war eine Bereicherung für unser Team. Sie haben uns geholfen, eine kollaborative Kultur zu etablieren, die auch nach den Workshops weiterwirkt."
+    client4:
+      quote: "Als Scrum Master habe ich von den bumbleflies unglaublich viel über Facilitation und Gruppendynamik gelernt. Ihre Workshops sind nicht nur lehrreich, sondern auch inspirierend."
+    client5:
+      quote: "Die bumbleflies verstehen es, komplexe organisatorische Herausforderungen in produktive Open Space Sessions zu verwandeln. Ihre Expertise und Leidenschaft sind in jedem Moment spürbar."
 
 slogan: Wir lieben Open Space!
 language_selector: Sprache auswählen

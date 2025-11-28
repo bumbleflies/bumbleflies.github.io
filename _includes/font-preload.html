@@ -1,0 +1,32 @@
+<!-- Font Preloading Strategy -->
+<!-- Preload critical fonts used above-the-fold for fastest render -->
+<!-- Using font-display: swap in font-faces.css to prevent FOIT (Flash of Invisible Text) -->
+
+<!-- Montserrat 700 (Headings - critical for hero/masthead) -->
+<link rel="preload"
+      href="{{ site.baseurl_root }}/assets/font/montserrat-v25-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous">
+
+<!-- Montserrat Regular (Body headings) -->
+<link rel="preload"
+      href="{{ site.baseurl_root }}/assets/font/montserrat-v25-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous">
+
+<!-- Roboto Condensed Regular (Body text - critical) -->
+<link rel="preload"
+      href="{{ site.baseurl_root }}/assets/font/roboto-condensed-v25-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous">
+
+<!-- DNS Prefetch and Preconnect for external resources -->
+<!-- Add any CDN or external font sources here if used -->
+<!-- Example for Google Fonts (currently using self-hosted fonts):
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+-->

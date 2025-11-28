@@ -16,12 +16,64 @@
 
 	  {% include footer.html %}
 
-	  <!-- Bootstrap core JavaScript -->
-	  <script src="{{ site.baseurl_root }}/assets/js/jquery-slim.min.js"></script>
-	  <script src="{{ site.baseurl_root }}/assets/js/bootstrap.bundle.min.js"></script>
+	  <!-- Bootstrap core JavaScript - Deferred for better performance -->
+	  <!-- jQuery is required by Bootstrap, but deferred to not block rendering -->
+	  <script src="{{ site.baseurl_root }}/assets/js/jquery-slim.min.js" defer></script>
+	  <script src="{{ site.baseurl_root }}/assets/js/bootstrap.bundle.min.js" defer></script>
 
-	  <!-- Custom scripts for this template -->
-	  <script src="{{ site.baseurl_root }}/assets/js/agency.min.js" async></script>
+	  <!-- Custom scripts for this template - Async loaded -->
+	  <!-- async allows parallel downloads, defer ensures proper execution order -->
+	  <script src="{{ site.baseurl_root }}/assets/js/agency.min.js" defer></script>
+
+	  <!-- Lazy Loading Image Enhancement Script -->
+	  <!-- Adds .loaded class to images when they load for smooth transitions -->
+	  <script>
+	    // Feature detection for native lazy loading
+	    if ('loading' in HTMLImageElement.prototype) {
+	      // Native lazy loading supported
+	      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+	      lazyImages.forEach(img => {
+	        if (img.complete) {
+	          img.classList.add('loaded');
+	        } else {
+	          img.addEventListener('load', () => {
+	            img.classList.add('loaded');
+	          });
+	        }
+	      });
+	    } else {
+	      // Fallback for browsers without native lazy loading
+	      // Use Intersection Observer API
+	      const lazyImages = document.querySelectorAll('img[data-src]');
+
+	      if ('IntersectionObserver' in window) {
+	        const imageObserver = new IntersectionObserver((entries, observer) => {
+	          entries.forEach(entry => {
+	            if (entry.isIntersecting) {
+	              const img = entry.target;
+	              img.src = img.dataset.src;
+	              if (img.dataset.srcset) {
+	                img.srcset = img.dataset.srcset;
+	              }
+	              img.classList.add('lazy-loaded');
+	              imageObserver.unobserve(img);
+	            }
+	          });
+	        });
+
+	        lazyImages.forEach(img => imageObserver.observe(img));
+	      } else {
+	        // Fallback: load all images immediately
+	        lazyImages.forEach(img => {
+	          img.src = img.dataset.src;
+	          if (img.dataset.srcset) {
+	            img.srcset = img.dataset.srcset;
+	          }
+	          img.classList.add('lazy-loaded');
+	        });
+	      }
+	    }
+	  </script>
 
   </body>
 </html>

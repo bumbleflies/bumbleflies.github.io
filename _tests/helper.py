@@ -16,8 +16,16 @@ def query_site(bumbleserve, path=''):
 
 
 def assert_stylesheet_present(stylesheet_name, stylesheets):
-    found_stylesheet = one(filter(lambda s: stylesheet_name in s.attrs['href'], stylesheets))
-    assert Path(Path(__file__).parent.parent.joinpath('_test_site'), found_stylesheet.attrs['href'].lstrip('/')).exists()
+    # Performance optimization added multiple link tags per stylesheet (preload + fallback)
+    # So we check for at least one matching stylesheet instead of exactly one
+    matching_stylesheets = list(filter(lambda s: stylesheet_name in s.attrs['href'], stylesheets))
+    assert len(matching_stylesheets) > 0, f"No stylesheet found for {stylesheet_name}"
+
+    # Verify the stylesheet file actually exists
+    for found_stylesheet in matching_stylesheets:
+        stylesheet_path = Path(Path(__file__).parent.parent.joinpath('_test_site'), found_stylesheet.attrs['href'].lstrip('/'))
+        assert stylesheet_path.exists(), f"Stylesheet file not found: {stylesheet_path}"
+        break  # Only need to verify existence once
 
 
 def assert_link_present(link_name, link_target, links, bumbleserve):

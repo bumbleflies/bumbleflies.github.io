@@ -41,7 +41,9 @@ def path_to_source():
 
 @pytest.fixture(scope='session')
 def bumblebuild(path_to_site: Path, path_to_source:Path):
-    result = subprocess.run(['bundle', 'exec', 'jekyll', 'build', '-d', path_to_site],
+    # Use the correct bundle path from gems cache
+    bundle_path = Path.home() / '.gems_cache' / 'ruby' / '3.3.0' / 'bin' / 'bundle'
+    result = subprocess.run([str(bundle_path), 'exec', 'jekyll', 'build', '-d', path_to_site],
                             capture_output=True, text=True, cwd=path_to_source)
     assert 'done in' in result.stdout
 

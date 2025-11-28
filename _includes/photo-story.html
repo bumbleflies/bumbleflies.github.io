@@ -1,0 +1,279 @@
+<!-- Photo Story Gallery -->
+<!-- Photo gallery with captions and stories -->
+<!-- Responsive masonry-style layout with hover effects -->
+<!-- Pass photos array via include.photos parameter -->
+
+{% comment %}
+Usage:
+{% include photo-story.html
+   options.title="pages.gallery.title"
+   options.text="pages.gallery.subtitle"
+   options.section="photo-story"
+   photos=page.photos
+%}
+
+Photo data structure (in page frontmatter or data file):
+photos:
+  - src: "/assets/img/story/photo1.webp"
+    alt: "Description for accessibility"
+    title: "Photo Title"
+    description: "Story or caption text"
+  - src: "/assets/img/story/photo2.webp"
+    alt: "Another description"
+    title: "Another Title"
+    description: "Another story"
+{% endcomment %}
+
+<section class="page-section photo-story-section" id="{{ include.options.section | default: 'photo-story' }}">
+  <div class="container">
+    {% if include.options.title %}
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{% t include.options.title %}</h2>
+        {% if include.options.text %}
+        <h3 class="section-subheading text-muted">{% t include.options.text %}</h3>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if include.photos %}
+    <div class="photo-story-grid">
+      {% for photo in include.photos %}
+      <div class="photo-story-item">
+        <div class="photo-story-card">
+          <img src="{{ site.baseurl_root }}{{ photo.src }}"
+               alt="{{ photo.alt }}"
+               loading="lazy"
+               class="photo-story-image">
+
+          <div class="photo-story-overlay">
+            <div class="photo-story-content">
+              {% if photo.title %}
+              <h3 class="photo-story-title">{{ photo.title }}</h3>
+              {% endif %}
+
+              {% if photo.description %}
+              <p class="photo-story-description">{{ photo.description }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <p class="text-muted">No photos available.</p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+/* Photo Story Grid - Responsive Masonry Layout */
+.photo-story-grid {
+  display: grid;
+  gap: var(--spacing-lg, 1.5rem);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: var(--spacing-2xl, 3rem);
+}
+
+@media (min-width: 992px) {
+  .photo-story-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .photo-story-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md, 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .photo-story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Photo Story Item */
+.photo-story-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Photo Story Card */
+.photo-story-card {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* 4:3 aspect ratio */
+  overflow: hidden;
+  border-radius: var(--radius-lg, 12px);
+  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0, 0, 0, 0.08));
+  transition: box-shadow var(--transition-normal, 250ms ease-in-out),
+              transform var(--transition-normal, 250ms ease-in-out);
+}
+
+.photo-story-card:hover {
+  box-shadow: var(--shadow-lg, 0 8px 16px rgba(0, 0, 0, 0.12));
+  transform: translateY(-4px);
+}
+
+/* Photo Story Image */
+.photo-story-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow, 400ms ease-in-out);
+}
+
+.photo-story-card:hover .photo-story-image {
+  transform: scale(1.05);
+}
+
+/* Photo Story Overlay */
+.photo-story-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-normal, 250ms ease-in-out);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--spacing-lg, 1.5rem);
+}
+
+.photo-story-card:hover .photo-story-overlay {
+  opacity: 1;
+}
+
+/* Photo Story Content */
+.photo-story-content {
+  width: 100%;
+  color: #ffffff;
+  transform: translateY(20px);
+  transition: transform var(--transition-normal, 250ms ease-in-out);
+}
+
+.photo-story-card:hover .photo-story-content {
+  transform: translateY(0);
+}
+
+.photo-story-title {
+  font-size: var(--font-size-lg, 1.125rem);
+  font-weight: var(--font-weight-bold, 700);
+  margin-bottom: var(--spacing-xs, 0.25rem);
+  color: #ffffff;
+  line-height: var(--line-height-tight, 1.25);
+}
+
+.photo-story-description {
+  font-size: var(--font-size-sm, 0.875rem);
+  line-height: var(--line-height-relaxed, 1.75);
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Alternative: Always show overlay on mobile */
+@media (max-width: 768px) {
+  .photo-story-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 70%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .photo-story-content {
+    transform: translateY(0);
+  }
+
+  .photo-story-card:hover {
+    transform: none;
+  }
+
+  .photo-story-card:hover .photo-story-image {
+    transform: none;
+  }
+}
+
+/* Stagger animation on load */
+@media (prefers-reduced-motion: no-preference) {
+  .photo-story-item {
+    opacity: 0;
+    animation: photoFadeIn 0.6s ease-out forwards;
+  }
+
+  .photo-story-item:nth-child(1) { animation-delay: 0.1s; }
+  .photo-story-item:nth-child(2) { animation-delay: 0.15s; }
+  .photo-story-item:nth-child(3) { animation-delay: 0.2s; }
+  .photo-story-item:nth-child(4) { animation-delay: 0.25s; }
+  .photo-story-item:nth-child(5) { animation-delay: 0.3s; }
+  .photo-story-item:nth-child(6) { animation-delay: 0.35s; }
+  .photo-story-item:nth-child(n+7) { animation-delay: 0.4s; }
+
+  @keyframes photoFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .photo-story-item,
+  .photo-story-card,
+  .photo-story-image,
+  .photo-story-overlay,
+  .photo-story-content {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .photo-story-item {
+    opacity: 1 !important;
+  }
+
+  .photo-story-card:hover {
+    transform: none;
+  }
+
+  .photo-story-card:hover .photo-story-image {
+    transform: none;
+  }
+
+  .photo-story-content {
+    transform: none !important;
+  }
+}
+
+/* Focus styles for accessibility */
+.photo-story-card:focus-within {
+  outline: 2px solid var(--color-primary, #f1c232);
+  outline-offset: 4px;
+}
+</style>
+<!-- End Photo Story Gallery -->

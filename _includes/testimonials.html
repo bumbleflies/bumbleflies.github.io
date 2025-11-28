@@ -1,0 +1,155 @@
+<!-- Client Testimonials Section -->
+<!-- Displays client success stories and feedback -->
+<!-- Uses modern card design with testimonial-specific styling -->
+<!-- Data source: _data/testimonials.yml -->
+
+<section class="page-section testimonials-section" id="{{ include.options.section | default: 'testimonials' }}">
+  <div class="container">
+    {% if include.options.title %}
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{% t include.options.title %}</h2>
+        {% if include.options.text %}
+        <h3 class="section-subheading text-muted">{% t include.options.text %}</h3>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="testimonials-grid">
+      {% for testimonial in site.data.testimonials.testimonials %}
+      <div class="card-testimonial">
+        <div class="testimonial-text">
+          "{% t testimonial.quote_key %}"
+        </div>
+
+        <div class="testimonial-author">
+          {% if testimonial.avatar %}
+          <img src="{{ site.baseurl_root }}{{ testimonial.avatar }}"
+               alt="Photo of {{ testimonial.name }}"
+               loading="lazy"
+               onerror="this.style.display='none'">
+          {% else %}
+          <div class="testimonial-avatar-placeholder" aria-hidden="true">
+            {{ testimonial.name | slice: 0 }}
+          </div>
+          {% endif %}
+
+          <div class="author-info">
+            <div class="author-name">{{ testimonial.name }}</div>
+            <div class="author-role">
+              {{ testimonial.role }}
+              {% if testimonial.company %}
+              <span class="author-company">@ {{ testimonial.company }}</span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if include.options.cta_text and include.options.cta_link %}
+    <div class="row mt-5">
+      <div class="col-lg-12 text-center">
+        <a href="{{ include.options.cta_link }}" class="btn-primary btn-lg">
+          {% t include.options.cta_text %}
+        </a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+/* Testimonials Grid Layout */
+.testimonials-grid {
+  display: grid;
+  gap: var(--spacing-xl, 2rem);
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin-top: var(--spacing-2xl, 3rem);
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg, 1.5rem);
+  }
+}
+
+/* Avatar Placeholder (when image not available) */
+.testimonial-avatar-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full, 9999px);
+  background: linear-gradient(135deg, var(--color-primary, #f1c232), var(--color-primary-hover, #d9ad28));
+  color: var(--color-text-on-primary, #2d2d2d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl, 1.25rem);
+  font-weight: var(--font-weight-bold, 700);
+  text-transform: uppercase;
+}
+
+/* Author Info */
+.author-info {
+  flex: 1;
+  text-align: left;
+}
+
+.author-company {
+  display: inline-block;
+  margin-left: var(--spacing-xs, 0.25rem);
+}
+
+/* Hover Effects */
+.card-testimonial {
+  transition: transform var(--transition-normal, 250ms ease-in-out),
+              box-shadow var(--transition-normal, 250ms ease-in-out);
+}
+
+.card-testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg, 0 8px 16px rgba(0, 0, 0, 0.12));
+}
+
+/* Stagger animation on load */
+@media (prefers-reduced-motion: no-preference) {
+  .card-testimonial {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .card-testimonial:nth-child(1) { animation-delay: 0.1s; }
+  .card-testimonial:nth-child(2) { animation-delay: 0.2s; }
+  .card-testimonial:nth-child(3) { animation-delay: 0.3s; }
+  .card-testimonial:nth-child(4) { animation-delay: 0.4s; }
+  .card-testimonial:nth-child(5) { animation-delay: 0.5s; }
+  .card-testimonial:nth-child(n+6) { animation-delay: 0.6s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Accessibility: Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card-testimonial {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  .card-testimonial:hover {
+    transform: none;
+  }
+}
+</style>
+<!-- End Client Testimonials -->

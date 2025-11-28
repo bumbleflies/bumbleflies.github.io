@@ -8,6 +8,16 @@
     {% if site.beta_mode %}<meta name="robots" content="noindex, nofollow">{% endif %}
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+    <!-- Critical CSS - Inlined for fastest initial render -->
+    {% include critical-css.html %}
+
+    <!-- Resource Hints - DNS Prefetch and Preconnect for faster resource loading -->
+    <!-- Add external domains here if using CDNs -->
+    <link rel="dns-prefetch" href="{{ site.url }}">
+
+    <!-- Font Preloading - Critical fonts loaded first -->
+    {% include font-preload.html %}
+
     {% if page.slogan %}
     {% capture page_slogan %}{% t page.slogan %}{% endcapture %}
     {% else %}
@@ -34,19 +44,35 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
 
-    <!-- preload styles -->
+    <!-- Deferred Non-Critical Stylesheets -->
+    <!-- Using media="print" trick for async CSS loading to prevent render-blocking -->
+    <!-- Critical CSS is already inlined above for fastest initial render -->
     {% for style in site.data.style.sheets %}
-    <link rel="preload" type="text/css" href="{{ site.baseurl_root }}/assets/css/{{ style.name }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload"
+          type="text/css"
+          href="{{ site.baseurl_root }}/assets/css/{{ style.name }}"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet"
+          type="text/css"
+          href="{{ site.baseurl_root }}/assets/css/{{ style.name }}"
+          media="print"
+          onload="this.media='all'">
     {% endfor %}
+
+    <!-- Fallback for browsers without JavaScript -->
     <noscript>
         {% for style in site.data.style.sheets %}
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl_root }}/assets/css/{{ style.name }}"/>
         {% endfor %}
     </noscript>
 
-    <!-- preload background image -->
+    <!-- Preload Critical Background Images -->
+    <!-- fetchpriority="high" for above-the-fold hero image -->
     <link rel="preload" as="image" fetchpriority="high" href="{{ site.data.style.header-image }}" type="image/webp">
-    <link rel="preload" as="image" href="{{ site.data.style.accceu-image }}" type="image/webp">
+
+    <!-- Lower priority for other images -->
+    <link rel="preload" as="image" fetchpriority="low" href="{{ site.data.style.accceu-image }}" type="image/webp">
 
     <!-- additional styles -->
     {% for style in page.head.styles %}

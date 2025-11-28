@@ -31,6 +31,10 @@ exclude:
   - README.md
   - 404.html
   - CLAUDE.md
+  - MODERNIZATION_PLAN.md
+  - PERFORMANCE.md
+  - STORYTELLING_COMPONENTS.md
+  - QA_REPORT.md
 
 plugins:
   - jekyll-github-metadata

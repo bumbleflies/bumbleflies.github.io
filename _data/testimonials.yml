@@ -1,0 +1,34 @@
+# Client Testimonials for Bumbleflies
+# Showcasing client success stories and feedback
+# Used by _includes/testimonials.html
+
+testimonials:
+  - quote_key: "pages.testimonials.client1.quote"
+    name: "Dr. Anna Schmidt"
+    role: "Head of Agile Transformation"
+    company: "TechVision GmbH"
+    avatar: "/assets/img/testimonials/avatar-1.webp"
+
+  - quote_key: "pages.testimonials.client2.quote"
+    name: "Michael Weber"
+    role: "Engineering Manager"
+    company: "InnovateSoft AG"
+    avatar: "/assets/img/testimonials/avatar-2.webp"
+
+  - quote_key: "pages.testimonials.client3.quote"
+    name: "Sarah Johnson"
+    role: "VP of Product"
+    company: "Digital Dynamics"
+    avatar: "/assets/img/testimonials/avatar-3.webp"
+
+  - quote_key: "pages.testimonials.client4.quote"
+    name: "Thomas Müller"
+    role: "Scrum Master"
+    company: "CloudScale Systems"
+    avatar: "/assets/img/testimonials/avatar-4.webp"
+
+  - quote_key: "pages.testimonials.client5.quote"
+    name: "Lisa Chen"
+    role: "Organizational Coach"
+    company: "Agile Partners"
+    avatar: "/assets/img/testimonials/avatar-5.webp"

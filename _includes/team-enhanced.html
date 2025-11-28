@@ -1,0 +1,314 @@
+<!-- Enhanced Team Section -->
+<!-- Modern team member display with bios, expertise, and fun facts -->
+<!-- Uses card-profile design with expandable content -->
+<!-- Data source: _data/team.yml with enhanced fields -->
+
+<section class="page-section team-enhanced-section" id="{{ include.options.section | default: 'team' }}">
+  <div class="container">
+    {% if include.options.title %}
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{% t include.options.title %}</h2>
+        {% if include.options.text %}
+        <h3 class="section-subheading text-muted">{% t include.options.text %}</h3>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="team-enhanced-grid">
+      {% for person in site.data.team.people %}
+      <div class="card-profile team-card">
+        <!-- Avatar -->
+        <img class="profile-avatar"
+             src="{{ site.baseurl_root }}{{ person.image }}"
+             alt="Profile image of {{ person.name }}"
+             loading="lazy">
+
+        <!-- Name and Role -->
+        <h3 class="profile-name">{{ person.name }}</h3>
+        <p class="profile-role">{{ person.role }}</p>
+
+        <!-- Bio (if available) -->
+        {% if person.bio_key %}
+        <div class="profile-bio">
+          {% t person.bio_key %}
+        </div>
+        {% endif %}
+
+        <!-- Expertise Tags (if available) -->
+        {% if person.expertise %}
+        <div class="expertise-tags">
+          {% for skill in person.expertise %}
+          <span class="expertise-tag">{{ skill }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Fun Fact (expandable) -->
+        {% if person.fun_fact_key %}
+        <details class="fun-fact-details">
+          <summary class="fun-fact-summary">
+            <span class="fun-fact-icon" aria-hidden="true">✨</span>
+            <span>{% t pages.team.fun_fact_label %}</span>
+          </summary>
+          <div class="fun-fact-content">
+            {% t person.fun_fact_key %}
+          </div>
+        </details>
+        {% endif %}
+
+        <!-- Social Links -->
+        {% if person.social %}
+        <div class="profile-social">
+          {% for network in person.social %}
+          <a href="{{ network.url }}"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-link"
+             aria-label="{{ person.name }} on {{ network.url | split: '//' | last | split: '/' | first }}">
+            <i class="{{ network.icon }}" aria-hidden="true"></i>
+          </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if include.options.subtext %}
+    <div class="row mt-5">
+      <div class="col-lg-8 mx-auto text-center">
+        {% capture subtext %}{% t include.options.subtext %}{% endcapture %}
+        <div class="large text-muted">{{ subtext | markdownify }}</div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+/* Team Enhanced Grid */
+.team-enhanced-grid {
+  display: grid;
+  gap: var(--spacing-xl, 2rem);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: var(--spacing-2xl, 3rem);
+}
+
+@media (max-width: 768px) {
+  .team-enhanced-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg, 1.5rem);
+  }
+}
+
+/* Team Card Enhancements */
+.team-card {
+  transition: transform var(--transition-normal, 250ms ease-in-out),
+              box-shadow var(--transition-normal, 250ms ease-in-out);
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl, 0 12px 24px rgba(0, 0, 0, 0.15));
+}
+
+/* Expertise Tags */
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs, 0.25rem);
+  justify-content: center;
+  margin: var(--spacing-md, 1rem) 0;
+}
+
+.expertise-tag {
+  display: inline-block;
+  padding: var(--spacing-xs, 0.25rem) var(--spacing-sm, 0.5rem);
+  background-color: rgba(var(--brand-yellow-rgb, 241, 194, 50), 0.15);
+  color: var(--color-text-secondary, #5e5e5e);
+  border-radius: var(--radius-full, 9999px);
+  font-size: var(--font-size-xs, 0.75rem);
+  font-weight: var(--font-weight-medium, 500);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide, 0.05em);
+  transition: background-color var(--transition-fast, 150ms ease-in-out),
+              transform var(--transition-fast, 150ms ease-in-out);
+}
+
+.team-card:hover .expertise-tag {
+  background-color: rgba(var(--brand-yellow-rgb, 241, 194, 50), 0.25);
+}
+
+/* Fun Fact Expandable */
+.fun-fact-details {
+  margin-top: var(--spacing-md, 1rem);
+  padding: var(--spacing-md, 1rem);
+  background-color: var(--color-background-alt, #f8f8f8);
+  border-radius: var(--radius-md, 8px);
+  border: 1px solid var(--color-border-light, #efefef);
+}
+
+.fun-fact-summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs, 0.25rem);
+  font-weight: var(--font-weight-semibold, 600);
+  color: var(--color-text-secondary, #5e5e5e);
+  font-size: var(--font-size-sm, 0.875rem);
+  transition: color var(--transition-fast, 150ms ease-in-out);
+  user-select: none;
+}
+
+.fun-fact-summary::-webkit-details-marker {
+  display: none;
+}
+
+.fun-fact-summary::marker {
+  display: none;
+}
+
+.fun-fact-summary:hover {
+  color: var(--color-primary, #f1c232);
+}
+
+.fun-fact-icon {
+  font-size: var(--font-size-base, 1rem);
+  transition: transform var(--transition-fast, 150ms ease-in-out);
+}
+
+.fun-fact-details[open] .fun-fact-icon {
+  transform: rotate(180deg);
+}
+
+.fun-fact-content {
+  margin-top: var(--spacing-sm, 0.5rem);
+  padding-top: var(--spacing-sm, 0.5rem);
+  border-top: 1px solid var(--color-border, #e0e0e0);
+  color: var(--color-text-tertiary, #999999);
+  font-size: var(--font-size-sm, 0.875rem);
+  line-height: var(--line-height-relaxed, 1.75);
+  text-align: left;
+  animation: expandContent 0.3s ease-out;
+}
+
+@keyframes expandContent {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profile Social Links */
+.profile-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm, 0.5rem);
+  margin-top: var(--spacing-md, 1rem);
+  padding-top: var(--spacing-md, 1rem);
+  border-top: 1px solid var(--color-border, #e0e0e0);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full, 9999px);
+  background-color: var(--color-background-alt, #f8f8f8);
+  color: var(--color-text-secondary, #5e5e5e);
+  transition: background-color var(--transition-fast, 150ms ease-in-out),
+              color var(--transition-fast, 150ms ease-in-out),
+              transform var(--transition-fast, 150ms ease-in-out);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: var(--color-primary, #f1c232);
+  color: var(--color-text-on-primary, #2d2d2d);
+  transform: translateY(-2px);
+}
+
+.social-link:active {
+  transform: translateY(0);
+}
+
+.social-link i {
+  font-size: var(--font-size-lg, 1.125rem);
+}
+
+/* Stagger animation on load */
+@media (prefers-reduced-motion: no-preference) {
+  .team-card {
+    opacity: 0;
+    animation: teamFadeIn 0.6s ease-out forwards;
+  }
+
+  .team-card:nth-child(1) { animation-delay: 0.1s; }
+  .team-card:nth-child(2) { animation-delay: 0.2s; }
+  .team-card:nth-child(3) { animation-delay: 0.3s; }
+  .team-card:nth-child(4) { animation-delay: 0.4s; }
+  .team-card:nth-child(n+5) { animation-delay: 0.5s; }
+
+  @keyframes teamFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .team-card,
+  .expertise-tag,
+  .social-link,
+  .fun-fact-icon,
+  .fun-fact-content {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .team-card {
+    opacity: 1 !important;
+  }
+
+  .team-card:hover {
+    transform: none;
+  }
+
+  .social-link:hover {
+    transform: none;
+  }
+
+  .fun-fact-details[open] .fun-fact-icon {
+    transform: none;
+  }
+}
+
+/* Focus styles */
+.social-link:focus-visible {
+  outline: 2px solid var(--color-primary, #f1c232);
+  outline-offset: 2px;
+}
+
+.fun-fact-summary:focus-visible {
+  outline: 2px solid var(--color-primary, #f1c232);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm, 4px);
+}
+</style>
+<!-- End Enhanced Team Section -->

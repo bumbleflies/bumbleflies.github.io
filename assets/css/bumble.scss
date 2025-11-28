@@ -37,6 +37,7 @@ $nvc-image: "{{ site.data.style.nvc-image }}";
 @import "components/navbar.scss";
 @import "components/cards.scss";
 @import "components/buttons-modern.scss";
+@import "components/storytelling.scss";
 
 // Layout
 @import "layout/masthead.scss";
@@ -48,3 +49,6 @@ $nvc-image: "{{ site.data.style.nvc-image }}";
 
 // Submenu
 @import "layout/submenu.scss";
+
+// Utilities
+@import "utilities/lazy-load.scss";

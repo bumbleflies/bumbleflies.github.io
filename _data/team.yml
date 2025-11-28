@@ -2,6 +2,12 @@ people:
   - name: "Christian Dähn"
     role: "Co-Founder"
     image: /assets/img/team/1.webp
+    bio_key: "pages.team.christian.bio"
+    expertise:
+      - "Open Space"
+      - "Agile Coaching"
+      - "Software Engineering"
+    fun_fact_key: "pages.team.christian.fun_fact"
     social:
       - icon: fab fa-twitter
         url: 'https://twitter.com/da_chrisch'
@@ -12,6 +18,12 @@ people:
   - name: "Sebastian Keller"
     role: "Co-Founder"
     image: /assets/img/team/2.webp
+    bio_key: "pages.team.sebastian.bio"
+    expertise:
+      - "Facilitation"
+      - "Team Coaching"
+      - "Product Management"
+    fun_fact_key: "pages.team.sebastian.fun_fact"
     social:
       - url: 'https://twitter.com/se_keller'
         icon: fab fa-twitter
@@ -20,6 +32,12 @@ people:
   - name: "Christoph Kämpfe"
     role: "Co-Founder"
     image: /assets/img/team/3.webp
+    bio_key: "pages.team.christoph.bio"
+    expertise:
+      - "Leadership"
+      - "Organizational Design"
+      - "Workshops"
+    fun_fact_key: "pages.team.christoph.fun_fact"
     social:
       - url: 'https://twitter.com/kaempfechris'
         icon: fab fa-twitter

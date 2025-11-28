@@ -1,0 +1,276 @@
+// Enhanced Lazy Loading Utilities
+// Provides smooth loading transitions and placeholder effects for images
+
+// ===== Base Lazy Loading =====
+// Use with loading="lazy" attribute on images
+img[loading="lazy"],
+picture img[loading="lazy"] {
+  // Start transparent to prevent flash
+  opacity: 0;
+  transition: opacity var(--transition-slow, 400ms ease-in-out);
+
+  // Loaded state (add .loaded class via JavaScript or rely on browser)
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+// ===== Blur-Up Effect =====
+// Progressive image loading with blur placeholder
+.lazy-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-background-alt, #f8f8f8);
+
+  // Placeholder blur effect
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      var(--color-background-alt, #f8f8f8) 0%,
+      var(--color-surface, #ffffff) 50%,
+      var(--color-background-alt, #f8f8f8) 100%
+    );
+    background-size: 200% 200%;
+    animation: lazy-shimmer 2s infinite;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity var(--transition-slow, 400ms ease-in-out);
+  }
+
+  // Hide shimmer when image loaded
+  &.loaded::before {
+    opacity: 0;
+  }
+
+  img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  // Blur placeholder (use with data-src pattern)
+  .lazy-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(20px);
+    transform: scale(1.1); // Prevent blur edge artifacts
+    z-index: 1;
+    transition: opacity var(--transition-slow, 400ms ease-in-out);
+  }
+
+  &.loaded .lazy-placeholder {
+    opacity: 0;
+  }
+}
+
+// Shimmer animation for loading state
+@keyframes lazy-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// ===== Loading Spinner =====
+// Centered spinner for lazy images
+.lazy-spinner {
+  position: relative;
+  min-height: 200px; // Prevent CLS
+  background-color: var(--color-background-alt, #f8f8f8);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 3px solid var(--color-border, #e0e0e0);
+    border-top-color: var(--color-primary, #f1c232);
+    border-radius: 50%;
+    animation: lazy-spin 0.8s linear infinite;
+    opacity: 1;
+    transition: opacity var(--transition-normal, 250ms ease-in-out);
+  }
+
+  &.loaded::after {
+    opacity: 0;
+  }
+}
+
+@keyframes lazy-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ===== Skeleton Loader =====
+// Skeleton placeholder for content blocks
+.lazy-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-background-alt, #f8f8f8) 25%,
+    var(--color-surface, #ffffff) 50%,
+    var(--color-background-alt, #f8f8f8) 75%
+  );
+  background-size: 200% 100%;
+  animation: lazy-skeleton-wave 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm, 4px);
+
+  // Hide text while loading
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+
+  &.loaded {
+    background: none;
+    color: inherit;
+    animation: none;
+    user-select: auto;
+    pointer-events: auto;
+  }
+}
+
+@keyframes lazy-skeleton-wave {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// ===== Fade-In Effect =====
+// Simple fade-in for lazy loaded elements
+.lazy-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-slow, 400ms ease-in-out),
+              transform var(--transition-slow, 400ms ease-in-out);
+
+  &.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ===== Prevent Cumulative Layout Shift (CLS) =====
+// Force aspect ratio to prevent layout shifts
+.lazy-aspect-ratio {
+  position: relative;
+  width: 100%;
+
+  // Common aspect ratios
+  &.ratio-16-9 {
+    padding-bottom: 56.25%; // 9/16 = 0.5625
+  }
+
+  &.ratio-4-3 {
+    padding-bottom: 75%; // 3/4 = 0.75
+  }
+
+  &.ratio-1-1 {
+    padding-bottom: 100%; // 1/1 = 1
+  }
+
+  &.ratio-3-2 {
+    padding-bottom: 66.67%; // 2/3 = 0.6667
+  }
+
+  &.ratio-21-9 {
+    padding-bottom: 42.86%; // 9/21 = 0.4286
+  }
+
+  img,
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// ===== Native Lazy Loading Support =====
+// Enhance native browser lazy loading
+@supports (loading: lazy) {
+  img[loading="lazy"] {
+    // Browser handles loading, just add smooth transition
+    transition: opacity var(--transition-normal, 250ms ease-in-out);
+  }
+}
+
+// ===== Intersection Observer Fallback =====
+// For browsers without native lazy loading support
+.no-lazy-loading {
+  img[data-src] {
+    opacity: 0;
+    transition: opacity var(--transition-slow, 400ms ease-in-out);
+  }
+
+  img.lazy-loaded {
+    opacity: 1;
+  }
+}
+
+// ===== Print Support =====
+// Ensure all images are visible when printing
+@media print {
+  img[loading="lazy"],
+  .lazy-image-wrapper,
+  .lazy-fade,
+  .lazy-skeleton {
+    opacity: 1 !important;
+    animation: none !important;
+    background: none !important;
+  }
+}
+
+// ===== Reduced Motion =====
+// Respect user's motion preferences
+@media (prefers-reduced-motion: reduce) {
+  img[loading="lazy"],
+  .lazy-image-wrapper,
+  .lazy-fade,
+  .lazy-skeleton {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+// ===== Dark Mode Adjustments =====
+@media (prefers-color-scheme: dark) {
+  .lazy-image-wrapper {
+    background-color: var(--color-surface, #2d2d2d);
+
+    &::before {
+      background: linear-gradient(
+        135deg,
+        var(--color-surface, #2d2d2d) 0%,
+        var(--color-background, #1a1a1a) 50%,
+        var(--color-surface, #2d2d2d) 100%
+      );
+    }
+  }
+
+  .lazy-spinner,
+  .lazy-skeleton {
+    background-color: var(--color-surface, #2d2d2d);
+  }
+}

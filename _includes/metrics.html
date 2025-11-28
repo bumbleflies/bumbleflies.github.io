@@ -1,0 +1,162 @@
+<!-- Impact Metrics Section -->
+<!-- Displays key metrics showcasing bumbleflies' impact and achievements -->
+<!-- Uses modern card design with animated counters -->
+<!-- Data source: _data/metrics.yml -->
+
+<section class="page-section metrics-section" id="{{ include.options.section | default: 'metrics' }}">
+  <div class="container">
+    {% if include.options.title %}
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{% t include.options.title %}</h2>
+        {% if include.options.text %}
+        <h3 class="section-subheading text-muted">{% t include.options.text %}</h3>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="metrics-grid">
+      {% for metric in site.data.metrics.metrics %}
+      <div class="metric-card card-stats card-hover">
+        <div class="metric-icon" aria-hidden="true">{{ metric.icon }}</div>
+        <div class="stats-value" data-target="{{ metric.value }}">{{ metric.value }}</div>
+        <div class="stats-label">{% t metric.label_key %}</div>
+        {% if metric.description_key %}
+        <div class="stats-description">{% t metric.description_key %}</div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Animated Counter Script -->
+<script>
+(function() {
+  // Simple counter animation for metrics
+  function animateCounter(element) {
+    const target = element.getAttribute('data-target');
+    const hasPlus = target.includes('+');
+    const hasPercent = target.includes('%');
+    const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
+
+    if (isNaN(numericValue)) {
+      return; // Skip animation if not a number
+    }
+
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const stepDuration = duration / steps;
+    const increment = numericValue / steps;
+    let current = 0;
+
+    const timer = setInterval(function() {
+      current += increment;
+      if (current >= numericValue) {
+        current = numericValue;
+        clearInterval(timer);
+      }
+
+      let displayValue = Math.floor(current).toLocaleString();
+      if (hasPlus) displayValue += '+';
+      if (hasPercent) displayValue += '%';
+
+      element.textContent = displayValue;
+    }, stepDuration);
+  }
+
+  // Intersection Observer for triggering animation when in view
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+          entry.target.classList.add('animated');
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stats-value').forEach(function(element) {
+      observer.observe(element);
+    });
+  } else {
+    // Fallback: animate immediately
+    document.querySelectorAll('.stats-value').forEach(function(element) {
+      animateCounter(element);
+    });
+  }
+})();
+</script>
+
+<style>
+/* Metrics Grid Layout */
+.metrics-grid {
+  display: grid;
+  gap: var(--spacing-lg, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: var(--spacing-2xl, 3rem);
+}
+
+@media (max-width: 992px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md, 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Metric Card Styling */
+.metric-card {
+  text-align: center;
+  transition: transform var(--transition-normal, 250ms ease-in-out);
+}
+
+.metric-icon {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: var(--spacing-md, 1rem);
+  filter: grayscale(0.2);
+  transition: filter var(--transition-normal, 250ms ease-in-out);
+}
+
+.metric-card:hover .metric-icon {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  transition: transform var(--transition-normal, 250ms ease-in-out),
+              filter var(--transition-normal, 250ms ease-in-out);
+}
+
+/* Animation state */
+.stats-value {
+  transition: opacity var(--transition-slow, 400ms ease-in-out);
+}
+
+.stats-value:not(.animated) {
+  opacity: 0.5;
+}
+
+.stats-value.animated {
+  opacity: 1;
+}
+
+/* Accessibility: Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .metric-card,
+  .metric-icon,
+  .stats-value {
+    transition: none !important;
+  }
+
+  .metric-card:hover .metric-icon {
+    transform: none;
+  }
+}
+</style>
+<!-- End Impact Metrics -->
