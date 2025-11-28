@@ -1,0 +1,8 @@
+# Beta environment configuration
+# This file is merged with _config.yml for beta builds
+# Usage: bundle exec jekyll build -c _config.yml,_config_beta.yml
+
+# Beta-specific settings
+baseurl: "/beta"  # Serve from /beta path
+url: "https://bumbleflies.de"  # Keep production URL
+beta_mode: true  # Enable beta-specific features (banner, noindex)

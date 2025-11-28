@@ -30,6 +30,7 @@ exclude:
   - vendor/ruby/
   - README.md
   - 404.html
+  - CLAUDE.md
 
 plugins:
   - jekyll-github-metadata

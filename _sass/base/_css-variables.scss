@@ -1,0 +1,163 @@
+// Modern Color System with Dark Mode Support
+// Based on bumbleflies brand colors with organic/warm design style
+
+:root {
+  // ===== Brand Colors =====
+  // Primary brand color - Bumble Yellow
+  --brand-yellow: #f1c232;
+  --brand-yellow-rgb: 241, 194, 50;
+
+  // Brand grays
+  --brand-gray-bumble: #5e5e5e;
+  --brand-gray-bumble-rgb: 94, 94, 94;
+
+  --brand-gray-flies: #999999;
+  --brand-gray-flies-rgb: 153, 153, 153;
+
+  // ===== Light Mode - Semantic Color Tokens =====
+
+  // Primary colors
+  --color-primary: var(--brand-yellow);
+  --color-primary-hover: #d9ad28; // 10% darker
+  --color-primary-active: #c19924; // 20% darker
+  --color-primary-rgb: var(--brand-yellow-rgb);
+
+  // Background colors (organic warm whites)
+  --color-background: #fefefe;
+  --color-background-alt: #f8f8f8;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f5f5f5;
+  --color-surface-dark: #212529; // For navbar
+  --color-surface-dark-hover: #2c3237;
+
+  // Text colors
+  --color-text: #2d2d2d;
+  --color-text-secondary: #5e5e5e; // Bumble gray
+  --color-text-tertiary: #999999; // Flies gray
+  --color-text-on-primary: #2d2d2d; // Dark text on yellow
+  --color-text-on-dark: #ffffff;
+  --color-text-link: var(--brand-yellow);
+  --color-text-link-hover: var(--color-primary-hover);
+
+  // Border colors
+  --color-border: #e0e0e0;
+  --color-border-light: #efefef;
+  --color-border-dark: #cccccc;
+
+  // State colors
+  --color-success: #4caf50;
+  --color-warning: #ff9800;
+  --color-error: #f44336;
+  --color-info: #2196f3;
+
+  // ===== Spacing & Design Tokens (Organic Style) =====
+
+  // Border radius (rounded corners for organic feel)
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  // Shadows (soft, organic shadows)
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+  // Spacing scale
+  --spacing-xs: 0.25rem; // 4px
+  --spacing-sm: 0.5rem;  // 8px
+  --spacing-md: 1rem;    // 16px
+  --spacing-lg: 1.5rem;  // 24px
+  --spacing-xl: 2rem;    // 32px
+  --spacing-2xl: 3rem;   // 48px
+  --spacing-3xl: 4rem;   // 64px
+
+  // Transitions (smooth, organic)
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+  --transition-slow: 400ms ease-in-out;
+
+  // Z-index layers
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+// ===== Dark Mode =====
+// Automatically switches based on system preference
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Primary colors (yellow stays vibrant in dark mode)
+    --color-primary: #ffd54f; // Lighter yellow for better contrast
+    --color-primary-hover: #ffca28;
+    --color-primary-active: #ffc107;
+    --color-primary-rgb: 255, 213, 79;
+
+    // Background colors (warm dark tones)
+    --color-background: #1a1a1a;
+    --color-background-alt: #222222;
+    --color-surface: #2d2d2d;
+    --color-surface-hover: #3a3a3a;
+    --color-surface-dark: #0d0d0d; // Navbar even darker
+    --color-surface-dark-hover: #1a1a1a;
+
+    // Text colors (warm whites for reduced eye strain)
+    --color-text: #f0f0f0;
+    --color-text-secondary: #b8b8b8;
+    --color-text-tertiary: #888888;
+    --color-text-on-primary: #1a1a1a; // Dark text on bright yellow
+    --color-text-on-dark: #f0f0f0;
+    --color-text-link: var(--color-primary);
+    --color-text-link-hover: var(--color-primary-hover);
+
+    // Border colors
+    --color-border: #3a3a3a;
+    --color-border-light: #2d2d2d;
+    --color-border-dark: #4a4a4a;
+
+    // State colors (adjusted for dark mode)
+    --color-success: #66bb6a;
+    --color-warning: #ffa726;
+    --color-error: #ef5350;
+    --color-info: #42a5f5;
+
+    // Shadows (more pronounced in dark mode)
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.7);
+  }
+}
+
+// ===== WCAG AA Contrast Utilities =====
+// Helper classes for ensuring proper contrast
+.text-on-primary {
+  color: var(--color-text-on-primary);
+}
+
+.text-on-dark {
+  color: var(--color-text-on-dark);
+}
+
+// Smooth color transitions for all elements
+* {
+  transition: background-color var(--transition-normal),
+              color var(--transition-normal),
+              border-color var(--transition-normal);
+}
+
+// Reduce motion for users who prefer it
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

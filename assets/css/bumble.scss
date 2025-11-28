@@ -2,12 +2,20 @@
 # copy of agency.scss
 ---
 @charset "utf-8";
+
+// Modern CSS Variables (must be imported first for dark mode support)
+@import "base/css-variables.scss";
+
 // Core variables and mixins
 @import "base/variables.scss";
 @import "base/mixins.scss";
 
-// Custom colors
-$primary: {{ site.data.style.highlight | default: "#fed136" }} !default;
+// Modern Typography System
+@import "base/typography-modern.scss";
+
+// Custom colors (SCSS fallback variables for compatibility)
+// Note: CSS variables are preferred, these are for legacy support
+$primary: {{ site.data.style.highlight | default: "#f1c232" }} !default;
 $white: {{ site.data.style.white | default: "#fff" }} !default;
 $black: {{ site.data.style.black | default: "#000" }} !default;
 
@@ -27,6 +35,8 @@ $nvc-image: "{{ site.data.style.nvc-image }}";
 // Components
 @import "components/buttons.scss";
 @import "components/navbar.scss";
+@import "components/cards.scss";
+@import "components/buttons-modern.scss";
 
 // Layout
 @import "layout/masthead.scss";

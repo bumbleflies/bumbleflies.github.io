@@ -2,14 +2,29 @@
     .navbar-nav {
       .nav-item {
         .dropdown-menu {
-            background-color: #212529;
-            border: 0
+            background-color: var(--color-surface-dark);
+            border: 0;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-fast);
         }
+
         .dropdown-item {
-            color: #ffffff
+            color: var(--color-text-on-dark);
+            transition: color var(--transition-fast),
+                        background-color var(--transition-fast);
+            border-radius: var(--radius-sm);
+
+            &:hover,
+            &:focus {
+              background-color: var(--color-surface-dark-hover);
+              color: var(--color-primary);
+            }
         }
+
         &.show.dropdown {
-            background-color: #212529;
+            background-color: var(--color-surface-dark-hover);
+            border-radius: var(--radius-sm);
         }
       }
     }

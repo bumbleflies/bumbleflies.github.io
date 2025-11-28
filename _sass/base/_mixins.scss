@@ -1,25 +1,193 @@
-// Font Mixins
-/* second heading */
+// ===== Font Mixins =====
+// Modern font mixins with consistent fallback stacks
+
+/* Serif font - Noto Serif for elegant, readable content */
 @mixin serif-font {
   font-family: "Noto Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-/* #mainNav .navbar-brand */
+
+/* Script font - Roboto Condensed for navbar brand */
 @mixin script-font {
   font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-/* default */
+
+/* Body font - Noto Sans for main content */
 @mixin body-font {
-  font-family: /*'Roboto Slab',*/ -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-/* main font */
+
+/* Heading font - Montserrat for strong, modern headings */
 @mixin heading-font {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+// ===== Modern Design Mixins =====
+
+/* Responsive container with max-width */
+@mixin container-responsive($max-width: 1200px) {
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+
+  @media (max-width: 768px) {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+}
+
+/* Card elevation with organic shadows */
+@mixin card-elevation($level: 1) {
+  @if $level == 0 {
+    box-shadow: none;
+  } @else if $level == 1 {
+    box-shadow: var(--shadow-sm);
+  } @else if $level == 2 {
+    box-shadow: var(--shadow-md);
+  } @else if $level == 3 {
+    box-shadow: var(--shadow-lg);
+  } @else {
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+/* Smooth transitions */
+@mixin transition-smooth($properties: all) {
+  transition: $properties var(--transition-normal);
+}
+
+@mixin transition-fast($properties: all) {
+  transition: $properties var(--transition-fast);
+}
+
+@mixin transition-slow($properties: all) {
+  transition: $properties var(--transition-slow);
+}
+
+/* Focus state for accessibility */
+@mixin focus-visible {
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Hover lift effect (organic interaction) */
+@mixin hover-lift($distance: -2px) {
+  transition: transform var(--transition-normal),
+              box-shadow var(--transition-normal);
+
+  &:hover {
+    transform: translateY($distance);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+/* Aspect ratio container */
+@mixin aspect-ratio($width: 16, $height: 9) {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: calc(($height / $width) * 100%);
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Truncate text with ellipsis */
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Multi-line truncate */
+@mixin truncate-lines($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Centered flex container */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive grid */
+@mixin grid-responsive($columns: 3, $gap: var(--spacing-lg)) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(max(2, $columns - 1), 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Visually hidden but accessible */
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive font sizing */
+@mixin responsive-font($min-size: 14px, $max-size: 18px) {
+  font-size: clamp($min-size, calc(#{$min-size} + (#{$max-size} - #{$min-size}) * ((100vw - 320px) / (1200 - 320))), $max-size);
+}
+
+/* Gradient text */
+@mixin gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-hover) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Backdrop blur (organic glass effect) */
+@mixin backdrop-blur($amount: 10px) {
+  backdrop-filter: blur($amount);
+  -webkit-backdrop-filter: blur($amount);
 }

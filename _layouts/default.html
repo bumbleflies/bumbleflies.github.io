@@ -5,6 +5,13 @@
 
   <body id="page-top">
 
+      {% if site.beta_mode %}
+      <div class="beta-banner" style="position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #ff9800; color: white; text-align: center; padding: 10px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        ⚠️ BETA ENVIRONMENT - This is a test version
+      </div>
+      <div style="height: 44px;"></div>
+      {% endif %}
+
       {{ content }}
 
 	  {% include footer.html %}

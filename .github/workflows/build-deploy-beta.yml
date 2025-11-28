@@ -1,0 +1,50 @@
+name: Build and Deploy Beta
+
+on:
+  push:
+    branches:
+      - beta
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: 🔨 install dependencies & build beta site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+          custom_opts: '-c _config.yml,_config_beta.yml -d _site/beta'
+
+      - name: 🫱 Upload beta site
+        uses: actions/upload-artifact@v4
+        with:
+          name: beta-site
+          path: |
+            _site/beta
+          retention-days: 7
+
+      - name: 🐍 setup python for test
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: 📄 install test requirements
+        uses: py-actions/py-dependency-install@v4
+        with:
+          path: "_tests/requirements.txt"
+          update-setuptools: "false"
+          update-wheel: "false"
+
+      - name: 🧪 test with pytest
+        uses: dariocurr/pytest-summary@main
+        with:
+          paths: _tests
