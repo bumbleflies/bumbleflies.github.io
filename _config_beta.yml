@@ -4,5 +4,6 @@
 
 # Beta-specific settings
 baseurl: "/beta"  # Serve from /beta path
+baseurl_root: "/beta"  # Root baseurl for absolute paths (must match baseurl for beta)
 url: "https://bumbleflies.de"  # Keep production URL
 beta_mode: true  # Enable beta-specific features (banner, noindex)

@@ -1,0 +1,129 @@
+<!-- Contact Modal Dialog -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered tj-modal-dialog" role="document">
+    <div class="modal-content tj-modal">
+      <div class="modal-header tj-modal__header">
+        <h5 class="modal-title tj-modal__title" id="contactModalLabel">
+          {% t pages.contact.header %}
+        </h5>
+        <button type="button" class="close tj-modal__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body tj-modal__body">
+        <p class="tj-modal__subtext">{% t pages.contact.subtext %}</p>
+
+        <!-- Contact Form - Formspree -->
+        <form
+          id="modal-contact-form"
+          action="https://formspree.io/f/xgejkpjy"
+          method="POST"
+          class="tj-modal__form"
+        >
+          <!-- Two Column Row -->
+          <div class="tj-modal__row">
+            <!-- Name -->
+            <div class="form-group">
+              <label for="modal-name">{% t pages.contact.form.name %} *</label>
+              <input type="text" class="form-control" id="modal-name" name="name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="modal-email">{% t pages.contact.form.email %} *</label>
+              <input type="email" class="form-control" id="modal-email" name="email" required>
+            </div>
+          </div>
+
+          <!-- Two Column Row -->
+          <div class="tj-modal__row">
+            <!-- Company (optional) -->
+            <div class="form-group">
+              <label for="modal-company">{% t pages.contact.form.company %}</label>
+              <input type="text" class="form-control" id="modal-company" name="company">
+            </div>
+
+            <!-- Service Selection -->
+            <div class="form-group">
+              <label for="modal-service">{% t pages.contact.form.service %}</label>
+              <select class="form-control" id="modal-service" name="service">
+                <option value="general">{% t pages.contact.form.services.general %}</option>
+                <option value="workshop">{% t pages.contact.form.services.workshop %}</option>
+                <option value="pi-planning">{% t pages.contact.form.services.pi_planning %}</option>
+                <option value="proposal">{% t pages.contact.form.services.proposal %}</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message (full width) -->
+          <div class="form-group">
+            <label for="modal-message">{% t pages.contact.form.message %} *</label>
+            <textarea class="form-control" id="modal-message" name="message" rows="4" required></textarea>
+          </div>
+
+          <!-- Hidden field for redirect -->
+          <input type="hidden" name="_next" value="{{ site.baseurl }}/?contact=success">
+
+          <!-- Submit Button -->
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary btn-lg">
+              {% t pages.contact.form.submit %}
+            </button>
+          </div>
+        </form>
+
+        <!-- Success Message (shown after submit) -->
+        <div id="modal-success-message" class="tj-modal__success" style="display: none;">
+          <div class="tj-modal__success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3>{% t pages.contact.form.success_title %}</h3>
+          <p>{% t pages.contact.form.success_message %}</p>
+          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">
+            {% t transformation.chapters.method.posters.close %}
+          </button>
+        </div>
+
+        <!-- Alternative Contact -->
+        <div class="tj-modal__alternative">
+          <p>{% t pages.contact.alternative %}</p>
+          <a href="mailto:info@bumbleflies.de">info@bumbleflies.de</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle service pre-selection from data attributes
+  $('#contactModal').on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget);
+    var service = button.data('service');
+    if (service) {
+      $('#modal-service').val(service);
+    } else {
+      $('#modal-service').val('general');
+    }
+  });
+
+  // Reset form when modal closes
+  $('#contactModal').on('hidden.bs.modal', function() {
+    $('#modal-contact-form')[0].reset();
+    $('#modal-contact-form').show();
+    $('#modal-success-message').hide();
+  });
+
+  // Check for success parameter on page load
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('contact') === 'success') {
+    // Show modal with success message
+    $('#contactModal').modal('show');
+    $('#modal-contact-form').hide();
+    $('#modal-success-message').show();
+    // Clean URL
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
+});
+</script>

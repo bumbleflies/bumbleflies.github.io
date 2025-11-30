@@ -1,0 +1,33 @@
+<!-- Simple Header for Transformation Journey -->
+<header class="tj-header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background-color: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px); padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto;">
+        <!-- Logo / Brand -->
+        <div>
+            <a href="{{ site.baseurl }}/" style="text-decoration: none;">
+                {%- if site.logo -%}
+                <img height="{{ site.logo.height | default: 40 }}" src="{{ site.logo.path }}" alt="{{ site.title }}" style="display: block;"/>
+                {%- else -%}
+                <span style="color: var(--color-primary, #f1c232); font-weight: bold; font-size: 1.5rem; font-family: 'Montserrat', sans-serif;">{{ site.title }}</span>
+                {%- endif -%}
+            </a>
+        </div>
+
+        <!-- Language Switcher -->
+        <div>
+            {% if site.lang == "de" %}
+            <a href="{{ site.baseurl }}/en/transformation-test/" style="color: #f0f0f0; text-decoration: none; padding: 0.5rem 1rem; border-radius: 4px; transition: background-color 0.2s; display: inline-flex; align-items: center; gap: 0.5rem;">
+                <span class="fi fi-gb" style="font-size: 1.2rem;"></span>
+                <span>English</span>
+            </a>
+            {% else %}
+            <a href="{{ site.baseurl }}/transformation-test/" style="color: #f0f0f0; text-decoration: none; padding: 0.5rem 1rem; border-radius: 4px; transition: background-color 0.2s; display: inline-flex; align-items: center; gap: 0.5rem;">
+                <span class="fi fi-de" style="font-size: 1.2rem;"></span>
+                <span>Deutsch</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+
+<!-- Spacer to prevent content from being hidden under fixed header -->
+<div style="height: 70px;"></div>

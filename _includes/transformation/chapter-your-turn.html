@@ -1,0 +1,123 @@
+<!-- Chapter 5: Your Turn - CONVERSION -->
+<div class="tj-chapter__content tj-chapter__content--conversion">
+  <div class="container">
+
+    <h2 class="tj-chapter__headline tj-reveal">
+      {% t transformation.chapters.your_turn.headline %}
+    </h2>
+
+    <!-- Transformation Metaphors -->
+    <div class="tj-metaphors tj-reveal" data-reveal-delay="200">
+      <p class="tj-metaphors__item">{% t transformation.chapters.your_turn.metaphor_1 %}</p>
+      <p class="tj-metaphors__item">{% t transformation.chapters.your_turn.metaphor_2 %}</p>
+      <p class="tj-metaphors__item">{% t transformation.chapters.your_turn.metaphor_3 %}</p>
+    </div>
+
+    <!-- The Question -->
+    <div class="tj-question tj-reveal" data-reveal-delay="500">
+      <p class="tj-question__text">
+        {% t transformation.chapters.your_turn.question %}<br>
+        {% t transformation.chapters.your_turn.question_end %}
+      </p>
+    </div>
+
+    <p class="tj-invitation tj-reveal" data-reveal-delay="700">
+      {% t transformation.chapters.your_turn.invitation %}
+    </p>
+
+    <!-- Event Categories (integrated) -->
+    <div class="tj-events__categories tj-reveal" data-reveal-delay="800">
+      <!-- Community Events: Open Bumble Space -->
+      <div class="tj-events__category">
+        <div class="tj-events__icon">🐝</div>
+        <h3 class="tj-events__category-title">
+          {% t pages.events.overview.categories.obs.title %}
+        </h3>
+        <p class="tj-events__category-desc">
+          {% t pages.events.overview.categories.obs.desc %}
+        </p>
+        <a href="#" class="btn btn-primary btn-md" data-toggle="modal" data-target="#eventModal">
+          {% t pages.events.overview.categories.obs.cta %}
+        </a>
+      </div>
+
+      <!-- Custom Workshops -->
+      <div class="tj-events__category">
+        <div class="tj-events__icon tj-events__icon--green">🎯</div>
+        <h3 class="tj-events__category-title">
+          {% t pages.events.overview.categories.workshops.title %}
+        </h3>
+        <p class="tj-events__category-desc">
+          {% t pages.events.overview.categories.workshops.desc %}
+        </p>
+        <a href="#" class="btn btn-primary btn-md" data-toggle="modal" data-target="#contactModal" data-service="workshop">
+          {% t pages.events.overview.categories.workshops.cta %}
+        </a>
+      </div>
+
+      <!-- PI Planning -->
+      <div class="tj-events__category">
+        <div class="tj-events__icon tj-events__icon--blue">🚀</div>
+        <h3 class="tj-events__category-title">
+          {% t pages.events.overview.categories.pi.title %}
+        </h3>
+        <p class="tj-events__category-desc">
+          {% t pages.events.overview.categories.pi.desc %}
+        </p>
+        <a href="#" class="btn btn-primary btn-md" data-toggle="modal" data-target="#contactModal" data-service="pi-planning">
+          {% t pages.events.overview.categories.pi.cta %}
+        </a>
+      </div>
+    </div>
+
+    <!-- Next Event -->
+    <div class="tj-events__next tj-reveal" data-reveal-delay="900">
+      <p class="tj-events__next-title">open:bumble:space #8</p>
+      <p class="tj-events__next-date">20. Februar 2025 | MaibornWolff, München</p>
+      <a href="#" class="btn btn-outline-primary btn-md" data-toggle="modal" data-target="#eventModal">
+        {% t pages.events.overview.upcoming.cta %}
+      </a>
+    </div>
+
+    <!-- Primary CTAs -->
+    <div class="tj-cta-grid tj-reveal" data-reveal-delay="1000">
+      <!-- High Intent -->
+      <div class="tj-cta-card tj-cta-card--high">
+        <h3 class="tj-cta-card__title">{% t transformation.ctas.high_intent.call %}</h3>
+        <a href="https://calendly.com/bumbleflies" class="btn btn-primary btn-md" target="_blank" rel="noopener">
+          {% t transformation.ctas.high_intent.call %}
+        </a>
+      </div>
+
+      <!-- Medium Intent -->
+      <div class="tj-cta-card tj-cta-card--medium">
+        <h3 class="tj-cta-card__title">{% t transformation.ctas.medium_intent.guide %}</h3>
+        <a href="{{ site.baseurl }}/downloads/open-space-guide.pdf" class="btn btn-outline-primary btn-md" download>
+          {% t transformation.ctas.medium_intent.guide %}
+        </a>
+      </div>
+
+      <!-- Low Intent / Community -->
+      <div class="tj-cta-card tj-cta-card--low">
+        <h3 class="tj-cta-card__title">{% t transformation.ctas.low_intent.community %}</h3>
+        <a href="#" class="btn btn-outline-secondary btn-md" data-toggle="modal" data-target="#eventModal">
+          {% t transformation.ctas.low_intent.community %}
+        </a>
+      </div>
+    </div>
+
+    <!-- Bumblefly Illustration (taking flight) -->
+    <div class="tj-flying-bumblefly tj-reveal" data-reveal-delay="1200" aria-hidden="true">
+      <img src="{{ site.baseurl }}/assets/img/bumblefly-blue.png"
+           alt="Bumblefly taking flight"
+           class="tj-bumblefly-img"
+           loading="lazy">
+    </div>
+
+    <!-- Final Encouragement -->
+    <p class="tj-closing-message tj-reveal" data-reveal-delay="1500">
+      {% t transformation.chapters.your_turn.closing %}
+    </p>
+
+  </div>
+</div>

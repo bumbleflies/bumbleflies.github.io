@@ -72,6 +72,28 @@ pages:
     title: Veranstaltungen
     overview:
       title: Übersicht
+      header: "Entdecke unsere Veranstaltungen"
+      subtext: "Von Community-Treffen bis zu maßgeschneiderten Workshops"
+      categories:
+        obs:
+          title: "open:bumble:space"
+          desc: "Monatliches Community-Treffen zum Thema Agilität. Wir treffen uns alle zwei Monate zu einem Open Space."
+          cta: "Mehr erfahren"
+        workshops:
+          title: "Workshops"
+          desc: "Maßgeschneiderte Workshops für dein Team. Wir gestalten Räume, in denen Zusammenarbeit natürlich entsteht."
+          cta: "Workshop anfragen"
+        pi:
+          title: "PI Planning"
+          desc: "Großveranstaltungen für 20 bis 200+ Personen. Wir kümmern uns um den Rahmen, ihr euch um den Plan."
+          cta: "PI Planning anfragen"
+      upcoming:
+        title: "Nächste Veranstaltungen"
+        cta: "Anmelden"
+      cta:
+        title: "Bring bumbleflies zu dir"
+        text: "Wir moderieren dein nächstes Event, Workshop oder PI-Planning. Lass uns über deine Anforderungen sprechen."
+        button: "Kontakt aufnehmen"
     obs:
       title: open:bumble:space
       header:
@@ -614,6 +636,57 @@ pages:
       quote: "Als Scrum Master habe ich von den bumbleflies unglaublich viel über Facilitation und Gruppendynamik gelernt. Ihre Workshops sind nicht nur lehrreich, sondern auch inspirierend."
     client5:
       quote: "Die bumbleflies verstehen es, komplexe organisatorische Herausforderungen in produktive Open Space Sessions zu verwandeln. Ihre Expertise und Leidenschaft sind in jedem Moment spürbar."
+  contact:
+    title: "Kontakt"
+    header: "Lass uns sprechen"
+    subtext: "Wie können wir dir helfen? Schreib uns und wir melden uns schnellstmöglich."
+    form:
+      name: "Name"
+      email: "E-Mail"
+      company: "Firma (optional)"
+      service: "Interesse an"
+      message: "Nachricht"
+      services:
+        general: "Allgemeine Anfrage"
+        workshop: "Workshop"
+        pi_planning: "PI Planning"
+        proposal: "Angebot anfordern"
+      submit: "Nachricht senden"
+      success_title: "Vielen Dank!"
+      success_message: "Wir haben deine Nachricht erhalten und melden uns bald bei dir."
+    alternative: "Oder schreib uns direkt an"
+  portfolio:
+    title: "Portfolio"
+    header: "Unsere Erfolgsgeschichten"
+    subtext: "Über 200 Facilitationen auf 3 Kontinenten. Entdecke, was wir gemeinsam mit unseren Kunden erreicht haben."
+    clients:
+      title: "Unsere Kunden"
+    services:
+      title: "Unsere Leistungen"
+      workshop:
+        title: "Workshops & Kollaboration"
+        desc: "Wir gestalten Räume, in denen jede Stimme zählt und Zusammenarbeit natürlich entsteht."
+        result: "87% gesteigertes Engagement"
+      pi:
+        title: "PI Planning"
+        desc: "Von 20 bis 200+ Personen. Wir kümmern uns um den Rahmen, damit ihr euch auf den Plan konzentrieren könnt."
+        result: "200+ Menschen. 2 Tage. Ein Plan."
+      events:
+        title: "Events & Community"
+        desc: "Nicht nur Teambuilding, sondern Community Building. Erlebnisse, die Menschen verbinden."
+        result: "Teams, die zusammenarbeiten wollen"
+    testimonials:
+      title: "Das sagen unsere Kunden"
+    cta:
+      title: "Dein Projekt mit uns"
+      text: "Bereit für deine eigene Erfolgsgeschichte? Lass uns gemeinsam herausfinden, wie wir dir helfen können."
+      button: "Projekt besprechen"
+  newsletter:
+    title: "Bleib informiert"
+    subtext: "Erhalte Updates zu neuen Events, Open Space Insights und Neuigkeiten von den bumbleflies."
+    placeholder: "Deine E-Mail-Adresse"
+    submit: "Anmelden"
+    privacy: "Wir respektieren deine Privatsphäre. Keine Spam-Mails, versprochen."
 
 slogan: Wir lieben Open Space!
 language_selector: Sprache auswählen
@@ -622,3 +695,134 @@ words:
   at: ab
   where: bei
   clock: Uhr
+
+# ===== TRANSFORMATION JOURNEY =====
+# Content for the new cinematic scroll homepage
+
+transformation:
+  chapters:
+    chaos:
+      title: "Chaos?"
+      headline: "200 Menschen. Ein Raum. Keine Agenda."
+      subline: "Klingt wie Chaos?"
+      question: "Was wäre, wenn es genau das ist, was deine Organisation braucht?"
+      scroll_prompt: "Entdecke die Transformation ↓"
+
+    bumbleflies:
+      title: "Die Bumbleflies"
+      headline: "WIR SIND BUMBLEFLIES"
+      intro_1: "Wir verbreiten Ideen wie Hummeln, die einen Garten bestäuben."
+      intro_2: "Wir schaffen schöne, unerwartete Transformationen wie Schmetterlinge."
+      stats: "Gemeinsam haben wir über 200 Großgruppen-Events moderiert."
+      range: "Von 20-Personen-Workshops bis zu 200+ PI-Planning-Sessions."
+      belief: "Wir glauben an eine einfache Wahrheit:"
+      truth: "Wenn jede Stimme gehört wird, geschieht Magie."
+      team:
+        christian: "Christian bereist Europa im Wohnmobil und entdeckt Open Space Communities"
+        sebastian: "Sebastian sieht das Kochen für große Gruppen als eine Form der Facilitation"
+        christoph: "Christoph hört Jazz-Improvisation in agilen Teams"
+      cta: "Lerne das gesamte Team kennen →"
+
+    method:
+      title: "Die Methode"
+      headline: "DER OPEN SPACE WEG"
+      intro: "Fünf Prinzipien. Ein Gesetz. Unendliche Möglichkeiten."
+      principles:
+        p1: "Wer auch immer kommt, es sind die richtigen Leute"
+        p2: "Was auch immer geschieht, es ist das Einzige, was geschehen konnte"
+        p3: "Wann immer es beginnt, ist es die richtige Zeit"
+        p4: "Wenn es vorbei ist, ist es vorbei"
+        p5: "Wo auch immer es geschieht, ist es der richtige Ort"
+      law: "Das Gesetz der zwei Füße: Geh dorthin, wo du lernen oder beitragen kannst."
+      closing_1: "Das ist kein Chaos. Das ist Selbstorganisation."
+      closing_2: "Das passiert, wenn man Menschen vertraut, dass ihnen ihre Arbeit wichtig ist."
+      cta: "Sieh Open Space in Aktion →"
+      posters:
+        title: "Open Space Poster zum Download"
+        principle_alt: "Open Space Prinzip"
+        principle_title: "Open Space Prinzip"
+        law_alt: "Das Gesetz der zwei Füße"
+        law_title: "Das Gesetz der zwei Füße"
+        download: "Herunterladen"
+        close: "Schließen"
+
+    action:
+      title: "In Aktion"
+      cta: "Alle Case Studies ansehen →"
+
+    your_turn:
+      title: "Du bist dran"
+      headline: "DEINE TRANSFORMATION BEGINNT HIER"
+      metaphor_1: "Jeder Schmetterling war einst eine Raupe."
+      metaphor_2: "Jedes ausgerichtete Team war einst fragmentiert."
+      metaphor_3: "Jeder Durchbruch begann mit einer Frage."
+      question: "Wie würde deine Organisation aussehen,"
+      question_end: "wenn jede Stimme gehört würde?"
+      invitation: "Lass es uns gemeinsam herausfinden."
+      closing: "Begeistert? Wir auch. Lass uns sprechen."
+
+  services:
+    workshops:
+      title: "WORKSHOPS, DIE TATSÄCHLICH ENERGIE GEBEN"
+      desc_1: "Deine Mitarbeiter:innen haben großartige Ideen."
+      desc_2: "Sie warten nur auf die Erlaubnis, sie zu teilen."
+      desc_3: "Wir schaffen den Raum, in dem jede Stimme zählt."
+      desc_4: "Wo Zusammenarbeit nicht erzwungen, sondern natürlich ist."
+      result: "Ergebnis: Meetings, an denen Menschen wirklich teilnehmen wollen."
+      metric: "87% der Teilnehmer:innen berichten von gesteigertem Engagement"
+      cta: "Gestalte deinen Workshop"
+
+    pi_planning:
+      title: "PI-PLANNING FÜR 20 BIS 200+ PERSONEN"
+      desc_1: "Du kümmerst dich um die Inhalte."
+      desc_2: "Wir kümmern uns um alles andere."
+      desc_3: "Den Rahmen. Den Ablauf. Die Moderation."
+      desc_4: "Damit sich dein Team auf das Wesentliche konzentrieren kann: den Plan selbst."
+      result: "Ergebnis: Ausgerichtete Teams. Klare Prioritäten. Null Chaos."
+      metric: "200+ Menschen. 2 Tage. Ein abgestimmter Plan."
+      cta: "Plane dein nächstes PI-Planning"
+
+    events:
+      title: "EVENTS, DIE COMMUNITY AUFBAUEN"
+      desc_1: "Nicht nur Teambuilding."
+      desc_2: "Community Building."
+      desc_3: "Von Online-Events für verteilte Teams bis zu mehrtägigen Retreats,"
+      desc_4: "wir schaffen Erlebnisse, die Menschen mit ihrem Zweck verbinden."
+      result: "Ergebnis: Teams, die zusammenarbeiten wollen, nicht müssen."
+      highlight: "open:bumble:space - Münchens agiles Open Space, alle 2 Monate"
+      cta: "Events entdecken"
+
+    fast:
+      title: "FAST AGILE – SKALIERUNG NEU GEDACHT"
+      desc_1: "Fluid-Scaling-Technology für agile Teams."
+      desc_2: "Von Einzelteams bis zu großen Organisationen."
+      desc_3: "Lerne FaST kennen und implementieren."
+      result: "Ergebnis: Skalierung ohne Komplexität."
+      metric: "Über 150+ Teams weltweit nutzen FaST"
+      cta: "FaST entdecken"
+
+  testimonials:
+    title: "Das sagen unsere Kunden"
+    energy: "Die Energie und das Engagement waren beeindruckend."
+    structured: "Ihre strukturierte Herangehensweise und warmherzige Art haben den Unterschied gemacht."
+    culture: "Sie haben uns geholfen, eine kollaborative Kultur zu etablieren, die weiterwirkt."
+
+  metrics:
+    facilitations: "Moderationen"
+    continents: "Kontinente"
+    participants: "Teilnehmer:innen transformiert"
+
+  ctas:
+    high_intent:
+      call: "Buche ein Kennenlerngespräch"
+      proposal: "Erhalte ein maßgeschneidertes Angebot"
+    medium_intent:
+      guide: "Lade unseren Open Space Guide herunter"
+      workshop: "Nimm an unserem nächsten Workshop teil"
+    low_intent:
+      community: "Besuche open:bumble:space"
+      newsletter: "Folge unserer Reise"
+
+# ===== COMMON TRANSLATIONS =====
+common:
+  close: "Schließen"

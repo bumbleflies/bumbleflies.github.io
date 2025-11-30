@@ -1,0 +1,45 @@
+<!-- Simple Navigation for Transformation Journey -->
+<nav class="navbar navbar-dark fixed-top" id="mainNav" style="background-color: rgba(0, 0, 0, 0.9); backdrop-filter: blur(10px);">
+    <div class="container-fluid" style="padding: 0 2rem;">
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+            {%- if site.logo -%}
+            <img height="{{ site.logo.height | default: 40 }}" src="{{ site.logo.path }}" alt="{{ site.title }}"/>
+            {%- else -%}
+            <span style="color: var(--color-primary); font-weight: bold; font-size: 1.5rem;">{{ site.title }}</span>
+            {%- endif -%}
+        </a>
+
+        <div class="navbar-nav ml-auto">
+            <!-- Language Switcher -->
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                   title="Language" style="color: #f0f0f0;">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
+                    {% for lang in site.languages %}
+                    {% if site.lang != lang %}
+                        {% if page.namespace %}
+                            {% capture lang_url %}{% tl page.namespace lang %}{% endcapture %}
+                        {% else %}
+                            {% assign lang_url = "/" %}
+                            {% if lang != "de" %}
+                                {% assign lang_url = "/en/" %}
+                            {% endif %}
+                        {% endif %}
+                        <a class="dropdown-item" href="{{ site.baseurl }}{{ lang_url }}">
+                            {% if site.data.navigation.languages[lang] %}
+                                <span class="fi fi-{{ site.data.navigation.languages[lang].code }}"></span>
+                                {{ site.data.navigation.languages[lang].text }}
+                            {% else %}
+                                {{ lang | upcase }}
+                            {% endif %}
+                        </a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

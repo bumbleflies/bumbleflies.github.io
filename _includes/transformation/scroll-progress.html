@@ -1,0 +1,17 @@
+<!-- Scroll Progress Indicator -->
+<div class="tj-progress" id="tj-progress" aria-label="Reading progress">
+  <div class="tj-progress__bar">
+    <div class="tj-progress__fill" id="tj-progress-fill"></div>
+  </div>
+  <nav class="tj-progress__chapters" aria-label="Chapter navigation">
+    {% for chapter in site.data.chapters.chapters %}
+    <a href="#chapter-{{ chapter.slug }}"
+       class="tj-progress__marker"
+       data-chapter="{{ chapter.number }}"
+       title="{% t chapter.title_key %}">
+      <span class="tj-progress__marker-number">{{ chapter.number }}</span>
+      <span class="tj-progress__marker-label">{% t chapter.title_key %}</span>
+    </a>
+    {% endfor %}
+  </nav>
+</div>

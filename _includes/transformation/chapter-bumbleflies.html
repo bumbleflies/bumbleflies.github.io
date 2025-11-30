@@ -1,0 +1,61 @@
+<!-- Chapter 2: The Bumbleflies - Trust Building -->
+<div class="tj-chapter__content">
+  <div class="container">
+
+    <h2 class="tj-chapter__headline tj-reveal">
+      {% t transformation.chapters.bumbleflies.headline %}
+    </h2>
+
+    <div class="tj-intro tj-reveal" data-reveal-delay="200">
+      <p class="tj-intro__text tj-intro__text--large">
+        {% t transformation.chapters.bumbleflies.intro_1 %}
+      </p>
+      <p class="tj-intro__text tj-intro__text--large">
+        {% t transformation.chapters.bumbleflies.intro_2 %}
+      </p>
+    </div>
+
+    <div class="tj-stats tj-reveal" data-reveal-delay="400">
+      <p class="tj-stats__item">{% t transformation.chapters.bumbleflies.stats %}</p>
+      <p class="tj-stats__item">{% t transformation.chapters.bumbleflies.range %}</p>
+    </div>
+
+    <div class="tj-belief tj-reveal" data-reveal-delay="600">
+      <p class="tj-belief__question">{% t transformation.chapters.bumbleflies.belief %}</p>
+      <p class="tj-belief__truth">{% t transformation.chapters.bumbleflies.truth %}</p>
+    </div>
+
+    <!-- Team Members -->
+    <div class="tj-team tj-reveal" data-reveal-delay="800">
+      <div class="row">
+        {% for member in site.data.team.people %}
+        <div class="col-md-4 tj-team__member">
+          <div class="tj-team__photo-wrapper">
+            <img src="{{ site.baseurl }}{{ member.image }}"
+                 alt="{{ member.name }}"
+                 class="tj-team__photo"
+                 loading="lazy">
+          </div>
+          <h3 class="tj-team__name">{{ member.name }}</h3>
+          <p class="tj-team__fun-fact">
+            {% if member.name == "Christian Dähn" %}
+              {% t transformation.chapters.bumbleflies.team.christian %}
+            {% elsif member.name == "Sebastian Keller" %}
+              {% t transformation.chapters.bumbleflies.team.sebastian %}
+            {% elsif member.name == "Christoph Kämpfe" %}
+              {% t transformation.chapters.bumbleflies.team.christoph %}
+            {% endif %}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="tj-cta tj-reveal" data-reveal-delay="1000">
+      <a href="{{ site.baseurl }}{% tl ueber-uns %}" class="tj-cta__link">
+        {% t transformation.chapters.bumbleflies.cta %}
+      </a>
+    </div>
+
+  </div>
+</div>

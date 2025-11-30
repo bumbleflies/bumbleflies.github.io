@@ -96,7 +96,7 @@
                 </div>
                 {% else %}
                 <!-- no entry.image.hover -->
-                <img class="img-fluid" src="{{ entry.image.url }}" alt="{% t entry.desc %}"
+                <img class="img-fluid" src="{{ site.baseurl }}{{ entry.image.url }}" alt="{% t entry.desc %}"
                      width="{{ page.gallery.width | default: site.data.image.gallery.width }}px"
                      height="{{ page.gallery.height | default: site.data.image.gallery.height }}px"/>
                 {% endif %}

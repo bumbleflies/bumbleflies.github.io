@@ -1,0 +1,153 @@
+// ===========================================
+// Scroll Progress Indicator
+// Sticky sidebar showing journey progress
+// ===========================================
+
+.tj-progress {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: var(--z-sticky);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media (max-width: 1200px) {
+    right: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    display: none; // Hide on mobile, takes up too much space
+  }
+
+  &__bar {
+    width: 4px;
+    height: 300px;
+    background-color: rgba(var(--brand-yellow-rgb), 0.2);
+    border-radius: var(--radius-full);
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg,
+      var(--brand-yellow) 0%,
+      var(--color-primary-hover) 100%
+    );
+    transition: height 300ms ease-out;
+    border-radius: var(--radius-full);
+  }
+
+  &__chapters {
+    position: absolute;
+    right: calc(100% + 1rem);
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__marker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--brand-yellow);
+
+      .tj-progress__marker-label {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    &.active {
+      color: var(--brand-yellow);
+
+      .tj-progress__marker-number {
+        background-color: var(--brand-yellow);
+        color: var(--color-text);
+        transform: scale(1.2);
+      }
+
+      .tj-progress__marker-label {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__marker-number {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(var(--brand-yellow-rgb), 0.1);
+    border: 2px solid currentColor;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 700;
+    transition: all var(--transition-normal);
+  }
+
+  &__marker-label {
+    position: absolute;
+    right: calc(100% + 1rem);
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all var(--transition-normal);
+    pointer-events: none;
+  }
+}
+
+// Mobile Chapter Navigation (Bottom Tab Bar)
+@media (max-width: 768px) {
+  .tj-progress-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    z-index: var(--z-sticky);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+
+    &__item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: var(--color-text-secondary);
+      font-size: 0.75rem;
+      padding: 0.5rem;
+      transition: all var(--transition-fast);
+
+      &.active {
+        color: var(--brand-yellow);
+      }
+
+      i {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}

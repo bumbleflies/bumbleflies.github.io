@@ -19,13 +19,13 @@ $primary: {{ site.data.style.highlight | default: "#f1c232" }} !default;
 $white: {{ site.data.style.white | default: "#fff" }} !default;
 $black: {{ site.data.style.black | default: "#000" }} !default;
 
-$contact-image: "{{ site.data.style.contact-image }}";
+$contact-image: "{{ site.baseurl }}{{ site.data.style.contact-image }}";
 
 // Custom Images
-$header-image: "{{ site.data.style.header-image }}";
-$accceu-image: "{{ site.data.style.accceu-image }}";
-$fast-image: "{{ site.data.style.fast-image }}";
-$nvc-image: "{{ site.data.style.nvc-image }}";
+$header-image: "{{ site.baseurl }}{{ site.data.style.header-image }}";
+$accceu-image: "{{ site.baseurl }}{{ site.data.style.accceu-image }}";
+$fast-image: "{{ site.baseurl }}{{ site.data.style.fast-image }}";
+$nvc-image: "{{ site.baseurl }}{{ site.data.style.nvc-image }}";
 
 @import "header_images.scss";
 
@@ -52,3 +52,9 @@ $nvc-image: "{{ site.data.style.nvc-image }}";
 
 // Utilities
 @import "utilities/lazy-load.scss";
+
+// ===== Transformation Journey =====
+// Cinematic scroll homepage redesign
+@import "transformation.scss";
+@import "chapters.scss";
+@import "scroll-progress.scss";

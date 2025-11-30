@@ -1,0 +1,128 @@
+<!-- Chapter 3: The Method - Education (Open Space Principles) -->
+<div class="tj-chapter__content">
+  <div class="container">
+
+    <h2 class="tj-chapter__headline tj-reveal">
+      {% t transformation.chapters.method.headline %}
+    </h2>
+
+    <p class="tj-chapter__intro tj-reveal" data-reveal-delay="200">
+      {% t transformation.chapters.method.intro %}
+    </p>
+
+    <!-- The 5 Principles -->
+    <div class="tj-principles">
+      <ol class="tj-principles__list">
+        <li class="tj-principles__item tj-reveal" data-reveal-delay="300">
+          <span class="tj-principles__number">1</span>
+          <p class="tj-principles__text">{% t transformation.chapters.method.principles.p1 %}</p>
+        </li>
+        <li class="tj-principles__item tj-reveal" data-reveal-delay="400">
+          <span class="tj-principles__number">2</span>
+          <p class="tj-principles__text">{% t transformation.chapters.method.principles.p2 %}</p>
+        </li>
+        <li class="tj-principles__item tj-reveal" data-reveal-delay="500">
+          <span class="tj-principles__number">3</span>
+          <p class="tj-principles__text">{% t transformation.chapters.method.principles.p3 %}</p>
+        </li>
+        <li class="tj-principles__item tj-reveal" data-reveal-delay="600">
+          <span class="tj-principles__number">4</span>
+          <p class="tj-principles__text">{% t transformation.chapters.method.principles.p4 %}</p>
+        </li>
+        <li class="tj-principles__item tj-reveal" data-reveal-delay="700">
+          <span class="tj-principles__number">5</span>
+          <p class="tj-principles__text">{% t transformation.chapters.method.principles.p5 %}</p>
+        </li>
+      </ol>
+    </div>
+
+    <!-- The Law of Two Feet -->
+    <div class="tj-law tj-reveal" data-reveal-delay="900">
+      <p class="tj-law__text">{% t transformation.chapters.method.law %}</p>
+    </div>
+
+    <!-- Closing -->
+    <div class="tj-closing tj-reveal" data-reveal-delay="1100">
+      <p class="tj-closing__text">{% t transformation.chapters.method.closing_1 %}</p>
+      <p class="tj-closing__text">{% t transformation.chapters.method.closing_2 %}</p>
+    </div>
+
+    <!-- Open Space Posters Gallery -->
+    <div class="tj-posters tj-reveal" data-reveal-delay="1200">
+      <h3 class="tj-posters__title" style="color: var(--color-primary, #f1c232); font-size: 1.5rem; text-align: center; margin-bottom: 1.5rem;">
+        {% t transformation.chapters.method.posters.title %}
+      </h3>
+      <div class="tj-posters__grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; max-width: 900px; margin: 0 auto;">
+        {% assign poster_names = "1,2,3,4,5,law" | split: "," %}
+        {% for poster in poster_names %}
+        <a href="#poster-{{ poster }}" class="tj-poster" data-toggle="modal" style="display: block; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+          <img src="{{ site.baseurl }}/assets/img/os/{{ site.lang }}/{{ poster }}.jpg"
+               alt="{% if poster == 'law' %}{% t transformation.chapters.method.posters.law_alt %}{% else %}{% t transformation.chapters.method.posters.principle_alt %} {{ poster }}{% endif %}"
+               style="width: 100%; height: auto; display: block;"
+               loading="lazy">
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Poster Modals -->
+    {% assign poster_data = "1:OS - Prinzip 1:OS - Principle 1,2:OS - Prinzip 2:OS - Principle 2,3:OS - Prinzip 3:OS - Principle 3,4:OS - Prinzip 4:OS - Principle 4,5:OS - Prinzip 5:OS - Principle 5,law:OS - Gesetz:OS - Law" | split: "," %}
+    {% for poster_item in poster_data %}
+      {% assign parts = poster_item | split: ":" %}
+      {% assign poster_id = parts[0] %}
+      {% assign poster_de = parts[1] %}
+      {% assign poster_en = parts[2] %}
+      {% if site.lang == "de" %}
+        {% assign poster_file = poster_de %}
+      {% else %}
+        {% assign poster_file = poster_en %}
+      {% endif %}
+    <div class="modal fade" id="poster-{{ poster_id }}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: #2c2c2c; border: none;">
+          <div class="modal-header" style="border-bottom: 1px solid #444;">
+            <h5 class="modal-title" style="color: #f0f0f0;">
+              {% if poster_id == 'law' %}{% t transformation.chapters.method.posters.law_title %}{% else %}{% t transformation.chapters.method.posters.principle_title %} {{ poster_id }}{% endif %}
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #f0f0f0;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center" style="padding: 2rem;">
+            <img src="{{ site.baseurl }}/assets/img/os/{{ site.lang }}/{{ poster_file }}.jpg"
+                 alt="{% if poster_id == 'law' %}{% t transformation.chapters.method.posters.law_alt %}{% else %}{% t transformation.chapters.method.posters.principle_alt %} {{ poster_id }}{% endif %}"
+                 style="max-width: 100%; height: auto; border-radius: 8px;">
+          </div>
+          <div class="modal-footer" style="border-top: 1px solid #444; justify-content: center;">
+            <a href="{{ site.baseurl }}/assets/img/os/{{ site.lang }}/{{ poster_file }}.jpg"
+               download="{{ poster_file }}.jpg"
+               class="btn btn-primary">
+              <i class="fas fa-download"></i> {% t transformation.chapters.method.posters.download %}
+            </a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              {% t transformation.chapters.method.posters.close %}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <!-- Testimonial (Client Quote) -->
+    <div class="tj-testimonial tj-reveal" data-reveal-delay="1300">
+      <blockquote class="tj-testimonial__quote">
+        <p>{% t transformation.testimonials.energy %}</p>
+        <footer class="tj-testimonial__attribution">
+          <cite>— BSH</cite>
+        </footer>
+      </blockquote>
+    </div>
+
+    <div class="tj-cta tj-reveal" data-reveal-delay="1500">
+      <a href="#chapter-action" class="tj-cta__link tj-cta__link--anchor">
+        {% t transformation.chapters.method.cta %}
+      </a>
+    </div>
+
+  </div>
+</div>

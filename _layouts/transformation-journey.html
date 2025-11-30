@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+{% include transformation/header-simple.html %}
+
+<!-- Outer container with dark background -->
+<div class="tj-outer">
+
+  <!-- Transformation Journey: Cinematic Scroll Experience -->
+  <div class="transformation-journey tj-frame" id="transformation-journey">
+
+    <!-- Progress Indicator (Sticky Sidebar) -->
+    {% include transformation/scroll-progress.html %}
+
+    <!-- Chapter 1: Chaos -->
+    <section class="tj-chapter tj-chapter--chaos" id="chapter-chaos" data-chapter="1">
+      {% include transformation/chapter-chaos.html %}
+    </section>
+
+    <!-- Chapter 2: The Bumbleflies -->
+    <section class="tj-chapter tj-chapter--bumbleflies" id="chapter-bumbleflies" data-chapter="2">
+      {% include transformation/chapter-bumbleflies.html %}
+    </section>
+
+    <!-- Chapter 3: The Method -->
+    <section class="tj-chapter tj-chapter--method" id="chapter-method" data-chapter="3">
+      {% include transformation/chapter-method.html %}
+    </section>
+
+    <!-- Chapter 4: In Action (Lead Generation Focus) -->
+    <section class="tj-chapter tj-chapter--action" id="chapter-action" data-chapter="4">
+      {% include transformation/chapter-action.html %}
+    </section>
+
+    <!-- Chapter 5: Your Turn (Conversion) -->
+    <section class="tj-chapter tj-chapter--your-turn" id="chapter-your-turn" data-chapter="5">
+      {% include transformation/chapter-your-turn.html %}
+    </section>
+
+  </div>
+
+</div>
+
+<!-- Contact Modal -->
+{% include transformation/contact-modal.html %}
+
+<!-- Event Modal -->
+{% include transformation/event-modal.html %}
+
+<!-- Scroll Controller Script -->
+<script src="{{ site.baseurl }}/assets/js/scroll-controller.js" defer></script>

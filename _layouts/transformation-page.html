@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{% include transformation/header-simple.html %}
+
+<!-- Transformation Page: Internal Pages with Consistent Styling -->
+<div class="transformation-page" style="background-color: #2c2c2c; min-height: 100vh; color: #f0f0f0;">
+
+  {{ content }}
+
+</div>
+
+<!-- Page-specific Scripts -->
+{% if page.scripts %}
+{% for script in page.scripts %}
+<script src="{{ site.baseurl }}{{ script }}" defer></script>
+{% endfor %}
+{% endif %}

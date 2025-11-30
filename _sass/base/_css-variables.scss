@@ -14,6 +14,26 @@
   --brand-gray-flies: #999999;
   --brand-gray-flies-rgb: 153, 153, 153;
 
+  // ===== Transformation Journey Colors =====
+  // Chapter 1: Chaos (dark, muted)
+  --transform-chaos-dark: #333333;
+  --transform-chaos-mid: #555555;
+  --transform-chaos-blue: #546e7a;
+
+  // Chapter 2: Emerging Hope (yellows warming up)
+  --transform-hope-yellow: var(--brand-yellow);
+  --transform-hope-warm-1: #2c2c2c; // Deep charcoal
+  --transform-hope-warm-2: #2c2c2c; // Deep charcoal
+
+  // Chapter 3-5: Full Transformation (vibrant spectrum)
+  --transform-green-light: #9ccc65;
+  --transform-green-mid: #7cb342;
+  --transform-blue-sky: #42a5f5;
+  --transform-blue-deep: #5c6bc0;
+  --transform-orange-bright: #ff6f00;
+  --transform-orange-warm: #ff8f00;
+  --transform-purple: #7e57c2;
+
   // ===== Light Mode - Semantic Color Tokens =====
 
   // Primary colors
@@ -57,7 +77,14 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
+  --radius-2xl: 24px;
   --radius-full: 9999px;
+
+  // Frame container tokens (for single-page app style)
+  --radius-frame: var(--radius-2xl);
+  --frame-border-color: rgba(255, 255, 255, 0.1);
+  --frame-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --frame-outer-bg: #0a0a0a;
 
   // Shadows (soft, organic shadows)
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);

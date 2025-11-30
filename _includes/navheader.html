@@ -56,7 +56,7 @@
                         {% unless site.lang == lang %}
 
                           {% capture page_url %}{% tl {{page.namespace}} {{lang}} %}{% endcapture %}
-                          {% assign lang_link = site.baseurl_root | append: page_url  %}
+                          {% assign lang_link = page_url %}
                           <a class="nav-link" href="{{ lang_link }}" >
                                 <span class="fi fi-{{ site.data.navigation.languages[lang].code }}"></span>
                                 {{ site.data.navigation.languages[lang].text }}

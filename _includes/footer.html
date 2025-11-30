@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="footer" id="footer" style="background-color: white">
+<footer class="footer" id="footer" style="background-color: #2c2c2c; color: #f0f0f0;">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-4">
@@ -26,7 +26,7 @@
         {% for link in site.data.footer.quicklinks %}
           <!-- {t % link.name %} -->
           <li class="list-inline-item">
-            <a href="{% tl link.url %}"
+            <a href="{{ site.baseurl }}/{{ link.url }}" style="color: #f0f0f0;"
               >{% t link.name %}</a
             >
           </li>

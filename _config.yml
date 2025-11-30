@@ -2,6 +2,7 @@ title: bumbleflies | 🦋
 email: info@bumbleflies.de
 author: bumbleflies UG
 baseurl: "" # the subpath of your site, e.g. /blog
+baseurl_root: "" # root baseurl for absolute paths (always empty, use baseurl for relative paths)
 url: "https://bumbleflies.de" # the base hostname & protocol for your site, e.g. http://example.com
 
 copyright: 'bumbleflies UG [CC by 4.0](https://creativecommons.org/licenses/by/4.0/){:target="_blank"}'
@@ -35,6 +36,7 @@ exclude:
   - PERFORMANCE.md
   - STORYTELLING_COMPONENTS.md
   - QA_REPORT.md
+  - TRANSFORMATION_JOURNEY_CONCEPT.md
 
 plugins:
   - jekyll-github-metadata

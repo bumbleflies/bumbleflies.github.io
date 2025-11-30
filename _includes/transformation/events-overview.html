@@ -1,0 +1,103 @@
+<!-- Events Overview Section -->
+<section class="tj-events" style="padding: 4rem 2rem;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto;">
+
+    <!-- Header -->
+    <div class="tj-events__header" style="text-align: center; margin-bottom: 4rem;">
+      <h1 style="color: var(--color-primary, #f1c232); font-size: 2.5rem; margin-bottom: 1rem;">
+        {% t pages.events.overview.header %}
+      </h1>
+      <p style="font-size: 1.25rem; color: #ccc; max-width: 600px; margin: 0 auto;">
+        {% t pages.events.overview.subtext %}
+      </p>
+    </div>
+
+    <!-- Event Categories -->
+    <div class="tj-events__categories" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+      <!-- Community Events: Open Bumble Space -->
+      <div class="tj-events__category" style="background-color: #3a3a3a; border-radius: 12px; padding: 2rem; text-align: center;">
+        <div class="tj-events__icon" style="font-size: 3rem; margin-bottom: 1rem;">
+          <span style="background: linear-gradient(135deg, var(--color-primary, #f1c232), #e6a800); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">&#x1F41D;</span>
+        </div>
+        <h3 style="color: #f0f0f0; font-size: 1.5rem; margin-bottom: 0.75rem;">
+          {% t pages.events.overview.categories.obs.title %}
+        </h3>
+        <p style="color: #ccc; margin-bottom: 1.5rem; line-height: 1.6;">
+          {% t pages.events.overview.categories.obs.desc %}
+        </p>
+        <a href="{% tl obs %}" class="btn btn-primary btn-md" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: var(--color-primary, #f1c232); color: #000; text-decoration: none; border-radius: 4px; font-weight: 600;">
+          {% t pages.events.overview.categories.obs.cta %}
+        </a>
+      </div>
+
+      <!-- Custom Workshops -->
+      <div class="tj-events__category" style="background-color: #3a3a3a; border-radius: 12px; padding: 2rem; text-align: center;">
+        <div class="tj-events__icon" style="font-size: 3rem; margin-bottom: 1rem;">
+          <span style="background: linear-gradient(135deg, #4CAF50, #2E7D32); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">&#x1F3AF;</span>
+        </div>
+        <h3 style="color: #f0f0f0; font-size: 1.5rem; margin-bottom: 0.75rem;">
+          {% t pages.events.overview.categories.workshops.title %}
+        </h3>
+        <p style="color: #ccc; margin-bottom: 1.5rem; line-height: 1.6;">
+          {% t pages.events.overview.categories.workshops.desc %}
+        </p>
+        <a href="{% tl kontakt %}?service=workshop" class="btn btn-primary btn-md" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: var(--color-primary, #f1c232); color: #000; text-decoration: none; border-radius: 4px; font-weight: 600;">
+          {% t pages.events.overview.categories.workshops.cta %}
+        </a>
+      </div>
+
+      <!-- PI Planning -->
+      <div class="tj-events__category" style="background-color: #3a3a3a; border-radius: 12px; padding: 2rem; text-align: center;">
+        <div class="tj-events__icon" style="font-size: 3rem; margin-bottom: 1rem;">
+          <span style="background: linear-gradient(135deg, #2196F3, #1565C0); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">&#x1F680;</span>
+        </div>
+        <h3 style="color: #f0f0f0; font-size: 1.5rem; margin-bottom: 0.75rem;">
+          {% t pages.events.overview.categories.pi.title %}
+        </h3>
+        <p style="color: #ccc; margin-bottom: 1.5rem; line-height: 1.6;">
+          {% t pages.events.overview.categories.pi.desc %}
+        </p>
+        <a href="{% tl kontakt %}?service=pi-planning" class="btn btn-primary btn-md" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: var(--color-primary, #f1c232); color: #000; text-decoration: none; border-radius: 4px; font-weight: 600;">
+          {% t pages.events.overview.categories.pi.cta %}
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Upcoming Events Section -->
+    <div class="tj-events__upcoming" style="margin-top: 4rem;">
+      <h2 style="color: #f0f0f0; font-size: 1.75rem; text-align: center; margin-bottom: 2rem;">
+        {% t pages.events.overview.upcoming.title %}
+      </h2>
+
+      <div class="tj-events__next" style="background-color: #3a3a3a; border-radius: 12px; padding: 2rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: center;">
+        <div style="text-align: center;">
+          <p style="color: var(--color-primary, #f1c232); font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">
+            open:bumble:space #8
+          </p>
+          <p style="color: #ccc; margin-bottom: 1rem;">
+            20. Februar 2025 | MaibornWolff, M&uuml;nchen
+          </p>
+          <a href="{% tl obs %}" class="btn btn-outline-primary btn-md" style="display: inline-block; padding: 0.5rem 1.25rem; border: 2px solid var(--color-primary, #f1c232); color: var(--color-primary, #f1c232); text-decoration: none; border-radius: 4px; font-weight: 500; background: transparent;">
+            {% t pages.events.overview.upcoming.cta %}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="tj-events__cta" style="text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #444;">
+      <h2 style="color: #f0f0f0; font-size: 1.75rem; margin-bottom: 1rem;">
+        {% t pages.events.overview.cta.title %}
+      </h2>
+      <p style="color: #ccc; max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.6;">
+        {% t pages.events.overview.cta.text %}
+      </p>
+      <a href="{% tl kontakt %}" class="btn btn-primary btn-lg" style="display: inline-block; padding: 1rem 2rem; background-color: var(--color-primary, #f1c232); color: #000; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 1.1rem;">
+        {% t pages.events.overview.cta.button %}
+      </a>
+    </div>
+
+  </div>
+</section>

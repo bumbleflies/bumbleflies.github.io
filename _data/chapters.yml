@@ -1,0 +1,121 @@
+# Transformation Journey Chapters
+# Metadata for the 5-chapter scroll experience
+
+chapters:
+  - id: chaos
+    number: 1
+    title_key: transformation.chapters.chaos.title
+    slug: chaos
+    scroll_range:
+      start: 0
+      end: 15
+    background_color: "#333333"
+    text_color: "#f0f0f0"
+    theme: dark
+    has_cta: false
+
+  - id: bumbleflies
+    number: 2
+    title_key: transformation.chapters.bumbleflies.title
+    slug: bumbleflies
+    scroll_range:
+      start: 15
+      end: 30
+    background_color: "#fef5e7"
+    text_color: "#2d2d2d"
+    theme: light
+    has_cta: true
+    cta_text_key: transformation.chapters.bumbleflies.cta
+
+  - id: method
+    number: 3
+    title_key: transformation.chapters.method.title
+    slug: method
+    scroll_range:
+      start: 30
+      end: 50
+    background_color: "#ffffff"
+    text_color: "#2d2d2d"
+    theme: light
+    has_cta: true
+    cta_text_key: transformation.chapters.method.cta
+
+  - id: action
+    number: 4
+    title_key: transformation.chapters.action.title
+    slug: action
+    scroll_range:
+      start: 50
+      end: 80
+    background_color: "#f8f8f8"
+    text_color: "#2d2d2d"
+    theme: light
+    has_cta: true
+    cta_text_key: transformation.chapters.action.cta
+    is_lead_gen_focus: true
+
+  - id: your_turn
+    number: 5
+    title_key: transformation.chapters.your_turn.title
+    slug: your-turn
+    scroll_range:
+      start: 80
+      end: 100
+    background_color: "#fff8e1"
+    text_color: "#2d2d2d"
+    theme: light
+    has_cta: true
+    is_conversion_chapter: true
+
+# Services for Chapter 4 (In Action)
+services:
+  - id: workshops
+    title_key: transformation.services.workshops.title
+    desc_key: transformation.services.workshops.desc
+    result_key: transformation.services.workshops.result
+    metric_key: transformation.services.workshops.metric
+    client: BSH
+    cta_text_key: transformation.services.workshops.cta
+    form_preset: workshop
+    icon: fa-users
+
+  - id: pi-planning
+    title_key: transformation.services.pi_planning.title
+    desc_key: transformation.services.pi_planning.desc
+    result_key: transformation.services.pi_planning.result
+    metric_key: transformation.services.pi_planning.metric
+    client: Siemens AG
+    cta_text_key: transformation.services.pi_planning.cta
+    form_preset: pi-planning
+    icon: fa-project-diagram
+
+  - id: events
+    title_key: transformation.services.events.title
+    desc_key: transformation.services.events.desc
+    result_key: transformation.services.events.result
+    highlight_key: transformation.services.events.highlight
+    cta_text_key: transformation.services.events.cta
+    cta_link: /veranstaltungen
+    icon: fa-calendar-alt
+
+# Testimonials for Chapter 4 (Social Proof)
+testimonials:
+  - quote_key: transformation.testimonials.energy
+    client: BSH
+
+  - quote_key: transformation.testimonials.structured
+    client: Anonymous
+
+  - quote_key: transformation.testimonials.culture
+    client: Anonymous
+
+# Metrics for Chapter 4 (The Proof)
+metrics:
+  - value: "200+"
+    label_key: transformation.metrics.facilitations
+
+  - value: "3"
+    label_key: transformation.metrics.continents
+
+  - value: "5,000+"
+    label_key: transformation.metrics.participants

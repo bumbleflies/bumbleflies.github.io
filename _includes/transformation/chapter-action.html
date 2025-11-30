@@ -1,0 +1,164 @@
+<!-- Chapter 4: In Action - LEAD GENERATION FOCUS -->
+<div class="tj-chapter__content tj-chapter__content--services">
+  <div class="container">
+
+    <!-- Service 1: Workshops -->
+    <div class="tj-service tj-reveal">
+      <h2 class="tj-service__title">{% t transformation.services.workshops.title %}</h2>
+
+      <div class="tj-service__content">
+        <p class="tj-service__desc">{% t transformation.services.workshops.desc_1 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.workshops.desc_2 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.workshops.desc_3 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.workshops.desc_4 %}</p>
+      </div>
+
+      <p class="tj-service__result">{% t transformation.services.workshops.result %}</p>
+
+      <div class="tj-service__proof">
+        <p class="tj-service__metric">
+          <i class="fas fa-chart-line"></i>
+          {% t transformation.services.workshops.metric %}
+        </p>
+        <p class="tj-service__client">
+          <img src="{{ site.baseurl }}/assets/img/clients/bsh.png" alt="BSH" class="tj-service__client-logo" loading="lazy">
+        </p>
+      </div>
+
+      <div class="tj-service__cta">
+        <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactModal" data-service="workshop">
+          {% t transformation.services.workshops.cta %}
+        </a>
+      </div>
+    </div>
+
+    <!-- Service 2: PI Planning -->
+    <div class="tj-service tj-reveal" data-reveal-delay="400">
+      <h2 class="tj-service__title">{% t transformation.services.pi_planning.title %}</h2>
+
+      <div class="tj-service__content">
+        <p class="tj-service__desc">{% t transformation.services.pi_planning.desc_1 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.pi_planning.desc_2 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.pi_planning.desc_3 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.pi_planning.desc_4 %}</p>
+      </div>
+
+      <p class="tj-service__result">{% t transformation.services.pi_planning.result %}</p>
+
+      <div class="tj-service__proof">
+        <p class="tj-service__metric">
+          <i class="fas fa-users"></i>
+          {% t transformation.services.pi_planning.metric %}
+        </p>
+        <p class="tj-service__client">
+          <img src="{{ site.baseurl }}/assets/img/clients/siemens.png" alt="Siemens AG" class="tj-service__client-logo" loading="lazy">
+        </p>
+      </div>
+
+      <div class="tj-service__cta">
+        <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactModal" data-service="pi-planning">
+          {% t transformation.services.pi_planning.cta %}
+        </a>
+      </div>
+    </div>
+
+    <!-- Service 3: Events -->
+    <div class="tj-service tj-reveal" data-reveal-delay="800">
+      <h2 class="tj-service__title">{% t transformation.services.events.title %}</h2>
+
+      <div class="tj-service__content">
+        <p class="tj-service__desc">{% t transformation.services.events.desc_1 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.events.desc_2 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.events.desc_3 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.events.desc_4 %}</p>
+      </div>
+
+      <p class="tj-service__result">{% t transformation.services.events.result %}</p>
+
+      <div class="tj-service__highlight">
+        <p class="tj-service__highlight-text">
+          <i class="fas fa-calendar-alt"></i>
+          {% t transformation.services.events.highlight %}
+        </p>
+      </div>
+
+      <div class="tj-service__cta">
+        <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eventModal">
+          {% t transformation.services.events.cta %}
+        </a>
+      </div>
+    </div>
+
+    <!-- Service 4: FaST Agile -->
+    <div class="tj-service tj-reveal" data-reveal-delay="1000">
+      <h2 class="tj-service__title">{% t transformation.services.fast.title %}</h2>
+
+      <div class="tj-service__content">
+        <p class="tj-service__desc">{% t transformation.services.fast.desc_1 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.fast.desc_2 %}</p>
+        <p class="tj-service__desc">{% t transformation.services.fast.desc_3 %}</p>
+      </div>
+
+      <p class="tj-service__result">{% t transformation.services.fast.result %}</p>
+
+      <div class="tj-service__proof">
+        <p class="tj-service__metric">
+          <i class="fas fa-layer-group"></i>
+          {% t transformation.services.fast.metric %}
+        </p>
+        <p class="tj-service__client">
+          <img src="{{ site.baseurl }}/assets/img/fast_agile/fast_agile_small.webp" alt="FaST Agile" class="tj-service__client-logo" loading="lazy" style="max-height: 60px;">
+        </p>
+      </div>
+
+      <div class="tj-service__cta">
+        <a href="{% tl fast-agile %}" class="btn btn-primary btn-lg">
+          {% t transformation.services.fast.cta %}
+        </a>
+      </div>
+    </div>
+
+    <!-- The Proof: Social Proof Section -->
+    <div class="tj-proof tj-reveal" data-reveal-delay="1200">
+      <h3 class="tj-proof__title">{% t transformation.testimonials.title %}</h3>
+
+      <!-- Client Logos -->
+      <div class="tj-proof__clients">
+        <img src="{{ site.baseurl }}/assets/img/clients/bsh.png" alt="BSH" loading="lazy">
+        <img src="{{ site.baseurl }}/assets/img/clients/siemens.png" alt="Siemens" loading="lazy">
+        <img src="{{ site.baseurl }}/assets/img/clients/wohnungshelden.png" alt="Wohnungshelden" loading="lazy">
+      </div>
+
+      <!-- Testimonials (Rotating) -->
+      <div class="tj-proof__testimonials">
+        <blockquote class="tj-proof__quote">
+          <p>{% t transformation.testimonials.energy %}</p>
+        </blockquote>
+        <blockquote class="tj-proof__quote">
+          <p>{% t transformation.testimonials.structured %}</p>
+        </blockquote>
+        <blockquote class="tj-proof__quote">
+          <p>{% t transformation.testimonials.culture %}</p>
+        </blockquote>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="tj-proof__metrics">
+        <div class="tj-proof__metric">
+          <span class="tj-proof__metric-value">200+</span>
+          <span class="tj-proof__metric-label">{% t transformation.metrics.facilitations %}</span>
+        </div>
+        <div class="tj-proof__metric">
+          <span class="tj-proof__metric-value">3</span>
+          <span class="tj-proof__metric-label">{% t transformation.metrics.continents %}</span>
+        </div>
+        <div class="tj-proof__metric">
+          <span class="tj-proof__metric-value">5,000+</span>
+          <span class="tj-proof__metric-label">{% t transformation.metrics.participants %}</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
