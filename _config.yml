@@ -18,7 +18,8 @@ theme: jekyll-agency
 
 repository: bumbleflies/bumbleflies.github.io
 
-include: ['_pages']
+include:
+  - _pages
 
 # https://jekyllrb.com/docs/troubleshooting/#configuration-problems
 exclude:
@@ -37,8 +38,16 @@ exclude:
   - STORYTELLING_COMPONENTS.md
   - QA_REPORT.md
   - TRANSFORMATION_JOURNEY_CONCEPT.md
+  - _pages/beta-index.md
 
 plugins:
   - jekyll-github-metadata
   - jekyll-redirect-from
   - jekyll-multiple-languages-plugin
+
+# Hide beta index from main site
+defaults:
+  - scope:
+      path: "_pages/beta-index.md"
+    values:
+      published: false

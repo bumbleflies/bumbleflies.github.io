@@ -7,3 +7,26 @@ baseurl: "/beta"  # Serve from /beta path
 baseurl_root: "/beta"  # Root baseurl for absolute paths (must match baseurl for beta)
 url: "https://bumbleflies.de"  # Keep production URL
 beta_mode: true  # Enable beta-specific features (banner, noindex)
+
+# Include beta pages folder, exclude original index
+include:
+  - _pages
+  - _beta_pages
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/bumbleflies.jekyll.agency
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - 404.html
+  - CLAUDE.md
+  - MODERNIZATION_PLAN.md
+  - PERFORMANCE.md
+  - STORYTELLING_COMPONENTS.md
+  - QA_REPORT.md
+  - TRANSFORMATION_JOURNEY_CONCEPT.md
+  - _pages/index.md
