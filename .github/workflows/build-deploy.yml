@@ -23,7 +23,7 @@ jobs:
     secrets: inherit
     uses: ./.github/workflows/part_deploy_stage.yml
   deploy-live:
-    if: github.ref == 'refs/heads/master'
     needs: build-test
+    if: github.ref == 'refs/heads/master'
     secrets: inherit
     uses: ./.github/workflows/part_deploy_live.yml
