@@ -1,44 +1,39 @@
 ---
-# copy of agency.scss
+# bumbleflies theme
 ---
 @charset "utf-8";
-// Core variables and mixins
-@import "base/variables.scss";
-@import "base/mixins.scss";
 
-// Custom colors
-$primary: {{ site.data.style.highlight | default: "#fed136" }} !default;
-$white: {{ site.data.style.white | default: "#fff" }} !default;
-$black: {{ site.data.style.black | default: "#242424" }} !default;
-
+// 1. Liquid variables from site data
 $bumble-yellow: {{ site.data.style.bumble_yellow | default: "#f1c232" }};
 $bumble-grey-dark: {{ site.data.style.bumble_grey_dark | default: "#5e5e5e" }};
 $bumble-grey-light: {{ site.data.style.bumble_grey_light | default: "#999999" }};
+$primary: {{ site.data.style.highlight | default: "#f1c232" }};
+$white: {{ site.data.style.white | default: "#ffffff" }};
+$black: {{ site.data.style.black | default: "#242424" }};
 
 $contact-image: "{{ site.data.style.contact-image }}";
-
-// Custom Images
 $header-image: "{{ site.data.style.header-image }}";
 $accceu-image: "{{ site.data.style.accceu-image }}";
 $fast-image: "{{ site.data.style.fast-image }}";
 $nvc-image: "{{ site.data.style.nvc-image }}";
 
-@import "header_images.scss";
+// 2. Core variables and mixins
+@import "base/variables";
+@import "base/mixins";
 
-// Global CSS
-@import "base/page.scss";
+// 3. Global CSS
+@import "base/page";
 
-// Components
-@import "components/buttons.scss";
-@import "components/navbar.scss";
+// 4. Components
+@import "components/buttons";
+@import "components/navbar";
 
-// Layout
-@import "layout/masthead.scss";
-@import "layout/services.scss";
-@import "layout/team.scss";
-@import "layout/contact.scss";
-@import "layout/footer.scss";
-@import "layout/gallery-hover.scss";
-
-// Submenu
-@import "layout/submenu.scss";
+// 5. Layout
+@import "header_images";
+@import "layout/masthead";
+@import "layout/services";
+@import "layout/gallery";
+@import "layout/team";
+@import "layout/contact";
+@import "layout/footer";
+@import "layout/submenu";

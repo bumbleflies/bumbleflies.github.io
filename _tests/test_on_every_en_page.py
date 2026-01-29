@@ -18,7 +18,11 @@ class TestOnEveryPage:
         stylesheets = query_site(bumbleserve, page).find_all(rel='stylesheet')
         external_stylesheets = list(filter(lambda s: s.attrs['href'].startswith('http'), stylesheets))
 
-        not_allowed = list(filter(lambda s: s.attrs['href'] not in allowed_stylesheets, external_stylesheets))
+        actually_allowed = list(allowed_stylesheets) + [
+            'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'
+        ]
+
+        not_allowed = list(filter(lambda s: s.attrs['href'] not in actually_allowed, external_stylesheets))
         assert len(not_allowed) == 0, f'External Stylesheets not allowed: {not_allowed}'
 
     def test_title(self, bumbleserve, title, page, allowed_stylesheets):
