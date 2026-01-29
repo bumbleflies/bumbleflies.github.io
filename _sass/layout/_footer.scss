@@ -1,0 +1,32 @@
+// Styling for the footer
+.footer {
+  padding: 60px 0;
+  text-align: center;
+  background-color: $black !important;
+  color: $white;
+  border-top: 4px solid $primary;
+
+  span.copyright {
+    font-size: 0.9rem;
+    line-height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    @include heading-font;
+  }
+
+  ul.quicklinks {
+    font-size: 0.9rem;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    @include heading-font;
+
+    li a {
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

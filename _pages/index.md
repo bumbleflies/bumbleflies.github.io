@@ -47,25 +47,24 @@ gallery:
   text: pages.home.gallery.text
   section: services
   list:
-    - title: pages.home.gallery.items.effective_collaboration.title
-      desc: pages.home.gallery.items.effective_collaboration.desc
+    - title: pages.home.gallery.items.app_development.title
+      desc: pages.home.gallery.items.app_development.desc
       image: 
-        url: /assets/img/services/bumblespace_effective-workshop.webp
+        url: /assets/img/bumblefly-blue.png
         copyright: bumbleflies UG
-        width: 300
-        height: 270
-    - title: pages.home.gallery.items.big_room.title
-      desc: pages.home.gallery.items.big_room.desc
+    - title: pages.home.gallery.items.lego_minecraft.title
+      desc: pages.home.gallery.items.lego_minecraft.desc
       image: 
-        url: /assets/img/services/bumblespace_pi-planning.webp
+        url: /assets/img/bumblefly-blue.png
         copyright: bumbleflies UG
-        width: 300
-        height: 270
-    - title: pages.home.gallery.items.online_events.title
-      desc: pages.home.gallery.items.online_events.desc
+    - title: pages.home.gallery.items.workshops.title
+      desc: pages.home.gallery.items.workshops.desc
       image: 
-        url: /assets/img/services/bumblespace_online-events.webp
+        url: /assets/img/bumblefly-blue.png
         copyright: bumbleflies UG
-        width: 300
-        height: 270
+    - title: pages.home.gallery.items.openspace_coaching.title
+      desc: pages.home.gallery.items.openspace_coaching.desc
+      image:
+        url: /assets/img/bumblefly-blue.png
+        copyright: bumbleflies UG
 ---

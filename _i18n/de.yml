@@ -5,21 +5,24 @@ pages:
     title: Startseite
     header:
       title: Willkommen bei den bumbleflies
-      text: WIR LIEBEN OPEN SPACE!
-      button: Schreib uns
+      text: Innovative Wege der Zusammenarbeit und Bildung
+      button: Kontakt aufnehmen
     gallery:
       title: Leistungen
-      text: So unterstützen wir dich
+      text: Innovative Wege für Kollaboration und Bildung
       items:
-        effective_collaboration:
-          title: Effektive Kollaboration
-          desc: Wir helfen dir, deine Meetings und Workshops effektiv, interaktiv und kollaborativ zu gestalten. Du wirst überrascht sein, wie viel Energie das bei deinen Mitarbeiter:innen freisetzt.
-        big_room:
-          title: Online Big-Room-Meetings
-          desc: Wir organisieren für dich dein nächstes Big-Room-Meeting (z.B. PI-Planning) für alle deine Teams. Egal ob 20, 200 oder mehr Personen. Wir sorgen für den produktiven Rahmen, damit ihr euch auf die Inhalte konzentrieren könnt.
-        online_events:
-          title: Online Events
-          desc: Wir organisieren für dich ein Event, bei dem Teambuilding, Austausch und Spaß im Vordergrund stehen. Ihr habt euch lange nicht mehr gesehen und sucht den Kontakt zu den Kollegen? Dann ist das genau das richtige.
+        app_development:
+          title: App-Entwicklung
+          desc: Wir entwickeln maßgeschneiderte Apps, die Zusammenarbeit und Lernen in deinem Unternehmen auf das nächste Level heben.
+        lego_minecraft:
+          title: Lego & Minecraft Education
+          desc: Spielerisch lernen und komplexe Probleme lösen – wir nutzen Lego und Minecraft für innovative Bildungsformate.
+        workshops:
+          title: Workshops
+          desc: Interaktive und effektive Workshops, die Energie freisetzen und echte Ergebnisse liefern.
+        openspace_coaching:
+          title: Open Space Coaching
+          desc: Wir begleiten dich und dein Team dabei, die Kraft von Open Space für eure Transformation zu nutzen.
   retreats:
     title: Retreats
     bumbleretreat:
@@ -568,11 +571,11 @@ pages:
     title: Über uns
     text: Wir sind bumbleflies
     body: |
-      Wir sind Chris, nochmal Chris und Sebastian, die bumbleflies. Unser Name ist eine Anspielung auf die beiden Erscheinungen des Open Space: die Hummeln, die für das Verbreiten von Ideen stehen, und die Schmetterlinge, die für das Schöne und Unerwartete stehen. Als Teil des Organisationsteams der Open Space Scrum München Veranstaltung haben wir viel Erfahrung und sind dazu bereit, diese weiterzugeben.
+      Wir sind Christian Dähn, Christoph Kämpfe und Sebastian Keller – die bumbleflies. Unser Name ist eine Anspielung auf die beiden Erscheinungen des Open Space: die Hummeln (bumblebees), die für das Verbreiten von Ideen stehen, und die Schmetterlinge (butterflies), die für das Schöne und Unerwartete stehen.
 
-      Mit der bumbleflies UG bieten wir Organisationen Unterstützung beim Einsatz des Open Space Formats an. Wir glauben, dass Open Space ein mächtiges Werkzeug für die Zusammenarbeit und den Wissensaustausch ist und wollen gemeinsam mit Euch die Idee voranbringen. Deshalb bieten wir nicht nur die Organisation von Open Spaces an, sondern auch Schulungen und Workshops, um Unternehmen und Organisationen bei der Implementierung von Open Space zu unterstützen.
+      Wir begleiten Organisationen auf neuen Wegen der Zusammenarbeit und Bildung. Von der Entwicklung maßgeschneiderter Apps über innovative Bildungsformate mit Lego und Minecraft bis hin zu professioneller Workshop-Moderation und Open Space Coaching – wir bringen frischen Wind in eure Projekte.
 
-      Wir sind überzeugt, dass jeder von der offenen und partizipativen Arbeitsweise profitieren kann, die Open Space ermöglicht, und wir freuen uns darauf, unsere Leidenschaft für Open Space und eine offene, kollaborative Arbeitskultur mit Euch zu teilen."
+      Wir sind überzeugt, dass jeder von einer offenen, partizipativen und spielerischen Arbeitsweise profitieren kann. Wir freuen uns darauf, unsere Leidenschaft für innovative Kollaboration mit euch zu teilen.
   stayintheloop:
     title: Informiert bleiben
   team:

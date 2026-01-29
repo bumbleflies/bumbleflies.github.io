@@ -1,16 +1,28 @@
 // Custom Images
 
 header.masthead {
-  &.default-image {
-    background-image: url("#{$header-image}");
+  background-color: $bumble-yellow; // Default fallback to yellow
+  color: $black;
+  background-image: none !important; // Force no background image for the new look
+
+  .intro-text .intro-lead-in, .intro-text .intro-heading {
+    color: $black;
   }
+
+  &.default-image {
+    background-color: $bumble-yellow;
+  }
+
   &.accceu-image {
-    background-image: url("#{$accceu-image}");
+    background-color: $bumble-grey-dark;
+    .intro-text .intro-lead-in, .intro-text .intro-heading {
+      color: $white;
+    }
   }
   &.fast-image {
-    background-image: url("#{$fast-image}");
+    background-color: $bumble-yellow;
   }
   &.nvc-image {
-    background-image: url("#{$nvc-image}");
+    background-color: $bumble-grey-light;
   }
 }

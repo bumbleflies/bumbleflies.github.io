@@ -1,0 +1,54 @@
+// Styling for the team section
+.team-member {
+  margin-bottom: 50px;
+  text-align: center;
+  padding: 30px;
+  background: $white;
+  transition: all 0.3s ease;
+
+  img {
+    width: 225px;
+    height: 225px;
+    border: 4px solid $black;
+    box-shadow: 6px 6px 0px $bumble-yellow;
+    filter: grayscale(0%); // Keep it professional yet playful
+    border-radius: 0 !important; // Modern blocky look
+  }
+
+  h3 {
+    margin-top: 25px;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    @include heading-font;
+  }
+
+  .text-muted {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $bumble-grey-dark !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.social-buttons {
+  li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: $white;
+    background-color: $black;
+    border-radius: 0;
+    transition: all 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $primary;
+      color: $black;
+      transform: translate(-2px, -2px);
+      box-shadow: 4px 4px 0px $black;
+    }
+  }
+}

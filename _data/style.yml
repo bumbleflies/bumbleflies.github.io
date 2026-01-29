@@ -1,10 +1,13 @@
 #Color Customization
-highlight: "#fbc02d"
-#white: "#FF0000"
-#black: "#000"
+highlight: "#f1c232"
+bumble_yellow: "#f1c232"
+bumble_grey_dark: "#5e5e5e"
+bumble_grey_light: "#999999"
+white: "#ffffff"
+black: "#242424"
 
 #Image Customization
-header-image: "/assets/img/header-bg.webp"
+# header-image: "/assets/img/header-bg.webp"
 accceu-image: "/assets/img/accceu-header.webp"
 fast-image: "/assets/img/fast-header.webp"
 nvc-image: "/assets/img/nvc-header.webp"

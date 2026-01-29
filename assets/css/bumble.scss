@@ -9,7 +9,11 @@
 // Custom colors
 $primary: {{ site.data.style.highlight | default: "#fed136" }} !default;
 $white: {{ site.data.style.white | default: "#fff" }} !default;
-$black: {{ site.data.style.black | default: "#000" }} !default;
+$black: {{ site.data.style.black | default: "#242424" }} !default;
+
+$bumble-yellow: {{ site.data.style.bumble_yellow | default: "#f1c232" }};
+$bumble-grey-dark: {{ site.data.style.bumble_grey_dark | default: "#5e5e5e" }};
+$bumble-grey-light: {{ site.data.style.bumble_grey_light | default: "#999999" }};
 
 $contact-image: "{{ site.data.style.contact-image }}";
 

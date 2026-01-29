@@ -3,21 +3,24 @@ pages:
     title: Home
     header:
       title: Welcome to the bumbleflies
-      text: WE LOVE OPEN SPACE!
-      button: Contact us
+      text: Innovative ways of collaboration and education
+      button: Get in touch
     gallery:
       title: Services
-      text: This is how we support you
+      text: Innovative ways for collaboration and education
       items:
-        effective_collaboration:
-          title: Effective Collaboration
-          desc: We help you make your meetings and workshops effective, interactive, and collaborative. You'll be surprised at how much energy this unleashes in your employees.
-        big_room:
-          title: Online Big-Room-Meetings
-          desc: We organize your next big room meeting (e.g., PI Planning) for all your teams, whether it's 20, 200, or more people. We provide the productive framework, so you can focus on the content.
-        online_events:
-          title: Online Events
-          desc: We organize an event for you where team building, exchange, and fun are the focus. Haven't seen each other for a year and looking for contact with colleagues? Then this is exactly the right thing.
+        app_development:
+          title: App Development
+          desc: We develop custom apps that take collaboration and learning in your company to the next level.
+        lego_minecraft:
+          title: Lego & Minecraft Education
+          desc: Learn through play and solve complex problems – we use Lego and Minecraft for innovative educational formats.
+        workshops:
+          title: Workshops
+          desc: Interactive and effective workshops that unleash energy and deliver real results.
+        openspace_coaching:
+          title: Open Space Coaching
+          desc: We accompany you and your team in utilizing the power of Open Space for your transformation.
   retreats:
     title: Retreats
     bumbleretreat:
@@ -577,11 +580,11 @@ pages:
     title: About us
     text: We are bumbleflies
     body: |
-      We are Chris, Chris again, and Sebastian, the bumbleflies. Our name is a nod to the two phenomena of Open Space: the bumblebees, representing the spread of ideas, and the butterflies, symbolizing the beautiful and unexpected. As part of the organizing team for the Open Space Scrum Munich event, we have gathered extensive experience and are ready to pass on this knowledge.
+      We are Christian Dähn, Christoph Kämpfe, and Sebastian Keller – the bumbleflies. Our name is a nod to the two phenomena of Open Space: the bumblebees, representing the spread of ideas, and the butterflies, symbolizing the beautiful and unexpected.
 
-      With bumbleflies UG, we offer organizations support in the implementation of the Open Space format. We believe that Open Space is a powerful tool for collaboration and knowledge exchange and want to advance the idea together with you. That's why we not only offer the organization of Open Spaces, but also training and workshops to assist companies and organizations in implementing Open Space.
+      We guide organizations on new paths of collaboration and education. From developing custom apps and innovative educational formats with Lego and Minecraft to professional workshop facilitation and Open Space coaching – we bring fresh energy to your projects.
 
-      We are convinced that everyone can benefit from the open and participatory working method that Open Space enables, and we look forward to sharing our passion for Open Space and an open, collaborative work culture with you.
+      We are convinced that everyone can benefit from an open, participatory, and playful way of working. We look forward to sharing our passion for innovative collaboration with you.
   stayintheloop:
     title: Stay in the loop
   team:
