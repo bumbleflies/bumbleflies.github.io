@@ -24,7 +24,7 @@ jobs:
       url: https://bumbleflies.de
     steps:
       - name: 🫲 Download site
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: site
           path: _site
