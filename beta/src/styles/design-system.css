@@ -135,6 +135,7 @@ button {
 a:focus-visible, button:focus-visible {
   outline: 2px solid var(--signal);
   outline-offset: 2px;
+  transition: outline-offset var(--duration-fast) var(--easing-default);
 }
 
 /* ───── Section & Layout ──────────────────────────────────────── */
@@ -159,12 +160,6 @@ section {
   margin: 0 auto;
   padding: 0 var(--space-3xl);
   width: 100%;
-}
-
-@media (max-width: 480px) {
-  .bf-container {
-    padding: 0 var(--space-md);
-  }
 }
 
 /* ───── Typography Utilities ──────────────────────────────────── */
@@ -372,6 +367,10 @@ section {
     padding: var(--space-3xl) 0;
   }
 
+  .bf-container {
+    padding: 0 var(--space-xl);
+  }
+
   .bf-clientwall {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -383,6 +382,10 @@ section {
 
   .bf-section {
     padding: var(--space-2xl) 0;
+  }
+
+  .bf-container {
+    padding: 0 var(--space-md);
   }
 
   .bf-clientwall {
