@@ -1,0 +1,158 @@
+---
+import Mark from './Mark.astro';
+
+interface Props {
+  lang?: 'DE' | 'EN';
+}
+
+const { lang = 'DE' } = Astro.props;
+
+const content = lang === 'DE'
+  ? {
+      about: 'Eine kleine Werkstatt aus Facilitator:innen, KI-Consultants und Entwickler:innen. Remote-first, vor Ort wenn\'s zählt.',
+      services: { title: 'Leistungen', items: ['Facilitation (remote, hybrid, vor Ort)', 'AI Consulting', 'App Development', 'Coaching & Handover'] },
+      learn: { title: 'Lernen', items: ['FaST-Training', 'GPT-Training', 'AI-Literacy', 'Open Space Checkliste'] },
+      contact: { title: 'Kontakt', items: ['info@bumbleflies.de', 'LinkedIn', 'Mastodon', 'GitHub'] },
+      legal: ['Impressum', 'Datenschutz'],
+    }
+  : {
+      about: 'A small workshop of facilitators, AI consultants and developers. Remote-first, on-site when it matters.',
+      services: { title: 'Services', items: ['Facilitation (remote, hybrid, on-site)', 'AI Consulting', 'App Development', 'Coaching & Handover'] },
+      learn: { title: 'Learn', items: ['FaST Training', 'GPT Training', 'AI Literacy', 'Open Space Checklist'] },
+      contact: { title: 'Contact', items: ['info@bumbleflies.de', 'LinkedIn', 'Mastodon', 'GitHub'] },
+      legal: ['Imprint', 'Privacy'],
+    };
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bf-footer">
+  <div class="bf-footer__col">
+    <div class="bf-nav__brand" style="margin-bottom: 16px;">
+      <Mark />
+      <span>bumbleflies</span>
+    </div>
+    <p style="font-size: 13px; color: var(--ink-soft); line-height: 1.55; max-width: 340px;">
+      {content.about}
+    </p>
+  </div>
+
+  <div class="bf-footer__col">
+    <h4>{content.services.title}</h4>
+    <ul>
+      {content.services.items.map((item) => (
+        <li key={item}><a href="#">{item}</a></li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="bf-footer__col">
+    <h4>{content.learn.title}</h4>
+    <ul>
+      {content.learn.items.map((item) => (
+        <li key={item}><a href="#">{item}</a></li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="bf-footer__col">
+    <h4>{content.contact.title}</h4>
+    <ul>
+      {content.contact.items.map((item) => (
+        <li key={item}><a href="#">{item}</a></li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="bf-footer__meta">
+    <span>© bumbleflies UG · München · {year}</span>
+    <span>{content.legal.join('  ·  ')}</span>
+  </div>
+</footer>
+
+<style>
+  .bf-footer {
+    border-top: 1px solid var(--rule);
+    padding: var(--space-2xl) var(--space-3xl) var(--space-xl);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: var(--space-xl);
+    background: var(--paper);
+  }
+
+  .bf-footer__col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .bf-nav__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: var(--ls-normal);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+  }
+
+  h4 {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-widest);
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    font-size: var(--text-base);
+  }
+
+  a {
+    color: var(--ink);
+    transition: color var(--duration-fast);
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+
+  .bf-footer__meta {
+    grid-column: 1 / -1;
+    padding-top: var(--space-lg);
+    margin-top: var(--space-lg);
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-xs);
+    color: var(--ink-soft);
+    font-family: var(--font-mono);
+  }
+
+  @media (max-width: 768px) {
+    .bf-footer {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      padding: var(--space-lg) var(--space-lg) var(--space-md);
+    }
+
+    .bf-footer__meta {
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .bf-footer {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

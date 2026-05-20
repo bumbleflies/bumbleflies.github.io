@@ -1,32 +1,167 @@
 ---
 import Layout from '../components/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import ClientWall from '../components/ClientWall.astro';
+import ServicePillars from '../components/ServicePillars.astro';
+import Quote from '../components/Quote.astro';
+import FormatsGrid from '../components/FormatsGrid.astro';
+import CTAStrip from '../components/CTAStrip.astro';
+import Footer from '../components/Footer.astro';
+
+// Content data
+const de = {
+  services: {
+    heading: 'Was wir liefern.',
+    eyebrow: 'Drei Pillars',
+    items: [
+      {
+        number: '01',
+        title: 'Facilitation',
+        tag: 'Workshops · Big-Room · Retros',
+        description: 'Wir gestalten Meetings, Workshops und Großgruppen so, dass die richtigen Themen den richtigen Raum bekommen — und alle mit klaren nächsten Schritten rausgehen.',
+        bullets: ['Open Space (8–500 PAX)', 'PI-Planning · Town-Halls', 'Retros · Strategy Days'],
+        formats: [
+          { kind: 'remote', label: 'Remote' },
+          { kind: 'hybrid', label: 'Hybrid' },
+          { kind: 'inperson', label: 'Vor Ort' },
+        ],
+      },
+      {
+        number: '02',
+        title: 'AI Consulting',
+        tag: 'Strategy · Literacy · Pilots',
+        description: 'Wir helfen euch herauszufinden, wo KI in eurer Organisation wirklich Hebel hat — und begleiten den Weg vom ersten Piloten bis in den Alltag.',
+        bullets: ['AI Readiness Assessment', 'Use-Case-Workshops', 'Pilot-Begleitung & Coaching'],
+        formats: [{ kind: 'ai', label: 'AI-Workflows' }],
+      },
+      {
+        number: '03',
+        title: 'App Development',
+        tag: 'Tools · Prototypes · MVPs',
+        description: 'Aus den Themen, die in Workshops auftauchen, bauen wir die Werkzeuge, die euer Team wirklich braucht — internes Tooling, kleine MVPs, KI-gestützte Apps.',
+        bullets: ['Interne Tools & Dashboards', 'KI-gestützte Web-Apps', 'Schneller Prototyp → echtes Produkt'],
+        formats: [{ kind: 'build', label: 'End-to-End' }],
+      },
+    ],
+  },
+  quote: '"Die meisten Probleme, die wir lösen, fangen als Gespräch an. Manche enden auch dort. Andere brauchen einen Piloten. Wieder andere wollen gebaut werden. Wir machen alle drei."',
+  quoteCite: '— Aus unserem Manifesto',
+  formats: {
+    heading: 'Remote-first.',
+    headingEnd: 'Vor Ort, wenn\'s zählt.',
+    eyebrow: 'Wo wir arbeiten',
+    items: [
+      { name: 'Remote', percentage: '85%', description: 'Sessions, Coachings, Pilots — vollständig remote, asynchron-freundlich.' },
+      { name: 'Hybrid', percentage: '10%', description: 'Workshops, in denen die einen im Raum sind und die anderen zugeschaltet. Ohne dass die Online-Leute zweite Klasse sind.' },
+      { name: 'Vor Ort', percentage: '5%', description: 'Wenn die Energie es braucht: Retreats, Big-Room-Meetings, Off-Sites.' },
+    ],
+  },
+  cta: {
+    heading: 'Was steht bei euch',
+    headingEm: 'als nächstes an?',
+    body: 'Schreib uns zwei Sätze. Wir antworten innerhalb von 24h mit dem Vorschlag, der zu eurem Anliegen passt — Workshop, KI-Pilot, oder das passende Tool.',
+    ctaText: 'Erstgespräch buchen',
+  },
+};
+
+const en = {
+  services: {
+    heading: 'What we deliver.',
+    eyebrow: 'Three pillars',
+    items: [
+      {
+        number: '01',
+        title: 'Facilitation',
+        tag: 'Workshops · Big-Room · Retros',
+        description: 'We design meetings, workshops and large-group events so the right topics get the right room — and everyone leaves with clear next steps.',
+        bullets: ['Open Space (8–500 PAX)', 'PI Planning · Town Halls', 'Retros · Strategy Days'],
+        formats: [
+          { kind: 'remote', label: 'Remote' },
+          { kind: 'hybrid', label: 'Hybrid' },
+          { kind: 'inperson', label: 'On-site' },
+        ],
+      },
+      {
+        number: '02',
+        title: 'AI Consulting',
+        tag: 'Strategy · Literacy · Pilots',
+        description: 'We help you find where AI actually moves the needle in your organisation — and walk with you from first pilot into everyday use.',
+        bullets: ['AI Readiness Assessment', 'Use-case workshops', 'Pilot facilitation & coaching'],
+        formats: [{ kind: 'ai', label: 'AI workflows' }],
+      },
+      {
+        number: '03',
+        title: 'App Development',
+        tag: 'Tools · Prototypes · MVPs',
+        description: 'From topics that surface in workshops, we build the tools your team actually needs — internal tooling, small MVPs, AI-powered apps.',
+        bullets: ['Internal tools & dashboards', 'AI-powered web apps', 'Fast prototype → real product'],
+        formats: [{ kind: 'build', label: 'End-to-end' }],
+      },
+    ],
+  },
+  quote: '"Most of the problems we solve start as a conversation. Some end there. Others need a pilot. Still others want to be built. We do all three."',
+  quoteCite: '— From our manifesto',
+  formats: {
+    heading: 'Remote-first.',
+    headingEnd: 'On-site when it matters.',
+    eyebrow: 'Where we work',
+    items: [
+      { name: 'Remote', percentage: '85%', description: 'Sessions, coachings, pilots — fully remote, async-friendly.' },
+      { name: 'Hybrid', percentage: '10%', description: 'Workshops where some are in the room and others dial in. Without the online folks being second-class.' },
+      { name: 'On-site', percentage: '5%', description: 'When the energy needs it: retreats, big-room meetings, off-sites.' },
+    ],
+  },
+  cta: {
+    heading: 'What\'s next',
+    headingEm: 'on your plate?',
+    body: 'Send us two sentences. We respond within 24h with the proposal that fits — workshop, AI pilot, or the right tool.',
+    ctaText: 'Book a first call',
+  },
+};
+
+// State management for language
+import { getImage } from 'astro:assets';
+let currentLang: 'DE' | 'EN' = 'DE';
 ---
 
-<Layout title="bumbleflies — From Conversation to Code">
-  <main>
-    <h1>From Conversation to Code — and Actually Using It</h1>
-    <p>Integration transformation shop: Talk → Decide → Build → Embed</p>
-    <p style="font-size: 0.9em; color: #666; margin-top: 2rem;">
-      This is the NEW site under development. See the <a href="https://bumbleflies.de">current site</a> for production content.
-    </p>
-  </main>
+<Layout title="bumbleflies — From Conversation to Code" lang={currentLang}>
+  <Nav lang={currentLang} />
+  <Hero lang={currentLang} />
+  <ClientWall lang={currentLang} />
+  <ServicePillars
+    heading={currentLang === 'DE' ? de.services.heading : en.services.heading}
+    eyebrow={currentLang === 'DE' ? de.services.eyebrow : en.services.eyebrow}
+    services={currentLang === 'DE' ? de.services.items : en.services.items}
+    lang={currentLang}
+  />
+  <Quote
+    text={currentLang === 'DE' ? de.quote : en.quote}
+    cite={currentLang === 'DE' ? de.quoteCite : en.quoteCite}
+    lang={currentLang}
+  />
+  <FormatsGrid
+    heading={currentLang === 'DE' ? de.formats.heading : en.formats.heading}
+    eyebrow={currentLang === 'DE' ? de.formats.eyebrow : en.formats.eyebrow}
+    formats={currentLang === 'DE' ? de.formats.items : en.formats.items}
+    lang={currentLang}
+  />
+  <CTAStrip
+    heading={currentLang === 'DE' ? de.cta.heading : en.cta.heading}
+    headingEm={currentLang === 'DE' ? de.cta.headingEm : en.cta.headingEm}
+    body={currentLang === 'DE' ? de.cta.body : en.cta.body}
+    ctaText={currentLang === 'DE' ? de.cta.ctaText : en.cta.ctaText}
+    lang={currentLang}
+  />
+  <Footer lang={currentLang} />
+
+  <script>
+    // Handle language changes
+    window.addEventListener('lang-change', (e: CustomEvent) => {
+      const newLang = e.detail.lang;
+      // Reload page with new language
+      // In production, would use a router/state management
+      window.location.href = `/?lang=${newLang}`;
+    });
+  </script>
 </Layout>
-
-<style>
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    line-height: 1.6;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  a {
-    color: #0066cc;
-  }
-</style>

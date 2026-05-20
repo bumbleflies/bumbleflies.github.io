@@ -1,0 +1,50 @@
+---
+type FormatKind = 'remote' | 'hybrid' | 'inperson' | 'ai' | 'build';
+
+interface Props {
+  kind: FormatKind;
+  children: string;
+}
+
+const { kind, children } = Astro.props;
+
+const dotColors: Record<FormatKind, string> = {
+  remote: 'var(--signal)',
+  hybrid: 'var(--accent)',
+  inperson: 'var(--ink)',
+  ai: 'var(--signal)',
+  build: 'var(--accent)',
+};
+
+const dotColor = dotColors[kind] || 'var(--ink-soft)';
+---
+
+<span class="bf-chip" style={`--dot-color: ${dotColor}`}>
+  <span class="bf-chip__dot"></span>
+  {children}
+</span>
+
+<style define:vars={{ dotColor }}>
+  .bf-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-full);
+    padding: 5px 11px;
+    white-space: nowrap;
+  }
+
+  .bf-chip__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--dot-color);
+    flex-shrink: 0;
+  }
+</style>

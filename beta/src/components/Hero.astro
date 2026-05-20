@@ -1,0 +1,208 @@
+---
+import FormatChip from './FormatChip.astro';
+
+interface Props {
+  lang?: 'DE' | 'EN';
+}
+
+const { lang = 'DE' } = Astro.props;
+
+const content = lang === 'DE'
+  ? {
+      kickerL: 'bumbleflies UG',
+      kickerR: 'Facilitation · AI · Software — remote, hybrid & vor Ort',
+      h1a: 'Drei Wege,',
+      h1b: 'wie wir mit',
+      h1c: 'euch',
+      h1d: 'arbeiten.',
+      lede: 'Wir helfen Teams, ihre wichtigsten Gespräche zu führen, die richtigen Entscheidungen über KI zu treffen, und die Software dafür zu bauen — egal ob remote, hybrid oder im Raum.',
+      metaL: '200+ Moderationen · 12 KI-Piloten · 9 Apps',
+      metaR: 'DE · EN · Remote-first',
+      metaBase: 'München · DE',
+      metaLLabel: 'Bilanz',
+      metaRLabel: 'Arbeitsweise',
+      metaBaseLabel: 'Sitz',
+      ctaPrimary: 'Erstgespräch buchen',
+      ctaSecondary: 'Wie wir arbeiten',
+    }
+  : {
+      kickerL: 'bumbleflies UG',
+      kickerR: 'Facilitation · AI · Software — remote, hybrid & on-site',
+      h1a: 'Three ways',
+      h1b: 'we work',
+      h1c: 'with',
+      h1d: 'your team.',
+      lede: 'We help teams hold their most important conversations, make the right decisions about AI, and build the software for it — remote, hybrid, or in the room.',
+      metaL: '200+ facilitations · 12 AI pilots · 9 apps',
+      metaR: 'DE · EN · Remote-first',
+      metaBase: 'Munich · DE',
+      metaLLabel: 'Track record',
+      metaRLabel: 'How we work',
+      metaBaseLabel: 'Based in',
+      ctaPrimary: 'Book a first call',
+      ctaSecondary: 'How we work',
+    };
+---
+
+<section class="a-hero bf-section--hero">
+  <div class="a-hero__kicker">
+    <span class="bf-eyebrow">{content.kickerL}</span>
+    <span style="font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--ink-soft);">
+      {content.kickerR}
+    </span>
+  </div>
+
+  <h1 class="a-hero__h1">
+    {content.h1a}<br />
+    {content.h1b} <em>{content.h1c}</em> {content.h1d}
+  </h1>
+
+  <div class="a-hero__content">
+    <p class="a-hero__lede">{content.lede}</p>
+    <div class="a-hero__actions">
+      <div class="a-hero__chips">
+        <FormatChip kind="remote">Remote</FormatChip>
+        <FormatChip kind="hybrid">Hybrid</FormatChip>
+        <FormatChip kind="inperson">{lang === 'DE' ? 'Vor Ort' : 'On-site'}</FormatChip>
+        <FormatChip kind="ai">AI</FormatChip>
+        <FormatChip kind="build">Software</FormatChip>
+      </div>
+      <div class="a-hero__ctas">
+        <a class="bf-cta" href="mailto:info@bumbleflies.de">{content.ctaPrimary} →</a>
+        <a class="bf-cta bf-cta--ghost" href="#">{content.ctaSecondary}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="a-hero__meta">
+    <div>
+      <b>{content.metaLLabel}</b>
+      <span class="a-hero__meta-value">{content.metaL}</span>
+    </div>
+    <div>
+      <b>{content.metaRLabel}</b>
+      <span class="a-hero__meta-value">{content.metaR}</span>
+    </div>
+    <div>
+      <b>{content.metaBaseLabel}</b>
+      <span class="a-hero__meta-value">{content.metaBase}</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .a-hero {
+    padding: var(--space-xl) var(--space-3xl) var(--space-4xl);
+  }
+
+  .a-hero__kicker {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: var(--space-2xl);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: var(--space-3xl);
+  }
+
+  .a-hero__h1 {
+    font-family: var(--font-display);
+    font-size: var(--text-9xl);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-tight);
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .a-hero__h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .a-hero__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    margin-top: var(--space-3xl);
+    align-items: flex-start;
+  }
+
+  .a-hero__lede {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-2xl);
+    line-height: var(--lh-loose);
+    max-width: 520px;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .a-hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .a-hero__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .a-hero__ctas {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .a-hero__meta {
+    margin-top: var(--space-3xl);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--rule);
+  }
+
+  .a-hero__meta div {
+    font-size: var(--text-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .a-hero__meta b {
+    display: block;
+    font-size: var(--text-xs);
+    font-family: var(--font-mono);
+    letter-spacing: var(--ls-mono);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .a-hero__meta-value {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    letter-spacing: -0.02em;
+    line-height: var(--lh-normal);
+  }
+
+  @media (max-width: 768px) {
+    .a-hero {
+      padding: var(--space-xl) var(--space-lg) var(--space-3xl);
+    }
+
+    .a-hero__h1 {
+      font-size: var(--text-5xl);
+    }
+
+    .a-hero__content {
+      grid-template-columns: 1fr;
+      gap: var(--space-2xl);
+    }
+
+    .a-hero__meta {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

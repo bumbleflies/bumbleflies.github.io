@@ -2,6 +2,19 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Worktree Context: Multi-Repo Setup
+
+This is a git worktree for the **bumbleflies.de redesign project** (Phase 1+ implementation).
+
+**Worktree Structure:**
+- `bumbleflies.github.io/` — Main Jekyll site (current production)
+- `bumbleflies.github.io/beta/` — Astro 4.3.0 redesign (new site, in development)
+- `container/` — Symlink to `/home/cda/dev/infrastructure/container` (infrastructure)
+- `PHASE_1_SUMMARY.md` — Phase 1 completion status and architecture decisions
+
+**Project Overview:**
+Transform bumbleflies.de from a facilitator-focused site to a full transformation shop. Stack: Astro + DecapCMS, static hosting (Netlify). See the full spec at `/home/cda/dev/infrastructure/bumbleflies/PROJECT_HANDOFF.md`.
+
 ## Project Overview
 
 This is the Bumbleflies homepage (`bumbleflies.de`), a Jekyll-based static site with:
@@ -62,6 +75,37 @@ pytest _tests/test_homepage_team.py::test_team_section_exists -v
 cd _purge
 ./purge.sh
 ```
+
+## Working with the Astro Beta Site
+
+The new redesigned site is in `bumbleflies.github.io/beta/`:
+
+```bash
+cd bumbleflies.github.io/beta
+
+# Install dependencies
+npm install
+
+# Serve locally at http://localhost:3000
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+**Key files:**
+- `astro.config.mjs` — Astro configuration (static output to dist/)
+- `src/pages/` — Page routes (Astro file-based routing)
+- `src/components/` — Reusable components
+- `src/layouts/` — Page templates (base Layout.astro)
+- `.github/workflows/build-beta.yml` — Docker build CI/CD pipeline
+- `Dockerfile` — Multi-stage build (Node 20 → Nginx Alpine)
+
+**Docker Images:**
+Docker images are auto-built in CI to `ghcr.io/bumbleflies/web:beta` on push to `feature/bumbleflies-redesign`. Docker builds must happen in CI only, not locally.
 
 ## Architecture & Key Concepts
 
@@ -245,3 +289,17 @@ Triggered by: `build-deploy.yml` workflow orchestrator.
 **Styles not updating**: Clear Jekyll cache and rebuild: `rm -rf _site && bundle exec jekyll build`.
 
 **i18n keys missing**: Check both `_i18n/en.yml` and `_i18n/de.yml` have matching keys at the same path.
+
+## Redesign Phase Status
+
+See `PHASE_1_SUMMARY.md` in the worktree root for completed work, GitHub Actions setup, and next phases (2-6).
+
+**Current phase:** Phase 1 Complete (Scaffold, CI/CD, Core Components)
+
+**Next phases:** Design System, Page Templates, Content Migration, DecapCMS Setup, Review, Go Live (3-4 weeks remaining)
+
+**Key Reference Docs:**
+- `/home/cda/dev/infrastructure/bumbleflies/PROJECT_HANDOFF.md` — Complete spec (1000+ lines)
+- `/home/cda/dev/infrastructure/bumbleflies/DELIVERABLES_SUMMARY.md` — Quick reference
+- `/home/cda/dev/infrastructure/bumbleflies/REDESIGN_SPEC.md` — Design details
+- `/home/cda/dev/infrastructure/bumbleflies/CASE_STUDIES_REAL.md` — Case study templates

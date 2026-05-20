@@ -1,0 +1,102 @@
+---
+import Mark from './Mark.astro';
+import LangToggle from './LangToggle.astro';
+
+interface Props {
+  lang?: 'DE' | 'EN';
+  cta?: string;
+  ctaHref?: string;
+}
+
+const { lang = 'DE', cta, ctaHref = 'mailto:info@bumbleflies.de' } = Astro.props;
+
+const links = lang === 'DE'
+  ? ['Facilitation', 'AI Consulting', 'App Development', 'Arbeiten', 'Über uns']
+  : ['Facilitation', 'AI Consulting', 'App Development', 'Work', 'About'];
+
+const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
+---
+
+<nav class="bf-nav">
+  <a href="/" class="bf-nav__brand">
+    <Mark />
+    <span>bumbleflies</span>
+  </a>
+
+  <div class="bf-nav__links">
+    {links.map((link) => (
+      <a key={link} href="#">{link}</a>
+    ))}
+  </div>
+
+  <div class="bf-nav__right">
+    <LangToggle lang={lang} />
+    <a class="bf-cta" href={ctaHref}>
+      {ctaLabel}
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M2 11L11 2M11 2H4M11 2v7" />
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<style>
+  .bf-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px var(--space-3xl);
+    gap: var(--space-2xl);
+    font-size: var(--text-base);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .bf-nav__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: var(--ls-normal);
+    flex-shrink: 0;
+    font-family: var(--font-sans);
+  }
+
+  .bf-nav__links {
+    display: flex;
+    gap: var(--space-2xl);
+    color: var(--ink-soft);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bf-nav__links a {
+    transition: color var(--duration-fast);
+    font-size: var(--text-base);
+  }
+
+  .bf-nav__links a:hover {
+    color: var(--ink);
+  }
+
+  .bf-nav__right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .bf-nav {
+      padding: 16px var(--space-lg);
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .bf-nav__links {
+      display: none;
+    }
+  }
+</style>

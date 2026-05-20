@@ -1,0 +1,36 @@
+---
+interface Props {
+  heading: string;
+  headingEm?: string;
+  body: string;
+  ctaText: string;
+  ctaHref?: string;
+  lang?: 'DE' | 'EN';
+}
+
+const { heading, headingEm, body, ctaText, ctaHref = 'mailto:info@bumbleflies.de', lang = 'DE' } = Astro.props;
+---
+
+<section class="bf-section" style="text-align: center; padding: var(--space-4xl) var(--space-3xl);">
+  <h2 style="font-family: var(--font-display); font-size: var(--text-5xl); letter-spacing: -0.03em; line-height: 1; margin: 0 auto 32px; max-width: 800px;">
+    {heading}
+    {headingEm && <em style="font-style: italic; color: var(--accent);">{headingEm}</em>}
+  </h2>
+  <p style="font-size: var(--text-base); line-height: var(--lh-generous); color: var(--ink-soft); max-width: 700px; margin: 0 auto 32px;">
+    {body}
+  </p>
+  <a class="bf-cta" href={ctaHref}>
+    {ctaText}
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M2 11L11 2M11 2H4M11 2v7" />
+    </svg>
+  </a>
+</section>
+
+<style>
+  @media (max-width: 768px) {
+    :global(h2) {
+      font-size: var(--text-3xl) !important;
+    }
+  }
+</style>
