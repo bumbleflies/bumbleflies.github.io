@@ -126,7 +126,8 @@ let currentLang: 'DE' | 'EN' = 'DE';
 ---
 
 <Layout title="bumbleflies — From Conversation to Code" lang={currentLang}>
-  <Nav lang={currentLang} />
+  <Nav slot="nav" lang={currentLang} />
+
   <Hero lang={currentLang} />
   <ClientWall lang={currentLang} />
   <ServicePillars
@@ -153,7 +154,8 @@ let currentLang: 'DE' | 'EN' = 'DE';
     ctaText={currentLang === 'DE' ? de.cta.ctaText : en.cta.ctaText}
     lang={currentLang}
   />
-  <Footer lang={currentLang} />
+
+  <Footer slot="footer" lang={currentLang} />
 
   <script>
     // Handle language changes

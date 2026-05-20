@@ -18,8 +18,10 @@ const { title, lang = 'DE' } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <slot name="nav" />
     <main>
       <slot />
     </main>
+    <slot name="footer" />
   </body>
 </html>
