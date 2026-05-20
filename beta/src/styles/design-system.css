@@ -13,7 +13,7 @@
   --ink: #1a1714;
   --ink-soft: #5c554b;
   --rule: rgba(26, 23, 20, 0.12);
-  --accent: #c89e72; /* honey amber — approximation of oklch(0.68 0.16 65) */
+  --accent: #a67c4d; /* honey amber (darkened for WCAG AA contrast on cream bg) */
   --signal: #4a3f8f; /* deep blue — approximation of oklch(0.55 0.16 250) */
 
   /* Typography */
