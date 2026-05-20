@@ -250,6 +250,14 @@ section {
   box-shadow: 0 4px 12px rgba(26, 23, 20, 0.15);
 }
 
+.bf-cta svg {
+  transition: transform var(--duration-fast) var(--easing-default);
+}
+
+.bf-cta:hover svg {
+  transform: translateX(2px);
+}
+
 .bf-cta--ghost {
   background: transparent;
   color: var(--ink);
