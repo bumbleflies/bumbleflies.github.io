@@ -11,7 +11,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: bumbleflies/bumble-beta
+  IMAGE_NAME: bumbleflies/web
 
 jobs:
   build:
@@ -40,10 +40,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=ref,event=branch
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=sha
+            type=raw,value=beta
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
