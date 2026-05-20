@@ -29,6 +29,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.md
+  - TRANSFORMATION_JOURNEY_CONCEPT.md
   - 404.html
 
 plugins:
