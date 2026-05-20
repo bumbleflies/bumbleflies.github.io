@@ -8,9 +8,11 @@ interface Props {
 const { text, cite, lang = 'DE' } = Astro.props;
 ---
 
-<section class="bf-section" style="padding: 120px 56px; text-align: center;">
-  <p class="a-quote">{text}</p>
-  <span class="a-quote__cite">{cite}</span>
+<section class="bf-section" style="padding: 120px 0;">
+  <div class="bf-container" style="text-align: center;">
+    <p class="a-quote">{text}</p>
+    <span class="a-quote__cite">{cite}</span>
+  </div>
 </section>
 
 <style>
