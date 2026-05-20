@@ -24,28 +24,32 @@ const learnMore = lang === 'DE' ? 'Mehr erfahren →' : 'Learn more →';
 ---
 
 <section class="bf-section" style="padding-top: 96px; padding-bottom: 0;">
-  <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px;">
-    <h2 style="font-family: var(--font-display); font-size: var(--text-6xl); letter-spacing: -0.03em; line-height: 0.95; max-width: 700px; margin: 0;">
-      {heading}
-    </h2>
-    <span class="bf-eyebrow">{eyebrow}</span>
+  <div class="bf-container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px;">
+      <h2 style="font-family: var(--font-display); font-size: var(--text-6xl); letter-spacing: -0.03em; line-height: 0.95; max-width: 700px; margin: 0;">
+        {heading}
+      </h2>
+      <span class="bf-eyebrow">{eyebrow}</span>
+    </div>
   </div>
 </section>
 
-<div class="a-services">
-  {services.map((service) => (
-    <ServicePillar
-      key={service.number}
-      number={service.number}
-      title={service.title}
-      tag={service.tag}
-      description={service.description}
-      bullets={service.bullets}
-      formats={service.formats}
-      learnMoreLabel={learnMore}
-      lang={lang}
-    />
-  ))}
+<div class="bf-container">
+  <div class="a-services">
+    {services.map((service) => (
+      <ServicePillar
+        key={service.number}
+        number={service.number}
+        title={service.title}
+        tag={service.tag}
+        description={service.description}
+        bullets={service.bullets}
+        formats={service.formats}
+        learnMoreLabel={learnMore}
+        lang={lang}
+      />
+    ))}
+  </div>
 </div>
 
 <style>
