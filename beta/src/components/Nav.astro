@@ -18,25 +18,27 @@ const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
 ---
 
 <nav class="bf-nav">
-  <a href="/" class="bf-nav__brand">
-    <Mark />
-    <span>bumbleflies</span>
-  </a>
-
-  <div class="bf-nav__links">
-    {links.map((link) => (
-      <a key={link} href="#">{link}</a>
-    ))}
-  </div>
-
-  <div class="bf-nav__right">
-    <LangToggle lang={lang} />
-    <a class="bf-cta" href={ctaHref}>
-      {ctaLabel}
-      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-        <path d="M2 11L11 2M11 2H4M11 2v7" />
-      </svg>
+  <div class="bf-container">
+    <a href="/" class="bf-nav__brand">
+      <Mark />
+      <span>bumbleflies</span>
     </a>
+
+    <div class="bf-nav__links">
+      {links.map((link) => (
+        <a key={link} href="#">{link}</a>
+      ))}
+    </div>
+
+    <div class="bf-nav__right">
+      <LangToggle lang={lang} />
+      <a class="bf-cta" href={ctaHref}>
+        {ctaLabel}
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M2 11L11 2M11 2H4M11 2v7" />
+        </svg>
+      </a>
+    </div>
   </div>
 </nav>
 
@@ -44,11 +46,20 @@ const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
   .bf-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 22px var(--space-3xl);
-    gap: var(--space-2xl);
+    padding: 22px 0;
     font-size: var(--text-base);
     border-bottom: 1px solid var(--rule);
+  }
+
+  .bf-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2xl);
+    padding: 0 var(--space-3xl);
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
   }
 
   .bf-nav__brand {
@@ -88,10 +99,13 @@ const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
 
   @media (max-width: 768px) {
     .bf-nav {
-      padding: 16px var(--space-lg);
+      padding: 16px 0;
+    }
+
+    .bf-container {
+      padding: 0 var(--space-lg);
       gap: var(--space-lg);
       flex-wrap: wrap;
-      align-items: center;
       justify-content: flex-start;
     }
 
