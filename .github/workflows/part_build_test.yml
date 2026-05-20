@@ -12,13 +12,13 @@ jobs:
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2"
+          ruby-version: "4.0.5"
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
       - name: 🫱 Upload site
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: site
           path: |
@@ -27,7 +27,7 @@ jobs:
       - name: 🐍 setup python for test
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
+          python-version: "3.14"
           cache: "pip"
       - name: 📄 install test requirements
         uses: py-actions/py-dependency-install@v4
