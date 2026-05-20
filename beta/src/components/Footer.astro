@@ -27,57 +27,62 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="bf-footer">
-  <div class="bf-footer__col">
-    <div class="bf-nav__brand" style="margin-bottom: 16px;">
-      <Mark />
-      <span>bumbleflies</span>
+  <div class="bf-container">
+    <div class="bf-footer__col">
+      <div class="bf-nav__brand" style="margin-bottom: 16px;">
+        <Mark />
+        <span>bumbleflies</span>
+      </div>
+      <p style="font-size: 13px; color: var(--ink-soft); line-height: 1.55; max-width: 340px;">
+        {content.about}
+      </p>
     </div>
-    <p style="font-size: 13px; color: var(--ink-soft); line-height: 1.55; max-width: 340px;">
-      {content.about}
-    </p>
-  </div>
 
-  <div class="bf-footer__col">
-    <h4>{content.services.title}</h4>
-    <ul>
-      {content.services.items.map((item) => (
-        <li key={item}><a href="#">{item}</a></li>
-      ))}
-    </ul>
-  </div>
+    <div class="bf-footer__col">
+      <h4>{content.services.title}</h4>
+      <ul>
+        {content.services.items.map((item) => (
+          <li key={item}><a href="#">{item}</a></li>
+        ))}
+      </ul>
+    </div>
 
-  <div class="bf-footer__col">
-    <h4>{content.learn.title}</h4>
-    <ul>
-      {content.learn.items.map((item) => (
-        <li key={item}><a href="#">{item}</a></li>
-      ))}
-    </ul>
-  </div>
+    <div class="bf-footer__col">
+      <h4>{content.learn.title}</h4>
+      <ul>
+        {content.learn.items.map((item) => (
+          <li key={item}><a href="#">{item}</a></li>
+        ))}
+      </ul>
+    </div>
 
-  <div class="bf-footer__col">
-    <h4>{content.contact.title}</h4>
-    <ul>
-      {content.contact.items.map((item) => (
-        <li key={item}><a href="#">{item}</a></li>
-      ))}
-    </ul>
-  </div>
+    <div class="bf-footer__col">
+      <h4>{content.contact.title}</h4>
+      <ul>
+        {content.contact.items.map((item) => (
+          <li key={item}><a href="#">{item}</a></li>
+        ))}
+      </ul>
+    </div>
 
-  <div class="bf-footer__meta">
-    <span>© bumbleflies UG · München · {year}</span>
-    <span>{content.legal.join('  ·  ')}</span>
+    <div class="bf-footer__meta">
+      <span>© bumbleflies UG · München · {year}</span>
+      <span>{content.legal.join('  ·  ')}</span>
+    </div>
   </div>
 </footer>
 
 <style>
   .bf-footer {
     border-top: 1px solid var(--rule);
-    padding: var(--space-2xl) var(--space-3xl) var(--space-xl);
+    padding: var(--space-2xl) 0 var(--space-xl);
+    background: var(--paper);
+  }
+
+  .bf-container {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: var(--space-xl);
-    background: var(--paper);
   }
 
   .bf-footer__col {
@@ -138,9 +143,12 @@ const year = new Date().getFullYear();
   }
 
   @media (max-width: 768px) {
-    .bf-footer {
+    .bf-container {
       grid-template-columns: 1fr 1fr;
       gap: var(--space-lg);
+    }
+
+    .bf-footer {
       padding: var(--space-lg) var(--space-lg) var(--space-md);
     }
 
@@ -151,7 +159,7 @@ const year = new Date().getFullYear();
   }
 
   @media (max-width: 480px) {
-    .bf-footer {
+    .bf-container {
       grid-template-columns: 1fr;
     }
   }
