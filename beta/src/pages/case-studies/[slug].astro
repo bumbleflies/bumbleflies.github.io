@@ -1,0 +1,153 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const caseStudies = await getCollection('caseStudies', ({ data }) => data.published);
+  return caseStudies.map(study => ({
+    params: { slug: study.data.slug },
+    props: { study },
+  }));
+}
+
+const { study } = Astro.props;
+const { Content } = await study.render();
+---
+
+<Layout>
+  <main class="a-case-study-detail">
+    <div class="bf-container">
+      <a href="/case-studies" class="a-case-study-detail__back">← Alle Fallstudien</a>
+
+      <header class="a-case-study-detail__header">
+        <h1 class="a-case-study-detail__title">{study.data.title}</h1>
+        <p class="a-case-study-detail__company">{study.data.company}</p>
+        <span class="a-case-study-detail__service">{study.data.service}</span>
+        {study.data.duration && (
+          <p class="a-case-study-detail__duration">{study.data.duration}</p>
+        )}
+      </header>
+
+      <article class="a-case-study-detail__content">
+        <Content />
+      </article>
+
+      <aside class="a-case-study-detail__quote">
+        <blockquote>"{study.data.quote}"</blockquote>
+      </aside>
+
+      <div class="a-case-study-detail__cta">
+        <a href="/contact" class="bf-cta">Erstes Gespräch buchen</a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .a-case-study-detail {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .a-case-study-detail__back {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .a-case-study-detail__back:hover {
+    text-decoration: underline;
+  }
+
+  .a-case-study-detail__header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0dcd4;
+  }
+
+  .a-case-study-detail__title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--ink);
+  }
+
+  .a-case-study-detail__company {
+    font-size: 1.25rem;
+    color: #666;
+    margin: 0 0 1rem 0;
+  }
+
+  .a-case-study-detail__service {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: white;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .a-case-study-detail__duration {
+    font-size: 0.875rem;
+    color: #999;
+    margin: 0;
+  }
+
+  .a-case-study-detail__content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    color: #333;
+  }
+
+  .a-case-study-detail__content :global(h2) {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--ink);
+  }
+
+  .a-case-study-detail__content :global(p) {
+    margin-bottom: 1rem;
+  }
+
+  .a-case-study-detail__content :global(ul),
+  .a-case-study-detail__content :global(ol) {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+  }
+
+  .a-case-study-detail__quote {
+    padding: 2rem;
+    background: #faf7f0;
+    border-left: 4px solid var(--accent);
+    margin: 3rem 0;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: #333;
+  }
+
+  .a-case-study-detail__quote blockquote {
+    margin: 0;
+  }
+
+  .a-case-study-detail__cta {
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .a-case-study-detail__title {
+      font-size: 1.75rem;
+    }
+
+    .a-case-study-detail__quote {
+      font-size: 1rem;
+    }
+  }
+</style>
