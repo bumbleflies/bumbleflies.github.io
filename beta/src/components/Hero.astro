@@ -45,54 +45,56 @@ const content = lang === 'DE'
 ---
 
 <section class="a-hero bf-section--hero">
-  <div class="a-hero__kicker">
-    <span class="bf-eyebrow">{content.kickerL}</span>
-    <span style="font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--ink-soft);">
-      {content.kickerR}
-    </span>
-  </div>
+  <div class="bf-container">
+    <div class="a-hero__kicker">
+      <span class="bf-eyebrow">{content.kickerL}</span>
+      <span style="font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--ink-soft);">
+        {content.kickerR}
+      </span>
+    </div>
 
-  <h1 class="a-hero__h1">
-    {content.h1a}<br />
-    {content.h1b} <em>{content.h1c}</em> {content.h1d}
-  </h1>
+    <h1 class="a-hero__h1">
+      {content.h1a}<br />
+      {content.h1b} <em>{content.h1c}</em> {content.h1d}
+    </h1>
 
-  <div class="a-hero__content">
-    <p class="a-hero__lede">{content.lede}</p>
-    <div class="a-hero__actions">
-      <div class="a-hero__chips">
-        <FormatChip kind="remote">Remote</FormatChip>
-        <FormatChip kind="hybrid">Hybrid</FormatChip>
-        <FormatChip kind="inperson">{lang === 'DE' ? 'Vor Ort' : 'On-site'}</FormatChip>
-        <FormatChip kind="ai">AI</FormatChip>
-        <FormatChip kind="build">Software</FormatChip>
+    <div class="a-hero__content">
+      <p class="a-hero__lede">{content.lede}</p>
+      <div class="a-hero__actions">
+        <div class="a-hero__chips">
+          <FormatChip kind="remote">Remote</FormatChip>
+          <FormatChip kind="hybrid">Hybrid</FormatChip>
+          <FormatChip kind="inperson">{lang === 'DE' ? 'Vor Ort' : 'On-site'}</FormatChip>
+          <FormatChip kind="ai">AI</FormatChip>
+          <FormatChip kind="build">Software</FormatChip>
+        </div>
+        <div class="a-hero__ctas">
+          <a class="bf-cta" href="mailto:info@bumbleflies.de">{content.ctaPrimary} →</a>
+          <a class="bf-cta bf-cta--ghost" href="#">{content.ctaSecondary}</a>
+        </div>
       </div>
-      <div class="a-hero__ctas">
-        <a class="bf-cta" href="mailto:info@bumbleflies.de">{content.ctaPrimary} →</a>
-        <a class="bf-cta bf-cta--ghost" href="#">{content.ctaSecondary}</a>
-      </div>
     </div>
-  </div>
 
-  <div class="a-hero__meta">
-    <div>
-      <b>{content.metaLLabel}</b>
-      <span class="a-hero__meta-value">{content.metaL}</span>
-    </div>
-    <div>
-      <b>{content.metaRLabel}</b>
-      <span class="a-hero__meta-value">{content.metaR}</span>
-    </div>
-    <div>
-      <b>{content.metaBaseLabel}</b>
-      <span class="a-hero__meta-value">{content.metaBase}</span>
+    <div class="a-hero__meta">
+      <div>
+        <b>{content.metaLLabel}</b>
+        <span class="a-hero__meta-value">{content.metaL}</span>
+      </div>
+      <div>
+        <b>{content.metaRLabel}</b>
+        <span class="a-hero__meta-value">{content.metaR}</span>
+      </div>
+      <div>
+        <b>{content.metaBaseLabel}</b>
+        <span class="a-hero__meta-value">{content.metaBase}</span>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
   .a-hero {
-    padding: var(--space-xl) var(--space-3xl) var(--space-4xl);
+    padding: var(--space-xl) 0 var(--space-4xl);
   }
 
   .a-hero__kicker {
@@ -189,7 +191,7 @@ const content = lang === 'DE'
 
   @media (max-width: 768px) {
     .a-hero {
-      padding: var(--space-xl) var(--space-lg) var(--space-3xl);
+      padding: var(--space-xl) 0 var(--space-3xl);
     }
 
     .a-hero__h1 {
