@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import TeamCard from './TeamCard.astro';
 
 const team = await getCollection('team');
 const sorted = team.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
@@ -10,18 +11,12 @@ const sorted = team.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999)
     <h2 class="a-team-profiles__heading">Unser Team</h2>
     <div class="a-team-profiles__grid">
       {sorted.map(member => (
-        <article class="a-team-profile">
-          {member.data.image && (
-            <img
-              src={member.data.image}
-              alt={member.data.name}
-              class="a-team-profile__image"
-            />
-          )}
-          <h3 class="a-team-profile__name">{member.data.name}</h3>
-          <p class="a-team-profile__role">{member.data.role}</p>
-          <p class="a-team-profile__bio">{member.data.bio}</p>
-        </article>
+        <TeamCard
+          name={member.data.name}
+          role={member.data.role}
+          bio={member.data.bio}
+          image={member.data.image}
+        />
       ))}
     </div>
   </div>
@@ -44,40 +39,6 @@ const sorted = team.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999)
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
-  }
-
-  .a-team-profile {
-    text-align: center;
-  }
-
-  .a-team-profile__image {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .a-team-profile__name {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem 0;
-    color: var(--ink);
-  }
-
-  .a-team-profile__role {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--accent);
-    margin: 0 0 1rem 0;
-  }
-
-  .a-team-profile__bio {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-    margin: 0;
   }
 
   @media (max-width: 768px) {
