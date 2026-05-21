@@ -5,10 +5,9 @@ import TestimonialCard from './TestimonialCard.astro';
 interface Props {
   heading?: string;
   eyebrow?: string;
-  lang?: string;
 }
 
-const { heading, eyebrow, lang } = Astro.props;
+const { heading, eyebrow } = Astro.props;
 
 const testimonials = await getCollection('testimonials');
 const published = testimonials.filter(t => t.data.published);
@@ -26,7 +25,6 @@ const published = testimonials.filter(t => t.data.published);
           company={testimonial.data.company}
           quote={testimonial.data.quote}
           image={testimonial.data.image}
-          lang={lang}
         />
       ))}
     </div>
@@ -42,15 +40,15 @@ const published = testimonials.filter(t => t.data.published);
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #d4a574;
-    margin: 0 0 1rem 0;
+    color: var(--accent);
+    margin: 0 0 var(--space-md) 0;
     text-align: center;
   }
 
   .a-testimonials-grid__heading {
     font-family: var(--font-display);
     font-size: 2rem;
-    margin: 0 0 3rem 0;
+    margin: 0 0 var(--space-2xl) 0;
     color: var(--ink);
     text-align: center;
   }
@@ -58,7 +56,7 @@ const published = testimonials.filter(t => t.data.published);
   .a-testimonials-grid__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: var(--space-xl);
   }
 
   @media (max-width: 768px) {
@@ -68,12 +66,12 @@ const published = testimonials.filter(t => t.data.published);
 
     .a-testimonials-grid__heading {
       font-size: 1.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: var(--space-xl);
     }
 
     .a-testimonials-grid__grid {
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: var(--space-lg);
     }
   }
 </style>
