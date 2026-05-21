@@ -13,13 +13,17 @@ const { lang = 'DE', cta, ctaHref = 'mailto:info@bumbleflies.de' } = Astro.props
 const navItems = lang === 'DE'
   ? [
       { label: 'Services', href: '/services' },
-      { label: 'Arbeiten', href: '#' },
-      { label: 'Über uns', href: '#' },
+      { label: 'Wie wir arbeiten', href: '/how-we-work' },
+      { label: 'Warum Bumbleflies', href: '/why-bumbleflies' },
+      { label: 'Über uns', href: '/about' },
+      { label: 'Risiken', href: '/risk-derisking' },
     ]
   : [
       { label: 'Services', href: '/services' },
-      { label: 'Work', href: '#' },
-      { label: 'About', href: '#' },
+      { label: 'How We Work', href: '/how-we-work' },
+      { label: 'Why Bumbleflies', href: '/why-bumbleflies' },
+      { label: 'About', href: '/about' },
+      { label: 'Risk & De-Risking', href: '/risk-derisking' },
     ];
 
 const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
