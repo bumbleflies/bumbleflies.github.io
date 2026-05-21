@@ -1,6 +1,5 @@
 ---
 title: "LeagueSphere — Building a Regional SaaS From Scratch"
-slug: leaguesphere
 service: "Build & Embed"
 company: "LeagueSphere"
 duration: "2021–2026 (Ongoing)"

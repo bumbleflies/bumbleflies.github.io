@@ -3,7 +3,6 @@ import { defineCollection, z } from 'astro:content';
 const caseStudies = defineCollection({
   schema: z.object({
     title: z.string(),
-    slug: z.string(),
     service: z.enum(['Talk', 'Decide', 'Build & Embed', 'Full Journey']),
     company: z.string(),
     duration: z.string().optional(),
@@ -38,9 +37,8 @@ const team = defineCollection({
 const pages = defineCollection({
   schema: z.object({
     title: z.string(),
-    slug: z.string(),
     published: z.boolean().default(true),
   }),
 });
 
-export const collections = { caseStudies, testimonials, team, pages };
+export const collections = { 'case-studies': caseStudies, testimonials, team, pages };

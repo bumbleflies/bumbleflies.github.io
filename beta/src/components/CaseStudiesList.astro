@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import CaseStudyCard from './CaseStudyCard.astro';
 
-const caseStudies = await getCollection('caseStudies', ({ data }) => data.published);
+const caseStudies = await getCollection('case-studies', ({ data }) => data.published);
 ---
 
 <section class="a-case-studies-list">
@@ -16,7 +16,7 @@ const caseStudies = await getCollection('caseStudies', ({ data }) => data.publis
             company={study.data.company}
             service={study.data.service}
             quote={study.data.quote}
-            slug={study.data.slug}
+            slug={study.slug}
           />
         ))
       ) : (

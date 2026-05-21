@@ -1,6 +1,5 @@
 ---
 title: "Siemens AG — Enterprise Team Alignment"
-slug: siemens
 service: "Talk"
 company: "Siemens AG"
 duration: "May 2023"

@@ -3,9 +3,9 @@ import { getCollection } from 'astro:content';
 import Layout from '../../components/Layout.astro';
 
 export async function getStaticPaths() {
-  const caseStudies = await getCollection('caseStudies', ({ data }) => data.published);
+  const caseStudies = await getCollection('case-studies', ({ data }) => data.published);
   return caseStudies.map(study => ({
-    params: { slug: study.data.slug },
+    params: { slug: study.slug },
     props: { study },
   }));
 }

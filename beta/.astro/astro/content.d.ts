@@ -146,45 +146,37 @@ declare module 'astro:content' {
   slug: "dialograum-geld";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 "leaguesphere.md": {
 	id: "leaguesphere.md";
   slug: "leaguesphere";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 "siemens.md": {
 	id: "siemens.md";
   slug: "siemens";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 "unternehmertum.md": {
 	id: "unternehmertum.md";
   slug: "unternehmertum";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 "wohnungshelden.md": {
 	id: "wohnungshelden.md";
   slug: "wohnungshelden";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 };
-"caseStudies": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "caseStudies";
-  data: InferEntrySchema<"caseStudies">;
-  render(): Render[".md"];
-}>;
 "pages": Record<string, {
   id: string;
   slug: string;

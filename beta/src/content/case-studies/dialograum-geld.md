@@ -1,6 +1,5 @@
 ---
 title: "Dialograum Geld — Values-Driven Community Dialogue"
-slug: dialograum-geld
 service: "Talk"
 company: "Dialograum Geld"
 duration: "March 2021"

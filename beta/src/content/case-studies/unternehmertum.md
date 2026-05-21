@@ -1,6 +1,5 @@
 ---
 title: "UnternehmerTUM — Agile Transformation at Scale"
-slug: unternehmertum
 service: "Decide"
 company: "UnternehmerTUM"
 duration: "2025–2026 (Ongoing)"

@@ -1,6 +1,5 @@
 ---
 title: "Wohnungshelden — Annual Team Alignment & Retrospective"
-slug: wohnungshelden
 service: "Talk"
 company: "Wohnungshelden GmbH"
 duration: "Annual (Jahresendretro)"
