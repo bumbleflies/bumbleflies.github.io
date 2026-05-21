@@ -16,7 +16,7 @@ const { Content } = await study.render();
 
 <Layout>
   <main class="a-case-study-detail">
-    <div class="bf-container">
+    <article class="bf-container">
       <a href="/case-studies" class="a-case-study-detail__back">← Alle Fallstudien</a>
 
       <header class="a-case-study-detail__header">
@@ -28,9 +28,9 @@ const { Content } = await study.render();
         )}
       </header>
 
-      <article class="a-case-study-detail__content">
+      <div class="a-case-study-detail__content">
         <Content />
-      </article>
+      </div>
 
       <aside class="a-case-study-detail__quote">
         <blockquote>"{study.data.quote}"</blockquote>
@@ -39,97 +39,118 @@ const { Content } = await study.render();
       <div class="a-case-study-detail__cta">
         <a href="/contact" class="bf-cta">Erstes Gespräch buchen</a>
       </div>
-    </div>
+    </article>
   </main>
 </Layout>
 
 <style>
   .a-case-study-detail {
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-xl) 0;
   }
 
   .a-case-study-detail__back {
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-lg);
     color: var(--accent);
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.9375rem;
+    transition: opacity 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
   .a-case-study-detail__back:hover {
-    text-decoration: underline;
+    opacity: 0.8;
   }
 
   .a-case-study-detail__header {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
     border-bottom: 1px solid #e0dcd4;
   }
 
   .a-case-study-detail__title {
     font-family: var(--font-display);
-    font-size: 2.5rem;
-    margin: 0 0 0.5rem 0;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 0 0 var(--spacing-md) 0;
     color: var(--ink);
   }
 
   .a-case-study-detail__company {
-    font-size: 1.25rem;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
     color: #666;
-    margin: 0 0 1rem 0;
+    margin: 0 0 var(--spacing-md) 0;
+    font-weight: 500;
   }
 
   .a-case-study-detail__service {
     display: inline-block;
-    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.5rem 1rem;
+    letter-spacing: 0.1em;
+    padding: 0.375rem 0.875rem;
     background: var(--accent);
     color: white;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
+    border-radius: 0;
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
   }
 
   .a-case-study-detail__duration {
+    font-family: var(--font-body);
     font-size: 0.875rem;
     color: #999;
     margin: 0;
   }
 
   .a-case-study-detail__content {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin-bottom: 3rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-xl);
     color: #333;
   }
 
   .a-case-study-detail__content :global(h2) {
     font-family: var(--font-display);
     font-size: 1.75rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    line-height: 1.2;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
     color: var(--ink);
   }
 
   .a-case-study-detail__content :global(p) {
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .a-case-study-detail__content :global(strong) {
+    color: var(--ink);
+    font-weight: 600;
   }
 
   .a-case-study-detail__content :global(ul),
   .a-case-study-detail__content :global(ol) {
-    margin: 1.5rem 0;
+    margin: var(--spacing-lg) 0;
     padding-left: 2rem;
   }
 
+  .a-case-study-detail__content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
   .a-case-study-detail__quote {
-    padding: 2rem;
+    padding: var(--spacing-lg);
     background: #faf7f0;
-    border-left: 4px solid var(--accent);
-    margin: 3rem 0;
+    border-left: 3px solid var(--accent);
+    margin: var(--spacing-xl) 0;
     font-style: italic;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
     color: #333;
+    font-family: var(--font-body);
   }
 
   .a-case-study-detail__quote blockquote {
@@ -138,16 +159,21 @@ const { Content } = await study.render();
 
   .a-case-study-detail__cta {
     text-align: center;
-    margin: 3rem 0;
+    margin: var(--spacing-xl) 0;
   }
 
   @media (max-width: 768px) {
+    .a-case-study-detail {
+      padding: var(--spacing-lg) 0;
+    }
+
     .a-case-study-detail__title {
-      font-size: 1.75rem;
+      font-size: 1.875rem;
     }
 
     .a-case-study-detail__quote {
       font-size: 1rem;
+      padding: var(--spacing-md);
     }
   }
 </style>
