@@ -30,8 +30,8 @@ const { author, role, company, quote, image } = Astro.props;
   .a-testimonial-card {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
     border-left: 4px solid var(--accent);
     background-color: var(--paper);
     border-radius: 0.5rem;
@@ -56,7 +56,7 @@ const { author, role, company, quote, image } = Astro.props;
   .a-testimonial-card__author-info {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: var(--space-xs);
   }
 
   .a-testimonial-card__author {
@@ -82,8 +82,8 @@ const { author, role, company, quote, image } = Astro.props;
 
   @media (max-width: 768px) {
     .a-testimonial-card {
-      padding: 1.5rem;
-      gap: 1.25rem;
+      padding: var(--space-lg);
+      gap: var(--space-md);
     }
 
     .a-testimonial-card__quote {
@@ -97,7 +97,7 @@ const { author, role, company, quote, image } = Astro.props;
 
   @media (max-width: 375px) {
     .a-testimonial-card {
-      padding: 1rem;
+      padding: var(--space-md);
     }
 
     .a-testimonial-card__quote {
