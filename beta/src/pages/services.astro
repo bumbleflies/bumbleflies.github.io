@@ -148,6 +148,12 @@ const content: Record<'DE' | 'EN', ContentSet> = {
 let lang: 'DE' | 'EN' = 'DE';
 const deContent = content.DE;
 const enContent = content.EN;
+
+// Serialize services for client-side rendering
+const servicesData = {
+  DE: deContent.services,
+  EN: enContent.services
+};
 ---
 
 <Layout title={deContent.pageTitle}>
@@ -169,7 +175,7 @@ const enContent = content.EN;
 
     <section class="a-services-grid bf-section">
       <div class="bf-container">
-        <div class="a-services-grid__inner">
+        <div class="a-services-grid__inner" data-services={JSON.stringify(servicesData)}>
           {deContent.services.map((service, index) => (
             <ServiceCard
               number={service.number}
@@ -177,13 +183,27 @@ const enContent = content.EN;
               tag={service.tag}
               description={service.description}
               bullets={service.bullets}
+              data-lang="DE"
+              data-service-id={index}
+            />
+          ))}
+          {enContent.services.map((service, index) => (
+            <ServiceCard
+              number={service.number}
+              title={service.title}
+              tag={service.tag}
+              description={service.description}
+              bullets={service.bullets}
+              data-lang="EN"
+              data-service-id={index}
+              class="hidden"
             />
           ))}
         </div>
       </div>
     </section>
 
-    <div data-de-cta={JSON.stringify({heading: deContent.ctaHeading, headingEm: deContent.ctaHeading_em, body: deContent.ctaBody, ctaText: deContent.ctaText})} data-en-cta={JSON.stringify({heading: enContent.ctaHeading, headingEm: enContent.ctaHeading_em, body: enContent.ctaBody, ctaText: enContent.ctaText})}>
+    <div data-de-cta={JSON.stringify({heading: deContent.ctaHeading, headingEm: deContent.ctaHeading_em, body: deContent.ctaBody, ctaText: deContent.ctaText})} data-en-cta={JSON.stringify({heading: enContent.ctaHeading, headingEm: enContent.ctaHeading_em, body: enContent.ctaBody, ctaText: enContent.ctaText})} class="bf-cta-container">
       <CTAStrip
         heading={deContent.ctaHeading}
         headingEm={deContent.ctaHeading_em}
@@ -201,8 +221,6 @@ const enContent = content.EN;
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const toggleLangEvent = new CustomEvent('lang:toggle');
-
     window.addEventListener('lang:toggle', (e: any) => {
       const newLang = e.detail?.lang || 'DE';
 
@@ -221,8 +239,19 @@ const enContent = content.EN;
         heroSubheading.textContent = newLang === 'DE' ? deValue : enValue;
       }
 
+      // Update service cards
+      const serviceCards = document.querySelectorAll('.a-service-card') as NodeListOf<HTMLElement>;
+      serviceCards.forEach(card => {
+        const cardLang = card.getAttribute('data-lang');
+        if (cardLang === newLang) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
       // Update CTA section
-      const ctaDiv = document.querySelector('[data-de-cta]') as HTMLElement;
+      const ctaDiv = document.querySelector('.bf-cta-container') as HTMLElement;
       if (ctaDiv) {
         const deCta = JSON.parse(ctaDiv.getAttribute('data-de-cta') || '{}');
         const enCta = JSON.parse(ctaDiv.getAttribute('data-en-cta') || '{}');
@@ -235,7 +264,7 @@ const enContent = content.EN;
           const link = ctaSection.querySelector('.bf-cta') as HTMLElement;
 
           if (heading) {
-            heading.innerHTML = `${ctaData.heading}<em style="font-style: italic; color: var(--accent);">${ctaData.headingEm}</em>`;
+            heading.innerHTML = `${ctaData.heading}<em class="cta-emphasis">${ctaData.headingEm}</em>`;
           }
           if (body) {
             body.textContent = ctaData.body;
@@ -254,7 +283,7 @@ const enContent = content.EN;
 <style>
   .a-services-hero {
     padding: 4rem 0;
-    background: linear-gradient(135deg, #f5f1e8 0%, #faf7f0 100%);
+    background: var(--paper);
   }
 
   .a-services-hero__heading {
@@ -266,7 +295,7 @@ const enContent = content.EN;
 
   .a-services-hero__subheading {
     font-size: 1.25rem;
-    color: #666;
+    color: var(--ink-soft);
     max-width: 700px;
     margin: 0;
   }
@@ -275,6 +304,15 @@ const enContent = content.EN;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+
+  .a-service-card.hidden {
+    display: none;
+  }
+
+  .cta-emphasis {
+    font-style: italic;
+    color: var(--accent);
   }
 
   @media (max-width: 768px) {

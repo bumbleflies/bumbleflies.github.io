@@ -8,9 +8,10 @@ interface Props {
 }
 
 const { number, title, tag, description, bullets } = Astro.props;
+const attrs = Astro.props;
 ---
 
-<article class="a-service-card">
+<article class="a-service-card" data-lang={attrs['data-lang']} data-service-id={attrs['data-service-id']}>
   <div class="a-service-card__header">
     <span class="a-service-card__number">{number}</span>
     <h3 class="a-service-card__title">{title}</h3>
@@ -33,8 +34,8 @@ const { number, title, tag, description, bullets } = Astro.props;
     flex-direction: column;
     gap: 1.5rem;
     padding: 2rem;
-    background: var(--cream, #faf7f0);
-    border: 1px solid #e0dcd4;
+    background: var(--paper);
+    border: 1px solid var(--rule);
     border-radius: 0.5rem;
     transition: transform var(--duration-normal), box-shadow var(--duration-normal);
   }
@@ -84,7 +85,7 @@ const { number, title, tag, description, bullets } = Astro.props;
   .a-service-card__description {
     font-size: 1rem;
     line-height: var(--lh-body);
-    color: #666;
+    color: var(--ink-soft);
     margin: 0;
   }
 
@@ -100,7 +101,7 @@ const { number, title, tag, description, bullets } = Astro.props;
   .a-service-card__bullets li {
     font-size: 0.95rem;
     line-height: 1.4;
-    color: #666;
+    color: var(--ink-soft);
     padding-left: 1.25rem;
     position: relative;
   }
