@@ -1,0 +1,131 @@
+---
+interface Row {
+  label: string;
+  fragmented: string;
+  integrated: string;
+}
+
+interface Props {
+  rows: Row[];
+  lang?: 'DE' | 'EN';
+}
+
+const { rows, lang = 'DE' } = Astro.props;
+---
+
+<div class="a-comparison-table">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th class="a-comparison-table__header" data-de="Fragmentiert" data-en="Fragmented">
+          {lang === 'DE' ? 'Fragmentiert' : 'Fragmented'}
+        </th>
+        <th class="a-comparison-table__header" data-de="Integriert" data-en="Integrated">
+          {lang === 'DE' ? 'Integriert' : 'Integrated'}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row, index) => (
+        <tr key={index}>
+          <td class="a-comparison-table__label" data-de={row.label} data-en={row.label}>
+            {row.label}
+          </td>
+          <td class="a-comparison-table__cell fragmented" data-de={row.fragmented} data-en={row.fragmented}>
+            {row.fragmented}
+          </td>
+          <td class="a-comparison-table__cell integrated" data-de={row.integrated} data-en={row.integrated}>
+            {row.integrated}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .a-comparison-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper);
+  }
+
+  thead {
+    background: var(--accent);
+    color: white;
+  }
+
+  th {
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .a-comparison-table__header {
+    border-bottom: 2px solid var(--accent);
+  }
+
+  td {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 1rem;
+    line-height: var(--lh-body);
+  }
+
+  .a-comparison-table__label {
+    font-weight: 600;
+    color: var(--ink);
+    width: 25%;
+  }
+
+  .a-comparison-table__cell {
+    color: var(--ink-soft);
+  }
+
+  .a-comparison-table__cell.fragmented {
+    background: rgba(212, 165, 116, 0.05);
+  }
+
+  .a-comparison-table__cell.integrated {
+    background: rgba(212, 165, 116, 0.1);
+  }
+
+  tbody tr:hover {
+    background: rgba(212, 165, 116, 0.05);
+  }
+
+  @media (max-width: 768px) {
+    th,
+    td {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .a-comparison-table__label {
+      width: 30%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-comparison-table {
+      margin: 1.5rem -1rem;
+    }
+
+    th,
+    td {
+      padding: 0.75rem;
+      font-size: 0.85rem;
+    }
+
+    .a-comparison-table__label {
+      width: 35%;
+    }
+  }
+</style>
