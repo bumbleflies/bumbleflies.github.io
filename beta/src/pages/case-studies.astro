@@ -1,10 +1,15 @@
 ---
 import Layout from '../components/Layout.astro';
+import Nav from '../components/Nav.astro';
 import CaseStudiesList from '../components/CaseStudiesList.astro';
+import Footer from '../components/Footer.astro';
+import LangToggle from '../components/LangToggle.astro';
 ---
 
-<Layout>
-  <main>
+<Layout title="Case Studies - bumbleflies">
+  <div slot="nav">
+    <Nav lang="DE" />
+  </div>
     <section class="a-case-studies-hero">
       <div class="bf-container">
         <h1 class="a-case-studies-hero__heading">Track Record</h1>
@@ -19,11 +24,23 @@ import CaseStudiesList from '../components/CaseStudiesList.astro';
     <section class="a-case-studies-cta">
       <div class="bf-container">
         <h2>Bereit für Ihre Transformation?</h2>
-        <a href="/contact" class="bf-cta">Erstes Gespräch vereinbaren</a>
+        <a href="mailto:info@bumbleflies.de" class="bf-cta">Erstes Gespräch vereinbaren</a>
       </div>
     </section>
-  </main>
+
+  <div slot="footer">
+    <Footer />
+  </div>
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('lang-change', (e: any) => {
+      const newLang = e.detail?.lang || 'DE';
+      // Handle any language-specific updates needed on this page
+    });
+  });
+</script>
 
 <style>
   .a-case-studies-hero {

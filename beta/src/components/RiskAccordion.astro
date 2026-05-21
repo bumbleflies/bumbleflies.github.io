@@ -6,85 +6,130 @@ interface RiskItem {
 }
 
 interface Props {
-  items: RiskItem[];
+  deItems?: RiskItem[];
+  enItems?: RiskItem[];
+  items?: RiskItem[];
   lang?: 'DE' | 'EN';
 }
 
-const { items, lang = 'DE' } = Astro.props;
+const { deItems, enItems, items, lang = 'DE' } = Astro.props;
+
+// Support both old API (items + lang) and new API (deItems + enItems)
+const useDeItems = deItems || items || [];
+const useEnItems = enItems || items || [];
 ---
 
-<div class="a-risk-accordion">
-  {items.map((item, index) => (
-    <div class="a-risk-accordion__item" key={index}>
-      <button class="a-risk-accordion__trigger" data-index={index} aria-expanded="false">
-        <span class="a-risk-accordion__title" data-de={item.title} data-en={item.title}>
-          {item.title}
-        </span>
-        <svg class="a-risk-accordion__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-      </button>
-      <div class="a-risk-accordion__panel" data-index={index} hidden>
-        <div class="a-risk-accordion__content">
-          <div class="a-risk-accordion__section">
-            <h4 class="a-risk-accordion__label">Description</h4>
-            <p class="a-risk-accordion__text" data-de={item.description} data-en={item.description}>
-              {item.description}
-            </p>
-          </div>
-          <div class="a-risk-accordion__section">
-            <h4 class="a-risk-accordion__label">Mitigation</h4>
-            <p class="a-risk-accordion__text" data-de={item.mitigation} data-en={item.mitigation}>
-              {item.mitigation}
-            </p>
+<div class="a-risk-accordion" data-lang={lang}>
+  <!-- DE Version -->
+  <div class="a-risk-accordion-set a-risk-accordion-set--de">
+    {useDeItems.map((item, index) => (
+      <div class="a-risk-accordion__item" key={index}>
+        <button class="a-risk-accordion__trigger" data-index={index} aria-expanded="false">
+          <span class="a-risk-accordion__title" data-de={item.title} data-en={item.title}>
+            {item.title}
+          </span>
+          <svg class="a-risk-accordion__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="a-risk-accordion__panel" data-index={index} hidden>
+          <div class="a-risk-accordion__content">
+            <div class="a-risk-accordion__section">
+              <h4 class="a-risk-accordion__label">Beschreibung</h4>
+              <p class="a-risk-accordion__text" data-de={item.description} data-en={item.description}>
+                {item.description}
+              </p>
+            </div>
+            <div class="a-risk-accordion__section">
+              <h4 class="a-risk-accordion__label">Unser Ansatz</h4>
+              <p class="a-risk-accordion__text" data-de={item.mitigation} data-en={item.mitigation}>
+                {item.mitigation}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  ))}
+    ))}
+  </div>
+
+  <!-- EN Version (hidden by default) -->
+  <div class="a-risk-accordion-set a-risk-accordion-set--en" style="display: none;">
+    {useEnItems.map((item, index) => (
+      <div class="a-risk-accordion__item" key={index}>
+        <button class="a-risk-accordion__trigger" data-index={index} aria-expanded="false">
+          <span class="a-risk-accordion__title" data-de={item.title} data-en={item.title}>
+            {item.title}
+          </span>
+          <svg class="a-risk-accordion__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="a-risk-accordion__panel" data-index={index} hidden>
+          <div class="a-risk-accordion__content">
+            <div class="a-risk-accordion__section">
+              <h4 class="a-risk-accordion__label">Description</h4>
+              <p class="a-risk-accordion__text" data-de={item.description} data-en={item.description}>
+                {item.description}
+              </p>
+            </div>
+            <div class="a-risk-accordion__section">
+              <h4 class="a-risk-accordion__label">Our Approach</h4>
+              <p class="a-risk-accordion__text" data-de={item.mitigation} data-en={item.mitigation}>
+                {item.mitigation}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const triggers = document.querySelectorAll('.a-risk-accordion__trigger') as NodeListOf<HTMLButtonElement>;
-    const panels = document.querySelectorAll('.a-risk-accordion__panel') as NodeListOf<HTMLElement>;
+    // Set up accordion behavior for both DE and EN versions
+    const accordions = document.querySelectorAll('.a-risk-accordion-set') as NodeListOf<HTMLElement>;
 
-    triggers.forEach((trigger, index) => {
-      trigger.addEventListener('click', () => {
-        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+    accordions.forEach(accordion => {
+      const triggers = accordion.querySelectorAll('.a-risk-accordion__trigger') as NodeListOf<HTMLButtonElement>;
+      const panels = accordion.querySelectorAll('.a-risk-accordion__panel') as NodeListOf<HTMLElement>;
 
-        // Close all panels
-        triggers.forEach(t => t.setAttribute('aria-expanded', 'false'));
-        panels.forEach(p => p.setAttribute('hidden', ''));
+      triggers.forEach((trigger, index) => {
+        trigger.addEventListener('click', () => {
+          const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
 
-        // Open clicked panel if it wasn't open
-        if (!isExpanded) {
-          trigger.setAttribute('aria-expanded', 'true');
-          const panel = document.querySelector(`.a-risk-accordion__panel[data-index="${index}"]`) as HTMLElement;
-          if (panel) {
-            panel.removeAttribute('hidden');
+          // Close all panels in this accordion
+          triggers.forEach(t => t.setAttribute('aria-expanded', 'false'));
+          panels.forEach(p => p.setAttribute('hidden', ''));
+
+          // Open clicked panel if it wasn't open
+          if (!isExpanded) {
+            trigger.setAttribute('aria-expanded', 'true');
+            const panel = accordion.querySelector(`.a-risk-accordion__panel[data-index="${index}"]`) as HTMLElement;
+            if (panel) {
+              panel.removeAttribute('hidden');
+            }
           }
-        }
+        });
       });
     });
 
     // Language toggle support
-    window.addEventListener('lang:toggle', (e: any) => {
+    window.addEventListener('lang-change', (e: any) => {
       const newLang = e.detail?.lang || 'DE';
+      const accordionContainer = document.querySelector('.a-risk-accordion') as HTMLElement;
+      if (accordionContainer) {
+        const deSet = accordionContainer.querySelector('.a-risk-accordion-set--de') as HTMLElement;
+        const enSet = accordionContainer.querySelector('.a-risk-accordion-set--en') as HTMLElement;
 
-      const titles = document.querySelectorAll('.a-risk-accordion__title') as NodeListOf<HTMLElement>;
-      titles.forEach(title => {
-        const deValue = title.getAttribute('data-de');
-        const enValue = title.getAttribute('data-en');
-        title.textContent = newLang === 'DE' ? deValue : enValue;
-      });
-
-      const texts = document.querySelectorAll('.a-risk-accordion__text') as NodeListOf<HTMLElement>;
-      texts.forEach(text => {
-        const deValue = text.getAttribute('data-de');
-        const enValue = text.getAttribute('data-en');
-        text.textContent = newLang === 'DE' ? deValue : enValue;
-      });
+        if (newLang === 'EN') {
+          if (deSet) deSet.style.setProperty('display', 'none');
+          if (enSet) enSet.style.setProperty('display', 'block');
+        } else {
+          if (deSet) deSet.style.setProperty('display', 'block');
+          if (enSet) enSet.style.setProperty('display', 'none');
+        }
+      }
     });
   });
 </script>

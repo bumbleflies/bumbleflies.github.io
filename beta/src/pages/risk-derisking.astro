@@ -105,8 +105,7 @@ const enContent = content.EN;
     <Nav lang={lang} />
   </div>
 
-  <main>
-    <section class="a-risk-hero">
+  <section class="a-risk-hero">
       <div class="bf-container">
         <h1 class="a-risk-hero__heading" data-de={deContent.heading} data-en={enContent.heading}>
           {deContent.heading}
@@ -120,7 +119,7 @@ const enContent = content.EN;
     <section class="a-risk-accordion-section bf-section">
       <div class="bf-container">
         <div class="a-risk-accordion-wrapper" data-de-risks={JSON.stringify(deContent.riskItems)} data-en-risks={JSON.stringify(enContent.riskItems)}>
-          <RiskAccordion items={deContent.riskItems} lang={lang} />
+          <RiskAccordion deItems={deContent.riskItems} enItems={enContent.riskItems} lang={lang} />
         </div>
       </div>
     </section>
@@ -134,7 +133,6 @@ const enContent = content.EN;
         lang={lang}
       />
     </div>
-  </main>
 
   <div slot="footer">
     <Footer />
@@ -143,7 +141,7 @@ const enContent = content.EN;
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('lang:toggle', (e: any) => {
+    window.addEventListener('lang-change', (e: any) => {
       const newLang = e.detail?.lang || 'DE';
 
       // Update hero section

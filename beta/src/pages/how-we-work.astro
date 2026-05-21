@@ -83,8 +83,7 @@ const contentData = {
     <Nav lang={lang} />
   </div>
 
-  <main>
-    <section class="a-how-we-work-hero">
+  <section class="a-how-we-work-hero">
       <div class="bf-container">
         <h1 class="a-how-we-work-hero__heading" data-de={deContent.heading} data-en={enContent.heading}>
           {deContent.heading}
@@ -142,7 +141,6 @@ const contentData = {
         lang={lang}
       />
     </div>
-  </main>
 
   <div slot="footer">
     <Footer />
@@ -151,7 +149,7 @@ const contentData = {
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('lang:toggle', (e: any) => {
+    window.addEventListener('lang-change', (e: any) => {
       const newLang = e.detail?.lang || 'DE';
 
       // Update hero section

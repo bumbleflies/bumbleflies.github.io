@@ -6,28 +6,65 @@ interface Row {
 }
 
 interface Props {
-  rows: Row[];
+  deRows?: Row[];
+  enRows?: Row[];
+  rows?: Row[];
   lang?: 'DE' | 'EN';
 }
 
-const { rows, lang = 'DE' } = Astro.props;
+const { deRows, enRows, rows, lang = 'DE' } = Astro.props;
+
+// Support both old API (rows + lang) and new API (deRows + enRows)
+const useDeRows = deRows || rows || [];
+const useEnRows = enRows || rows || [];
 ---
 
-<div class="a-comparison-table">
-  <table>
+<div class="a-comparison-table" data-lang={lang}>
+  <!-- DE Version -->
+  <table class="a-comparison-table-set a-comparison-table-set--de">
     <thead>
       <tr>
         <th></th>
         <th class="a-comparison-table__header" data-de="Fragmentiert" data-en="Fragmented">
-          {lang === 'DE' ? 'Fragmentiert' : 'Fragmented'}
+          Fragmentiert
         </th>
         <th class="a-comparison-table__header" data-de="Integriert" data-en="Integrated">
-          {lang === 'DE' ? 'Integriert' : 'Integrated'}
+          Integriert
         </th>
       </tr>
     </thead>
     <tbody>
-      {rows.map((row, index) => (
+      {useDeRows.map((row, index) => (
+        <tr key={index}>
+          <td class="a-comparison-table__label" data-de={row.label} data-en={row.label}>
+            {row.label}
+          </td>
+          <td class="a-comparison-table__cell fragmented" data-de={row.fragmented} data-en={row.fragmented}>
+            {row.fragmented}
+          </td>
+          <td class="a-comparison-table__cell integrated" data-de={row.integrated} data-en={row.integrated}>
+            {row.integrated}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <!-- EN Version (hidden by default) -->
+  <table class="a-comparison-table-set a-comparison-table-set--en" style="display: none;">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="a-comparison-table__header" data-de="Fragmentiert" data-en="Fragmented">
+          Fragmented
+        </th>
+        <th class="a-comparison-table__header" data-de="Integriert" data-en="Integrated">
+          Integrated
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {useEnRows.map((row, index) => (
         <tr key={index}>
           <td class="a-comparison-table__label" data-de={row.label} data-en={row.label}>
             {row.label}
@@ -43,6 +80,28 @@ const { rows, lang = 'DE' } = Astro.props;
     </tbody>
   </table>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Language toggle support
+    window.addEventListener('lang-change', (e: any) => {
+      const newLang = e.detail?.lang || 'DE';
+      const tableContainer = document.querySelector('.a-comparison-table') as HTMLElement;
+      if (tableContainer) {
+        const deSet = tableContainer.querySelector('.a-comparison-table-set--de') as HTMLElement;
+        const enSet = tableContainer.querySelector('.a-comparison-table-set--en') as HTMLElement;
+
+        if (newLang === 'EN') {
+          if (deSet) deSet.style.setProperty('display', 'none');
+          if (enSet) enSet.style.setProperty('display', 'block');
+        } else {
+          if (deSet) deSet.style.setProperty('display', 'block');
+          if (enSet) enSet.style.setProperty('display', 'none');
+        }
+      }
+    });
+  });
+</script>
 
 <style>
   .a-comparison-table {
