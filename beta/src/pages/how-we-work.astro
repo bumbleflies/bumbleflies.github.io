@@ -1,0 +1,349 @@
+---
+import Layout from '../components/Layout.astro';
+import Nav from '../components/Nav.astro';
+import CTAStrip from '../components/CTAStrip.astro';
+import Footer from '../components/Footer.astro';
+
+interface ContentSet {
+  pageTitle: string;
+  heading: string;
+  intro: string;
+  problemTitle: string;
+  problemBullets: string[];
+  solutionTitle: string;
+  solutionBullets: string[];
+  ctaHeading: string;
+  ctaHeading_em: string;
+  ctaBody: string;
+  ctaText: string;
+}
+
+const content: Record<'DE' | 'EN', ContentSet> = {
+  DE: {
+    pageTitle: 'How We Work',
+    heading: 'Warum 80% der Transformationen scheitern (und wie wir es anders machen)',
+    intro: 'Die meisten Transformationsprojekte scheitern nicht an Ideen. Sie scheitern an der Umsetzung...',
+    problemTitle: 'Das Problem: Fragmentierte Services',
+    problemBullets: [
+      'Facilitation-Agentur → Consulting-Firma → Software-Haus',
+      'Niemand kümmert sich, ob Code genutzt wird',
+      'Teams müssen sich dreimal einarbeiten',
+      'Adoption im Nachhinein zu integrieren funktioniert nicht'
+    ],
+    solutionTitle: 'Unsere Lösung: Integrierte Adoption',
+    solutionBullets: [
+      'Ein Team versteht alle drei Bereiche',
+      'Workshop-Insights → Software direkt',
+      'Adoption von Tag 1, nicht als letzte Phase',
+      'Nutzer co-designen das Tool das sie verwenden'
+    ],
+    ctaHeading: 'Bereit für',
+    ctaHeading_em: 'Transformation?',
+    ctaBody: 'Schreiben Sie uns oder buchen Sie ein erstes Gespräch. Wir freuen uns auf den Austausch mit Ihnen.',
+    ctaText: 'Erstes Gespräch vereinbaren'
+  },
+  EN: {
+    pageTitle: 'How We Work',
+    heading: 'Why 80% of transformations fail (and how we do it differently)',
+    intro: 'Most transformation projects fail not on ideas. They fail on execution...',
+    problemTitle: 'The Problem: Fragmented Services',
+    problemBullets: [
+      'Facilitation agency → consulting firm → software house',
+      'Nobody cares if code is used',
+      'Teams go 3x onboarding',
+      'Retrofitting adoption doesn\'t work'
+    ],
+    solutionTitle: 'Our Solution: Integrated Adoption',
+    solutionBullets: [
+      'One team understanding all three',
+      'Workshop insights → software directly',
+      'Adoption from day 1, not phase at end',
+      'People using tool co-designed it'
+    ],
+    ctaHeading: 'Ready for',
+    ctaHeading_em: 'Transformation?',
+    ctaBody: 'Get in touch or book your first call. We look forward to speaking with you.',
+    ctaText: 'Book a first call'
+  }
+};
+
+let lang: 'DE' | 'EN' = 'DE';
+const deContent = content.DE;
+const enContent = content.EN;
+
+// Serialize for client-side rendering
+const contentData = {
+  DE: deContent,
+  EN: enContent
+};
+---
+
+<Layout title={deContent.pageTitle}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <main>
+    <section class="a-how-we-work-hero">
+      <div class="bf-container">
+        <h1 class="a-how-we-work-hero__heading" data-de={deContent.heading} data-en={enContent.heading}>
+          {deContent.heading}
+        </h1>
+        <p class="a-how-we-work-hero__intro" data-de={deContent.intro} data-en={enContent.intro}>
+          {deContent.intro}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-how-we-work-content bf-section">
+      <div class="bf-container">
+        <div class="a-how-we-work-columns">
+          <div class="a-how-we-work-column">
+            <h2 class="a-how-we-work-column__title" data-de={deContent.problemTitle} data-en={enContent.problemTitle}>
+              {deContent.problemTitle}
+            </h2>
+            <ul class="a-how-we-work-bullets" data-lang="DE" data-bullets={JSON.stringify({DE: deContent.problemBullets, EN: enContent.problemBullets})}>
+              {deContent.problemBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+            <ul class="a-how-we-work-bullets hidden" data-lang="EN" data-bullets={JSON.stringify({DE: deContent.problemBullets, EN: enContent.problemBullets})}>
+              {enContent.problemBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="a-how-we-work-column">
+            <h2 class="a-how-we-work-column__title" data-de={deContent.solutionTitle} data-en={enContent.solutionTitle}>
+              {deContent.solutionTitle}
+            </h2>
+            <ul class="a-how-we-work-bullets" data-lang="DE" data-bullets={JSON.stringify({DE: deContent.solutionBullets, EN: enContent.solutionBullets})}>
+              {deContent.solutionBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+            <ul class="a-how-we-work-bullets hidden" data-lang="EN" data-bullets={JSON.stringify({DE: deContent.solutionBullets, EN: enContent.solutionBullets})}>
+              {enContent.solutionBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div data-de-cta={JSON.stringify({heading: deContent.ctaHeading, headingEm: deContent.ctaHeading_em, body: deContent.ctaBody, ctaText: deContent.ctaText})} data-en-cta={JSON.stringify({heading: enContent.ctaHeading, headingEm: enContent.ctaHeading_em, body: enContent.ctaBody, ctaText: enContent.ctaText})} class="bf-cta-container">
+      <CTAStrip
+        heading={deContent.ctaHeading}
+        headingEm={deContent.ctaHeading_em}
+        body={deContent.ctaBody}
+        ctaText={deContent.ctaText}
+        lang={lang}
+      />
+    </div>
+  </main>
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('lang:toggle', (e: any) => {
+      const newLang = e.detail?.lang || 'DE';
+
+      // Update hero section
+      const heroHeading = document.querySelector('.a-how-we-work-hero__heading') as HTMLElement;
+      if (heroHeading) {
+        const deValue = heroHeading.getAttribute('data-de');
+        const enValue = heroHeading.getAttribute('data-en');
+        heroHeading.textContent = newLang === 'DE' ? deValue : enValue;
+      }
+
+      const heroIntro = document.querySelector('.a-how-we-work-hero__intro') as HTMLElement;
+      if (heroIntro) {
+        const deValue = heroIntro.getAttribute('data-de');
+        const enValue = heroIntro.getAttribute('data-en');
+        heroIntro.textContent = newLang === 'DE' ? deValue : enValue;
+      }
+
+      // Update titles
+      const titles = document.querySelectorAll('.a-how-we-work-column__title') as NodeListOf<HTMLElement>;
+      titles.forEach(title => {
+        const deValue = title.getAttribute('data-de');
+        const enValue = title.getAttribute('data-en');
+        title.textContent = newLang === 'DE' ? deValue : enValue;
+      });
+
+      // Update bullet lists
+      const bulletLists = document.querySelectorAll('.a-how-we-work-bullets') as NodeListOf<HTMLElement>;
+      bulletLists.forEach(list => {
+        const listLang = list.getAttribute('data-lang');
+        if (listLang === newLang) {
+          list.classList.remove('hidden');
+        } else {
+          list.classList.add('hidden');
+        }
+      });
+
+      // Update CTA section
+      const ctaDiv = document.querySelector('.bf-cta-container') as HTMLElement;
+      if (ctaDiv) {
+        const deCta = JSON.parse(ctaDiv.getAttribute('data-de-cta') || '{}');
+        const enCta = JSON.parse(ctaDiv.getAttribute('data-en-cta') || '{}');
+        const ctaData = newLang === 'DE' ? deCta : enCta;
+
+        const ctaSection = ctaDiv.querySelector('section') as HTMLElement;
+        if (ctaSection) {
+          const heading = ctaSection.querySelector('h2') as HTMLElement;
+          const body = ctaSection.querySelector('p') as HTMLElement;
+          const link = ctaSection.querySelector('.bf-cta') as HTMLElement;
+
+          if (heading) {
+            heading.innerHTML = `${ctaData.heading}<em style="font-style: italic; color: var(--accent);">${ctaData.headingEm}</em>`;
+          }
+          if (body) {
+            body.textContent = ctaData.body;
+          }
+          if (link) {
+            const svg = link.querySelector('svg');
+            link.textContent = ctaData.ctaText;
+            if (svg) link.appendChild(svg);
+          }
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .a-how-we-work-hero {
+    padding: 4rem 0;
+    background: var(--paper);
+  }
+
+  .a-how-we-work-hero__heading {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--ink);
+    max-width: 900px;
+  }
+
+  .a-how-we-work-hero__intro {
+    font-size: 1.25rem;
+    color: var(--ink-soft);
+    max-width: 700px;
+    margin: 0;
+  }
+
+  .a-how-we-work-content {
+    padding: 4rem 0;
+  }
+
+  .a-how-we-work-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .a-how-we-work-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .a-how-we-work-column__title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .a-how-we-work-bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .a-how-we-work-bullets li {
+    font-size: 1rem;
+    line-height: var(--lh-body);
+    color: var(--ink-soft);
+    padding-left: 2rem;
+    position: relative;
+  }
+
+  .a-how-we-work-bullets li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .a-how-we-work-hero {
+      padding: 2.5rem 0;
+    }
+
+    .a-how-we-work-hero__heading {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .a-how-we-work-hero__intro {
+      font-size: 1rem;
+    }
+
+    .a-how-we-work-content {
+      padding: 2.5rem 0;
+    }
+
+    .a-how-we-work-columns {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .a-how-we-work-column__title {
+      font-size: 1.5rem;
+    }
+
+    .a-how-we-work-bullets li {
+      font-size: 0.95rem;
+      padding-left: 1.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-how-we-work-hero {
+      padding: 1.5rem 0;
+    }
+
+    .a-how-we-work-hero__heading {
+      font-size: 1.5rem;
+    }
+
+    .a-how-we-work-hero__intro {
+      font-size: 0.95rem;
+    }
+
+    .a-how-we-work-column__title {
+      font-size: 1.25rem;
+    }
+
+    .a-how-we-work-bullets li {
+      font-size: 0.9rem;
+      padding-left: 1.5rem;
+    }
+  }
+</style>
