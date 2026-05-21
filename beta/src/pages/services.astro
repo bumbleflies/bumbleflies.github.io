@@ -1,0 +1,312 @@
+---
+import Layout from '../components/Layout.astro';
+import Nav from '../components/Nav.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CTAStrip from '../components/CTAStrip.astro';
+import Footer from '../components/Footer.astro';
+
+interface ContentSet {
+  pageTitle: string;
+  heroHeading: string;
+  heroSubheading: string;
+  ctaHeading: string;
+  ctaBody: string;
+  ctaText: string;
+  services: Array<{
+    number: string;
+    title: string;
+    tag: string;
+    description: string;
+    bullets: string[];
+  }>;
+}
+
+const content: Record<'DE' | 'EN', ContentSet> = {
+  DE: {
+    pageTitle: 'Services',
+    heroHeading: 'Unsere Services',
+    heroSubheading: 'Vier Wege, wie wir euch helfen: Talk, Decide, Build & Embed oder der komplette Weg.',
+    services: [
+      {
+        number: '01',
+        title: 'Talk: Facilitation & Workshops',
+        tag: 'Workshops · Big-Room · Retros',
+        description:
+          'Wir moderieren eure wichtigsten Gespräche und bringen Klarheit in komplexe Themen.',
+        bullets: [
+          'Open Space (8–500 Personen)',
+          'PI-Planning · Town-Halls',
+          'Retros · Strategy Days',
+        ],
+      },
+      {
+        number: '02',
+        title: 'Decide: AI Consulting',
+        tag: 'Strategy · Literacy · Pilots',
+        description:
+          'Wir unterstützen euch beim Navigieren der KI-Landschaft und treffen informierte Entscheidungen.',
+        bullets: [
+          'AI Readiness Assessment',
+          'Use-Case-Workshops',
+          'Pilot-Begleitung',
+        ],
+      },
+      {
+        number: '03',
+        title: 'Build & Embed: App Development',
+        tag: 'Tools · MVPs · Integration',
+        description:
+          'Wir bauen die Software, die eure Strategie umsetzt und euer Team befähigt.',
+        bullets: [
+          'Internal tools & dashboards',
+          'KI-gestützte Web-Apps',
+          'Schneller Prototyp → echtes Produkt',
+        ],
+      },
+      {
+        number: '04',
+        title: 'Full Journey: Integrated Transformation',
+        tag: 'End-to-End · Fixed Price · Milestones',
+        description:
+          'Wir begleiten euch vom ersten Gespräch bis zur fertigen Lösung — alles aus einer Hand.',
+        bullets: [
+          'Talk + Decide + Build integrated',
+          'Fixed price & milestones',
+          '16–26 weeks',
+        ],
+      },
+    ],
+    ctaHeading: 'Bereit für',
+    ctaHeading_em: 'Transformation?',
+    ctaBody:
+      'Schreiben Sie uns oder buchen Sie ein erstes Gespräch. Wir freuen uns auf den Austausch mit Ihnen.',
+    ctaText: 'Erstes Gespräch vereinbaren',
+  },
+  EN: {
+    pageTitle: 'Services',
+    heroHeading: 'Our Services',
+    heroSubheading:
+      'Four ways we can help you: Talk, Decide, Build & Embed, or the full journey.',
+    services: [
+      {
+        number: '01',
+        title: 'Talk: Facilitation & Workshops',
+        tag: 'Workshops · Big-Room · Retros',
+        description:
+          'We moderate your most important conversations and bring clarity to complex topics.',
+        bullets: [
+          'Open Space (8–500 participants)',
+          'PI-Planning · Town-Halls',
+          'Retros · Strategy Days',
+        ],
+      },
+      {
+        number: '02',
+        title: 'Decide: AI Consulting',
+        tag: 'Strategy · Literacy · Pilots',
+        description:
+          'We help you navigate the AI landscape and make informed decisions.',
+        bullets: [
+          'AI Readiness Assessment',
+          'Use-Case Workshops',
+          'Pilot Support',
+        ],
+      },
+      {
+        number: '03',
+        title: 'Build & Embed: App Development',
+        tag: 'Tools · MVPs · Integration',
+        description:
+          'We build the software that executes your strategy and empowers your team.',
+        bullets: [
+          'Internal tools & dashboards',
+          'AI-powered web apps',
+          'Fast prototype → production product',
+        ],
+      },
+      {
+        number: '04',
+        title: 'Full Journey: Integrated Transformation',
+        tag: 'End-to-End · Fixed Price · Milestones',
+        description:
+          'We guide you from the first conversation to the finished solution — all from one source.',
+        bullets: [
+          'Talk + Decide + Build integrated',
+          'Fixed price & milestones',
+          '16–26 weeks',
+        ],
+      },
+    ],
+    ctaHeading: 'Ready for',
+    ctaHeading_em: 'Transformation?',
+    ctaBody:
+      'Get in touch or book your first call. We look forward to speaking with you.',
+    ctaText: 'Book a first call',
+  },
+};
+
+let lang: 'DE' | 'EN' = 'DE';
+const deContent = content.DE;
+const enContent = content.EN;
+---
+
+<Layout title={deContent.pageTitle}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <main>
+    <section class="a-services-hero">
+      <div class="bf-container">
+        <h1 class="a-services-hero__heading" data-de={deContent.heroHeading} data-en={enContent.heroHeading}>
+          {deContent.heroHeading}
+        </h1>
+        <p class="a-services-hero__subheading" data-de={deContent.heroSubheading} data-en={enContent.heroSubheading}>
+          {deContent.heroSubheading}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-services-grid bf-section">
+      <div class="bf-container">
+        <div class="a-services-grid__inner">
+          {deContent.services.map((service, index) => (
+            <ServiceCard
+              number={service.number}
+              title={service.title}
+              tag={service.tag}
+              description={service.description}
+              bullets={service.bullets}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <div data-de-cta={JSON.stringify({heading: deContent.ctaHeading, headingEm: deContent.ctaHeading_em, body: deContent.ctaBody, ctaText: deContent.ctaText})} data-en-cta={JSON.stringify({heading: enContent.ctaHeading, headingEm: enContent.ctaHeading_em, body: enContent.ctaBody, ctaText: enContent.ctaText})}>
+      <CTAStrip
+        heading={deContent.ctaHeading}
+        headingEm={deContent.ctaHeading_em}
+        body={deContent.ctaBody}
+        ctaText={deContent.ctaText}
+        lang={lang}
+      />
+    </div>
+  </main>
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleLangEvent = new CustomEvent('lang:toggle');
+
+    window.addEventListener('lang:toggle', (e: any) => {
+      const newLang = e.detail?.lang || 'DE';
+
+      // Update hero section
+      const heroHeading = document.querySelector('.a-services-hero__heading') as HTMLElement;
+      if (heroHeading) {
+        const deValue = heroHeading.getAttribute('data-de');
+        const enValue = heroHeading.getAttribute('data-en');
+        heroHeading.textContent = newLang === 'DE' ? deValue : enValue;
+      }
+
+      const heroSubheading = document.querySelector('.a-services-hero__subheading') as HTMLElement;
+      if (heroSubheading) {
+        const deValue = heroSubheading.getAttribute('data-de');
+        const enValue = heroSubheading.getAttribute('data-en');
+        heroSubheading.textContent = newLang === 'DE' ? deValue : enValue;
+      }
+
+      // Update CTA section
+      const ctaDiv = document.querySelector('[data-de-cta]') as HTMLElement;
+      if (ctaDiv) {
+        const deCta = JSON.parse(ctaDiv.getAttribute('data-de-cta') || '{}');
+        const enCta = JSON.parse(ctaDiv.getAttribute('data-en-cta') || '{}');
+        const ctaData = newLang === 'DE' ? deCta : enCta;
+
+        const ctaSection = ctaDiv.querySelector('section') as HTMLElement;
+        if (ctaSection) {
+          const heading = ctaSection.querySelector('h2') as HTMLElement;
+          const body = ctaSection.querySelector('p') as HTMLElement;
+          const link = ctaSection.querySelector('.bf-cta') as HTMLElement;
+
+          if (heading) {
+            heading.innerHTML = `${ctaData.heading}<em style="font-style: italic; color: var(--accent);">${ctaData.headingEm}</em>`;
+          }
+          if (body) {
+            body.textContent = ctaData.body;
+          }
+          if (link) {
+            const svg = link.querySelector('svg');
+            link.textContent = ctaData.ctaText;
+            if (svg) link.appendChild(svg);
+          }
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .a-services-hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f5f1e8 0%, #faf7f0 100%);
+  }
+
+  .a-services-hero__heading {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    color: var(--ink);
+  }
+
+  .a-services-hero__subheading {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0;
+  }
+
+  .a-services-grid__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .a-services-hero {
+      padding: 2rem 0;
+    }
+
+    .a-services-hero__heading {
+      font-size: 1.75rem;
+    }
+
+    .a-services-hero__subheading {
+      font-size: 1rem;
+    }
+
+    .a-services-grid__inner {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-services-hero {
+      padding: 1.5rem 0;
+    }
+
+    .a-services-hero__heading {
+      font-size: 1.5rem;
+    }
+
+    .a-services-hero__subheading {
+      font-size: 0.95rem;
+    }
+  }
+</style>

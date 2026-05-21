@@ -10,9 +10,17 @@ interface Props {
 
 const { lang = 'DE', cta, ctaHref = 'mailto:info@bumbleflies.de' } = Astro.props;
 
-const links = lang === 'DE'
-  ? ['Facilitation', 'AI Consulting', 'App Development', 'Arbeiten', 'Über uns']
-  : ['Facilitation', 'AI Consulting', 'App Development', 'Work', 'About'];
+const navItems = lang === 'DE'
+  ? [
+      { label: 'Services', href: '/services' },
+      { label: 'Arbeiten', href: '#' },
+      { label: 'Über uns', href: '#' },
+    ]
+  : [
+      { label: 'Services', href: '/services' },
+      { label: 'Work', href: '#' },
+      { label: 'About', href: '#' },
+    ];
 
 const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
 ---
@@ -25,8 +33,8 @@ const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
     </a>
 
     <div class="bf-nav__links">
-      {links.map((link) => (
-        <a key={link} href="#">{link}</a>
+      {navItems.map((item) => (
+        <a key={item.label} href={item.href}>{item.label}</a>
       ))}
     </div>
 

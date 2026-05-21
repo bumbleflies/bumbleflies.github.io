@@ -1,0 +1,153 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  tag: string;
+  description: string;
+  bullets: string[];
+}
+
+const { number, title, tag, description, bullets } = Astro.props;
+---
+
+<article class="a-service-card">
+  <div class="a-service-card__header">
+    <span class="a-service-card__number">{number}</span>
+    <h3 class="a-service-card__title">{title}</h3>
+  </div>
+
+  <span class="a-service-card__tag">{tag}</span>
+
+  <p class="a-service-card__description">{description}</p>
+
+  <ul class="a-service-card__bullets">
+    {bullets.map((bullet) => (
+      <li>{bullet}</li>
+    ))}
+  </ul>
+</article>
+
+<style>
+  .a-service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: var(--cream, #faf7f0);
+    border: 1px solid #e0dcd4;
+    border-radius: 0.5rem;
+    transition: transform var(--duration-normal), box-shadow var(--duration-normal);
+  }
+
+  .a-service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26, 23, 20, 0.1);
+  }
+
+  .a-service-card__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .a-service-card__number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .a-service-card__title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .a-service-card__tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0.75rem;
+    background: var(--accent);
+    color: white;
+    border-radius: 0.25rem;
+    width: fit-content;
+    font-weight: 500;
+  }
+
+  .a-service-card__description {
+    font-size: 1rem;
+    line-height: var(--lh-body);
+    color: #666;
+    margin: 0;
+  }
+
+  .a-service-card__bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .a-service-card__bullets li {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #666;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .a-service-card__bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .a-service-card {
+      padding: 1.5rem;
+      gap: 1rem;
+    }
+
+    .a-service-card__number {
+      font-size: 2rem;
+    }
+
+    .a-service-card__title {
+      font-size: 1.25rem;
+    }
+
+    .a-service-card__description {
+      font-size: 0.95rem;
+    }
+
+    .a-service-card__bullets li {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-service-card {
+      padding: 1.25rem;
+      gap: 0.75rem;
+    }
+
+    .a-service-card__number {
+      font-size: 1.75rem;
+    }
+
+    .a-service-card__title {
+      font-size: 1.125rem;
+    }
+  }
+</style>
