@@ -5,6 +5,7 @@ import Hero from '../components/Hero.astro';
 import ClientWall from '../components/ClientWall.astro';
 import ServicePillars from '../components/ServicePillars.astro';
 import Quote from '../components/Quote.astro';
+import CaseStudiesPreview from '../components/CaseStudiesPreview.astro';
 import FormatsGrid from '../components/FormatsGrid.astro';
 import CTAStrip from '../components/CTAStrip.astro';
 import Footer from '../components/Footer.astro';
@@ -56,6 +57,11 @@ const de = {
       { name: 'Hybrid', percentage: '10%', description: 'Workshops, in denen die einen im Raum sind und die anderen zugeschaltet. Ohne dass die Online-Leute zweite Klasse sind.' },
       { name: 'Vor Ort', percentage: '5%', description: 'Wenn die Energie es braucht: Retreats, Big-Room-Meetings, Off-Sites.' },
     ],
+  },
+  caseStudies: {
+    eyebrow: 'Echte Ergebnisse',
+    heading: 'So arbeiten wir mit echten Kunden.',
+    ctaText: 'Alle Fallstudien ansehen',
   },
   cta: {
     heading: 'Was steht bei euch',
@@ -112,6 +118,11 @@ const en = {
       { name: 'On-site', percentage: '5%', description: 'When the energy needs it: retreats, big-room meetings, off-sites.' },
     ],
   },
+  caseStudies: {
+    eyebrow: 'Real results',
+    heading: 'How we work with real clients.',
+    ctaText: 'View all case studies',
+  },
   cta: {
     heading: 'What\'s next',
     headingEm: 'on your plate?',
@@ -139,6 +150,12 @@ let currentLang: 'DE' | 'EN' = 'DE';
   <Quote
     text={currentLang === 'DE' ? de.quote : en.quote}
     cite={currentLang === 'DE' ? de.quoteCite : en.quoteCite}
+    lang={currentLang}
+  />
+  <CaseStudiesPreview
+    eyebrow={currentLang === 'DE' ? de.caseStudies.eyebrow : en.caseStudies.eyebrow}
+    heading={currentLang === 'DE' ? de.caseStudies.heading : en.caseStudies.heading}
+    ctaText={currentLang === 'DE' ? de.caseStudies.ctaText : en.caseStudies.ctaText}
     lang={currentLang}
   />
   <FormatsGrid
