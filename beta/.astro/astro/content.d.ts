@@ -208,14 +208,29 @@ declare module 'astro:content' {
   data: InferEntrySchema<"team">
 } & { render(): Render[".md"] };
 };
-"testimonials": Record<string, {
-  id: string;
-  slug: string;
+"testimonials": {
+"dialograum-geld-quote.md": {
+	id: "dialograum-geld-quote.md";
+  slug: "dialograum-geld-quote";
   body: string;
   collection: "testimonials";
-  data: InferEntrySchema<"testimonials">;
-  render(): Render[".md"];
-}>;
+  data: InferEntrySchema<"testimonials">
+} & { render(): Render[".md"] };
+"leaguesphere-quote.md": {
+	id: "leaguesphere-quote.md";
+  slug: "leaguesphere-quote";
+  body: string;
+  collection: "testimonials";
+  data: InferEntrySchema<"testimonials">
+} & { render(): Render[".md"] };
+"siemens-quote.md": {
+	id: "siemens-quote.md";
+  slug: "siemens-quote";
+  body: string;
+  collection: "testimonials";
+  data: InferEntrySchema<"testimonials">
+} & { render(): Render[".md"] };
+};
 
 	};
 

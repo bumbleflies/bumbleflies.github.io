@@ -1,0 +1,108 @@
+---
+interface Props {
+  author: string;
+  role: string;
+  company: string;
+  quote: string;
+  image?: string;
+  lang?: string;
+}
+
+const { author, role, company, quote, image, lang } = Astro.props;
+---
+
+<article class="a-testimonial-card">
+  <p class="a-testimonial-card__quote">{quote}</p>
+  {image && (
+    <img
+      src={image}
+      alt={author}
+      class="a-testimonial-card__image"
+    />
+  )}
+  <div class="a-testimonial-card__author-info">
+    <p class="a-testimonial-card__author">{author}</p>
+    <p class="a-testimonial-card__role">{role}</p>
+    <p class="a-testimonial-card__company">{company}</p>
+  </div>
+</article>
+
+<style>
+  .a-testimonial-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-left: 4px solid #d4a574;
+    background-color: #fdfcf7;
+    border-radius: 0.5rem;
+  }
+
+  .a-testimonial-card__quote {
+    font-family: var(--font-display, "Instrument Serif", serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #1a1a1a;
+    margin: 0;
+  }
+
+  .a-testimonial-card__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .a-testimonial-card__author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .a-testimonial-card__author {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+  }
+
+  .a-testimonial-card__role {
+    font-size: 0.8rem;
+    color: #d4a574;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+
+  .a-testimonial-card__company {
+    font-size: 0.8rem;
+    color: #4a4a4a;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .a-testimonial-card {
+      padding: 1.5rem;
+      gap: 1.25rem;
+    }
+
+    .a-testimonial-card__quote {
+      font-size: 1rem;
+    }
+
+    .a-testimonial-card__author {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .a-testimonial-card {
+      padding: 1rem;
+    }
+
+    .a-testimonial-card__quote {
+      font-size: 0.95rem;
+    }
+  }
+</style>
