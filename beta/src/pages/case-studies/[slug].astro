@@ -1,6 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import LangToggle from '../../components/LangToggle.astro';
 
 export async function getStaticPaths() {
   const caseStudies = await getCollection('case-studies', ({ data }) => data.published);
@@ -14,9 +17,11 @@ const { study } = Astro.props;
 const { Content } = await study.render();
 ---
 
-<Layout>
-  <main class="a-case-study-detail">
-    <article class="bf-container">
+<Layout title={study.data.title}>
+  <Nav slot="nav">
+    <LangToggle slot="lang" />
+  </Nav>
+  <article class="a-case-study-detail bf-container">
       <a href="/case-studies" class="a-case-study-detail__back">← Alle Fallstudien</a>
 
       <header class="a-case-study-detail__header">
@@ -37,15 +42,15 @@ const { Content } = await study.render();
       </aside>
 
       <div class="a-case-study-detail__cta">
-        <a href="/contact" class="bf-cta">Erstes Gespräch buchen</a>
+        <a href="mailto:info@bumbleflies.de" class="bf-cta">Erstes Gespräch buchen</a>
       </div>
     </article>
-  </main>
+  <Footer slot="footer" />
 </Layout>
 
 <style>
   .a-case-study-detail {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-xl) var(--space-3xl);
   }
 
   .a-case-study-detail__back {
