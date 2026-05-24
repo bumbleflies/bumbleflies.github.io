@@ -1,0 +1,114 @@
+---
+import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Hero from '../../components/Hero.astro';
+import ClientWall from '../../components/ClientWall.astro';
+import ServicePillars from '../../components/ServicePillars.astro';
+import Quote from '../../components/Quote.astro';
+import CaseStudiesPreview from '../../components/CaseStudiesPreview.astro';
+import FormatsGrid from '../../components/FormatsGrid.astro';
+import CTAStrip from '../../components/CTAStrip.astro';
+import Footer from '../../components/Footer.astro';
+
+// Content data
+const en = {
+  services: {
+    heading: 'What we deliver.',
+    eyebrow: 'Three pillars',
+    items: [
+      {
+        number: '01',
+        title: 'Facilitation',
+        tag: 'Workshops · Big-Room · Retros',
+        description: 'We design meetings, workshops and large-group events so the right topics get the right room — and everyone leaves with clear next steps.',
+        bullets: ['Open Space (8–500 PAX)', 'PI Planning · Town Halls', 'Retros · Strategy Days'],
+        formats: [
+          { kind: 'remote', label: 'Remote' },
+          { kind: 'hybrid', label: 'Hybrid' },
+          { kind: 'inperson', label: 'On-site' },
+        ],
+      },
+      {
+        number: '02',
+        title: 'AI Consulting',
+        tag: 'Strategy · Literacy · Pilots',
+        description: 'We help you find where AI actually moves the needle in your organisation — and walk with you from first pilot into everyday use.',
+        bullets: ['AI Readiness Assessment', 'Use-case workshops', 'Pilot facilitation & coaching'],
+        formats: [{ kind: 'ai', label: 'AI workflows' }],
+      },
+      {
+        number: '03',
+        title: 'App Development',
+        tag: 'Tools · Prototypes · MVPs',
+        description: 'From topics that surface in workshops, we build the tools your team actually needs — internal tooling, small MVPs, AI-powered apps.',
+        bullets: ['Internal tools & dashboards', 'AI-powered web apps', 'Fast prototype → real product'],
+        formats: [{ kind: 'build', label: 'End-to-end' }],
+      },
+    ],
+  },
+  quote: '"Most of the problems we solve start as a conversation. Some end there. Others need a pilot. Still others want to be built. We do all three."',
+  quoteCite: '— From our manifesto',
+  formats: {
+    heading: 'Remote-first.',
+    headingEnd: 'On-site when it matters.',
+    eyebrow: 'Where we work',
+    items: [
+      { name: 'Remote', percentage: '85%', description: 'Sessions, coachings, pilots — fully remote, async-friendly.' },
+      { name: 'Hybrid', percentage: '10%', description: 'Workshops where some are in the room and others dial in. Without the online folks being second-class.' },
+      { name: 'On-site', percentage: '5%', description: 'When the energy needs it: retreats, big-room meetings, off-sites.' },
+    ],
+  },
+  caseStudies: {
+    eyebrow: 'Real results',
+    heading: 'How we work with real clients.',
+    ctaText: 'View all case studies',
+  },
+  cta: {
+    heading: 'What\'s next',
+    headingEm: 'on your plate?',
+    body: 'Send us two sentences. We respond within 24h with the proposal that fits — workshop, AI pilot, or the right tool.',
+    ctaText: 'Book a first call',
+  },
+};
+
+const currentLang: 'DE' | 'EN' = 'EN';
+---
+
+<Layout title="bumbleflies — From Conversation to Code" lang={currentLang}>
+  <Nav slot="nav" lang={currentLang} />
+
+  <Hero lang={currentLang} />
+  <ClientWall lang={currentLang} />
+  <ServicePillars
+    heading={en.services.heading}
+    eyebrow={en.services.eyebrow}
+    services={en.services.items}
+    lang={currentLang}
+  />
+  <Quote
+    text={en.quote}
+    cite={en.quoteCite}
+    lang={currentLang}
+  />
+  <CaseStudiesPreview
+    eyebrow={en.caseStudies.eyebrow}
+    heading={en.caseStudies.heading}
+    ctaText={en.caseStudies.ctaText}
+    lang={currentLang}
+  />
+  <FormatsGrid
+    heading={en.formats.heading}
+    eyebrow={en.formats.eyebrow}
+    formats={en.formats.items}
+    lang={currentLang}
+  />
+  <CTAStrip
+    heading={en.cta.heading}
+    headingEm={en.cta.headingEm}
+    body={en.cta.body}
+    ctaText={en.cta.ctaText}
+    lang={currentLang}
+  />
+
+  <Footer slot="footer" lang={currentLang} />
+</Layout>

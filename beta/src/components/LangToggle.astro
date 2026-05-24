@@ -1,7 +1,6 @@
 ---
 interface Props {
   lang: 'DE' | 'EN';
-  onLangChange?: (lang: 'DE' | 'EN') => void;
   id?: string;
 }
 
@@ -30,11 +29,13 @@ const { lang, id = 'lang-toggle' } = Astro.props;
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.getAttribute('data-lang');
-      buttons.forEach(b => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
+      const path = window.location.pathname;
 
-      // Dispatch custom event for parent to listen to
-      window.dispatchEvent(new CustomEvent('lang-change', { detail: { lang } }));
+      if (lang === 'EN') {
+        window.location.href = path === '/' ? '/en/' : '/en' + path;
+      } else {
+        window.location.href = path.replace(/^\/en/, '') || '/';
+      }
     });
   });
 </script>

@@ -139,55 +139,6 @@ const enContent = content.EN;
   </div>
 </Layout>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('lang-change', (e: any) => {
-      const newLang = e.detail?.lang || 'DE';
-
-      // Update hero section
-      const heroHeading = document.querySelector('.a-risk-hero__heading') as HTMLElement;
-      if (heroHeading) {
-        const deValue = heroHeading.getAttribute('data-de');
-        const enValue = heroHeading.getAttribute('data-en');
-        heroHeading.textContent = newLang === 'DE' ? deValue : enValue;
-      }
-
-      const heroIntro = document.querySelector('.a-risk-hero__intro') as HTMLElement;
-      if (heroIntro) {
-        const deValue = heroIntro.getAttribute('data-de');
-        const enValue = heroIntro.getAttribute('data-en');
-        heroIntro.textContent = newLang === 'DE' ? deValue : enValue;
-      }
-
-      // Update CTA section
-      const ctaDiv = document.querySelector('.bf-cta-container') as HTMLElement;
-      if (ctaDiv) {
-        const deCta = JSON.parse(ctaDiv.getAttribute('data-de-cta') || '{}');
-        const enCta = JSON.parse(ctaDiv.getAttribute('data-en-cta') || '{}');
-        const ctaData = newLang === 'DE' ? deCta : enCta;
-
-        const ctaSection = ctaDiv.querySelector('section') as HTMLElement;
-        if (ctaSection) {
-          const heading = ctaSection.querySelector('h2') as HTMLElement;
-          const body = ctaSection.querySelector('p') as HTMLElement;
-          const link = ctaSection.querySelector('.bf-cta') as HTMLElement;
-
-          if (heading) {
-            heading.innerHTML = `${ctaData.heading}<em style="font-style: italic; color: var(--accent);">${ctaData.headingEm}</em>`;
-          }
-          if (body) {
-            body.textContent = ctaData.body;
-          }
-          if (link) {
-            const svg = link.querySelector('svg');
-            link.textContent = ctaData.ctaText;
-            if (svg) link.appendChild(svg);
-          }
-        }
-      }
-    });
-  });
-</script>
 
 <style>
   .a-risk-hero {

@@ -36,7 +36,7 @@ const featured = allCases.slice(0, 4);
     </div>
 
     <div class="a-case-studies-preview__cta">
-      <a href="/case-studies" class="bf-cta">
+      <a href={lang === 'DE' ? '/case-studies' : '/en/case-studies/'} class="bf-cta">
         {ctaText}
         <span aria-hidden="true">→</span>
       </a>

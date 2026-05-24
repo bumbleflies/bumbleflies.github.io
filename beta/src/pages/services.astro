@@ -217,67 +217,6 @@ const servicesData = {
   </div>
 </Layout>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('lang-change', (e: any) => {
-      const newLang = e.detail?.lang || 'DE';
-
-      // Update hero section
-      const heroHeading = document.querySelector('.a-services-hero__heading') as HTMLElement;
-      if (heroHeading) {
-        const deValue = heroHeading.getAttribute('data-de');
-        const enValue = heroHeading.getAttribute('data-en');
-        heroHeading.textContent = newLang === 'DE' ? deValue : enValue;
-      }
-
-      const heroSubheading = document.querySelector('.a-services-hero__subheading') as HTMLElement;
-      if (heroSubheading) {
-        const deValue = heroSubheading.getAttribute('data-de');
-        const enValue = heroSubheading.getAttribute('data-en');
-        heroSubheading.textContent = newLang === 'DE' ? deValue : enValue;
-      }
-
-      // Update service cards
-      const serviceCards = document.querySelectorAll('.a-service-card') as NodeListOf<HTMLElement>;
-      serviceCards.forEach(card => {
-        const cardLang = card.getAttribute('data-lang');
-        if (cardLang === newLang) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-
-      // Update CTA section
-      const ctaDiv = document.querySelector('.bf-cta-container') as HTMLElement;
-      if (ctaDiv) {
-        const deCta = JSON.parse(ctaDiv.getAttribute('data-de-cta') || '{}');
-        const enCta = JSON.parse(ctaDiv.getAttribute('data-en-cta') || '{}');
-        const ctaData = newLang === 'DE' ? deCta : enCta;
-
-        const ctaSection = ctaDiv.querySelector('section') as HTMLElement;
-        if (ctaSection) {
-          const heading = ctaSection.querySelector('h2') as HTMLElement;
-          const body = ctaSection.querySelector('p') as HTMLElement;
-          const link = ctaSection.querySelector('.bf-cta') as HTMLElement;
-
-          if (heading) {
-            heading.innerHTML = `${ctaData.heading}<em class="cta-emphasis">${ctaData.headingEm}</em>`;
-          }
-          if (body) {
-            body.textContent = ctaData.body;
-          }
-          if (link) {
-            const svg = link.querySelector('svg');
-            link.textContent = ctaData.ctaText;
-            if (svg) link.appendChild(svg);
-          }
-        }
-      }
-    });
-  });
-</script>
-
 <style>
   .a-services-hero {
     padding: 4rem 0;

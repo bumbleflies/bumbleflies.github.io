@@ -173,14 +173,4 @@ let currentLang: 'DE' | 'EN' = 'DE';
   />
 
   <Footer slot="footer" lang={currentLang} />
-
-  <script>
-    // Handle language changes
-    window.addEventListener('lang-change', (e: CustomEvent) => {
-      const newLang = e.detail.lang;
-      // Reload page with new language
-      // In production, would use a router/state management
-      window.location.href = `/?lang=${newLang}`;
-    });
-  </script>
 </Layout>

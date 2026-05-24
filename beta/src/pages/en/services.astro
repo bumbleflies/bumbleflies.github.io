@@ -1,0 +1,132 @@
+---
+import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CTAStrip from '../../components/CTAStrip.astro';
+import Footer from '../../components/Footer.astro';
+
+interface ContentSet {
+  pageTitle: string;
+  heroHeading: string;
+  heroSubheading: string;
+  ctaHeading: string;
+  ctaBody: string;
+  ctaText: string;
+  services: Array<{
+    number: string;
+    title: string;
+    tag: string;
+    description: string;
+    bullets: string[];
+  }>;
+}
+
+const content: ContentSet = {
+  pageTitle: 'Services',
+  heroHeading: 'Our Services',
+  heroSubheading:
+    'Four ways we can help you: Talk, Decide, Build & Embed, or the full journey.',
+  services: [
+    {
+      number: '01',
+      title: 'Talk: Facilitation & Workshops',
+      tag: 'Workshops · Big-Room · Retros',
+      description:
+        'We moderate your most important conversations and bring clarity to complex topics.',
+      bullets: [
+        'Open Space (8–500 participants)',
+        'PI-Planning · Town-Halls',
+        'Retros · Strategy Days',
+      ],
+    },
+    {
+      number: '02',
+      title: 'Decide: AI Consulting',
+      tag: 'Strategy · Literacy · Pilots',
+      description:
+        'We help you navigate the AI landscape and make informed decisions.',
+      bullets: [
+        'AI Readiness Assessment',
+        'Use-Case Workshops',
+        'Pilot Support',
+      ],
+    },
+    {
+      number: '03',
+      title: 'Build & Embed: App Development',
+      tag: 'Tools · MVPs · Integration',
+      description:
+        'We build the software that executes your strategy and empowers your team.',
+      bullets: [
+        'Internal tools & dashboards',
+        'AI-powered web apps',
+        'Fast prototype → production product',
+      ],
+    },
+    {
+      number: '04',
+      title: 'Full Journey: Integrated Transformation',
+      tag: 'End-to-End · Fixed Price · Milestones',
+      description:
+        'We guide you from the first conversation to the finished solution — all from one source.',
+      bullets: [
+        'Talk + Decide + Build integrated',
+        'Fixed price & milestones',
+        '16–26 weeks',
+      ],
+    },
+  ],
+  ctaHeading: 'Ready for',
+  ctaHeading_em: 'Transformation?',
+  ctaBody:
+    'Get in touch or book your first call. We look forward to speaking with you.',
+  ctaText: 'Book a first call',
+};
+
+const lang: 'DE' | 'EN' = 'EN';
+---
+
+<Layout title={content.pageTitle}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <section class="a-services-hero">
+      <div class="bf-container">
+        <h1 class="a-services-hero__heading">
+          {content.heroHeading}
+        </h1>
+        <p class="a-services-hero__subheading">
+          {content.heroSubheading}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-services-grid bf-section">
+      <div class="bf-container">
+        <div class="a-services-grid__inner">
+          {content.services.map((service, index) => (
+            <ServiceCard
+              number={service.number}
+              title={service.title}
+              tag={service.tag}
+              description={service.description}
+              bullets={service.bullets}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTAStrip
+      heading={content.ctaHeading}
+      headingEm={content.ctaHeading_em}
+      body={content.ctaBody}
+      ctaText={content.ctaText}
+      lang={lang}
+    />
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>

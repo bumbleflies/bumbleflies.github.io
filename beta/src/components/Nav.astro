@@ -19,19 +19,21 @@ const navItems = lang === 'DE'
       { label: 'Risiken', href: '/risk-derisking' },
     ]
   : [
-      { label: 'Services', href: '/services' },
-      { label: 'How We Work', href: '/how-we-work' },
-      { label: 'Why Bumbleflies', href: '/why-bumbleflies' },
-      { label: 'About', href: '/about' },
-      { label: 'Risk & De-Risking', href: '/risk-derisking' },
+      { label: 'Services', href: '/en/services/' },
+      { label: 'How We Work', href: '/en/how-we-work/' },
+      { label: 'Why Bumbleflies', href: '/en/why-bumbleflies/' },
+      { label: 'About', href: '/en/about/' },
+      { label: 'Risk & De-Risking', href: '/en/risk-derisking/' },
     ];
+
+const brandHref = lang === 'DE' ? '/' : '/en/';
 
 const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
 ---
 
 <nav class="bf-nav">
   <div class="bf-container">
-    <a href="/" class="bf-nav__brand">
+    <a href={brandHref} class="bf-nav__brand">
       <Mark />
       <span>bumbleflies</span>
     </a>

@@ -1,0 +1,96 @@
+---
+import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import RiskAccordion from '../../components/RiskAccordion.astro';
+import CTAStrip from '../../components/CTAStrip.astro';
+import Footer from '../../components/Footer.astro';
+
+interface ContentSet {
+  pageTitle: string;
+  heading: string;
+  intro: string;
+  riskItems: Array<{
+    title: string;
+    description: string;
+    mitigation: string;
+  }>;
+  ctaHeading: string;
+  ctaHeading_em: string;
+  ctaBody: string;
+  ctaText: string;
+}
+
+const content: ContentSet = {
+  pageTitle: 'Risk & De-Risking',
+  heading: 'Risks and how we mitigate them',
+  intro: 'Transformation isn\'t always smooth. Here are the five biggest risks we see — and how we de-risk them.',
+  riskItems: [
+    {
+      title: 'Risk 1: Organization not ready for change',
+      description: 'Leadership says yes, but the team is skeptical. Resistance builds quickly.',
+      mitigation: 'We start with a readiness phase. We surface concerns early, build trust, and create shared understanding.'
+    },
+    {
+      title: 'Risk 2: Pilot starts but nothing happens',
+      description: 'Workshops end, old patterns return. Teams fall back into old routines.',
+      mitigation: 'Adoption is integrated from day 1, not as the final phase. Users co-design the tool they use.'
+    },
+    {
+      title: 'Risk 3: Software project becomes expensive/long',
+      description: 'Scope creep, underestimated complexity. Budgets grow, timelines shift.',
+      mitigation: 'Fixed sprints with fixed milestones. Fixed price per phase. We make prioritization decisions quickly.'
+    },
+    {
+      title: 'Risk 4: CEO leaves and project gets cancelled',
+      description: 'Executive change, budget cuts, org restructure. Suddenly the project isn\'t a priority.',
+      mitigation: 'We document everything. We build the team, not individuals. Knowledge is distributed, not centralized.'
+    },
+    {
+      title: 'Risk 5: Partnership doesn\'t work',
+      description: 'Different work styles, communication breaks down. Team friction emerges.',
+      mitigation: '2-week trial phase, non-binding, transparent. We know quickly if it\'s a fit. Both sides can walk.'
+    }
+  ],
+  ctaHeading: 'Ready for',
+  ctaHeading_em: 'Transformation?',
+  ctaBody: 'Get in touch or book your first call. We look forward to speaking with you.',
+  ctaText: 'Book a first call'
+};
+
+const lang: 'DE' | 'EN' = 'EN';
+---
+
+<Layout title={content.pageTitle}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <section class="a-risk-hero">
+      <div class="bf-container">
+        <h1 class="a-risk-hero__heading">
+          {content.heading}
+        </h1>
+        <p class="a-risk-hero__intro">
+          {content.intro}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-risk-accordion bf-section">
+      <div class="bf-container">
+        <RiskAccordion items={content.riskItems} />
+      </div>
+    </section>
+
+    <CTAStrip
+      heading={content.ctaHeading}
+      headingEm={content.ctaHeading_em}
+      body={content.ctaBody}
+      ctaText={content.ctaText}
+      lang={lang}
+    />
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>

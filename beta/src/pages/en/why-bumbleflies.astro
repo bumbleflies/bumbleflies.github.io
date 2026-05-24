@@ -1,0 +1,91 @@
+---
+import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import CTAStrip from '../../components/CTAStrip.astro';
+import Footer from '../../components/Footer.astro';
+
+interface ContentSet {
+  pageTitle: string;
+  heading: string;
+  intro: string;
+  comparisonRows: Array<{
+    label: string;
+    fragmented: string;
+    integrated: string;
+  }>;
+  ctaHeading: string;
+  ctaHeading_em: string;
+  ctaBody: string;
+  ctaText: string;
+}
+
+const content: ContentSet = {
+  pageTitle: 'Why Bumbleflies',
+  heading: 'Integrated, not fragmented.',
+  intro: 'Most transformation services are relay races...',
+  comparisonRows: [
+    {
+      label: 'Who leads?',
+      fragmented: 'multiple',
+      integrated: 'one team'
+    },
+    {
+      label: 'Goal?',
+      fragmented: 'bill phases',
+      integrated: 'solution that works'
+    },
+    {
+      label: 'Learning between phases?',
+      fragmented: 'no',
+      integrated: 'yes'
+    },
+    {
+      label: 'Adoption?',
+      fragmented: 'at end',
+      integrated: 'from start'
+    }
+  ],
+  ctaHeading: 'Ready for',
+  ctaHeading_em: 'Transformation?',
+  ctaBody: 'Get in touch or book your first call. We look forward to speaking with you.',
+  ctaText: 'Book a first call'
+};
+
+const lang: 'DE' | 'EN' = 'EN';
+---
+
+<Layout title={content.pageTitle}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <section class="a-why-bumbleflies-hero">
+      <div class="bf-container">
+        <h1 class="a-why-bumbleflies-hero__heading">
+          {content.heading}
+        </h1>
+        <p class="a-why-bumbleflies-hero__intro">
+          {content.intro}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-why-bumbleflies-comparison bf-section">
+      <div class="bf-container">
+        <ComparisonTable rows={content.comparisonRows} />
+      </div>
+    </section>
+
+    <CTAStrip
+      heading={content.ctaHeading}
+      headingEm={content.ctaHeading_em}
+      body={content.ctaBody}
+      ctaText={content.ctaText}
+      lang={lang}
+    />
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>
