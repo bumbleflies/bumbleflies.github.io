@@ -24,30 +24,34 @@ const { title, company, service, quote, slug } = Astro.props;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 2rem;
-    background: var(--cream);
-    border: 1px solid #e0dcd4;
-    border-radius: 0.5rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
   }
 
   .a-case-study-card__title {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
     color: var(--ink);
   }
 
   .a-case-study-card__meta {
-    font-size: 0.875rem;
-    color: #666;
+    font-size: 0.6875rem;
+    color: #999;
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .a-case-study-card__quote {
     font-style: italic;
     color: #666;
     margin: 0;
-    padding-left: 1rem;
-    border-left: 3px solid var(--accent);
+    padding: 0;
+    border: none;
   }
 </style>
