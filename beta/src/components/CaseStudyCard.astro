@@ -11,11 +11,8 @@ const { title, company, service, quote, slug } = Astro.props;
 ---
 
 <article class="a-case-study-card">
-  <div class="a-case-study-card__header">
-    <h3 class="a-case-study-card__title">{title}</h3>
-    <p class="a-case-study-card__company">{company}</p>
-    <span class="a-case-study-card__service">{service}</span>
-  </div>
+  <h3 class="a-case-study-card__title">{title}</h3>
+  <p class="a-case-study-card__meta">{company} · {service}</p>
   <blockquote class="a-case-study-card__quote">{quote}</blockquote>
   <a href={`/case-studies/${slug}`} class="bf-cta">
     Mehr erfahren <span aria-hidden="true">→</span>
@@ -33,12 +30,6 @@ const { title, company, service, quote, slug } = Astro.props;
     border-radius: 0.5rem;
   }
 
-  .a-case-study-card__header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
   .a-case-study-card__title {
     font-family: var(--font-display);
     font-size: 1.5rem;
@@ -46,22 +37,10 @@ const { title, company, service, quote, slug } = Astro.props;
     color: var(--ink);
   }
 
-  .a-case-study-card__company {
+  .a-case-study-card__meta {
     font-size: 0.875rem;
     color: #666;
     margin: 0;
-  }
-
-  .a-case-study-card__service {
-    display: inline-block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.25rem 0.75rem;
-    background: var(--accent);
-    color: white;
-    border-radius: 0.25rem;
-    width: fit-content;
   }
 
   .a-case-study-card__quote {
