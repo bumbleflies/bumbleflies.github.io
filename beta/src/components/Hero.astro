@@ -1,11 +1,17 @@
 ---
-import FormatChip from './FormatChip.astro';
-
 interface Props {
   lang?: 'DE' | 'EN';
 }
 
 const { lang = 'DE' } = Astro.props;
+
+// Shared base packages (identical across DE and EN)
+const basePackages = [
+  { name: 'Quick Start', timeline: '1–2 weeks' },
+  { name: 'Use-Case Sprint', timeline: '4–6 weeks' },
+  { name: 'AI Adoption', timeline: '1–6 months' },
+  { name: 'Custom Program', timeline: 'Concept' },
+];
 
 const content = lang === 'DE'
   ? {
@@ -20,14 +26,18 @@ const content = lang === 'DE'
         { num: '03', label: 'Bauen', color: '#d4a573' },
         { num: '04', label: 'Begleiten', color: '#666666' },
       ],
-      metaL: '200+ Moderationen · 12 KI-Piloten · 9 Apps',
-      metaR: 'DE · EN · Remote-first',
-      metaBase: 'München · DE',
-      metaLLabel: 'Bilanz',
-      metaRLabel: 'Arbeitsweise',
-      metaBaseLabel: 'Sitz',
       ctaPrimary: 'Erstgespräch buchen',
       ctaSecondary: 'Wie wir arbeiten',
+      engagementPackages: basePackages.map((base, idx) => ({
+        ...base,
+        outcome: [
+          'Clarity über dein größtes Problem',
+          'AI-Opportunity Assessment',
+          'Funktionierender Prototyp',
+          'Team trainiert & unabhängig',
+        ][idx],
+        ctaText: 'Mehr erfahren',
+      })),
     }
   : {
       h1a: 'Three ways',
@@ -41,14 +51,18 @@ const content = lang === 'DE'
         { num: '03', label: 'Build', color: '#d4a573' },
         { num: '04', label: 'Embed', color: '#666666' },
       ],
-      metaL: '200+ facilitations · 12 AI pilots · 9 apps',
-      metaR: 'DE · EN · Remote-first',
-      metaBase: 'Munich · DE',
-      metaLLabel: 'Track record',
-      metaRLabel: 'How we work',
-      metaBaseLabel: 'Based in',
       ctaPrimary: 'Book a first call',
       ctaSecondary: 'How we work',
+      engagementPackages: basePackages.map((base, idx) => ({
+        ...base,
+        outcome: [
+          'Clarity on your biggest challenge',
+          'AI opportunity assessment',
+          'Working prototype',
+          'Team trained & independent',
+        ][idx],
+        ctaText: 'Learn more',
+      })),
     };
 ---
 
@@ -81,7 +95,7 @@ const content = lang === 'DE'
         </div>
         <div class="a-hero__ctas">
           <a class="bf-cta" href="mailto:info@bumbleflies.de">{content.ctaPrimary} →</a>
-          <a class="bf-cta bf-cta--ghost" href="#">{content.ctaSecondary}</a>
+          <a class="bf-cta bf-cta--ghost" href={lang === 'DE' ? '/how-we-work' : '/en/how-we-work'}>{content.ctaSecondary}</a>
         </div>
       </div>
       <img
@@ -91,19 +105,23 @@ const content = lang === 'DE'
       />
     </div>
 
-    <div class="a-hero__meta">
-      <div>
-        <b>{content.metaLLabel}</b>
-        <span class="a-hero__meta-value">{content.metaL}</span>
-      </div>
-      <div>
-        <b>{content.metaRLabel}</b>
-        <span class="a-hero__meta-value">{content.metaR}</span>
-      </div>
-      <div>
-        <b>{content.metaBaseLabel}</b>
-        <span class="a-hero__meta-value">{content.metaBase}</span>
-      </div>
+    <div class="a-hero__engagement-packages">
+      {content.engagementPackages.map((pkg, idx) => {
+        const num = String(idx + 1).padStart(2, '0');
+        const phase = content.steps[idx].label.toUpperCase();
+        return (
+          <div class="a-hero__package">
+            <div class="a-hero__package-header">
+              <span class="a-hero__package-num">{num}</span>
+              <span class="a-hero__package-phase">{phase}</span>
+            </div>
+            <h3 class="a-hero__package-name">{pkg.name}</h3>
+            <div class="a-hero__package-timeline">{pkg.timeline}</div>
+            <p class="a-hero__package-outcome">{pkg.outcome}</p>
+            <a class="bf-cta bf-cta--ghost a-hero__package-cta" href={lang === 'DE' ? '/services' : '/en/services'}>{pkg.ctaText}</a>
+          </div>
+        );
+      })}
     </div>
   </div>
 </section>
@@ -208,38 +226,72 @@ const content = lang === 'DE'
     margin-top: var(--space-lg);
   }
 
-  .a-hero__meta {
+  .a-hero__engagement-packages {
     margin-top: var(--space-3xl);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
     padding-top: var(--space-xl);
     border-top: 1px solid var(--rule);
   }
 
-  .a-hero__meta div {
-    font-size: var(--text-sm);
+  .a-hero__package {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: var(--space-md);
   }
 
-  .a-hero__meta b {
-    display: block;
-    font-size: var(--text-xs);
+  .a-hero__package-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+  }
+
+  .a-hero__package-num {
     font-family: var(--font-mono);
-    letter-spacing: var(--ls-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--ls-wider);
     text-transform: uppercase;
     color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  .a-hero__package-phase {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .a-hero__package-name {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    line-height: var(--lh-normal);
     margin: 0;
     font-weight: 500;
   }
 
-  .a-hero__meta-value {
-    font-family: var(--font-display);
-    font-size: var(--text-2xl);
-    letter-spacing: -0.02em;
-    line-height: var(--lh-normal);
+  .a-hero__package-timeline {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--ls-mono);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .a-hero__package-outcome {
+    font-size: var(--text-sm);
+    line-height: var(--lh-loose);
+    color: var(--ink-soft);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .a-hero__package-cta {
+    align-self: flex-start;
+    margin-top: var(--space-sm);
   }
 
   @media (max-width: 768px) {
@@ -264,7 +316,13 @@ const content = lang === 'DE'
       gap: var(--space-xs);
     }
 
-    .a-hero__meta {
+    .a-hero__engagement-packages {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-hero__engagement-packages {
       grid-template-columns: 1fr;
     }
   }
