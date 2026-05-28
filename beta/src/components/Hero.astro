@@ -9,11 +9,6 @@ const { lang = 'DE' } = Astro.props;
 
 const content = lang === 'DE'
   ? {
-      navLinks: [
-        { text: 'Facilitation · AI · Software', href: '/services' },
-        { text: 'remote, hybrid & vor Ort', href: '/how-we-work' },
-        { text: 'Why · We', href: '/why-we' }
-      ],
       h1a: 'Drei Wege,',
       h1b: 'wie wir mit',
       h1c: 'euch',
@@ -29,11 +24,6 @@ const content = lang === 'DE'
       ctaSecondary: 'Wie wir arbeiten',
     }
   : {
-      navLinks: [
-        { text: 'Facilitation · AI · Software', href: '/en/services' },
-        { text: 'remote, hybrid & on-site', href: '/en/how-we-work' },
-        { text: 'Why · We', href: '/en/why-we' }
-      ],
       h1a: 'Three ways',
       h1b: 'we work',
       h1c: 'with',
@@ -52,17 +42,6 @@ const content = lang === 'DE'
 
 <section class="a-hero bf-section--hero">
   <div class="bf-container">
-    <div class="a-hero__nav">
-      <nav class="a-hero__nav-links">
-        {content.navLinks.map((link, index) => (
-          <>
-            <a href={link.href} class="a-hero__nav-link">{link.text}</a>
-            {index < content.navLinks.length - 1 && <span class="a-hero__nav-separator">—</span>}
-          </>
-        ))}
-      </nav>
-    </div>
-
     <h1 class="a-hero__h1">
       {content.h1a}<br />
       {content.h1b} <em>{content.h1c}</em> {content.h1d}
@@ -112,36 +91,6 @@ const content = lang === 'DE'
     padding: var(--space-xl) 0 var(--space-4xl);
   }
 
-  .a-hero__nav {
-    padding-bottom: var(--space-2xl);
-    border-bottom: 1px solid var(--rule);
-    margin-bottom: var(--space-3xl);
-  }
-
-  .a-hero__nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    align-items: center;
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    letter-spacing: var(--ls-widest);
-    text-transform: uppercase;
-  }
-
-  .a-hero__nav-link {
-    color: var(--ink);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .a-hero__nav-link:hover {
-    color: var(--accent);
-  }
-
-  .a-hero__nav-separator {
-    color: var(--ink-soft);
-  }
 
   .a-hero__h1 {
     font-family: var(--font-display);
