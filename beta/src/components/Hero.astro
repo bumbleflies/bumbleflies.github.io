@@ -331,12 +331,13 @@ const content = lang === 'DE'
     }
 
     .a-hero__package {
-      border-right: none;
       padding-right: var(--space-md);
+      /* Keep border-right from desktop — it will naturally show on left column */
     }
 
     .a-hero__package:nth-child(even) {
       border-right: none;
+      padding-right: 0;
     }
   }
 
