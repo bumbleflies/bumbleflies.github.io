@@ -12,18 +12,14 @@ const { lang = 'DE', cta, ctaHref = 'mailto:info@bumbleflies.de' } = Astro.props
 
 const navItems = lang === 'DE'
   ? [
-      { label: 'Services', href: '/services' },
-      { label: 'Wie wir arbeiten', href: '/how-we-work' },
-      { label: 'Warum Bumbleflies', href: '/why-bumbleflies' },
-      { label: 'Über uns', href: '/about' },
-      { label: 'Risiken', href: '/risk-derisking' },
+      { label: 'Facilitation · AI · Software', href: '/services' },
+      { label: 'remote, hybrid & vor Ort', href: '/how-we-work' },
+      { label: 'Why · We', href: '/why-we' },
     ]
   : [
-      { label: 'Services', href: '/en/services/' },
-      { label: 'How We Work', href: '/en/how-we-work/' },
-      { label: 'Why Bumbleflies', href: '/en/why-bumbleflies/' },
-      { label: 'About', href: '/en/about/' },
-      { label: 'Risk & De-Risking', href: '/en/risk-derisking/' },
+      { label: 'Facilitation · AI · Software', href: '/en/services' },
+      { label: 'remote, hybrid & on-site', href: '/en/how-we-work' },
+      { label: 'Why · We', href: '/en/why-we' },
     ];
 
 const brandHref = lang === 'DE' ? '/' : '/en/';
@@ -93,11 +89,16 @@ const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
     margin: 0;
     padding: 0;
     list-style: none;
+    align-items: center;
   }
 
   .bf-nav__links a {
     transition: color var(--duration-fast);
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
+    font-family: var(--font-mono);
+    letter-spacing: var(--ls-widest);
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .bf-nav__links a:hover {
