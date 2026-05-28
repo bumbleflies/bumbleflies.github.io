@@ -30,6 +30,7 @@ const { title, company, service, quote, slug } = Astro.props;
     border-radius: 0;
     border-left: 3px solid #d4a573;
     padding-left: 16px;
+    min-height: 100%;
   }
 
   .a-case-study-card__title {
@@ -53,5 +54,6 @@ const { title, company, service, quote, slug } = Astro.props;
     margin: 0;
     padding: 0;
     border: none;
+    flex-grow: 1;
   }
 </style>
