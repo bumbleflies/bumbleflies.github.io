@@ -215,11 +215,13 @@ let currentLang: 'DE' | 'EN' = 'DE';
     stations={currentLang === 'DE' ? de.flow.stations : en.flow.stations}
     lang={currentLang}
   />
-  <Quote
-    text={currentLang === 'DE' ? de.quote : en.quote}
-    cite={currentLang === 'DE' ? de.quoteCite : en.quoteCite}
-    lang={currentLang}
-  />
+  <section class="a-quote-highlight">
+    <Quote
+      text={currentLang === 'DE' ? de.quote : en.quote}
+      cite={currentLang === 'DE' ? de.quoteCite : en.quoteCite}
+      lang={currentLang}
+    />
+  </section>
   <CaseStudiesPreview
     eyebrow={currentLang === 'DE' ? de.caseStudies.eyebrow : en.caseStudies.eyebrow}
     heading={currentLang === 'DE' ? de.caseStudies.heading : en.caseStudies.heading}
@@ -242,3 +244,17 @@ let currentLang: 'DE' | 'EN' = 'DE';
 
   <Footer slot="footer" lang={currentLang} />
 </Layout>
+
+<style>
+  .a-quote-highlight {
+    padding: 4rem 0;
+    background: var(--paper);
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .a-quote-highlight {
+      padding: 2.5rem 0;
+    }
+  }
+</style>
