@@ -17,29 +17,18 @@ const { text, cite, lang = 'DE' } = Astro.props;
 
 <style>
   .a-quote {
-    font-family: var(--font-display);
-    font-size: var(--text-4xl);
-    line-height: var(--lh-relaxed);
-    letter-spacing: -0.015em;
-    max-width: 900px;
-    margin: 0 auto;
+    font-style: italic;
     color: var(--ink);
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 700px;
   }
 
   .a-quote__cite {
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    letter-spacing: var(--ls-mono);
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    margin-top: 32px;
+    font-size: 0.875rem;
+    color: #999;
+    margin-top: 1.25rem;
     display: block;
-    font-weight: 500;
-  }
-
-  @media (max-width: 768px) {
-    .a-quote {
-      font-size: var(--text-3xl);
-    }
   }
 </style>
