@@ -14,6 +14,7 @@ const content = lang === 'DE'
       h1c: 'euch',
       h1d: 'arbeiten.',
       lede: 'Wir helfen Teams, ihre wichtigsten Gespräche zu führen, die richtigen Entscheidungen über KI zu treffen, und die Software dafür zu bauen — egal ob remote, hybrid oder im Raum.',
+      steps: ['Reden', 'Entscheiden', 'Bauen', 'Begleiten'],
       metaL: '200+ Moderationen · 12 KI-Piloten · 9 Apps',
       metaR: 'DE · EN · Remote-first',
       metaBase: 'München · DE',
@@ -29,6 +30,7 @@ const content = lang === 'DE'
       h1c: 'with',
       h1d: 'your team.',
       lede: 'We help teams hold their most important conversations, make the right decisions about AI, and build the software for it — remote, hybrid, or in the room.',
+      steps: ['Talk', 'Decide', 'Build', 'Embed'],
       metaL: '200+ facilitations · 12 AI pilots · 9 apps',
       metaR: 'DE · EN · Remote-first',
       metaBase: 'Munich · DE',
@@ -56,11 +58,9 @@ const content = lang === 'DE'
           class="a-hero__image"
         />
         <div class="a-hero__chips">
-          <FormatChip kind="remote">Remote</FormatChip>
-          <FormatChip kind="hybrid">Hybrid</FormatChip>
-          <FormatChip kind="inperson">{lang === 'DE' ? 'Vor Ort' : 'On-site'}</FormatChip>
-          <FormatChip kind="ai">AI</FormatChip>
-          <FormatChip kind="build">Software</FormatChip>
+          {content.steps.map((step) => (
+            <FormatChip kind="step">{step}</FormatChip>
+          ))}
         </div>
         <div class="a-hero__ctas">
           <a class="bf-cta" href="mailto:info@bumbleflies.de">{content.ctaPrimary} →</a>

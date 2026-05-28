@@ -1,5 +1,5 @@
 ---
-type FormatKind = 'remote' | 'hybrid' | 'inperson' | 'ai' | 'build';
+type FormatKind = 'remote' | 'hybrid' | 'inperson' | 'ai' | 'build' | 'step';
 
 interface Props {
   kind: FormatKind;
@@ -14,6 +14,7 @@ const dotColors: Record<FormatKind, string> = {
   inperson: 'var(--ink)',
   ai: 'var(--signal)',
   build: 'var(--accent)',
+  step: 'var(--accent)',
 };
 
 const dotColor = dotColors[kind] || 'var(--ink-soft)';
