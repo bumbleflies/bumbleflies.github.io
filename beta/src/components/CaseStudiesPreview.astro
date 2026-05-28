@@ -76,13 +76,19 @@ const featured = allCases.slice(0, 4);
 
   .a-case-studies-preview__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
   }
 
   .a-case-studies-preview__cta {
     text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .a-case-studies-preview__grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
   }
 
   @media (max-width: 768px) {
