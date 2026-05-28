@@ -3,7 +3,7 @@ import Layout from '../../components/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Hero from '../../components/Hero.astro';
 import ClientWall from '../../components/ClientWall.astro';
-import ServicePillars from '../../components/ServicePillars.astro';
+import StationFlow from '../../components/StationFlow.astro';
 import Quote from '../../components/Quote.astro';
 import CaseStudiesPreview from '../../components/CaseStudiesPreview.astro';
 import FormatsGrid from '../../components/FormatsGrid.astro';
@@ -48,6 +48,40 @@ const en = {
   },
   quote: '"Most of the problems we solve start as a conversation. Some end there. Others need a pilot. Still others want to be built. We do all three."',
   quoteCite: '— From our manifesto',
+  flow: {
+    eyebrow: 'How we work',
+    heading: 'One path. Four stations.',
+    stations: [
+      {
+        number: '01',
+        title: 'Talk',
+        subtitle: 'Facilitation',
+        description: 'We help you figure out what\'s actually at stake. Workshop, Open Space, strategy day — remote, hybrid or in the room.',
+        outputs: ['Clarity on the real problem', 'Decisions with owners', 'Shared context across the team'],
+      },
+      {
+        number: '02',
+        title: 'Decide',
+        subtitle: 'AI Consulting',
+        description: 'We bring your team up to speed on AI. Which use cases matter? Which are hype? What should be piloted first?',
+        outputs: ['AI Readiness Assessment', 'Prioritised use-case list', 'Shared vocabulary on the team'],
+      },
+      {
+        number: '03',
+        title: 'Build',
+        subtitle: 'App Development',
+        description: 'Ideas that survive the workshop need a prototype. We build it — fast, simple, adaptable.',
+        outputs: ['Clickable prototype in 2–4 weeks', 'MVP in 6–12 weeks', 'Clean handover to your team'],
+      },
+      {
+        number: '04',
+        title: 'Embed',
+        subtitle: 'Coaching & handover',
+        description: 'Once the tool exists, we help it stick. Trainings, office hours, retros — until you can continue without us.',
+        outputs: ['Adoption plan', 'Internal champions', 'Clean handover and exit'],
+      },
+    ],
+  },
   formats: {
     heading: 'Remote-first.',
     headingEnd: 'On-site when it matters.',
@@ -79,10 +113,10 @@ const currentLang: 'DE' | 'EN' = 'EN';
 
   <Hero lang={currentLang} />
   <ClientWall lang={currentLang} />
-  <ServicePillars
-    heading={en.services.heading}
-    eyebrow={en.services.eyebrow}
-    services={en.services.items}
+  <StationFlow
+    eyebrow={en.flow.eyebrow}
+    heading={en.flow.heading}
+    stations={en.flow.stations}
     lang={currentLang}
   />
   <Quote

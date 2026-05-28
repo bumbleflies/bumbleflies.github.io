@@ -61,6 +61,11 @@ const content = lang === 'DE'
     <div class="a-hero__content">
       <p class="a-hero__lede">{content.lede}</p>
       <div class="a-hero__actions">
+        <img
+          src="/images/hero-open-space.png"
+          alt={lang === 'DE' ? 'Open Space Facilitation — Kreis von Teilnehmenden' : 'Open Space Facilitation — circle of participants'}
+          class="a-hero__image"
+        />
         <div class="a-hero__chips">
           <FormatChip kind="remote">Remote</FormatChip>
           <FormatChip kind="hybrid">Hybrid</FormatChip>
@@ -142,6 +147,15 @@ const content = lang === 'DE'
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
+  }
+
+  .a-hero__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 8px rgba(26, 23, 20, 0.08);
   }
 
   .a-hero__chips {
