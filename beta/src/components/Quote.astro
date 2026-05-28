@@ -8,7 +8,7 @@ interface Props {
 const { text, cite, lang = 'DE' } = Astro.props;
 ---
 
-<section class="bf-section" style="padding: 120px 0;">
+<section class="bf-section" style="padding: 2rem 0;">
   <div class="bf-container" style="text-align: center;">
     <p class="a-quote">{text}</p>
     <span class="a-quote__cite">{cite}</span>
@@ -27,7 +27,7 @@ const { text, cite, lang = 'DE' } = Astro.props;
 
   .a-quote__cite {
     font-size: 0.875rem;
-    color: #999;
+    color: #666;
     margin-top: 1.25rem;
     display: block;
   }
