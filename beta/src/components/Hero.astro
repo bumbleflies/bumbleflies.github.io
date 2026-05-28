@@ -59,7 +59,10 @@ const content = lang === 'DE'
         />
         <div class="a-hero__chips">
           {content.steps.map((step) => (
-            <FormatChip kind="step">{step}</FormatChip>
+            <span class="bf-chip" style="--dot-color: var(--accent)">
+              <span class="bf-chip__dot"></span>
+              {step}
+            </span>
           ))}
         </div>
         <div class="a-hero__ctas">
