@@ -67,7 +67,21 @@ const year = new Date().getFullYear();
 
     <div class="bf-footer__meta">
       <span>© bumbleflies UG · München · {year}</span>
-      <span>{content.legal.join('  ·  ')}</span>
+      <div class="bf-footer__legal">
+        {lang === 'DE' ? (
+          <>
+            <a href="/impressum">Impressum</a>
+            <span>·</span>
+            <a href="/datenschutz">Datenschutz</a>
+          </>
+        ) : (
+          <>
+            <a href="/en/imprint">Imprint</a>
+            <span>·</span>
+            <a href="/en/privacy">Privacy</a>
+          </>
+        )}
+      </div>
     </div>
   </div>
 </footer>
@@ -141,6 +155,24 @@ const year = new Date().getFullYear();
     font-size: var(--text-xs);
     color: var(--ink-soft);
     font-family: var(--font-mono);
+  }
+
+  .bf-footer__legal {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .bf-footer__legal a {
+    color: var(--ink-soft);
+  }
+
+  .bf-footer__legal a:hover {
+    color: var(--accent);
+  }
+
+  .bf-footer__legal span {
+    color: var(--ink-soft);
   }
 
   @media (max-width: 768px) {
