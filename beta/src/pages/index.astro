@@ -9,199 +9,72 @@ import CaseStudiesPreview from '../components/CaseStudiesPreview.astro';
 import FormatsGrid from '../components/FormatsGrid.astro';
 import CTAStrip from '../components/CTAStrip.astro';
 import Footer from '../components/Footer.astro';
+import { getCollection } from 'astro:content';
 
-// Content data
-const de = {
-  services: {
-    heading: 'Was wir liefern.',
-    eyebrow: 'Drei Pillars',
-    items: [
-      {
-        number: '01',
-        title: 'Facilitation',
-        tag: 'Workshops · Big-Room · Retros',
-        description: 'Wir gestalten Meetings, Workshops und Großgruppen so, dass die richtigen Themen den richtigen Raum bekommen — und alle mit klaren nächsten Schritten rausgehen.',
-        bullets: ['Open Space (8–500 PAX)', 'PI-Planning · Town-Halls', 'Retros · Strategy Days'],
-        formats: [
-          { kind: 'remote', label: 'Remote' },
-          { kind: 'hybrid', label: 'Hybrid' },
-          { kind: 'inperson', label: 'Vor Ort' },
-        ],
-      },
-      {
-        number: '02',
-        title: 'AI Consulting',
-        tag: 'Strategy · Literacy · Pilots',
-        description: 'Wir helfen euch herauszufinden, wo KI in eurer Organisation wirklich Hebel hat — und begleiten den Weg vom ersten Piloten bis in den Alltag.',
-        bullets: ['AI Readiness Assessment', 'Use-Case-Workshops', 'Pilot-Begleitung & Coaching'],
-        formats: [{ kind: 'ai', label: 'AI-Workflows' }],
-      },
-      {
-        number: '03',
-        title: 'App Development',
-        tag: 'Tools · Prototypes · MVPs',
-        description: 'Aus den Themen, die in Workshops auftauchen, bauen wir die Werkzeuge, die euer Team wirklich braucht — internes Tooling, kleine MVPs, KI-gestützte Apps.',
-        bullets: ['Interne Tools & Dashboards', 'KI-gestützte Web-Apps', 'Schneller Prototyp → echtes Produkt'],
-        formats: [{ kind: 'build', label: 'End-to-End' }],
-      },
-    ],
-  },
-  quote: '"Die meisten Probleme, die wir lösen, fangen als Gespräch an. Manche enden auch dort. Andere brauchen einen Piloten. Wieder andere wollen gebaut werden. Wir machen alle drei."',
-  quoteCite: '— Aus unserem Manifesto',
-  flow: {
-    eyebrow: 'So arbeiten wir',
-    heading: 'Ein Pfad. Vier Stationen.',
-    stations: [
-      {
-        number: '01',
-        title: 'Reden',
-        subtitle: 'Facilitation',
-        description: 'Wir helfen euch herauszufinden, was wirklich ansteht. Workshop, Open Space, Strategy Day — remote, hybrid oder im Raum.',
-        outputs: ['Klarheit über das eigentliche Problem', 'Beschlüsse mit Owner', 'Geteilter Kontext im Team'],
-      },
-      {
-        number: '02',
-        title: 'Entscheiden',
-        subtitle: 'AI Consulting',
-        description: 'Wir bringen euer Team auf einen Stand bei KI. Welche Use Cases zählen? Welche sind Hype? Was sollte als erstes pilotiert werden?',
-        outputs: ['AI Readiness Assessment', 'Priorisierte Use-Case-Liste', 'Geteiltes Vokabular im Team'],
-      },
-      {
-        number: '03',
-        title: 'Bauen',
-        subtitle: 'App Development',
-        description: 'Die Ideen, die den Workshop überlebt haben, brauchen einen Prototyp. Wir bauen ihn — schnell, schlicht, anpassbar.',
-        outputs: ['Klickbarer Prototyp in 2–4 Wochen', 'MVP in 6–12 Wochen', 'Klare Übergabe an euer Team'],
-      },
-      {
-        number: '04',
-        title: 'Begleiten',
-        subtitle: 'Coaching & Handover',
-        description: 'Sobald das Tool steht, helfen wir es im Alltag zu verankern. Trainings, Sprechstunden, Retros — bis ihr ohne uns weiterkönnt.',
-        outputs: ['Adoption-Plan', 'Interne Champions', 'Klare Übergabe und Exit'],
-      },
-    ],
-  },
-  formats: {
-    heading: 'Remote-first.',
-    headingEnd: 'Vor Ort, wenn\'s zählt.',
-    eyebrow: 'Wo wir arbeiten',
-    items: [
-      { name: 'Remote', percentage: '85%', description: 'Sessions, Coachings, Pilots — vollständig remote, asynchron-freundlich.' },
-      { name: 'Hybrid', percentage: '10%', description: 'Workshops, in denen die einen im Raum sind und die anderen zugeschaltet. Ohne dass die Online-Leute zweite Klasse sind.' },
-      { name: 'Vor Ort', percentage: '5%', description: 'Wenn die Energie es braucht: Retreats, Big-Room-Meetings, Off-Sites.' },
-    ],
-  },
-  caseStudies: {
-    eyebrow: 'Echte Ergebnisse',
-    heading: 'So arbeiten wir mit echten Kunden.',
-    ctaText: 'Alle Fallstudien ansehen',
-  },
-  cta: {
-    heading: 'Was steht bei euch',
-    headingEm: 'als nächstes an?',
-    body: 'Schreib uns zwei Sätze. Wir antworten innerhalb von 24h mit dem Vorschlag, der zu eurem Anliegen passt — Workshop, KI-Pilot, oder das passende Tool.',
-    ctaText: 'Erstgespräch buchen',
-  },
+const homeContent = await getCollection('pages', ({ slug }) => slug === 'home');
+const page = homeContent[0];
+
+if (!page) {
+  throw new Error('Homepage content not found in collection');
+}
+
+const { data } = page;
+
+const currentLang: 'DE' | 'EN' = 'DE';
+
+const flow = {
+  eyebrow: 'So arbeiten wir',
+  heading: 'Ein Pfad. Vier Stationen.',
+  stations: [
+    {
+      number: '01',
+      title: 'Reden',
+      subtitle: 'Facilitation',
+      description: 'Wir helfen euch herauszufinden, was wirklich ansteht. Workshop, Open Space, Strategy Day — remote, hybrid oder im Raum.',
+      outputs: ['Klarheit über das eigentliche Problem', 'Beschlüsse mit Owner', 'Geteilter Kontext im Team'],
+    },
+    {
+      number: '02',
+      title: 'Entscheiden',
+      subtitle: 'AI Consulting',
+      description: 'Wir bringen euer Team auf einen Stand bei KI. Welche Use Cases zählen? Welche sind Hype? Was sollte als erstes pilotiert werden?',
+      outputs: ['AI Readiness Assessment', 'Priorisierte Use-Case-Liste', 'Geteiltes Vokabular im Team'],
+    },
+    {
+      number: '03',
+      title: 'Bauen',
+      subtitle: 'App Development',
+      description: 'Die Ideen, die den Workshop überlebt haben, brauchen einen Prototyp. Wir bauen ihn — schnell, schlicht, anpassbar.',
+      outputs: ['Klickbarer Prototyp in 2–4 Wochen', 'MVP in 6–12 Wochen', 'Klare Übergabe an euer Team'],
+    },
+    {
+      number: '04',
+      title: 'Begleiten',
+      subtitle: 'Coaching & Handover',
+      description: 'Sobald das Tool steht, helfen wir es im Alltag zu verankern. Trainings, Sprechstunden, Retros — bis ihr ohne uns weiterkönnt.',
+      outputs: ['Adoption-Plan', 'Interne Champions', 'Klare Übergabe und Exit'],
+    },
+  ],
 };
 
-const en = {
-  services: {
-    heading: 'What we deliver.',
-    eyebrow: 'Three pillars',
-    items: [
-      {
-        number: '01',
-        title: 'Facilitation',
-        tag: 'Workshops · Big-Room · Retros',
-        description: 'We design meetings, workshops and large-group events so the right topics get the right room — and everyone leaves with clear next steps.',
-        bullets: ['Open Space (8–500 PAX)', 'PI Planning · Town Halls', 'Retros · Strategy Days'],
-        formats: [
-          { kind: 'remote', label: 'Remote' },
-          { kind: 'hybrid', label: 'Hybrid' },
-          { kind: 'inperson', label: 'On-site' },
-        ],
-      },
-      {
-        number: '02',
-        title: 'AI Consulting',
-        tag: 'Strategy · Literacy · Pilots',
-        description: 'We help you find where AI actually moves the needle in your organisation — and walk with you from first pilot into everyday use.',
-        bullets: ['AI Readiness Assessment', 'Use-case workshops', 'Pilot facilitation & coaching'],
-        formats: [{ kind: 'ai', label: 'AI workflows' }],
-      },
-      {
-        number: '03',
-        title: 'App Development',
-        tag: 'Tools · Prototypes · MVPs',
-        description: 'From topics that surface in workshops, we build the tools your team actually needs — internal tooling, small MVPs, AI-powered apps.',
-        bullets: ['Internal tools & dashboards', 'AI-powered web apps', 'Fast prototype → real product'],
-        formats: [{ kind: 'build', label: 'End-to-end' }],
-      },
-    ],
-  },
-  quote: '"Most of the problems we solve start as a conversation. Some end there. Others need a pilot. Still others want to be built. We do all three."',
-  quoteCite: '— From our manifesto',
-  flow: {
-    eyebrow: 'How we work',
-    heading: 'One path. Four stations.',
-    stations: [
-      {
-        number: '01',
-        title: 'Talk',
-        subtitle: 'Facilitation',
-        description: 'We help you figure out what\'s actually at stake. Workshop, Open Space, strategy day — remote, hybrid or in the room.',
-        outputs: ['Clarity on the real problem', 'Decisions with owners', 'Shared context across the team'],
-      },
-      {
-        number: '02',
-        title: 'Decide',
-        subtitle: 'AI Consulting',
-        description: 'We bring your team up to speed on AI. Which use cases matter? Which are hype? What should be piloted first?',
-        outputs: ['AI Readiness Assessment', 'Prioritised use-case list', 'Shared vocabulary on the team'],
-      },
-      {
-        number: '03',
-        title: 'Build',
-        subtitle: 'App Development',
-        description: 'Ideas that survive the workshop need a prototype. We build it — fast, simple, adaptable.',
-        outputs: ['Clickable prototype in 2–4 weeks', 'MVP in 6–12 weeks', 'Clean handover to your team'],
-      },
-      {
-        number: '04',
-        title: 'Embed',
-        subtitle: 'Coaching & handover',
-        description: 'Once the tool exists, we help it stick. Trainings, office hours, retros — until you can continue without us.',
-        outputs: ['Adoption plan', 'Internal champions', 'Clean handover and exit'],
-      },
-    ],
-  },
-  formats: {
-    heading: 'Remote-first.',
-    headingEnd: 'On-site when it matters.',
-    eyebrow: 'Where we work',
-    items: [
-      { name: 'Remote', percentage: '85%', description: 'Sessions, coachings, pilots — fully remote, async-friendly.' },
-      { name: 'Hybrid', percentage: '10%', description: 'Workshops where some are in the room and others dial in. Without the online folks being second-class.' },
-      { name: 'On-site', percentage: '5%', description: 'When the energy needs it: retreats, big-room meetings, off-sites.' },
-    ],
-  },
-  caseStudies: {
-    eyebrow: 'Real results',
-    heading: 'How we work with real clients.',
-    ctaText: 'View all case studies',
-  },
-  cta: {
-    heading: 'What\'s next',
-    headingEm: 'on your plate?',
-    body: 'Send us two sentences. We respond within 24h with the proposal that fits — workshop, AI pilot, or the right tool.',
-    ctaText: 'Book a first call',
-  },
+const formats = {
+  heading: 'Remote-first.',
+  eyebrow: 'Wo wir arbeiten',
+  items: [
+    { name: 'Remote', percentage: '85%', description: 'Sessions, Coachings, Pilots — vollständig remote, asynchron-freundlich.' },
+    { name: 'Hybrid', percentage: '10%', description: 'Workshops, in denen die einen im Raum sind und die anderen zugeschaltet. Ohne dass die Online-Leute zweite Klasse sind.' },
+    { name: 'Vor Ort', percentage: '5%', description: 'Wenn die Energie es braucht: Retreats, Big-Room-Meetings, Off-Sites.' },
+  ],
 };
 
-// State management for language
-import { getImage } from 'astro:assets';
-let currentLang: 'DE' | 'EN' = 'DE';
+const caseStudies = {
+  eyebrow: 'Echte Ergebnisse',
+  heading: 'So arbeiten wir mit echten Kunden.',
+};
+
+const ctaHeading = 'Was steht bei euch';
+const ctaHeadingEm = 'als nächstes an?';
+const ctaBody = 'Schreib uns zwei Sätze. Wir antworten innerhalb von 24h mit dem Vorschlag, der zu eurem Anliegen passt — Workshop, KI-Pilot, oder das passende Tool.';
 ---
 
 <Layout title="bumbleflies — From Conversation to Code" lang={currentLang}>
@@ -210,35 +83,34 @@ let currentLang: 'DE' | 'EN' = 'DE';
   <Hero lang={currentLang} />
   <ClientWall lang={currentLang} />
   <StationFlow
-    eyebrow={currentLang === 'DE' ? de.flow.eyebrow : en.flow.eyebrow}
-    heading={currentLang === 'DE' ? de.flow.heading : en.flow.heading}
-    stations={currentLang === 'DE' ? de.flow.stations : en.flow.stations}
+    eyebrow={flow.eyebrow}
+    heading={flow.heading}
+    stations={flow.stations}
     lang={currentLang}
   />
   <section class="a-quote-highlight">
     <Quote
-      text={currentLang === 'DE' ? de.quote : en.quote}
-      cite={currentLang === 'DE' ? de.quoteCite : en.quoteCite}
+      text={data.quote ?? ''}
+      cite={data.quoteCite ?? ''}
       lang={currentLang}
     />
   </section>
   <CaseStudiesPreview
-    eyebrow={currentLang === 'DE' ? de.caseStudies.eyebrow : en.caseStudies.eyebrow}
-    heading={currentLang === 'DE' ? de.caseStudies.heading : en.caseStudies.heading}
-    ctaText={currentLang === 'DE' ? de.caseStudies.ctaText : en.caseStudies.ctaText}
+    eyebrow={caseStudies.eyebrow}
+    heading={caseStudies.heading}
     lang={currentLang}
   />
   <FormatsGrid
-    heading={currentLang === 'DE' ? de.formats.heading : en.formats.heading}
-    eyebrow={currentLang === 'DE' ? de.formats.eyebrow : en.formats.eyebrow}
-    formats={currentLang === 'DE' ? de.formats.items : en.formats.items}
+    heading={formats.heading}
+    eyebrow={formats.eyebrow}
+    formats={formats.items}
     lang={currentLang}
   />
   <CTAStrip
-    heading={currentLang === 'DE' ? de.cta.heading : en.cta.heading}
-    headingEm={currentLang === 'DE' ? de.cta.headingEm : en.cta.headingEm}
-    body={currentLang === 'DE' ? de.cta.body : en.cta.body}
-    ctaText={currentLang === 'DE' ? de.cta.ctaText : en.cta.ctaText}
+    heading={ctaHeading}
+    headingEm={ctaHeadingEm}
+    body={ctaBody}
+    ctaText={data.cta?.text ?? 'Erstes Gespräch vereinbaren'}
     lang={currentLang}
   />
 
