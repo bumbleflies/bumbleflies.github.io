@@ -6,8 +6,8 @@ import CTAStrip from '../components/CTAStrip.astro';
 import Footer from '../components/Footer.astro';
 import { getCollection } from 'astro:content';
 
-const dePages = await getCollection('pages', ({ slug }) => slug === 'why-bumbleflies');
-const enPages = await getCollection('pages', ({ slug }) => slug === 'en/why-bumbleflies');
+const dePages = await getCollection('pages', ({ id }) => id === 'why-bumbleflies');
+const enPages = await getCollection('pages', ({ id }) => id === 'en/why-bumbleflies');
 
 const dePage = dePages[0];
 const enPage = enPages[0];

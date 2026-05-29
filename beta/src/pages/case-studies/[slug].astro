@@ -8,13 +8,12 @@ import LangToggle from '../../components/LangToggle.astro';
 export async function getStaticPaths() {
   const caseStudies = await getCollection('case-studies', ({ data }) => data.published);
   return caseStudies.map(study => ({
-    params: { slug: study.slug },
+    params: { slug: study.id },
     props: { study },
   }));
 }
 
 const { study } = Astro.props;
-const { Content } = await study.render();
 ---
 
 <Layout title={study.data.title}>
@@ -34,7 +33,7 @@ const { Content } = await study.render();
       </header>
 
       <div class="a-case-study-detail__content">
-        <Content />
+        {study.body && <Fragment set:html={study.body} />}
       </div>
 
       <aside class="a-case-study-detail__quote">

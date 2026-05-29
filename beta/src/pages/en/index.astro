@@ -11,7 +11,7 @@ import CTAStrip from '../../components/CTAStrip.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 
-const homeContent = await getCollection('pages', ({ slug }) => slug === 'en/home');
+const homeContent = await getCollection('pages', ({ id }) => id === 'en/home');
 const page = homeContent[0];
 
 if (!page) {
