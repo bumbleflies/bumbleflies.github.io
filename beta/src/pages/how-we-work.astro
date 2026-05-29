@@ -3,73 +3,22 @@ import Layout from '../components/Layout.astro';
 import Nav from '../components/Nav.astro';
 import CTAStrip from '../components/CTAStrip.astro';
 import Footer from '../components/Footer.astro';
+import { getCollection } from 'astro:content';
 
-interface ContentSet {
-  pageTitle: string;
-  heading: string;
-  intro: string;
-  problemTitle: string;
-  problemBullets: string[];
-  solutionTitle: string;
-  solutionBullets: string[];
-  ctaHeading: string;
-  ctaHeading_em: string;
-  ctaBody: string;
-  ctaText: string;
+const dePages = await getCollection('pages', ({ slug }) => slug === 'how-we-work');
+const enPages = await getCollection('pages', ({ slug }) => slug === 'en/how-we-work');
+
+const dePage = dePages[0];
+const enPage = enPages[0];
+
+if (!dePage || !enPage) {
+  throw new Error('How We Work content not found in collection');
 }
 
-const content: Record<'DE' | 'EN', ContentSet> = {
-  DE: {
-    pageTitle: 'How We Work',
-    heading: 'Warum 80% der Transformationen scheitern (und wie wir es anders machen)',
-    intro: 'Die meisten Transformationsprojekte scheitern nicht an Ideen. Sie scheitern an der Umsetzung...',
-    problemTitle: 'Das Problem: Fragmentierte Services',
-    problemBullets: [
-      'Facilitation-Agentur → Consulting-Firma → Software-Haus',
-      'Niemand kümmert sich, ob Code genutzt wird',
-      'Teams müssen sich dreimal einarbeiten',
-      'Adoption im Nachhinein zu integrieren funktioniert nicht'
-    ],
-    solutionTitle: 'Unsere Lösung: Integrierte Adoption',
-    solutionBullets: [
-      'Ein Team versteht alle drei Bereiche',
-      'Workshop-Insights → Software direkt',
-      'Adoption von Tag 1, nicht als letzte Phase',
-      'Nutzer co-designen das Tool das sie verwenden'
-    ],
-    ctaHeading: 'Bereit für',
-    ctaHeading_em: 'Transformation?',
-    ctaBody: 'Schreiben Sie uns oder buchen Sie ein erstes Gespräch. Wir freuen uns auf den Austausch mit Ihnen.',
-    ctaText: 'Erstes Gespräch vereinbaren'
-  },
-  EN: {
-    pageTitle: 'How We Work',
-    heading: 'Why 80% of transformations fail (and how we do it differently)',
-    intro: 'Most transformation projects fail not on ideas. They fail on execution...',
-    problemTitle: 'The Problem: Fragmented Services',
-    problemBullets: [
-      'Facilitation agency → consulting firm → software house',
-      'Nobody cares if code is used',
-      'Teams go 3x onboarding',
-      'Retrofitting adoption doesn\'t work'
-    ],
-    solutionTitle: 'Our Solution: Integrated Adoption',
-    solutionBullets: [
-      'One team understanding all three',
-      'Workshop insights → software directly',
-      'Adoption from day 1, not phase at end',
-      'People using tool co-designed it'
-    ],
-    ctaHeading: 'Ready for',
-    ctaHeading_em: 'Transformation?',
-    ctaBody: 'Get in touch or book your first call. We look forward to speaking with you.',
-    ctaText: 'Book a first call'
-  }
-};
+const deContent = dePage.data;
+const enContent = enPage.data;
 
 let lang: 'DE' | 'EN' = 'DE';
-const deContent = content.DE;
-const enContent = content.EN;
 
 // Serialize for client-side rendering
 const contentData = {
@@ -78,7 +27,7 @@ const contentData = {
 };
 ---
 
-<Layout title={deContent.pageTitle}>
+<Layout title={deContent.title}>
   <div slot="nav">
     <Nav lang={lang} />
   </div>

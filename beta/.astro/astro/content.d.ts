@@ -177,14 +177,78 @@ declare module 'astro:content' {
   data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 };
-"pages": Record<string, {
-  id: string;
-  slug: string;
+"pages": {
+"datenschutz.md": {
+	id: "datenschutz.md";
+  slug: "datenschutz";
   body: string;
   collection: "pages";
-  data: InferEntrySchema<"pages">;
-  render(): Render[".md"];
-}>;
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+"en/home.md": {
+	id: "en/home.md";
+  slug: "en/home";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+"en/how-we-work.md": {
+	id: "en/how-we-work.md";
+  slug: "en/how-we-work";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+"en/imprint.md": {
+	id: "en/imprint.md";
+  slug: "en/imprint";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+"en/privacy.md": {
+	id: "en/privacy.md";
+  slug: "en/privacy";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+"en/why-bumbleflies.md": {
+	id: "en/why-bumbleflies.md";
+  slug: "en/why-bumbleflies";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+"home.md": {
+	id: "home.md";
+  slug: "home";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+"how-we-work.md": {
+	id: "how-we-work.md";
+  slug: "how-we-work";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+"impressum.md": {
+	id: "impressum.md";
+  slug: "impressum";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+"why-bumbleflies.md": {
+	id: "why-bumbleflies.md";
+  slug: "why-bumbleflies";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
+};
 "team": {
 "christian.md": {
 	id: "christian.md";
