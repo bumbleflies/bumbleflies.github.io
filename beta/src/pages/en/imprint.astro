@@ -1,8 +1,12 @@
 ---
 import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="Imprint">
+<Layout title="Imprint" lang="EN">
+  <Nav slot="nav" lang="EN" />
+  <Footer slot="footer" lang="EN" />
   <div style="max-width: 800px; margin: 4rem auto; padding: 0 2rem; line-height: 1.8;">
     <h1>Imprint</h1>
 
@@ -85,7 +89,6 @@ import Layout from '../../components/Layout.astro';
       Last updated: May 2026
     </p>
   </div>
-</Layout>
 
 <style>
   h1, h4, h5 {
@@ -110,3 +113,4 @@ import Layout from '../../components/Layout.astro';
     text-decoration: underline;
   }
 </style>
+</Layout>

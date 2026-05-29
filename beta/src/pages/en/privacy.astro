@@ -1,8 +1,12 @@
 ---
 import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="Privacy Policy">
+<Layout title="Privacy Policy" lang="EN">
+  <Nav slot="nav" lang="EN" />
+  <Footer slot="footer" lang="EN" />
   <div style="max-width: 800px; margin: 4rem auto; padding: 0 2rem; line-height: 1.8;">
     <h1>Privacy Policy</h1>
 
@@ -193,7 +197,6 @@ import Layout from '../../components/Layout.astro';
       Last updated: May 2026
     </p>
   </div>
-</Layout>
 
 <style>
   h1, h3, h4 {
@@ -225,3 +228,4 @@ import Layout from '../../components/Layout.astro';
     color: var(--ink);
   }
 </style>
+</Layout>
