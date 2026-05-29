@@ -1,0 +1,27 @@
+---
+import '../styles/design-system.css';
+
+interface Props {
+  title: string;
+  lang?: 'DE' | 'EN';
+}
+
+const { title, lang = 'DE' } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang === 'DE' ? 'de' : 'en'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="bumbleflies — Facilitation, AI Consulting, App Development" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot name="nav" />
+    <main>
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>

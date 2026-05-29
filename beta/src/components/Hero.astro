@@ -1,0 +1,355 @@
+---
+interface Props {
+  lang?: 'DE' | 'EN';
+}
+
+const { lang = 'DE' } = Astro.props;
+
+// Shared base packages (identical across DE and EN)
+const basePackages = [
+  { name: 'Quick Start', timeline: '1–2 weeks' },
+  { name: 'Use-Case Sprint', timeline: '4–6 weeks' },
+  { name: 'AI Adoption', timeline: '1–6 months' },
+  { name: 'Custom Program', timeline: 'Concept' },
+];
+
+const content = lang === 'DE'
+  ? {
+      h1a: 'Drei Wege,',
+      h1b: 'wie wir mit',
+      h1c: 'euch',
+      h1d: 'arbeiten.',
+      lede: 'Wir helfen Teams, ihre wichtigsten Gespräche zu führen, die richtigen Entscheidungen über KI zu treffen, und die Software dafür zu bauen — egal ob remote, hybrid oder im Raum.',
+      steps: [
+        { num: '01', label: 'Reden', color: '#1a1a1a' },
+        { num: '02', label: 'Entscheiden', color: '#4a86e8' },
+        { num: '03', label: 'Bauen', color: '#d4a573' },
+        { num: '04', label: 'Begleiten', color: '#666666' },
+      ],
+      ctaPrimary: 'Erstgespräch buchen',
+      ctaSecondary: 'Wie wir arbeiten',
+      engagementPackages: basePackages.map((base, idx) => ({
+        ...base,
+        outcome: [
+          'Clarity über dein größtes Problem',
+          'AI-Opportunity Assessment',
+          'Funktionierender Prototyp',
+          'Team trainiert & unabhängig',
+        ][idx],
+        ctaText: 'Mehr erfahren',
+      })),
+    }
+  : {
+      h1a: 'Three ways',
+      h1b: 'we work',
+      h1c: 'with',
+      h1d: 'your team.',
+      lede: 'We help teams hold their most important conversations, make the right decisions about AI, and build the software for it — remote, hybrid, or in the room.',
+      steps: [
+        { num: '01', label: 'Talk', color: '#1a1a1a' },
+        { num: '02', label: 'Decide', color: '#4a86e8' },
+        { num: '03', label: 'Build', color: '#d4a573' },
+        { num: '04', label: 'Embed', color: '#666666' },
+      ],
+      ctaPrimary: 'Book a first call',
+      ctaSecondary: 'How we work',
+      engagementPackages: basePackages.map((base, idx) => ({
+        ...base,
+        outcome: [
+          'Clarity on your biggest challenge',
+          'AI opportunity assessment',
+          'Working prototype',
+          'Team trained & independent',
+        ][idx],
+        ctaText: 'Learn more',
+      })),
+    };
+---
+
+<section class="a-hero bf-section--hero">
+  <div class="bf-container">
+    <h1 class="a-hero__h1">
+      {content.h1a}<br />
+      {content.h1b} <em>{content.h1c}</em> {content.h1d}
+    </h1>
+
+    <div class="a-hero__content">
+      <div class="a-hero__left">
+        <p class="a-hero__lede">{content.lede}</p>
+        <div class="a-hero__process-flow">
+          <svg class="a-hero__process-line" viewBox="0 0 1000 80">
+            <line x1="100" y1="40" x2="900" y2="40" stroke="#ddd" strokeWidth="2" />
+            {content.steps.map((step, idx) => {
+              const x = 100 + (idx * 800) / (content.steps.length - 1);
+              return <circle cx={x} cy="40" r="18" fill={step.color} />;
+            })}
+          </svg>
+          <div class="a-hero__process-labels">
+            {content.steps.map((step) => (
+              <div class="a-hero__process-item">
+                <span class="a-hero__process-num">{step.num}</span>
+                <span class="a-hero__process-label">{step.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="a-hero__ctas">
+          <a class="bf-cta" href="mailto:info@bumbleflies.de">{content.ctaPrimary} →</a>
+          <a class="bf-cta bf-cta--ghost" href={lang === 'DE' ? '/how-we-work' : '/en/how-we-work'}>{content.ctaSecondary}</a>
+        </div>
+      </div>
+      <img
+        src="/images/hero-open-space.png"
+        alt={lang === 'DE' ? 'Open Space Facilitation — Kreis von Teilnehmenden' : 'Open Space Facilitation — circle of participants'}
+        class="a-hero__image"
+      />
+    </div>
+
+    <div class="a-hero__engagement-packages">
+      {content.engagementPackages.map((pkg, idx) => {
+        const num = String(idx + 1).padStart(2, '0');
+        const phase = content.steps[idx].label.toUpperCase();
+        return (
+          <div class="a-hero__package">
+            <div class="a-hero__package-header">
+              <span class="a-hero__package-num">{num}</span>
+              <span class="a-hero__package-phase">{phase}</span>
+            </div>
+            <h3 class="a-hero__package-name">{pkg.name}</h3>
+            <div class="a-hero__package-timeline">{pkg.timeline}</div>
+            <p class="a-hero__package-outcome">{pkg.outcome}</p>
+            <a class="bf-cta bf-cta--ghost a-hero__package-cta" href={lang === 'DE' ? '/services' : '/en/services'}>{pkg.ctaText}</a>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<style>
+  .a-hero {
+    padding: var(--space-xl) 0 var(--space-4xl);
+  }
+
+
+  .a-hero__h1 {
+    font-family: var(--font-display);
+    font-size: var(--text-9xl);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-tight);
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .a-hero__h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .a-hero__content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-4xl);
+    margin-top: var(--space-3xl);
+    align-items: flex-start;
+  }
+
+  .a-hero__left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xl);
+  }
+
+  .a-hero__lede {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-2xl);
+    line-height: var(--lh-loose);
+    max-width: 520px;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .a-hero__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 8px rgba(26, 23, 20, 0.08);
+  }
+
+  .a-hero__process-flow {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .a-hero__process-line {
+    width: 100%;
+    height: 80px;
+  }
+
+  .a-hero__process-labels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .a-hero__process-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: center;
+  }
+
+  .a-hero__process-num {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .a-hero__process-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .a-hero__ctas {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  .a-hero__engagement-packages {
+    margin-top: var(--space-3xl);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4xl);
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .a-hero__package {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    border-right: 1px solid var(--rule);
+    padding-right: var(--space-4xl);
+  }
+
+  .a-hero__package:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .a-hero__package-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+  }
+
+  .a-hero__package-num {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  .a-hero__package-phase {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .a-hero__package-name {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    line-height: var(--lh-normal);
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .a-hero__package-timeline {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    letter-spacing: var(--ls-mono);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .a-hero__package-outcome {
+    font-size: var(--text-md);
+    line-height: var(--lh-loose);
+    color: var(--ink-soft);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .a-hero__package-cta {
+    align-self: flex-start;
+    margin-top: var(--space-sm);
+  }
+
+  @media (max-width: 768px) {
+    .a-hero {
+      padding: var(--space-xl) 0 var(--space-3xl);
+    }
+
+    .a-hero__h1 {
+      font-size: var(--text-5xl);
+    }
+
+    .a-hero__content {
+      grid-template-columns: 1fr;
+      gap: var(--space-2xl);
+    }
+
+    .a-hero__left {
+      gap: var(--space-2xl);
+    }
+
+    .a-hero__process-flow {
+      gap: var(--space-xs);
+    }
+
+    .a-hero__engagement-packages {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-2xl);
+    }
+
+    .a-hero__package {
+      padding-right: var(--space-md);
+      /* Keep border-right from desktop — it will naturally show on left column */
+    }
+
+    .a-hero__package:nth-child(even) {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-hero__engagement-packages {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .a-hero__package {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+</style>

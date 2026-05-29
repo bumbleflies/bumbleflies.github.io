@@ -1,0 +1,131 @@
+---
+import Mark from './Mark.astro';
+import LangToggle from './LangToggle.astro';
+
+interface Props {
+  lang?: 'DE' | 'EN';
+  cta?: string;
+  ctaHref?: string;
+}
+
+const { lang = 'DE', cta, ctaHref = 'mailto:info@bumbleflies.de' } = Astro.props;
+
+const navItems = lang === 'DE'
+  ? [
+      { label: 'Facilitation · AI · Software', href: '/services' },
+      { label: 'remote, hybrid & vor Ort', href: '/how-we-work' },
+      { label: 'Warum · Wir', href: '/why-we' },
+    ]
+  : [
+      { label: 'Facilitation · AI · Software', href: '/en/services' },
+      { label: 'remote, hybrid & on-site', href: '/en/how-we-work' },
+      { label: 'Why · We', href: '/en/why-we' },
+    ];
+
+const brandHref = lang === 'DE' ? '/' : '/en/';
+
+const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
+---
+
+<nav class="bf-nav">
+  <div class="bf-container">
+    <a href={brandHref} class="bf-nav__brand">
+      <Mark />
+      <span>bumbleflies</span>
+    </a>
+
+    <div class="bf-nav__links">
+      {navItems.map((item) => (
+        <a key={item.label} href={item.href}>{item.label}</a>
+      ))}
+    </div>
+
+    <div class="bf-nav__right">
+      <LangToggle lang={lang} />
+      <a class="bf-cta" href={ctaHref}>
+        {ctaLabel}
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M2 11L11 2M11 2H4M11 2v7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .bf-nav {
+    display: flex;
+    align-items: center;
+    padding: 22px 0;
+    font-size: var(--text-base);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .bf-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2xl);
+    padding: 0 var(--space-3xl);
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .bf-nav__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: var(--ls-normal);
+    flex-shrink: 0;
+    font-family: var(--font-sans);
+  }
+
+  .bf-nav__links {
+    display: flex;
+    gap: var(--space-2xl);
+    color: var(--ink-soft);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+  }
+
+  .bf-nav__links a {
+    transition: color var(--duration-fast);
+    font-size: var(--text-sm);
+    font-family: var(--font-mono);
+    letter-spacing: var(--ls-widest);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .bf-nav__links a:hover {
+    color: var(--ink);
+  }
+
+  .bf-nav__right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .bf-nav {
+      padding: 16px 0;
+    }
+
+    .bf-container {
+      padding: 0 var(--space-lg);
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .bf-nav__links {
+      display: none;
+    }
+  }
+</style>

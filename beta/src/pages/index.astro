@@ -1,0 +1,132 @@
+---
+import Layout from '../components/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import ClientWall from '../components/ClientWall.astro';
+import StationFlow from '../components/StationFlow.astro';
+import Quote from '../components/Quote.astro';
+import CaseStudiesPreview from '../components/CaseStudiesPreview.astro';
+import FormatsGrid from '../components/FormatsGrid.astro';
+import CTAStrip from '../components/CTAStrip.astro';
+import Footer from '../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const homeContent = await getCollection('pages', ({ id }) => id === 'home');
+const page = homeContent[0];
+
+if (!page) {
+  throw new Error('Homepage content not found in collection');
+}
+
+const { data } = page;
+
+const currentLang: 'DE' | 'EN' = 'DE';
+
+const flow = {
+  eyebrow: 'So arbeiten wir',
+  heading: 'Ein Pfad. Vier Stationen.',
+  stations: [
+    {
+      number: '01',
+      title: 'Reden',
+      subtitle: 'Facilitation',
+      description: 'Wir helfen euch herauszufinden, was wirklich ansteht. Workshop, Open Space, Strategy Day — remote, hybrid oder im Raum.',
+      outputs: ['Klarheit über das eigentliche Problem', 'Beschlüsse mit Owner', 'Geteilter Kontext im Team'],
+    },
+    {
+      number: '02',
+      title: 'Entscheiden',
+      subtitle: 'AI Consulting',
+      description: 'Wir bringen euer Team auf einen Stand bei KI. Welche Use Cases zählen? Welche sind Hype? Was sollte als erstes pilotiert werden?',
+      outputs: ['AI Readiness Assessment', 'Priorisierte Use-Case-Liste', 'Geteiltes Vokabular im Team'],
+    },
+    {
+      number: '03',
+      title: 'Bauen',
+      subtitle: 'App Development',
+      description: 'Die Ideen, die den Workshop überlebt haben, brauchen einen Prototyp. Wir bauen ihn — schnell, schlicht, anpassbar.',
+      outputs: ['Klickbarer Prototyp in 2–4 Wochen', 'MVP in 6–12 Wochen', 'Klare Übergabe an euer Team'],
+    },
+    {
+      number: '04',
+      title: 'Begleiten',
+      subtitle: 'Coaching & Handover',
+      description: 'Sobald das Tool steht, helfen wir es im Alltag zu verankern. Trainings, Sprechstunden, Retros — bis ihr ohne uns weiterkönnt.',
+      outputs: ['Adoption-Plan', 'Interne Champions', 'Klare Übergabe und Exit'],
+    },
+  ],
+};
+
+const formats = {
+  heading: 'Remote-first.',
+  eyebrow: 'Wo wir arbeiten',
+  items: [
+    { name: 'Remote', percentage: '85%', description: 'Sessions, Coachings, Pilots — vollständig remote, asynchron-freundlich.' },
+    { name: 'Hybrid', percentage: '10%', description: 'Workshops, in denen die einen im Raum sind und die anderen zugeschaltet. Ohne dass die Online-Leute zweite Klasse sind.' },
+    { name: 'Vor Ort', percentage: '5%', description: 'Wenn die Energie es braucht: Retreats, Big-Room-Meetings, Off-Sites.' },
+  ],
+};
+
+const caseStudies = {
+  eyebrow: 'Echte Ergebnisse',
+  heading: 'So arbeiten wir mit echten Kunden.',
+};
+
+const ctaHeading = 'Was steht bei euch';
+const ctaHeadingEm = 'als nächstes an?';
+const ctaBody = 'Schreib uns zwei Sätze. Wir antworten innerhalb von 24h mit dem Vorschlag, der zu eurem Anliegen passt — Workshop, KI-Pilot, oder das passende Tool.';
+---
+
+<Layout title="bumbleflies — From Conversation to Code" lang={currentLang}>
+  <Nav slot="nav" lang={currentLang} />
+
+  <Hero lang={currentLang} />
+  <ClientWall lang={currentLang} />
+  <StationFlow
+    eyebrow={flow.eyebrow}
+    heading={flow.heading}
+    stations={flow.stations}
+    lang={currentLang}
+  />
+  <section class="a-quote-highlight">
+    <Quote
+      text={data.quote ?? ''}
+      cite={data.quoteCite ?? ''}
+      lang={currentLang}
+    />
+  </section>
+  <CaseStudiesPreview
+    eyebrow={caseStudies.eyebrow}
+    heading={caseStudies.heading}
+    lang={currentLang}
+  />
+  <FormatsGrid
+    heading={formats.heading}
+    eyebrow={formats.eyebrow}
+    formats={formats.items}
+    lang={currentLang}
+  />
+  <CTAStrip
+    heading={ctaHeading}
+    headingEm={ctaHeadingEm}
+    body={ctaBody}
+    ctaText={data.cta?.text ?? 'Erstes Gespräch vereinbaren'}
+    lang={currentLang}
+  />
+
+  <Footer slot="footer" lang={currentLang} />
+</Layout>
+
+<style>
+  .a-quote-highlight {
+    padding: 4rem 0;
+    background: var(--paper);
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .a-quote-highlight {
+      padding: 2.5rem 0;
+    }
+  }
+</style>

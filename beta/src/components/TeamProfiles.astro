@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import TeamCard from './TeamCard.astro';
+
+const team = await getCollection('team');
+const sorted = team.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
+---
+
+<div class="a-team-profiles__grid">
+      {sorted.map(member => (
+        <TeamCard
+          name={member.data.name}
+          role={member.data.role}
+          bio={member.data.bio}
+          image={member.data.image}
+        />
+      ))}
+    </div>
+
+<style>
+  .a-team-profiles__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .a-team-profiles__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .a-team-profiles__heading {
+      font-size: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,53 @@
+---
+import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import CTAStrip from '../../components/CTAStrip.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const enPages = await getCollection('pages', ({ id }) => id === 'en/why-bumbleflies');
+
+if (!enPages[0]) {
+  throw new Error('EN Why Bumbleflies content not found in collection');
+}
+
+const content = enPages[0].data;
+
+const lang: 'DE' | 'EN' = 'EN';
+---
+
+<Layout title={content.title}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <section class="a-why-bumbleflies-hero">
+      <div class="bf-container">
+        <h1 class="a-why-bumbleflies-hero__heading">
+          {content.heading}
+        </h1>
+        <p class="a-why-bumbleflies-hero__intro">
+          {content.intro}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-why-bumbleflies-comparison bf-section">
+      <div class="bf-container">
+        <ComparisonTable rows={content.comparisonRows} />
+      </div>
+    </section>
+
+    <CTAStrip
+      heading={content.ctaHeading}
+      headingEm={content.ctaHeading_em}
+      body={content.ctaBody}
+      ctaText={content.ctaText}
+      lang={lang}
+    />
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>

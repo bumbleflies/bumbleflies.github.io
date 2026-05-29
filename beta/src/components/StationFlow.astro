@@ -1,0 +1,209 @@
+---
+interface Station {
+  number: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  outputs: string[];
+}
+
+interface Props {
+  eyebrow: string;
+  heading: string;
+  stations: Station[];
+  lang?: 'DE' | 'EN';
+}
+
+const { eyebrow, heading, stations, lang = 'DE' } = Astro.props;
+---
+
+<section class="a-flow-section">
+  <div class="bf-container">
+    <div class="a-flow-header">
+      <h2 class="a-flow-heading">{heading}</h2>
+      <span class="bf-eyebrow">{eyebrow}</span>
+    </div>
+  </div>
+
+  <div class="bf-container">
+    <div class="a-flow-rows">
+      {stations.map((station) => (
+        <div class="a-flow-row">
+          <div class="a-flow-num">{station.number}</div>
+          <div class="a-flow-title-block">
+            <span class="a-flow-subtitle">{station.subtitle}</span>
+            <h3 class="a-flow-title">{station.title}</h3>
+          </div>
+          <div class="a-flow-desc">
+            <p>{station.description}</p>
+          </div>
+          <div class="a-flow-outputs">
+            <ul>
+              {station.outputs.map((output) => (
+                <li class="a-flow-output">{output}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .a-flow-section {
+    border-top: 1px solid var(--rule);
+    padding: var(--space-4xl) 0 0;
+  }
+
+  .a-flow-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .a-flow-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-6xl);
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    margin: 0;
+    max-width: 760px;
+  }
+
+  .a-flow-rows {
+    border-top: 1px solid var(--rule);
+  }
+
+  .a-flow-row {
+    display: grid;
+    grid-template-columns: 120px 1.3fr 1fr 1fr;
+    gap: var(--space-4xl);
+    padding: var(--space-2xl) var(--space-3xl);
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+
+  .a-flow-num {
+    font-family: var(--font-display);
+    font-size: var(--text-6xl);
+    color: var(--accent);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+  }
+
+  .a-flow-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .a-flow-subtitle {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--ls-widest);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .a-flow-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .a-flow-desc {
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .a-flow-desc p {
+    margin: 0;
+  }
+
+  .a-flow-outputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .a-flow-outputs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .a-flow-output {
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--ink);
+    padding-left: var(--space-xl);
+    position: relative;
+  }
+
+  .a-flow-output::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 1px;
+    background-color: var(--accent);
+  }
+
+  @media (max-width: 768px) {
+    .a-flow-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-2xl);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .a-flow-heading {
+      font-size: var(--text-4xl);
+    }
+
+    .a-flow-row {
+      grid-template-columns: 80px 1fr;
+      gap: var(--space-2xl);
+      padding: var(--space-2xl);
+    }
+
+    .a-flow-num {
+      font-size: var(--text-4xl);
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .a-flow-title-block {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .a-flow-desc {
+      grid-column: 2;
+      grid-row: 2;
+      font-size: var(--text-sm);
+    }
+
+    .a-flow-outputs {
+      grid-column: 2;
+      grid-row: 3;
+    }
+
+    .a-flow-outputs ul {
+      gap: var(--space-md);
+    }
+
+    .a-flow-output {
+      font-size: var(--text-sm);
+    }
+  }
+</style>

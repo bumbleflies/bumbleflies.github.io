@@ -1,0 +1,116 @@
+---
+import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Hero from '../../components/Hero.astro';
+import ClientWall from '../../components/ClientWall.astro';
+import StationFlow from '../../components/StationFlow.astro';
+import Quote from '../../components/Quote.astro';
+import CaseStudiesPreview from '../../components/CaseStudiesPreview.astro';
+import FormatsGrid from '../../components/FormatsGrid.astro';
+import CTAStrip from '../../components/CTAStrip.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const homeContent = await getCollection('pages', ({ id }) => id === 'en/home');
+const page = homeContent[0];
+
+if (!page) {
+  throw new Error('EN Homepage content not found in collection');
+}
+
+const { data } = page;
+
+const currentLang: 'DE' | 'EN' = 'EN';
+
+const flow = {
+  eyebrow: 'How we work',
+  heading: 'One path. Four stations.',
+  stations: [
+    {
+      number: '01',
+      title: 'Talk',
+      subtitle: 'Facilitation',
+      description: 'We help you figure out what\'s actually at stake. Workshop, Open Space, strategy day — remote, hybrid or in the room.',
+      outputs: ['Clarity on the real problem', 'Decisions with owners', 'Shared context across the team'],
+    },
+    {
+      number: '02',
+      title: 'Decide',
+      subtitle: 'AI Consulting',
+      description: 'We bring your team up to speed on AI. Which use cases matter? Which are hype? What should be piloted first?',
+      outputs: ['AI Readiness Assessment', 'Prioritised use-case list', 'Shared vocabulary on the team'],
+    },
+    {
+      number: '03',
+      title: 'Build',
+      subtitle: 'App Development',
+      description: 'Ideas that survive the workshop need a prototype. We build it — fast, simple, adaptable.',
+      outputs: ['Clickable prototype in 2–4 weeks', 'MVP in 6–12 weeks', 'Clean handover to your team'],
+    },
+    {
+      number: '04',
+      title: 'Embed',
+      subtitle: 'Coaching & handover',
+      description: 'Once the tool exists, we help it stick. Trainings, office hours, retros — until you can continue without us.',
+      outputs: ['Adoption plan', 'Internal champions', 'Clean handover and exit'],
+    },
+  ],
+};
+
+const formats = {
+  heading: 'Remote-first.',
+  eyebrow: 'Where we work',
+  items: [
+    { name: 'Remote', percentage: '85%', description: 'Sessions, coachings, pilots — fully remote, async-friendly.' },
+    { name: 'Hybrid', percentage: '10%', description: 'Workshops where some are in the room and others dial in. Without the online folks being second-class.' },
+    { name: 'On-site', percentage: '5%', description: 'When the energy needs it: retreats, big-room meetings, off-sites.' },
+  ],
+};
+
+const caseStudies = {
+  eyebrow: 'Real results',
+  heading: 'How we work with real clients.',
+};
+
+const ctaHeading = 'What\'s next';
+const ctaHeadingEm = 'on your plate?';
+const ctaBody = 'Send us two sentences. We respond within 24h with the proposal that fits — workshop, AI pilot, or the right tool.';
+---
+
+<Layout title={data.title} lang={currentLang}>
+  <Nav slot="nav" lang={currentLang} />
+
+  <Hero lang={currentLang} />
+  <ClientWall lang={currentLang} />
+  <StationFlow
+    eyebrow={flow.eyebrow}
+    heading={flow.heading}
+    stations={flow.stations}
+    lang={currentLang}
+  />
+  <Quote
+    text={data.quote ?? ''}
+    cite={data.quoteCite ?? ''}
+    lang={currentLang}
+  />
+  <CaseStudiesPreview
+    eyebrow={caseStudies.eyebrow}
+    heading={caseStudies.heading}
+    lang={currentLang}
+  />
+  <FormatsGrid
+    heading={formats.heading}
+    eyebrow={formats.eyebrow}
+    formats={formats.items}
+    lang={currentLang}
+  />
+  <CTAStrip
+    heading={ctaHeading}
+    headingEm={ctaHeadingEm}
+    body={ctaBody}
+    ctaText={data.cta?.text ?? 'Book a first call'}
+    lang={currentLang}
+  />
+
+  <Footer slot="footer" lang={currentLang} />
+</Layout>

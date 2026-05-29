@@ -1,0 +1,190 @@
+---
+interface Row {
+  label: string;
+  fragmented: string;
+  integrated: string;
+}
+
+interface Props {
+  deRows?: Row[];
+  enRows?: Row[];
+  rows?: Row[];
+  lang?: 'DE' | 'EN';
+}
+
+const { deRows, enRows, rows, lang = 'DE' } = Astro.props;
+
+// Support both old API (rows + lang) and new API (deRows + enRows)
+const useDeRows = deRows || rows || [];
+const useEnRows = enRows || rows || [];
+---
+
+<div class="a-comparison-table" data-lang={lang}>
+  <!-- DE Version -->
+  <table class="a-comparison-table-set a-comparison-table-set--de">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="a-comparison-table__header" data-de="Fragmentiert" data-en="Fragmented">
+          Fragmentiert
+        </th>
+        <th class="a-comparison-table__header" data-de="Integriert" data-en="Integrated">
+          Integriert
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {useDeRows.map((row, index) => (
+        <tr key={index}>
+          <td class="a-comparison-table__label" data-de={row.label} data-en={row.label}>
+            {row.label}
+          </td>
+          <td class="a-comparison-table__cell fragmented" data-de={row.fragmented} data-en={row.fragmented}>
+            {row.fragmented}
+          </td>
+          <td class="a-comparison-table__cell integrated" data-de={row.integrated} data-en={row.integrated}>
+            {row.integrated}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <!-- EN Version (hidden by default) -->
+  <table class="a-comparison-table-set a-comparison-table-set--en" style="display: none;">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="a-comparison-table__header" data-de="Fragmentiert" data-en="Fragmented">
+          Fragmented
+        </th>
+        <th class="a-comparison-table__header" data-de="Integriert" data-en="Integrated">
+          Integrated
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {useEnRows.map((row, index) => (
+        <tr key={index}>
+          <td class="a-comparison-table__label" data-de={row.label} data-en={row.label}>
+            {row.label}
+          </td>
+          <td class="a-comparison-table__cell fragmented" data-de={row.fragmented} data-en={row.fragmented}>
+            {row.fragmented}
+          </td>
+          <td class="a-comparison-table__cell integrated" data-de={row.integrated} data-en={row.integrated}>
+            {row.integrated}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Language toggle support
+    window.addEventListener('lang-change', (e: any) => {
+      const newLang = e.detail?.lang || 'DE';
+      const tableContainer = document.querySelector('.a-comparison-table') as HTMLElement;
+      if (tableContainer) {
+        const deSet = tableContainer.querySelector('.a-comparison-table-set--de') as HTMLElement;
+        const enSet = tableContainer.querySelector('.a-comparison-table-set--en') as HTMLElement;
+
+        if (newLang === 'EN') {
+          if (deSet) deSet.style.setProperty('display', 'none');
+          if (enSet) enSet.style.setProperty('display', 'block');
+        } else {
+          if (deSet) deSet.style.setProperty('display', 'block');
+          if (enSet) enSet.style.setProperty('display', 'none');
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .a-comparison-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper);
+  }
+
+  thead {
+    background: var(--accent);
+    color: white;
+  }
+
+  th {
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .a-comparison-table__header {
+    border-bottom: 2px solid var(--accent);
+  }
+
+  td {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 1rem;
+    line-height: var(--lh-body);
+  }
+
+  .a-comparison-table__label {
+    font-weight: 600;
+    color: var(--ink);
+    width: 25%;
+  }
+
+  .a-comparison-table__cell {
+    color: var(--ink-soft);
+  }
+
+  .a-comparison-table__cell.fragmented {
+    background: rgba(212, 165, 116, 0.05);
+  }
+
+  .a-comparison-table__cell.integrated {
+    background: rgba(212, 165, 116, 0.1);
+  }
+
+  tbody tr:hover {
+    background: rgba(212, 165, 116, 0.05);
+  }
+
+  @media (max-width: 768px) {
+    th,
+    td {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .a-comparison-table__label {
+      width: 30%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-comparison-table {
+      margin: 1.5rem -1rem;
+    }
+
+    th,
+    td {
+      padding: 0.75rem;
+      font-size: 0.85rem;
+    }
+
+    .a-comparison-table__label {
+      width: 35%;
+    }
+  }
+</style>

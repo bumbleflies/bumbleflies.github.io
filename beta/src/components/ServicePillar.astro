@@ -1,0 +1,144 @@
+---
+import FormatChip from './FormatChip.astro';
+
+type FormatKind = 'remote' | 'hybrid' | 'inperson' | 'ai' | 'build';
+
+interface Props {
+  number: string;
+  title: string;
+  tag: string;
+  description: string;
+  bullets: string[];
+  formats: Array<{ kind: FormatKind; label: string }>;
+  learnMoreLabel?: string;
+  lang?: 'DE' | 'EN';
+}
+
+const { number, title, tag, description, bullets, formats, learnMoreLabel, lang = 'DE' } = Astro.props;
+const label = learnMoreLabel || (lang === 'DE' ? 'Mehr erfahren →' : 'Learn more →');
+---
+
+<article class="a-service">
+  <div class="a-service__header">
+    <span class="a-service__num">{number} — {tag}</span>
+    <h3 class="a-service__h">{title}</h3>
+  </div>
+
+  <div class="a-service__formats">
+    {formats.map((fmt) => (
+      <FormatChip kind={fmt.kind}>{fmt.label}</FormatChip>
+    ))}
+  </div>
+
+  <p class="a-service__p">{description}</p>
+
+  <ul class="a-service__bullets">
+    {bullets.map((bullet) => (
+      <li key={bullet}>{bullet}</li>
+    ))}
+  </ul>
+
+  <a href="#" class="a-service__link">{label}</a>
+</article>
+
+<style>
+  .a-service {
+    padding: 44px 32px 40px;
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--paper);
+  }
+
+  .a-service:last-child {
+    border-right: 0;
+  }
+
+  .a-service__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .a-service__num {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--ls-widest);
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  .a-service__h {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    letter-spacing: -0.025em;
+    line-height: var(--lh-normal);
+    margin: 0;
+  }
+
+  .a-service__formats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .a-service__p {
+    font-size: var(--text-base);
+    line-height: var(--lh-generous);
+    color: var(--ink-soft);
+    margin: 4px 0 0 0;
+  }
+
+  .a-service__bullets {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: var(--text-sm);
+    color: var(--ink);
+  }
+
+  .a-service__bullets li {
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .a-service__bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .a-service__link {
+    margin-top: auto;
+    padding-top: var(--space-lg);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--ls-mono);
+    text-transform: uppercase;
+    color: var(--accent);
+    transition: color var(--duration-fast);
+    font-weight: 500;
+  }
+
+  .a-service__link:hover {
+    color: var(--ink);
+  }
+
+  @media (max-width: 768px) {
+    .a-service {
+      padding: 32px 24px;
+    }
+
+    .a-service__h {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>

@@ -1,0 +1,74 @@
+---
+import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import CTAStrip from '../../components/CTAStrip.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const enPages = await getCollection('pages', ({ id }) => id === 'en/how-we-work');
+
+if (!enPages[0]) {
+  throw new Error('EN How We Work content not found in collection');
+}
+
+const content = enPages[0].data;
+
+const lang: 'DE' | 'EN' = 'EN';
+---
+
+<Layout title={content.title}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <section class="a-how-we-work-hero">
+      <div class="bf-container">
+        <h1 class="a-how-we-work-hero__heading">
+          {content.heading}
+        </h1>
+        <p class="a-how-we-work-hero__intro">
+          {content.intro}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-how-we-work-content bf-section">
+      <div class="bf-container">
+        <div class="a-how-we-work-columns">
+          <div class="a-how-we-work-column">
+            <h2 class="a-how-we-work-column__title">
+              {content.problemTitle}
+            </h2>
+            <ul class="a-how-we-work-bullets">
+              {content.problemBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="a-how-we-work-column">
+            <h2 class="a-how-we-work-column__title">
+              {content.solutionTitle}
+            </h2>
+            <ul class="a-how-we-work-bullets">
+              {content.solutionBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTAStrip
+      heading={content.ctaHeading}
+      headingEm={content.ctaHeading_em}
+      body={content.ctaBody}
+      ctaText={content.ctaText}
+      lang={lang}
+    />
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>

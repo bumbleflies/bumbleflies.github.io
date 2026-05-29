@@ -1,0 +1,34 @@
+---
+interface Props {
+  text: string;
+  cite: string;
+  lang?: 'DE' | 'EN';
+}
+
+const { text, cite, lang = 'DE' } = Astro.props;
+---
+
+<section class="bf-section" style="padding: 2rem 0;">
+  <div class="bf-container" style="text-align: center;">
+    <p class="a-quote">{text}</p>
+    <span class="a-quote__cite">{cite}</span>
+  </div>
+</section>
+
+<style>
+  .a-quote {
+    font-style: italic;
+    color: var(--ink);
+    margin: 0 auto;
+    font-size: var(--text-3xl);
+    line-height: var(--lh-loose);
+    max-width: 800px;
+  }
+
+  .a-quote__cite {
+    font-size: var(--text-md);
+    color: var(--ink-soft);
+    margin-top: var(--space-lg);
+    display: block;
+  }
+</style>

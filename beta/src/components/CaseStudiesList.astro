@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+import CaseStudyCard from './CaseStudyCard.astro';
+
+const caseStudies = await getCollection('case-studies', ({ data }) => data.published);
+---
+
+<section class="a-case-studies-list">
+  <div class="bf-container">
+    <h2 class="a-case-studies-list__heading">Track Record</h2>
+    <div class="a-case-studies-list__grid">
+      {caseStudies.length > 0 ? (
+        caseStudies.map(study => (
+          <CaseStudyCard
+            title={study.data.title}
+            company={study.data.company}
+            service={study.data.service}
+            quote={study.data.quote}
+            slug={study.slug}
+          />
+        ))
+      ) : (
+        <p class="a-case-studies-list__empty">Case studies coming soon.</p>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .a-case-studies-list {
+    padding: var(--spacing-xl) 0;
+    background: #fafafa;
+  }
+
+  .a-case-studies-list__heading {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--ink);
+  }
+
+  .a-case-studies-list__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .a-case-studies-list__empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #999;
+    padding: 3rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .a-case-studies-list__heading {
+      font-size: 1.5rem;
+    }
+
+    .a-case-studies-list__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

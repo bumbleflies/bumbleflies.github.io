@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  service: string;
+  quote: string;
+  slug: string;
+}
+
+const { title, company, service, quote, slug } = Astro.props;
+---
+
+<article class="a-case-study-card">
+  <h3 class="a-case-study-card__title">{title}</h3>
+  <p class="a-case-study-card__meta">{company} · {service}</p>
+  <blockquote class="a-case-study-card__quote">{quote}</blockquote>
+  <a href={`/case-studies/${slug}`} class="bf-cta">
+    Mehr erfahren <span aria-hidden="true">→</span>
+  </a>
+</article>
+
+<style>
+  .a-case-study-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-left: 3px solid #d4a573;
+    padding-left: 16px;
+    min-height: 100%;
+  }
+
+  .a-case-study-card__title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .a-case-study-card__meta {
+    font-size: 0.6875rem;
+    color: #666;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .a-case-study-card__quote {
+    font-style: italic;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    border: none;
+    flex-grow: 1;
+  }
+</style>

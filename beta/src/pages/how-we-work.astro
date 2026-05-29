@@ -1,0 +1,227 @@
+---
+import Layout from '../components/Layout.astro';
+import Nav from '../components/Nav.astro';
+import CTAStrip from '../components/CTAStrip.astro';
+import Footer from '../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const dePages = await getCollection('pages', ({ id }) => id === 'how-we-work');
+const enPages = await getCollection('pages', ({ id }) => id === 'en/how-we-work');
+
+const dePage = dePages[0];
+const enPage = enPages[0];
+
+if (!dePage || !enPage) {
+  throw new Error('How We Work content not found in collection');
+}
+
+const deContent = dePage.data;
+const enContent = enPage.data;
+
+let lang: 'DE' | 'EN' = 'DE';
+
+// Serialize for client-side rendering
+const contentData = {
+  DE: deContent,
+  EN: enContent
+};
+---
+
+<Layout title={deContent.title}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <section class="a-how-we-work-hero">
+      <div class="bf-container">
+        <h1 class="a-how-we-work-hero__heading" data-de={deContent.heading} data-en={enContent.heading}>
+          {deContent.heading}
+        </h1>
+        <p class="a-how-we-work-hero__intro" data-de={deContent.intro} data-en={enContent.intro}>
+          {deContent.intro}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-how-we-work-content bf-section">
+      <div class="bf-container">
+        <div class="a-how-we-work-columns">
+          <div class="a-how-we-work-column">
+            <h2 class="a-how-we-work-column__title" data-de={deContent.problemTitle} data-en={enContent.problemTitle}>
+              {deContent.problemTitle}
+            </h2>
+            <ul class="a-how-we-work-bullets" data-lang="DE" data-bullets={JSON.stringify({DE: deContent.problemBullets, EN: enContent.problemBullets})}>
+              {deContent.problemBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+            <ul class="a-how-we-work-bullets hidden" data-lang="EN" data-bullets={JSON.stringify({DE: deContent.problemBullets, EN: enContent.problemBullets})}>
+              {enContent.problemBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="a-how-we-work-column">
+            <h2 class="a-how-we-work-column__title" data-de={deContent.solutionTitle} data-en={enContent.solutionTitle}>
+              {deContent.solutionTitle}
+            </h2>
+            <ul class="a-how-we-work-bullets" data-lang="DE" data-bullets={JSON.stringify({DE: deContent.solutionBullets, EN: enContent.solutionBullets})}>
+              {deContent.solutionBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+            <ul class="a-how-we-work-bullets hidden" data-lang="EN" data-bullets={JSON.stringify({DE: deContent.solutionBullets, EN: enContent.solutionBullets})}>
+              {enContent.solutionBullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div data-de-cta={JSON.stringify({heading: deContent.ctaHeading, headingEm: deContent.ctaHeading_em, body: deContent.ctaBody, ctaText: deContent.ctaText})} data-en-cta={JSON.stringify({heading: enContent.ctaHeading, headingEm: enContent.ctaHeading_em, body: enContent.ctaBody, ctaText: enContent.ctaText})} class="bf-cta-container">
+      <CTAStrip
+        heading={deContent.ctaHeading}
+        headingEm={deContent.ctaHeading_em}
+        body={deContent.ctaBody}
+        ctaText={deContent.ctaText}
+        lang={lang}
+      />
+    </div>
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .a-how-we-work-hero {
+    padding: 4rem 0;
+    background: var(--paper);
+  }
+
+  .a-how-we-work-hero__heading {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--ink);
+    max-width: 900px;
+  }
+
+  .a-how-we-work-hero__intro {
+    font-size: 1.25rem;
+    color: var(--ink-soft);
+    max-width: 700px;
+    margin: 0;
+  }
+
+  .a-how-we-work-content {
+    padding: 4rem 0;
+  }
+
+  .a-how-we-work-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .a-how-we-work-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .a-how-we-work-column__title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .a-how-we-work-bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .a-how-we-work-bullets li {
+    font-size: 1rem;
+    line-height: var(--lh-body);
+    color: var(--ink-soft);
+    padding-left: 2rem;
+    position: relative;
+  }
+
+  .a-how-we-work-bullets li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .a-how-we-work-hero {
+      padding: 2.5rem 0;
+    }
+
+    .a-how-we-work-hero__heading {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .a-how-we-work-hero__intro {
+      font-size: 1rem;
+    }
+
+    .a-how-we-work-content {
+      padding: 2.5rem 0;
+    }
+
+    .a-how-we-work-columns {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .a-how-we-work-column__title {
+      font-size: 1.5rem;
+    }
+
+    .a-how-we-work-bullets li {
+      font-size: 0.95rem;
+      padding-left: 1.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-how-we-work-hero {
+      padding: 1.5rem 0;
+    }
+
+    .a-how-we-work-hero__heading {
+      font-size: 1.5rem;
+    }
+
+    .a-how-we-work-hero__intro {
+      font-size: 0.95rem;
+    }
+
+    .a-how-we-work-column__title {
+      font-size: 1.25rem;
+    }
+
+    .a-how-we-work-bullets li {
+      font-size: 0.9rem;
+      padding-left: 1.5rem;
+    }
+  }
+</style>

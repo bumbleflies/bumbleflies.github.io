@@ -1,0 +1,226 @@
+---
+import Layout from '../components/Layout.astro';
+import Nav from '../components/Nav.astro';
+import TeamProfiles from '../components/TeamProfiles.astro';
+import TestimonialsGrid from '../components/TestimonialsGrid.astro';
+import CTAStrip from '../components/CTAStrip.astro';
+import Footer from '../components/Footer.astro';
+
+interface ContentSet {
+  pageTitle: string;
+  heading: string;
+  intro: string;
+  vision: string;
+  teamHeading: string;
+  testimonialsHeading: string;
+  ctaHeading: string;
+  ctaHeading_em: string;
+  ctaBody: string;
+  ctaText: string;
+}
+
+const content: Record<'DE' | 'EN', ContentSet> = {
+  DE: {
+    pageTitle: 'About Us',
+    heading: 'Drei Facilitators, eine Vision.',
+    intro: 'bumbleflies wurde gegründet, weil wir ein Muster sahen...',
+    vision: 'Wir dachten: Was wäre, wenn Facilitation, Strategie und Engineering zusammen arbeiten würden?',
+    teamHeading: 'Unser Team',
+    testimonialsHeading: 'Das sagen unsere Kunden',
+    ctaHeading: 'Bereit für',
+    ctaHeading_em: 'Transformation?',
+    ctaBody: 'Schreiben Sie uns oder buchen Sie ein erstes Gespräch. Wir freuen uns auf den Austausch mit Ihnen.',
+    ctaText: 'Erstes Gespräch vereinbaren'
+  },
+  EN: {
+    pageTitle: 'About Us',
+    heading: 'Three facilitators, one vision.',
+    intro: 'bumbleflies was founded because we saw a pattern...',
+    vision: 'We thought: What if facilitation, strategy, engineering worked together?',
+    teamHeading: 'Our Team',
+    testimonialsHeading: 'What our clients say',
+    ctaHeading: 'Ready for',
+    ctaHeading_em: 'Transformation?',
+    ctaBody: 'Get in touch or book your first call. We look forward to speaking with you.',
+    ctaText: 'Book a first call'
+  }
+};
+
+let lang: 'DE' | 'EN' = 'DE';
+const deContent = content.DE;
+const enContent = content.EN;
+---
+
+<Layout title={deContent.pageTitle}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <section class="a-about-hero">
+      <div class="bf-container">
+        <h1 class="a-about-hero__heading" data-de={deContent.heading} data-en={enContent.heading}>
+          {deContent.heading}
+        </h1>
+        <p class="a-about-hero__intro" data-de={deContent.intro} data-en={enContent.intro}>
+          {deContent.intro}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-about-vision bf-section">
+      <div class="bf-container">
+        <p class="a-about-vision__text" data-de={deContent.vision} data-en={enContent.vision}>
+          {deContent.vision}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-about-team bf-section">
+      <div class="bf-container">
+        <h2 class="a-about-team__heading" data-de={deContent.teamHeading} data-en={enContent.teamHeading}>
+          {deContent.teamHeading}
+        </h2>
+        <TeamProfiles />
+      </div>
+    </section>
+
+    <section class="a-about-testimonials bf-section">
+      <div class="bf-container">
+        <TestimonialsGrid heading={deContent.testimonialsHeading} />
+      </div>
+    </section>
+
+    <div data-de-cta={JSON.stringify({heading: deContent.ctaHeading, headingEm: deContent.ctaHeading_em, body: deContent.ctaBody, ctaText: deContent.ctaText})} data-en-cta={JSON.stringify({heading: enContent.ctaHeading, headingEm: enContent.ctaHeading_em, body: enContent.ctaBody, ctaText: enContent.ctaText})} class="bf-cta-container">
+      <CTAStrip
+        heading={deContent.ctaHeading}
+        headingEm={deContent.ctaHeading_em}
+        body={deContent.ctaBody}
+        ctaText={deContent.ctaText}
+        lang={lang}
+      />
+    </div>
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>
+
+
+<style>
+  .a-about-hero {
+    padding: 4rem 0;
+    background: var(--paper);
+  }
+
+  .a-about-hero__heading {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--ink);
+    max-width: 900px;
+  }
+
+  .a-about-hero__intro {
+    font-size: 1.25rem;
+    color: var(--ink-soft);
+    max-width: 700px;
+    margin: 0;
+  }
+
+  .a-about-vision {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .a-about-vision__text {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    line-height: 1.4;
+    color: var(--ink);
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+
+  .a-about-team {
+    padding: 4rem 0;
+  }
+
+  .a-about-team__heading {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--ink);
+  }
+
+  .a-about-testimonials {
+    padding: 4rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .a-about-hero {
+      padding: 2.5rem 0;
+    }
+
+    .a-about-hero__heading {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .a-about-hero__intro {
+      font-size: 1rem;
+    }
+
+    .a-about-vision {
+      padding: 2rem 0;
+    }
+
+    .a-about-vision__text {
+      font-size: 1.25rem;
+    }
+
+    .a-about-team {
+      padding: 2.5rem 0;
+    }
+
+    .a-about-team__heading {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .a-about-testimonials {
+      padding: 2.5rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-about-hero {
+      padding: 1.5rem 0;
+    }
+
+    .a-about-hero__heading {
+      font-size: 1.5rem;
+    }
+
+    .a-about-hero__intro {
+      font-size: 0.95rem;
+    }
+
+    .a-about-vision {
+      padding: 1.5rem 0;
+    }
+
+    .a-about-vision__text {
+      font-size: 1.1rem;
+    }
+
+    .a-about-team {
+      padding: 1.5rem 0;
+    }
+
+    .a-about-testimonials {
+      padding: 1.5rem 0;
+    }
+  }
+</style>

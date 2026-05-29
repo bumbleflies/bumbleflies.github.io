@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import CaseStudyCard from './CaseStudyCard.astro';
+
+interface Props {
+  heading: string;
+  eyebrow: string;
+  lang: 'DE' | 'EN';
+}
+
+const { heading, eyebrow, lang } = Astro.props;
+
+// Get 4 featured case studies (showing variety of service types)
+const allCases = await getCollection('case-studies', ({ data }) => data.published);
+const featured = allCases.slice(0, 4);
+---
+
+<section class="a-case-studies-preview">
+  <div class="bf-container">
+    <div class="a-case-studies-preview__header">
+      <span class="a-case-studies-preview__eyebrow">{eyebrow}</span>
+      <h2 class="a-case-studies-preview__heading">{heading}</h2>
+    </div>
+
+    <div class="a-case-studies-preview__grid">
+      {featured.map(study => (
+        <CaseStudyCard
+          title={study.data.title}
+          company={study.data.company}
+          service={study.data.service}
+          quote={study.data.quote}
+          slug={study.slug}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .a-case-studies-preview {
+    padding: var(--space-xl) 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .a-case-studies-preview__header {
+    margin-bottom: var(--space-xl);
+    text-align: center;
+  }
+
+  .a-case-studies-preview__eyebrow {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #999;
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+  }
+
+  .a-case-studies-preview__heading {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin: 0;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .a-case-studies-preview__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    align-items: stretch;
+  }
+
+  @media (max-width: 1024px) {
+    .a-case-studies-preview__grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .a-case-studies-preview {
+      padding: var(--space-lg) 0;
+    }
+
+    .a-case-studies-preview__heading {
+      font-size: 1.5rem;
+    }
+
+    .a-case-studies-preview__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+  }
+</style>

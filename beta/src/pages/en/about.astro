@@ -1,0 +1,88 @@
+---
+import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import TeamProfiles from '../../components/TeamProfiles.astro';
+import TestimonialsGrid from '../../components/TestimonialsGrid.astro';
+import CTAStrip from '../../components/CTAStrip.astro';
+import Footer from '../../components/Footer.astro';
+
+interface ContentSet {
+  pageTitle: string;
+  heading: string;
+  intro: string;
+  vision: string;
+  teamHeading: string;
+  testimonialsHeading: string;
+  ctaHeading: string;
+  ctaHeading_em: string;
+  ctaBody: string;
+  ctaText: string;
+}
+
+const content: ContentSet = {
+  pageTitle: 'About Us',
+  heading: 'Three facilitators, one vision.',
+  intro: 'bumbleflies was founded because we saw a pattern...',
+  vision: 'We thought: What if facilitation, strategy, engineering worked together?',
+  teamHeading: 'Our Team',
+  testimonialsHeading: 'What our clients say',
+  ctaHeading: 'Ready for',
+  ctaHeading_em: 'Transformation?',
+  ctaBody: 'Get in touch or book your first call. We look forward to speaking with you.',
+  ctaText: 'Book a first call'
+};
+
+const lang: 'DE' | 'EN' = 'EN';
+---
+
+<Layout title={content.pageTitle}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <section class="a-about-hero">
+      <div class="bf-container">
+        <h1 class="a-about-hero__heading">
+          {content.heading}
+        </h1>
+        <p class="a-about-hero__intro">
+          {content.intro}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-about-vision bf-section">
+      <div class="bf-container">
+        <p class="a-about-vision__text">
+          {content.vision}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-about-team bf-section">
+      <div class="bf-container">
+        <h2 class="a-about-team__heading">
+          {content.teamHeading}
+        </h2>
+        <TeamProfiles />
+      </div>
+    </section>
+
+    <section class="a-about-testimonials bf-section">
+      <div class="bf-container">
+        <TestimonialsGrid heading={content.testimonialsHeading} />
+      </div>
+    </section>
+
+    <CTAStrip
+      heading={content.ctaHeading}
+      headingEm={content.ctaHeading_em}
+      body={content.ctaBody}
+      ctaText={content.ctaText}
+      lang={lang}
+    />
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>

@@ -1,0 +1,85 @@
+---
+import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import CaseStudiesList from '../../components/CaseStudiesList.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Case Studies - bumbleflies">
+  <div slot="nav">
+    <Nav lang="EN" />
+  </div>
+    <section class="a-case-studies-hero">
+      <div class="bf-container">
+        <h1 class="a-case-studies-hero__heading">Track Record</h1>
+        <p class="a-case-studies-hero__subheading">
+          Real results from real clients. From conversation to code — and actually useful.
+        </p>
+      </div>
+    </section>
+
+    <CaseStudiesList />
+
+    <section class="a-case-studies-cta">
+      <div class="bf-container">
+        <h2>Ready for your transformation?</h2>
+        <a href="mailto:info@bumbleflies.de" class="bf-cta">Book a first call</a>
+      </div>
+    </section>
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .a-case-studies-hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f5f1e8 0%, #faf7f0 100%);
+  }
+
+  .a-case-studies-hero__heading {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    color: var(--ink);
+  }
+
+  .a-case-studies-hero__subheading {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .a-case-studies-cta {
+    padding: 4rem 0;
+    text-align: center;
+    background: #f5f1e8;
+  }
+
+  .a-case-studies-cta h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--ink);
+  }
+
+  @media (max-width: 768px) {
+    .a-case-studies-hero {
+      padding: 2rem 0;
+    }
+
+    .a-case-studies-hero__heading {
+      font-size: 1.75rem;
+    }
+
+    .a-case-studies-hero__subheading {
+      font-size: 1rem;
+    }
+
+    .a-case-studies-cta h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,77 @@
+---
+interface Props {
+  lang?: 'DE' | 'EN';
+  clients?: string[];
+}
+
+const { lang = 'DE', clients = ['BSH', 'Siemens', 'Wohnungshelden', '+200 Teams'] } = Astro.props;
+const label = lang === 'DE' ? 'Vertrauen von' : 'Trusted by';
+---
+
+<section class="bf-clientwall-section">
+  <div class="bf-container">
+    <div class="bf-eyebrow" style="padding: 0 0 var(--space-lg);">{label}</div>
+    <div class="bf-clientwall">
+      {clients.map((client) => (
+        <div class="bf-client" key={client}>{client}</div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .bf-clientwall-section {
+    width: 100%;
+  }
+
+  .bf-eyebrow {
+    display: block;
+  }
+
+  .bf-clientwall {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .bf-client {
+    padding: var(--space-3xl) var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--ink);
+    letter-spacing: var(--ls-normal);
+    border-right: 1px solid var(--rule);
+    opacity: 0.62;
+    transition: opacity var(--duration-normal);
+  }
+
+  .bf-client:last-child {
+    border-right: 0;
+  }
+
+  .bf-client:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .bf-clientwall {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bf-client {
+      padding: var(--space-2xl) var(--space-lg);
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .bf-clientwall {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,209 @@
+---
+import Layout from '../components/Layout.astro';
+import Nav from '../components/Nav.astro';
+import RiskAccordion from '../components/RiskAccordion.astro';
+import CTAStrip from '../components/CTAStrip.astro';
+import Footer from '../components/Footer.astro';
+
+interface ContentSet {
+  pageTitle: string;
+  heading: string;
+  intro: string;
+  riskItems: Array<{
+    title: string;
+    description: string;
+    mitigation: string;
+  }>;
+  ctaHeading: string;
+  ctaHeading_em: string;
+  ctaBody: string;
+  ctaText: string;
+}
+
+const content: Record<'DE' | 'EN', ContentSet> = {
+  DE: {
+    pageTitle: 'Risk & De-Risking',
+    heading: 'Risiken und wie wir sie minimieren',
+    intro: 'Transformation ist nicht immer einfach. Hier sind die fünf größten Risiken, die wir sehen — und wie wir sie de-risken.',
+    riskItems: [
+      {
+        title: 'Risiko 1: Organisation ist nicht bereit für Veränderung',
+        description: 'Leadership sagt ja, aber das Team ist skeptisch. Widerstände entstehen schnell.',
+        mitigation: 'Wir starten mit einer Readiness-Phase. Wir surfacen Bedenken früh, bauen Vertrauen auf und schaffen gemeinsames Verständnis.'
+      },
+      {
+        title: 'Risiko 2: Pilot startet, aber nichts passiert',
+        description: 'Workshops enden, alte Muster kehren zurück. Teams fallen in alte Routinen.',
+        mitigation: 'Adoption ist integriert von Tag 1, nicht als letzte Phase. Nutzer co-designen das Tool, das sie verwenden.'
+      },
+      {
+        title: 'Risiko 3: Software-Projekt wird teuer/lange',
+        description: 'Scope Creep, unterschätzte Komplexität. Budgets wachsen, Timelines verschieben sich.',
+        mitigation: 'Feste Sprints mit festen Milestones. Fixed Price pro Phase. Wir entscheiden schnell über Priorisierung.'
+      },
+      {
+        title: 'Risiko 4: CEO geht und Projekt wird abgebrochen',
+        description: 'Exec-Wechsel, Budget-Schnitte, Org-Restrukturierung. Plötzlich ist das Projekt nicht mehr Priorität.',
+        mitigation: 'Wir dokumentieren alles. Wir bauen das Team auf, nicht Individuen. Knowledge ist vertteilt, nicht zentralisiert.'
+      },
+      {
+        title: 'Risiko 5: Partnership funktioniert nicht',
+        description: 'Andere Arbeitsweise, Kommunikation bricht zusammen. Team-Reibung entstehen.',
+        mitigation: '2-Wochen-Trial Phase, unverbindlich, transparent. Wir wissen schnell, ob es passt. Beide Seiten können einfach gehen.'
+      }
+    ],
+    ctaHeading: 'Bereit für',
+    ctaHeading_em: 'Transformation?',
+    ctaBody: 'Schreiben Sie uns oder buchen Sie ein erstes Gespräch. Wir freuen uns auf den Austausch mit Ihnen.',
+    ctaText: 'Erstes Gespräch vereinbaren'
+  },
+  EN: {
+    pageTitle: 'Risk & De-Risking',
+    heading: 'Risks and how we mitigate them',
+    intro: 'Transformation isn\'t always smooth. Here are the five biggest risks we see — and how we de-risk them.',
+    riskItems: [
+      {
+        title: 'Risk 1: Organization not ready for change',
+        description: 'Leadership says yes, but the team is skeptical. Resistance builds quickly.',
+        mitigation: 'We start with a readiness phase. We surface concerns early, build trust, and create shared understanding.'
+      },
+      {
+        title: 'Risk 2: Pilot starts but nothing happens',
+        description: 'Workshops end, old patterns return. Teams fall back into old routines.',
+        mitigation: 'Adoption is integrated from day 1, not as the final phase. Users co-design the tool they use.'
+      },
+      {
+        title: 'Risk 3: Software project becomes expensive/long',
+        description: 'Scope creep, underestimated complexity. Budgets grow, timelines shift.',
+        mitigation: 'Fixed sprints with fixed milestones. Fixed price per phase. We make prioritization decisions quickly.'
+      },
+      {
+        title: 'Risk 4: CEO leaves and project gets cancelled',
+        description: 'Executive change, budget cuts, org restructure. Suddenly the project isn\'t a priority.',
+        mitigation: 'We document everything. We build the team, not individuals. Knowledge is distributed, not centralized.'
+      },
+      {
+        title: 'Risk 5: Partnership doesn\'t work',
+        description: 'Different work styles, communication breaks down. Team friction emerges.',
+        mitigation: '2-week trial phase, non-binding, transparent. We know quickly if it\'s a fit. Both sides can walk.'
+      }
+    ],
+    ctaHeading: 'Ready for',
+    ctaHeading_em: 'Transformation?',
+    ctaBody: 'Get in touch or book your first call. We look forward to speaking with you.',
+    ctaText: 'Book a first call'
+  }
+};
+
+let lang: 'DE' | 'EN' = 'DE';
+const deContent = content.DE;
+const enContent = content.EN;
+---
+
+<Layout title={deContent.pageTitle}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <section class="a-risk-hero">
+      <div class="bf-container">
+        <h1 class="a-risk-hero__heading" data-de={deContent.heading} data-en={enContent.heading}>
+          {deContent.heading}
+        </h1>
+        <p class="a-risk-hero__intro" data-de={deContent.intro} data-en={enContent.intro}>
+          {deContent.intro}
+        </p>
+      </div>
+    </section>
+
+    <section class="a-risk-accordion-section bf-section">
+      <div class="bf-container">
+        <div class="a-risk-accordion-wrapper" data-de-risks={JSON.stringify(deContent.riskItems)} data-en-risks={JSON.stringify(enContent.riskItems)}>
+          <RiskAccordion deItems={deContent.riskItems} enItems={enContent.riskItems} lang={lang} />
+        </div>
+      </div>
+    </section>
+
+    <div data-de-cta={JSON.stringify({heading: deContent.ctaHeading, headingEm: deContent.ctaHeading_em, body: deContent.ctaBody, ctaText: deContent.ctaText})} data-en-cta={JSON.stringify({heading: enContent.ctaHeading, headingEm: enContent.ctaHeading_em, body: enContent.ctaBody, ctaText: enContent.ctaText})} class="bf-cta-container">
+      <CTAStrip
+        heading={deContent.ctaHeading}
+        headingEm={deContent.ctaHeading_em}
+        body={deContent.ctaBody}
+        ctaText={deContent.ctaText}
+        lang={lang}
+      />
+    </div>
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>
+
+
+<style>
+  .a-risk-hero {
+    padding: 4rem 0;
+    background: var(--paper);
+  }
+
+  .a-risk-hero__heading {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--ink);
+    max-width: 900px;
+  }
+
+  .a-risk-hero__intro {
+    font-size: 1.25rem;
+    color: var(--ink-soft);
+    max-width: 700px;
+    margin: 0;
+  }
+
+  .a-risk-accordion-section {
+    padding: 4rem 0;
+  }
+
+  .a-risk-accordion-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .a-risk-hero {
+      padding: 2.5rem 0;
+    }
+
+    .a-risk-hero__heading {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .a-risk-hero__intro {
+      font-size: 1rem;
+    }
+
+    .a-risk-accordion-section {
+      padding: 2.5rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-risk-hero {
+      padding: 1.5rem 0;
+    }
+
+    .a-risk-hero__heading {
+      font-size: 1.5rem;
+    }
+
+    .a-risk-hero__intro {
+      font-size: 0.95rem;
+    }
+
+    .a-risk-accordion-section {
+      padding: 1.5rem 0;
+    }
+  }
+</style>

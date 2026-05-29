@@ -1,0 +1,41 @@
+---
+// Logo lozenge: two overlapping circles (bee + butterfly metaphor)
+// Circle A (accent) offset -3px, Circle B (ink) offset +3px
+---
+
+<div class="bf-mark" aria-hidden="true"></div>
+
+<style>
+  .bf-mark {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bf-mark::before,
+  .bf-mark::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  }
+
+  .bf-mark::before {
+    background: var(--accent);
+    transform: translate(-4px, 0);
+  }
+
+  .bf-mark::after {
+    background: var(--ink);
+    mix-blend-mode: multiply;
+    opacity: 0.85;
+    width: 11px;
+    height: 11px;
+    transform: translate(4px, 0);
+  }
+</style>

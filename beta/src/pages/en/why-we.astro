@@ -1,0 +1,324 @@
+---
+import Layout from '../../components/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import TeamProfiles from '../../components/TeamProfiles.astro';
+import TestimonialsGrid from '../../components/TestimonialsGrid.astro';
+import CTAStrip from '../../components/CTAStrip.astro';
+import Footer from '../../components/Footer.astro';
+
+interface ContentSet {
+  pageTitle: string;
+  whyHeading: string;
+  whyIntro: string;
+  comparisonRows: Array<{
+    label: string;
+    fragmented: string;
+    integrated: string;
+  }>;
+  aboutHeading: string;
+  aboutIntro: string;
+  vision: string;
+  teamHeading: string;
+  testimonialsHeading: string;
+  ctaHeading: string;
+  ctaHeading_em: string;
+  ctaBody: string;
+  ctaText: string;
+}
+
+const content: ContentSet = {
+  pageTitle: 'Why Bumbleflies',
+  whyHeading: 'Integrated, not fragmented.',
+  whyIntro: 'Most transformation services are relay races...',
+  comparisonRows: [
+    {
+      label: 'Who leads?',
+      fragmented: 'multiple',
+      integrated: 'one team'
+    },
+    {
+      label: 'Goal?',
+      fragmented: 'bill phases',
+      integrated: 'solution that works'
+    },
+    {
+      label: 'Learning between phases?',
+      fragmented: 'no',
+      integrated: 'yes'
+    },
+    {
+      label: 'Adoption?',
+      fragmented: 'at end',
+      integrated: 'from start'
+    }
+  ],
+  aboutHeading: 'Three facilitators, one vision.',
+  aboutIntro: 'bumbleflies was founded because we saw a pattern...',
+  vision: 'We thought: What if facilitation, strategy, engineering worked together?',
+  teamHeading: 'Our Team',
+  testimonialsHeading: 'What our clients say',
+  ctaHeading: 'Ready for',
+  ctaHeading_em: 'Transformation?',
+  ctaBody: 'Get in touch or book your first call. We look forward to speaking with you.',
+  ctaText: 'Book a first call'
+};
+
+let lang: 'DE' | 'EN' = 'EN';
+---
+
+<Layout title={content.pageTitle}>
+  <div slot="nav">
+    <Nav lang={lang} />
+  </div>
+
+  <!-- Why Bumbleflies Section -->
+  <section class="a-why-bumbleflies-hero">
+    <div class="bf-container">
+      <h1 class="a-why-bumbleflies-hero__heading">
+        {content.whyHeading}
+      </h1>
+      <p class="a-why-bumbleflies-hero__intro">
+        {content.whyIntro}
+      </p>
+    </div>
+  </section>
+
+  <section class="a-why-bumbleflies-table bf-section">
+    <div class="bf-container">
+      <div class="a-comparison-wrapper">
+        <ComparisonTable deRows={content.comparisonRows} enRows={content.comparisonRows} lang={lang} />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="a-about-hero">
+    <div class="bf-container">
+      <h2 class="a-about-hero__heading">
+        {content.aboutHeading}
+      </h2>
+      <p class="a-about-hero__intro">
+        {content.aboutIntro}
+      </p>
+    </div>
+  </section>
+
+  <section class="a-about-vision bf-section">
+    <div class="bf-container">
+      <p class="a-about-vision__text">
+        {content.vision}
+      </p>
+    </div>
+  </section>
+
+  <section class="a-about-team bf-section">
+    <div class="bf-container">
+      <h3 class="a-about-team__heading">
+        {content.teamHeading}
+      </h3>
+      <TeamProfiles />
+    </div>
+  </section>
+
+  <section class="a-about-testimonials bf-section">
+    <div class="bf-container">
+      <TestimonialsGrid heading={content.testimonialsHeading} />
+    </div>
+  </section>
+
+  <div class="bf-cta-container">
+    <CTAStrip
+      heading={content.ctaHeading}
+      headingEm={content.ctaHeading_em}
+      body={content.ctaBody}
+      ctaText={content.ctaText}
+      lang={lang}
+    />
+  </div>
+
+  <div slot="footer">
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .a-why-bumbleflies-hero {
+    padding: 4rem 0;
+    background: var(--paper);
+  }
+
+  .a-why-bumbleflies-hero__heading {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--ink);
+    max-width: 900px;
+  }
+
+  .a-why-bumbleflies-hero__intro {
+    font-size: 1.25rem;
+    color: var(--ink-soft);
+    max-width: 700px;
+    margin: 0;
+  }
+
+  .a-why-bumbleflies-table {
+    padding: 4rem 0;
+  }
+
+  .a-comparison-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .a-about-hero {
+    padding: 4rem 0;
+    background: var(--paper);
+  }
+
+  .a-about-hero__heading {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--ink);
+    max-width: 900px;
+  }
+
+  .a-about-hero__intro {
+    font-size: 1.25rem;
+    color: var(--ink-soft);
+    max-width: 700px;
+    margin: 0;
+  }
+
+  .a-about-vision {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .a-about-vision__text {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    line-height: 1.4;
+    color: var(--ink);
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+
+  .a-about-team {
+    padding: 4rem 0;
+  }
+
+  .a-about-team__heading {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--ink);
+  }
+
+  .a-about-testimonials {
+    padding: 4rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .a-why-bumbleflies-hero {
+      padding: 2.5rem 0;
+    }
+
+    .a-why-bumbleflies-hero__heading {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .a-why-bumbleflies-hero__intro {
+      font-size: 1rem;
+    }
+
+    .a-why-bumbleflies-table {
+      padding: 2.5rem 0;
+    }
+
+    .a-about-hero {
+      padding: 2.5rem 0;
+    }
+
+    .a-about-hero__heading {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .a-about-hero__intro {
+      font-size: 1rem;
+    }
+
+    .a-about-vision {
+      padding: 2rem 0;
+    }
+
+    .a-about-vision__text {
+      font-size: 1.25rem;
+    }
+
+    .a-about-team {
+      padding: 2.5rem 0;
+    }
+
+    .a-about-team__heading {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .a-about-testimonials {
+      padding: 2.5rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .a-why-bumbleflies-hero {
+      padding: 1.5rem 0;
+    }
+
+    .a-why-bumbleflies-hero__heading {
+      font-size: 1.5rem;
+    }
+
+    .a-why-bumbleflies-hero__intro {
+      font-size: 0.95rem;
+    }
+
+    .a-why-bumbleflies-table {
+      padding: 1.5rem 0;
+    }
+
+    .a-about-hero {
+      padding: 1.5rem 0;
+    }
+
+    .a-about-hero__heading {
+      font-size: 1.25rem;
+    }
+
+    .a-about-hero__intro {
+      font-size: 0.95rem;
+    }
+
+    .a-about-vision {
+      padding: 1.5rem 0;
+    }
+
+    .a-about-vision__text {
+      font-size: 1.1rem;
+    }
+
+    .a-about-team {
+      padding: 1.5rem 0;
+    }
+
+    .a-about-testimonials {
+      padding: 1.5rem 0;
+    }
+  }
+</style>

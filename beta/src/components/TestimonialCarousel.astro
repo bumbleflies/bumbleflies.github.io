@@ -1,0 +1,94 @@
+---
+import { getCollection } from 'astro:content';
+
+const testimonials = await getCollection('testimonials', ({ data }) => data.published);
+---
+
+<section class="a-testimonial-carousel">
+  <div class="bf-container">
+    <h2 class="a-testimonial-carousel__heading">Was Kunden über uns sagen</h2>
+    <div class="a-testimonial-carousel__track">
+      {testimonials.length > 0 ? (
+        testimonials.map((testimonial, index) => (
+          <article
+            class="a-testimonial-carousel__slide"
+            data-index={index}
+          >
+            <blockquote class="a-testimonial-carousel__quote">
+              "{testimonial.data.quote}"
+            </blockquote>
+            <footer class="a-testimonial-carousel__attribution">
+              <strong>{testimonial.data.author}</strong>
+              <br />
+              {testimonial.data.role} at {testimonial.data.company}
+            </footer>
+          </article>
+        ))
+      ) : (
+        <p class="a-testimonial-carousel__empty">Testimonials coming soon.</p>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .a-testimonial-carousel {
+    padding: var(--spacing-xl) 0;
+    background: #faf7f0;
+  }
+
+  .a-testimonial-carousel__heading {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--ink);
+  }
+
+  .a-testimonial-carousel__track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .a-testimonial-carousel__slide {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e0dcd4;
+  }
+
+  .a-testimonial-carousel__quote {
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.8;
+    margin: 0 0 1.5rem 0;
+    color: #333;
+  }
+
+  .a-testimonial-carousel__attribution {
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  .a-testimonial-carousel__empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #999;
+    padding: 3rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .a-testimonial-carousel__heading {
+      font-size: 1.5rem;
+    }
+
+    .a-testimonial-carousel__track {
+      grid-template-columns: 1fr;
+    }
+
+    .a-testimonial-carousel__quote {
+      font-size: 1rem;
+    }
+  }
+</style>

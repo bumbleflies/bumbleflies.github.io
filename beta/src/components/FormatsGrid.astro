@@ -1,0 +1,85 @@
+---
+interface Format {
+  name: string;
+  percentage: string;
+  description: string;
+}
+
+interface Props {
+  heading: string;
+  eyebrow: string;
+  formats: Format[];
+  lang?: 'DE' | 'EN';
+}
+
+const { heading, eyebrow, formats, lang = 'DE' } = Astro.props;
+---
+
+<section style="border-top: 1px solid var(--rule); padding: var(--space-4xl) 0 0;">
+  <div class="bf-container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px;">
+      <h2 style="font-family: var(--font-display); font-size: var(--text-5xl); letter-spacing: -0.03em; line-height: 0.95; max-width: 700px; margin: 0;">
+        {heading}
+      </h2>
+      <span class="bf-eyebrow">{eyebrow}</span>
+    </div>
+  </div>
+</section>
+
+<div class="bf-container">
+  <div class="formats-grid">
+    {formats.map((fmt, idx) => (
+      <div key={fmt.name} class="format-item" style={{ borderRight: idx < 2 ? '1px solid var(--rule)' : 'none' }}>
+        <div class="format-header">
+          <h3 style="font-family: var(--font-display); font-size: var(--text-3xl); letter-spacing: -0.02em; line-height: 1; margin: 0;">
+            {fmt.name}
+          </h3>
+          <span style="font-family: var(--font-display); font-size: var(--text-4xl); color: var(--accent); letter-spacing: -0.03em; line-height: 1;">
+            {fmt.percentage}
+          </span>
+        </div>
+        <p style="font-size: var(--text-base); line-height: var(--lh-generous); color: var(--ink-soft); margin: 0;">
+          {fmt.description}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .formats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .format-item {
+    padding: 44px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .format-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .formats-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .format-item {
+      border-bottom: 1px solid var(--rule);
+      border-right: 0 !important;
+    }
+
+    .format-item:last-child {
+      border-bottom: 0;
+    }
+  }
+</style>

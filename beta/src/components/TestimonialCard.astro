@@ -1,0 +1,107 @@
+---
+interface Props {
+  author: string;
+  role: string;
+  company: string;
+  quote: string;
+  image?: string;
+}
+
+const { author, role, company, quote, image } = Astro.props;
+---
+
+<article class="a-testimonial-card">
+  <p class="a-testimonial-card__quote">{quote}</p>
+  {image && (
+    <img
+      src={image}
+      alt={author}
+      class="a-testimonial-card__image"
+    />
+  )}
+  <div class="a-testimonial-card__author-info">
+    <p class="a-testimonial-card__author">{author}</p>
+    <p class="a-testimonial-card__role">{role}</p>
+    <p class="a-testimonial-card__company">{company}</p>
+  </div>
+</article>
+
+<style>
+  .a-testimonial-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    border-left: 4px solid var(--accent);
+    background-color: var(--paper);
+    border-radius: 0.5rem;
+  }
+
+  .a-testimonial-card__quote {
+    font-family: var(--font-display, "Instrument Serif", serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .a-testimonial-card__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .a-testimonial-card__author-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .a-testimonial-card__author {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .a-testimonial-card__role {
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+
+  .a-testimonial-card__company {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .a-testimonial-card {
+      padding: var(--space-lg);
+      gap: var(--space-md);
+    }
+
+    .a-testimonial-card__quote {
+      font-size: 1rem;
+    }
+
+    .a-testimonial-card__author {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .a-testimonial-card {
+      padding: var(--space-md);
+    }
+
+    .a-testimonial-card__quote {
+      font-size: 0.95rem;
+    }
+  }
+</style>
