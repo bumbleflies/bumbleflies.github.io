@@ -38,6 +38,36 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     published: z.boolean().default(true),
+    // Flexible fields for different page types
+    eyebrow: z.string().optional(),
+    heading: z.string().optional(),
+    subheading: z.string().optional(),
+    // For homepage services/formats
+    services: z.array(z.object({
+      number: z.string(),
+      title: z.string(),
+      tag: z.string(),
+      description: z.string(),
+      bullets: z.array(z.string()),
+      formats: z.array(z.object({
+        kind: z.string(),
+        label: z.string(),
+      })),
+    })).optional(),
+    // For process/steps pages
+    steps: z.array(z.object({
+      number: z.string(),
+      title: z.string(),
+      description: z.string(),
+    })).optional(),
+    // For quotes
+    quote: z.string().optional(),
+    quoteCite: z.string().optional(),
+    // For CTAs
+    cta: z.object({
+      text: z.string(),
+      link: z.string(),
+    }).optional(),
   }),
 });
 
