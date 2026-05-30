@@ -30,9 +30,11 @@ exclude:
   - vendor/ruby/
   - README.md
   - CLAUDE.md
+  - STAGE3_COMPLETE.md
   - TRANSFORMATION_JOURNEY_CONCEPT.md
   - 404.html
   - beta/
+  - docs/
 
 plugins:
   - jekyll-github-metadata
