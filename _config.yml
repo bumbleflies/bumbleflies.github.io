@@ -31,6 +31,7 @@ exclude:
   - README.md
   - TRANSFORMATION_JOURNEY_CONCEPT.md
   - 404.html
+  - beta/
 
 plugins:
   - jekyll-github-metadata
