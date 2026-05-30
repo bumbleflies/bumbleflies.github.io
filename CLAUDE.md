@@ -105,7 +105,34 @@ npm run preview
 - `Dockerfile` — Multi-stage build (Node 20 → Nginx Alpine)
 
 **Docker Images:**
-Docker images are auto-built in CI to `ghcr.io/bumbleflies/web:beta` on push to `feature/bumbleflies-redesign`. Docker builds must happen in CI only, not locally.
+Docker images are auto-built in CI to `bumblecode/web:beta` (Docker Hub) on push to `feature/bumbleflies-redesign`. Docker builds must happen in CI only, not locally.
+
+**Auto-Deployment (Dev Watchtower):**
+The beta service on `servyy-test` is configured with `com.centurylinklabs.watchtower.scope=dev` in `container/bumbleflies/docker-compose.yml`. This means:
+- New `bumblecode/web:beta` images are automatically pulled and deployed
+- No manual `docker compose up -d beta` needed
+- Service auto-updates whenever a new image is built in CI
+
+### Astro Beta Site Messaging
+
+**Hero Section:**
+- Headline: "Four ways we work with your team" (German: "Vier Wege, wie wir mit euch arbeiten")
+- Emphasis: "your/euch" (italicized) — highlights partnership/WE-YOU relationship
+- Shows 4 engagement packages: Quick Start, Use-Case Sprint, AI Adoption, Custom Program
+- Component: `src/components/Hero.astro`
+
+**How We Work Section:**
+- Heading: "One path. Four stations." (German: "Ein Weg. Vier Stationen.")
+- Details the Talk → Decide → Build → Embed methodology
+- Component: `src/components/StationFlow.astro`
+
+**Messaging Alignment:**
+- Hero emphasizes *offering flexibility* (4 engagement options)
+- StationFlow emphasizes *consistent methodology* (one proven process)
+- Both sections are visually distinct on the homepage but convey complementary messages
+
+**Assets:**
+- Favicon: `public/favicon.ico` (reused from Jekyll legacy site, linked in `src/components/Layout.astro`)
 
 ## Architecture & Key Concepts
 
