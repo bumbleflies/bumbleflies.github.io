@@ -1,6 +1,7 @@
 ---
 import Mark from './Mark.astro';
 import LangToggle from './LangToggle.astro';
+import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
   lang?: 'DE' | 'EN';
@@ -41,6 +42,7 @@ const ctaLabel = cta || (lang === 'DE' ? 'Schreib uns' : 'Get in touch');
     </div>
 
     <div class="bf-nav__right">
+      <ThemeToggle />
       <LangToggle lang={lang} />
       <a class="bf-cta" href={ctaHref}>
         {ctaLabel}
