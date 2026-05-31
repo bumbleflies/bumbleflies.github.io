@@ -17,6 +17,10 @@
   }
 
   .bf-mark::before,
+:global([data-theme="dark"]) .bf-mark::after {
+  mix-blend-mode: screen;
+}
+
   .bf-mark::after {
     content: '';
     position: absolute;
@@ -30,9 +34,14 @@
     transform: translate(-4px, 0);
   }
 
+:global([data-theme="dark"]) .bf-mark::after {
+  mix-blend-mode: screen;
+}
+
   .bf-mark::after {
     background: var(--ink);
     mix-blend-mode: multiply;
+    transition: mix-blend-mode var(--duration-normal);
     opacity: 0.85;
     width: 11px;
     height: 11px;

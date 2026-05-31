@@ -78,6 +78,17 @@
   --easing-default: ease-in-out;
 }
 
+[data-theme="dark"] {
+  /* Direction B · Open Space als Form */
+  --bg: #0e1116;
+  --paper: #16191e;
+  --ink: #f3f1ec;
+  --ink-soft: rgba(243, 241, 236, 0.62);
+  --rule: rgba(243, 241, 236, 0.14);
+  --accent: oklch(0.82 0.18 95);
+  --signal: oklch(0.7 0.18 30);
+}
+
 /* ───── Reset & Normalize ─────────────────────────────────────── */
 * {
   margin: 0;
@@ -98,6 +109,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'ss01', 'cv11';
+  transition: background-color var(--duration-normal) var(--easing-default), color var(--duration-normal) var(--easing-default);
 }
 
 /* Typography defaults */

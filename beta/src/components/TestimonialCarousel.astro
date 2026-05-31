@@ -33,14 +33,14 @@ const testimonials = await getCollection('testimonials', ({ data }) => data.publ
 
 <style>
   .a-testimonial-carousel {
-    padding: var(--spacing-xl) 0;
-    background: #faf7f0;
+    padding: var(--space-4xl) 0;
+    background: var(--paper);
   }
 
   .a-testimonial-carousel__heading {
     font-family: var(--font-display);
-    font-size: 2rem;
-    margin-bottom: 3rem;
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-3xl);
     text-align: center;
     color: var(--ink);
   }
@@ -48,47 +48,43 @@ const testimonials = await getCollection('testimonials', ({ data }) => data.publ
   .a-testimonial-carousel__track {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    gap: var(--space-xl);
   }
 
   .a-testimonial-carousel__slide {
-    background: white;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    border: 1px solid #e0dcd4;
+    background: var(--bg);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--rule);
   }
 
   .a-testimonial-carousel__quote {
-    font-size: 1.125rem;
+    font-size: var(--text-lg);
     font-style: italic;
-    line-height: 1.8;
-    margin: 0 0 1.5rem 0;
-    color: #333;
+    line-height: var(--lh-body);
+    margin: 0 0 var(--space-lg) 0;
+    color: var(--ink);
   }
 
   .a-testimonial-carousel__attribution {
-    font-size: 0.875rem;
-    color: #666;
+    font-size: var(--text-sm);
+    color: var(--ink-soft);
   }
 
   .a-testimonial-carousel__empty {
     grid-column: 1 / -1;
     text-align: center;
-    color: #999;
-    padding: 3rem 0;
+    color: var(--ink-soft);
+    padding: var(--space-3xl) 0;
   }
 
   @media (max-width: 768px) {
     .a-testimonial-carousel__heading {
-      font-size: 1.5rem;
+      font-size: var(--text-2xl);
     }
 
     .a-testimonial-carousel__track {
       grid-template-columns: 1fr;
-    }
-
-    .a-testimonial-carousel__quote {
-      font-size: 1rem;
     }
   }
 </style>
