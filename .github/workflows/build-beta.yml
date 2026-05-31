@@ -1,17 +1,11 @@
 # This workflow builds the Astro-based beta site as a Docker image.
-# It only pushes the 'beta' tag to the registry when running on the master branch.
-# Branches and Pull Requests will build the image to verify correctness but will NOT push.
+# It only runs on the master branch and pushes the 'beta' tag to the registry.
 name: Build Astro Beta Image
 
 on:
   push:
     branches:
       - master
-      - feature/**
-    paths:
-      - beta/**
-      - .github/workflows/build-beta.yml
-  pull_request:
     paths:
       - beta/**
       - .github/workflows/build-beta.yml
@@ -35,8 +29,6 @@ jobs:
         uses: docker/setup-buildx-action@v4
 
       - name: Log in to Container Registry
-        # Only log in if we are on master (production push)
-        if: github.ref == 'refs/heads/master'
         uses: docker/login-action@v4
         with:
           registry: ${{ env.REGISTRY }}
@@ -49,17 +41,13 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            # Only tag as 'beta' on master
-            type=raw,value=beta,enable=${{ github.ref == 'refs/heads/master' }}
-            # Use SHA tagging for other branches (local build context)
-            type=sha,enable=${{ github.ref != 'refs/heads/master' }}
+            type=raw,value=beta
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
         with:
           context: beta
-          # Only push when on master branch
-          push: ${{ github.ref == 'refs/heads/master' }}
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
