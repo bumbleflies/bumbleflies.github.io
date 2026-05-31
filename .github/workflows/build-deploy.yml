@@ -5,6 +5,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches:
+      - master
       - "*"
 
   # Allows you to run this workflow manually from the Actions tab
@@ -20,6 +21,7 @@ jobs:
     uses: ./.github/workflows/part_build_test.yml
   deploy-stage:
     needs: build-test
+    if: github.ref == 'refs/heads/master'
     secrets: inherit
     uses: ./.github/workflows/part_deploy_stage.yml
   deploy-live:
