@@ -6,7 +6,7 @@ category: "Autonomie"
 image: "/images/blog/bots-die-nachts-arbeiten.svg"
 order: 5
 date: 2026-07-22
-author: "Chris 🦋 | Founder at bumbleflies / Senior Product Manager at JUNE"
+author: "Chris 🦋 · Founder at bumbleflies / Senior Product Manager at JUNE"
 readingTime: "10 Min."
 published: false
 lang: "DE"
@@ -14,7 +14,7 @@ lang: "DE"
 
 Das ist der Artikel, auf den die eingangs zitierte Kundenfrage wirklich zielte: *„Man gibt Feature-Requests textuell ein, und dann laufen Agents los, implementieren das, machen Pull-Requests?"*
 
-Ja. So funktioniert es. Und so habe ich es bei JUNE gebaut.
+Ja. So funktioniert es. Und so haben wir es bei JUNE gebaut.
 
 ## Die Grundidee: ein Agent ist Claude Code als Daemon
 

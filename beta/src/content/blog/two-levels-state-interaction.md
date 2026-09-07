@@ -6,7 +6,7 @@ category: "Architecture"
 image: "/images/blog/zwei-ebenen-zustand-und-interaktion.svg"
 order: 2
 date: 2026-07-12
-author: "Chris 🦋 | Founder at bumbleflies / Senior Product Manager at JUNE"
+author: "Chris 🦋 · Founder at bumbleflies / Senior Product Manager at JUNE"
 readingTime: "8 min"
 published: false
 lang: "EN"
@@ -14,7 +14,7 @@ lang: "EN"
 
 When you build a system of autonomous agents, the most tempting idea is to have them talk directly to each other. Agent A calls an API from Agent B, which sends a message to Service C. After a few weeks, you have a web of direct calls that nobody can keep track of, that loses state on every restart, and that you can't trace when something goes wrong at night.
 
-I did it differently. The entire agent system I built at JUNE, a German legal-tech company, coordinates through **two foundations made of standard tools**, and almost no component calls another directly.
+We did it differently. The entire agent system my colleagues and I built at JUNE, a German legal-tech company, coordinates through **two foundations made of standard tools**, and almost no component calls another directly.
 
 ## Foundation 1: the project management tool as the state foundation
 
