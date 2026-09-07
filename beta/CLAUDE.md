@@ -137,6 +137,10 @@ Content collections are defined in `src/content.config.ts` and provide type-safe
 - **Purpose:** Content data for main pages (home, services, etc.)
 - **Custom Loader:** Uses NestedText format (see `lib/nestedtext.ts`)
 
+## Content & Writing Style
+
+- **No em dashes.** Use a period, comma, colon, semicolon, or parentheses instead. Applies to blog posts, page copy, and any prose Claude writes for this repo.
+
 ## Component Guidelines
 
 ### Astro Components (`.astro`)
