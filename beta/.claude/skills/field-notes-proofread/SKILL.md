@@ -30,6 +30,28 @@ A line-by-line editorial pass for the "Field Notes" blog series (the KI-Agenten-
 - **Unfalsifiable absolutes**: "It improvises, and improvises a little differently every time" invites an easy technical objection. Prefer a specific, defensible claim ("it doesn't automatically know your deployment pipeline; it has to infer it from context").
 - **Vague growth metaphors**: "From this one idea grew a multi-layered operating system." Say what actually happened in concrete terms instead.
 
+## Comma-before-"und"/"and": fix vs. leave alone
+
+Not every comma call is a style preference — some are real errors, and it's worth telling the two apart before touching one:
+
+- **A genuine error**: a comma before "und"/"and" joining just **two items** of a list or two objects of the same verb, with no third item and no second clause. E.g. "Er liest beide Fundamente, und sogar die eigene Gesprächshistorie" (one verb, two objects) or "the protective measures behind it, and the concrete incident" (two items, not three). German doesn't take a comma there, and neither does English absent a third list item to justify an Oxford comma. Fix these.
+- **Not an error, don't touch**: a comma before "und"/"and" joining **two full predicates sharing a subject** ("Jeder Skill ist X, und funktioniert Y") or **two independent clauses** ("der Filter prüft erneut, und blockiert im Zweifel"). German's *Kann-Komma* rule makes this comma optional for clarity; removing it isn't wrong, but it isn't a fix either — leave it as the author had it unless something else about the sentence needs work.
+- A genuine 3+-item enumeration ("implements code, opens pull requests, ..., and reports back") keeps its comma before the final "and" in English (Oxford comma, this site's convention) and drops it in German (no Oxford-comma equivalent) — don't cross the conventions between languages.
+
+## Don't trade precision for length
+
+A "readability" rewrite that makes a sentence longer without making it clearer is a regression, not an improvement. Concretely:
+- **Don't unpack a precise compound term into a wordier relative clause** unless the original was actually unclear. "trifft die Urteilsentscheidungen" (makes the judgment calls) → "trifft die Entscheidungen, bei denen Urteil gefragt ist" (makes the decisions where judgment is called for) is strictly worse: more words, same information, softer verb.
+- **Don't swap a clean native verb for an anglicism-flavored noun phrase** to dodge a repeated word elsewhere in the post. "rollt der Agent aus" → "führt der Agent den Rollout aus" trades a normal separable verb for a clunkier "execute the rollout" construction. If a word is repeated too often, cut the repetition some other way (or leave it — repetition of a plain technical verb is rarely the reader's actual problem).
+- If a rewrite like this appears without a mirrored edit in the other language file, that's itself a signal it's a taste call rather than a real fix — a real fix (fixing an actual error, a real inconsistency) is worth making in both languages; a marginal wording preference usually isn't worth the asymmetry.
+
+## Reviewing someone else's proofread PR
+
+Rate every hunk individually before approving or merging, the same way you'd proofread a post from scratch:
+- **Verify "mirrored to English" claims** — don't take a PR description's word for it. Diff both files and check whether a fix applied to one was actually ported to the other (a frontmatter-description inconsistency fixed in DE but left unfixed in EN is a common miss).
+- **Classify each hunk** as a genuine fix (grammar error, real inconsistency), a lateral taste call (optional comma, either wording works), or a regression (wordier, less precise, or introduces an asymmetry between languages) before deciding whether to keep it.
+- It's fine to keep only a subset of a PR. Strip it down to the hunks that are unambiguous wins and revert the rest, rather than accepting or rejecting the whole thing wholesale.
+
 ## Always preserve
 
 - Concrete numbers and specifics (workflow counts, plugin counts, dated incidents) — these are the strongest anti-slop signal in the piece.
