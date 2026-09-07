@@ -6,7 +6,7 @@ export async function GET(context: APIContext) {
   const posts = await getBlogPosts('DE');
   return rss({
     title: 'bumbleflies Field Notes',
-    description: 'Feldnotizen aus einem produktiven KI-Agenten-System — Architektur, Automatisierung, Autonomie.',
+    description: 'Feldnotizen aus einem produktiven KI-Agenten-System: Architektur, Automatisierung, Autonomie.',
     site: context.site!,
     items: posts.map((post) => ({
       title: post.data.title,

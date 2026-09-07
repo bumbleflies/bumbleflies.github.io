@@ -17,19 +17,19 @@
   "services": [
     {
       "name": "Talk",
-      "description": "Facilitation and workshop design — structured dialogue that surfaces real issues and creates clarity. Includes bumble:space (Open Space) methodology."
+      "description": "Facilitation and workshop design: structured dialogue that surfaces real issues and creates clarity. Includes bumble:space (Open Space) methodology."
     },
     {
       "name": "Decide",
-      "description": "Decision-making and strategy — from strategic direction to operational ownership"
+      "description": "Decision-making and strategy: from strategic direction to operational ownership"
     },
     {
       "name": "Build & Embed",
-      "description": "Custom software and internal tools — built to solve real organizational problems, with ongoing partnership"
+      "description": "Custom software and internal tools: built to solve real organizational problems, with ongoing partnership"
     },
     {
       "name": "Full Journey",
-      "description": "End-to-end engagement — facilitation, strategy, and execution in one continuous engagement"
+      "description": "End-to-end engagement: facilitation, strategy, and execution in one continuous engagement"
     }
   ],
   "team": [

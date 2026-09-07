@@ -7,7 +7,7 @@ services:
   - number: "01"
     title: "Facilitation"
     tag: "Workshops · Big-Room · Retros"
-    description: "Wir gestalten Meetings, Workshops und Großgruppen so, dass die richtigen Themen den richtigen Raum bekommen — und alle mit klaren nächsten Schritten rausgehen."
+    description: "Wir gestalten Meetings, Workshops und Großgruppen so, dass die richtigen Themen den richtigen Raum bekommen, und alle mit klaren nächsten Schritten rausgehen."
     bullets:
       - "Open Space (8–500 PAX)"
       - "PI-Planning · Town-Halls"
@@ -22,7 +22,7 @@ services:
   - number: "02"
     title: "AI Consulting"
     tag: "Strategy · Literacy · Pilots"
-    description: "Wir helfen euch herauszufinden, wo KI in eurer Organisation wirklich Hebel hat — und begleiten den Weg vom ersten Piloten bis in den Alltag."
+    description: "Wir helfen euch herauszufinden, wo KI in eurer Organisation wirklich Hebel hat, und begleiten den Weg vom ersten Piloten bis in den Alltag."
     bullets:
       - "AI Readiness Assessment"
       - "Use-Case-Workshops"
@@ -33,7 +33,7 @@ services:
   - number: "03"
     title: "App Development"
     tag: "Tools · Prototypes · MVPs"
-    description: "Aus den Themen, die in Workshops auftauchen, bauen wir die Werkzeuge, die euer Team wirklich braucht — internes Tooling, kleine MVPs, KI-gestützte Apps."
+    description: "Aus den Themen, die in Workshops auftauchen, bauen wir die Werkzeuge, die euer Team wirklich braucht: internes Tooling, kleine MVPs, KI-gestützte Apps."
     bullets:
       - "Interne Tools & Dashboards"
       - "KI-gestützte Web-Apps"
@@ -42,7 +42,7 @@ services:
       - kind: "build"
         label: "End-to-End"
 quote: '"Die meisten Probleme, die wir lösen, fangen als Gespräch an. Manche enden auch dort. Andere brauchen einen Piloten. Wieder andere wollen gebaut werden. Wir machen alle drei."'
-quoteCite: "— Aus unserem Manifesto"
+quoteCite: "Aus unserem Manifesto"
 cta:
   text: "Erstes Gespräch vereinbaren"
   link: "mailto:info@bumbleflies.de"

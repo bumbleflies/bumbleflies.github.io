@@ -1,5 +1,5 @@
 ---
-title: "AI Consulting — From Conversation to Code"
+title: "AI Consulting: From Conversation to Code"
 published: true
 heading: "AI consulting that delivers."
 subheading: "From the first conversation to a working AI solution. We help you not just understand AI, but deploy it."
@@ -18,7 +18,7 @@ steps:
     title: "Scale"
     description: "Pilot works? Then we roll out. Integration into your systems, training for your team, support until you're self-sufficient."
 quote: '"Most of the problems we solve start as a conversation. Some end there. Others need an AI pilot. Still others want to be built. We do all three."'
-quoteCite: "— From our manifesto"
+quoteCite: "From our manifesto"
 ctaHeading: "Let's"
 ctaHeading_em: "talk."
 ctaBody: "Send us two sentences about your topic. We respond within 24h with an assessment of whether and how AI can help."
