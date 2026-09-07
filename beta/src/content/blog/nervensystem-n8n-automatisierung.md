@@ -6,7 +6,7 @@ category: "Automatisierung"
 image: "/images/blog/nervensystem-n8n-automatisierung.svg"
 order: 3
 date: 2026-07-15
-author: "Chris 🦋 | Founder at bumbleflies / Senior Product Manager at JUNE"
+author: "Chris 🦋 · Founder at bumbleflies / Senior Product Manager at JUNE"
 readingTime: "9 Min."
 published: false
 lang: "DE"
@@ -14,7 +14,7 @@ lang: "DE"
 
 Wenn die zwei Fundamente, Tickets und Chat, das Skelett des Systems sind, dann ist die Automatisierungssäule das Nervensystem: immer wach, ereignisgetrieben, ohne Menschen in der Schleife. Sie reagiert auf jede Veränderung an einem Ticket und steuert daraus die anderen Systeme.
 
-Ich habe diese Säule bei JUNE mit n8n gebaut, einer Open-Source-Automatisierungsplattform. 24 Workflows, knapp 700 Verarbeitungsschritte. Sie verwandelt eine Support-Mail in ein klassifiziertes Ticket, ein Call-Recording in eine strukturierte Aufgabenliste, einen Kommentar in fertige Release-Notes. Zwei dieser Workflows verdienen einen genaueren Blick, weil sie zwei Prinzipien verkörpern, die für jedes KI-System gelten.
+Wir haben diese Säule bei JUNE mit n8n gebaut, einer Open-Source-Automatisierungsplattform. 24 Workflows, knapp 700 Verarbeitungsschritte. Sie verwandelt eine Support-Mail in ein klassifiziertes Ticket, ein Call-Recording in eine strukturierte Aufgabenliste, einen Kommentar in fertige Release-Notes. Zwei dieser Workflows verdienen einen genaueren Blick, weil sie zwei Prinzipien verkörpern, die für jedes KI-System gelten.
 
 ## Erstens: der Code ist die Wahrheit, nicht die Handarbeit
 

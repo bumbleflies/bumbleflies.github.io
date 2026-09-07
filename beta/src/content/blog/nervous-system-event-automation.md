@@ -6,7 +6,7 @@ category: "Automation"
 image: "/images/blog/nervensystem-n8n-automatisierung.svg"
 order: 3
 date: 2026-07-15
-author: "Chris 🦋 | Founder at bumbleflies / Senior Product Manager at JUNE"
+author: "Chris 🦋 · Founder at bumbleflies / Senior Product Manager at JUNE"
 readingTime: "9 min"
 published: false
 lang: "EN"
@@ -14,7 +14,7 @@ lang: "EN"
 
 If the two foundations, tickets and chat, are the skeleton of the system, then the automation pillar is the nervous system: always awake, event-driven, no human in the loop. It reacts to every change in a ticket and controls the other systems from there.
 
-I built this pillar with n8n, an open-source automation platform, at JUNE. 24 workflows, nearly 700 processing steps. It turns a support email into a classified ticket, a call recording into a structured task list, a comment into finished release notes. Two of these workflows deserve a closer look because they embody two principles that apply to any AI system.
+We built this pillar with n8n, an open-source automation platform, at JUNE. 24 workflows, nearly 700 processing steps. It turns a support email into a classified ticket, a call recording into a structured task list, a comment into finished release notes. Two of these workflows deserve a closer look because they embody two principles that apply to any AI system.
 
 ## First: code is the truth, not manual work
 

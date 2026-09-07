@@ -6,7 +6,7 @@ category: "Plattform"
 image: "/images/blog/skills-als-apps-plugin-marktplatz.svg"
 order: 4
 date: 2026-07-18
-author: "Chris 🦋 | Founder at bumbleflies / Senior Product Manager at JUNE"
+author: "Chris 🦋 · Founder at bumbleflies / Senior Product Manager at JUNE"
 readingTime: "8 Min."
 published: false
 lang: "DE"
@@ -14,7 +14,7 @@ lang: "DE"
 
 Jedes Unternehmen hat Verfahren, die im Kopf einzelner Leute stecken. Wie man ein Feature von der Idee bis zum Pull-Request bringt. Wie man einen Kunden von einem Altsystem migriert. Wie man einen Hotfix ausrollt, ohne die Produktion umzuwerfen. Dieses Wissen wird normalerweise mündlich weitergegeben, in veralteten Wiki-Seiten begraben oder von Person zu Person kopiert, jedes Mal ein bisschen anders.
 
-Ich habe es bei JUNE stattdessen in einen **internen App-Store** verpackt. Die Metapher ist wörtlich gemeint: der Marktplatz ist der Store, jedes Plugin ist eine App, und jeder Skill darin ist ein Feature.
+Wir haben es bei JUNE stattdessen in einen **internen App-Store** verpackt. Die Metapher ist wörtlich gemeint: der Marktplatz ist der Store, jedes Plugin ist eine App, und jeder Skill darin ist ein Feature.
 
 ## Wie es sich anfühlt
 
@@ -24,7 +24,7 @@ Ein Mitarbeiter fügt den Marktplatz einmal pro Rechner zu seinem Claude Code hi
 
 ## Die eine Regel: Modell-Urteil plus deterministisches Skript
 
-Wenn du dir aus diesem Artikel eine Sache merkst, dann diese Regel. Sie ist das architektonische Herzstück des ganzen Systems:
+Die Regel, die den ganzen Marktplatz zusammenhält:
 
 > Jeder Teil eines Skills, der deterministisch gemacht werden kann, SOLL ein Skript sein. Das Sprachmodell komponiert nur den Aufruf.
 

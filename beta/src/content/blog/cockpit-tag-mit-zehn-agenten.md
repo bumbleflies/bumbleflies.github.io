@@ -6,7 +6,7 @@ category: "Produktivität"
 image: "/images/blog/cockpit-tag-mit-zehn-agenten.svg"
 order: 6
 date: 2026-07-25
-author: "Chris 🦋 | Founder at bumbleflies / Senior Product Manager at JUNE"
+author: "Chris 🦋 · Founder at bumbleflies / Senior Product Manager at JUNE"
 readingTime: "8 Min."
 published: false
 lang: "DE"

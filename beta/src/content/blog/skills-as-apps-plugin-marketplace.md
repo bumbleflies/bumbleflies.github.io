@@ -6,7 +6,7 @@ category: "Platform"
 image: "/images/blog/skills-als-apps-plugin-marktplatz.svg"
 order: 4
 date: 2026-07-18
-author: "Chris 🦋 | Founder at bumbleflies / Senior Product Manager at JUNE"
+author: "Chris 🦋 · Founder at bumbleflies / Senior Product Manager at JUNE"
 readingTime: "8 min"
 published: false
 lang: "EN"
@@ -14,7 +14,7 @@ lang: "EN"
 
 Every company has procedures living in individual people's heads. How to take a feature from idea to pull request. How to migrate a client from a legacy system. How to roll out a hotfix without breaking production. This knowledge is normally passed on orally, buried in outdated wiki pages, or copied from person to person, each time a little different.
 
-I packaged it into an **internal app store** instead, at JUNE. The metaphor is meant literally: the marketplace is the store, each plugin is an app, and each skill within it is a feature.
+We packaged it into an **internal app store** instead, at JUNE. The metaphor is meant literally: the marketplace is the store, each plugin is an app, and each skill within it is a feature.
 
 ## What it feels like
 
@@ -24,7 +24,7 @@ An employee adds the marketplace to their Claude Code once per machine and insta
 
 ## The one rule: model judgment plus deterministic script
 
-If you remember one thing from this article, let it be this rule. It's the architectural heart of the entire system:
+The rule that holds the entire marketplace together:
 
 > Any part of a skill that can be made deterministic SHOULD be a script. The language model only composes the call.
 
