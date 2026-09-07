@@ -1,12 +1,12 @@
 ---
 title: "Statt KI zu kaufen: Was ich wirklich gebaut habe"
-description: "Nicht 'ich habe KI gekauft', sondern 'ich habe meine eigenen Betriebsabläufe in Code übersetzt, den ein Sprachmodell komponiert'. Die Landkarte eines echten Agenten-Systems in Produktion."
+description: "Nicht „ich habe KI gekauft\", sondern „ich habe meine eigenen Betriebsabläufe in Code übersetzt, den ein Sprachmodell komponiert\". Hier ist die Architektur dahinter."
 excerpt: "Vier Agenten-Säulen auf zwei Fundamenten. Autonome Agenten, die Pull-Requests öffnen, ein Skill-Marktplatz für Firmenwissen, ein Cockpit, das den Tag plant. So sieht KI aus, wenn sie nicht in der Demo endet."
 category: "Überblick"
 image: "/images/blog/ki-agenten-betriebssystem.svg"
 order: 1
 date: 2026-07-10
-author: "Chris 🦋 | Founder at bumbleflies / Senior Product Manager at JUNE"
+author: "Chris 🦋 · Founder at bumbleflies / Senior Product Manager at JUNE"
 readingTime: "9 Min."
 published: true
 lang: "DE"
@@ -16,27 +16,25 @@ Die häufigste Frage, die mir Leute zum Thema KI stellen, klingt ungefähr so:
 
 > „Gehe ich richtig in der Annahme, dass man Feature-Requests einfach textuell eingibt, und dann laufen Agents los, implementieren das, machen Pull-Requests? Ich habe die romantische Vorstellung, dass ihr da einen aktuellen Schatz habt."
 
-Das ist ein echtes Zitat aus einer Kundenanfrage. Und die ehrliche Antwort lautet: Ja, genau das habe ich gebaut. Nur nicht bei bumbleflies. Ich habe es bei JUNE gebaut, einem deutschen Legal-Tech-Unternehmen, bei dem ich ebenfalls arbeite, und es trägt dort seit über einem Jahr meinen Arbeitsalltag.
+Das ist ein echtes Zitat aus einer Kundenanfrage. Und die ehrliche Antwort lautet: Ja, genau das haben wir gebaut, meine Kolleg:innen und ich bei JUNE, einem deutschen Legal-Tech-Unternehmen, wo ich es bis heute im Arbeitsalltag betreibe. Bei bumbleflies berate ich andere Unternehmen zu KI. Diese Serie ist deshalb mein persönlicher Erfahrungsbericht aus JUNE, kein bumbleflies-Kundenprojekt.
 
-Kurz zur Einordnung: Ich arbeite sowohl bei JUNE, wo ich dieses System gebaut habe und betreibe, als auch bei bumbleflies, wo ich andere Unternehmen in Sachen KI berate. Diese Serie ist mein persönlicher Erfahrungsbericht aus JUNE, kein bumbleflies-Kundenprojekt.
-
-Diese Artikelserie beschreibt dieses System. Wie es aufgebaut ist, welche Entscheidungen ich getroffen habe, und vor allem die Narben, denn fast jede Schutzmaßnahme darin lässt sich auf einen konkreten Vorfall zurückführen.
+Diese Artikelserie beschreibt das System: wie es aufgebaut ist, welche Entscheidungen ich getroffen habe und vor allem die Narben. Fast jede Schutzmaßnahme darin lässt sich auf einen konkreten Vorfall zurückführen.
 
 ## Der Kern: keine gekaufte KI, sondern kompilierte Betriebsabläufe
 
-Der wichtigste Satz zuerst, weil er alles andere erklärt: Ich habe keine KI-Lösung *eingekauft*. Ich habe die **operativen Verfahren von JUNE in Code übersetzt, den ein Sprachmodell zusammensetzt.**
+Ich habe keine KI-Lösung *eingekauft*. Ich habe die **operativen Verfahren von JUNE in Code übersetzt, den ein Sprachmodell zusammensetzt.**
 
-Der Unterschied liegt tief. Ein generischer KI-Assistent weiß nichts über deine Deployment-Pipeline, deine Ticket-Konventionen, deine Freigabe-Regeln, deine Kundenlandschaft. Er improvisiert, und improvisiert jedes Mal ein bisschen anders. Ein System, das deine Verfahren als versionierten, testbaren Code kennt, tut jedes Mal dasselbe. Das Sprachmodell trifft die Urteilsentscheidungen; deterministische Skripte führen die Mechanik aus.
+Der Unterschied liegt tief. Ein generischer KI-Assistent kennt deine Deployment-Pipeline, Ticket-Konventionen und Freigabe-Regeln nicht automatisch. Er muss sie aus Kontext ableiten. Ein System, das diese Verfahren als versionierten, testbaren Code kennt, kann sie deterministisch ausführen. Das Sprachmodell trifft die Urteilsentscheidungen; deterministische Skripte führen die Mechanik aus.
 
-Aus dieser einen Idee ist ein mehrschichtiges Betriebssystem gewachsen.
+Daraus ist das System entstanden, das heute meinen Arbeitsalltag trägt.
 
 ## Die Architektur: zwei Fundamente, vier Säulen
 
 <div class="a-arch-diagram" role="img" aria-label="Diagramm: zwei Fundamente, Zustand und Interaktion, tragen vier Agenten-Säulen: Nervensystem, Skill-Marktplatz, Agenten, Cockpit" style="--diagram-dark:url('/images/blog/ki-agenten-betriebssystem-architecture.svg');--diagram-light:url('/images/blog/ki-agenten-betriebssystem-architecture-light.svg')"></div>
 
-Das mentale Modell hat **zwei rechtwinklige Fundamente** und **vier Agenten-Säulen**, die darauf stehen.
+Das mentale Modell besteht aus **zwei Fundamenten** und **vier Säulen**.
 
-**Fundament 1, der Zustand.** Das Projektmanagement-Tool. Bei JUNE ist das ClickUp. Jede Arbeit wird als Ticket geboren oder gegen ein Ticket abgeglichen. Ein Statuswechsel, ein neuer Kommentar, ein geändertes Feld: jedes ist ein Ereignis, das Aktionen auslöst. Das ist der dauerhafte Speicher der Wahrheit *und* die Zündung.
+**Fundament 1, der Zustand.** Das Projektmanagement-Tool. Bei JUNE ist das ClickUp. Jede Arbeit wird als Ticket geboren oder gegen ein Ticket abgeglichen. Ein Statuswechsel, ein neuer Kommentar, ein geändertes Feld: jedes ist ein Ereignis, das Aktionen auslöst. Das Ticket ist damit zugleich der dauerhafte Zustand und der Auslöser für weitere Aktionen.
 
 **Fundament 2, die Interaktion.** Der Team-Chat (Microsoft Teams). Hier trifft Autonomie auf Menschen: Hier lösen Menschen Agenten aus, hier melden Agenten ihren Status zurück, und hier koordinieren sich Agenten untereinander.
 
@@ -50,9 +48,9 @@ Darauf stehen die vier Säulen:
 
 - **Säule 4, das persönliche Cockpit.** Ein Meta-Agent, der zehn Quellen parallel scannt und daraus den Tag eines Menschen plant. Er liest beide Fundamente, und sogar die eigene Gesprächshistorie der KI, um offene Fäden wiederzufinden.
 
-## Das Verbindungsgewebe
+## Wie die Komponenten zusammenspielen
 
-Das sind keine vier getrennten Projekte. Es ist ein **Netz mit benannten, tragenden Nähten**, und fast jede Verbindung läuft über die zwei Fundamente. Komponenten stoßen sich gegenseitig über Chat-Nachrichten an und koordinieren sich über Tickets und Kommentare, statt sich direkt aufzurufen. Die Fundamente *sind* das gemeinsame Vokabular.
+Das sind keine vier getrennten Projekte. Sie koordinieren sich über die beiden Fundamente: Chat-Nachrichten lösen Aktionen aus, Tickets und Kommentare transportieren Zustand und Kontext. Die Komponenten müssen sich deshalb nicht direkt aufrufen.
 
 Ein durchgängiger Ablauf, wie er täglich passiert:
 
@@ -66,28 +64,28 @@ Vier Säulen, ein Arbeitsvorgang. Kein einziger Direktaufruf zwischen den Kompon
 
 ## Die wiederkehrenden Prinzipien
 
-Über alle Säulen hinweg tauchen dieselben Entwurfsprinzipien auf. Sie sind der eigentliche Wert, und der rote Faden dieser Serie:
+Über alle Säulen hinweg tauchen dieselben Entwurfsprinzipien auf, die sich durch alle Teile des Systems ziehen:
 
-**Vertraue dem Modell nicht, verifiziere mit Code.** Die durchgängige Antwort auf „Wie macht man ein Sprachmodell in Produktion sicher?" lautet: eine deterministische Grenze drumherum ziehen. Das Modell schreibt, ein Regex-Filter prüft, das Modell korrigiert, derselbe Filter prüft erneut, und verweigert im Zweifel hart.
+**Vertraue dem Modell nicht, verifiziere mit Code.** Die durchgängige Antwort auf „Wie macht man ein Sprachmodell in Produktion sicher?" lautet: eine deterministische Grenze drumherum ziehen. Das Modell schreibt, ein Regex-Filter prüft, das Modell korrigiert, derselbe Filter prüft erneut, und blockiert im Zweifel.
 
-**Narben als Design.** Fast jede Schutzmaßnahme zitiert einen datierten Vorfall: eine Nacht, in der ein Agent für mehrere hundert Euro Tokens verbrannte, eine Regression bei der Terminbuchung, eine defekte Konfiguration auf einem Netzlaufwerk. Die Systeme wachsen, indem sie ihre eigenen Fehler in Regeln gießen.
+**Narben als Design.** Fast jede Schutzmaßnahme geht auf einen datierten Vorfall zurück: eine Nacht, in der ein Agent für mehrere hundert Euro Tokens verbrannte, eine Regression bei der Terminbuchung, eine defekte Konfiguration auf einem Netzlaufwerk. Die Systeme wachsen, indem sie ihre eigenen Fehler in Regeln gießen.
 
 **Koordination über dauerhafte Artefakte, nicht über RPC.** Agenten und Menschen sprechen über Tickets, Tags, Status und Chat-Nachrichten miteinander, nachvollziehbar, wiederaufnehmbar, für Menschen einsehbar.
 
 **Eine Definition, viele Laufzeiten.** Derselbe Skill läuft identisch für einen Menschen am Laptop, einen Agenten im Container und die CI-Pipeline. Ein Skript, keine drei. Kein Copy-Paste.
 
-**Mensch am Bremshebel.** Deutschsprachige Trigger überall, Rechts-Domäne, und alle wirklich folgenreichen Aktionen, Freigaben, Merges, Produktiv-Deployments, sind an eine explizite menschliche Bestätigung gebunden. Autonomie mit der Hand am Hebel.
+**Mensch am Bremshebel.** Deutschsprachige Trigger, eine Rechts-Domäne und vor allem: Alle wirklich folgenreichen Aktionen (Freigaben, Merges, Produktiv-Deployments) brauchen eine explizite menschliche Bestätigung. Autonomie mit der Hand am Hebel.
 
-Das ist kein Bauplan zum Kopieren. Es ist der aktuelle Zustand eines laufenden Systems, Narben inklusive, und manche Entscheidungen darin sind mir bis heute nicht ganz geheuer.
+Es ist der aktuelle Zustand eines laufenden Systems, Narben inklusive, und manche Entscheidungen darin sind mir bis heute nicht ganz geheuer.
 
 ## Was in dieser Serie kommt
 
-Die folgenden Artikel nehmen sich je ein Fundament oder eine Säule vor:
+Die nächsten Artikel nehmen jeweils ein Fundament oder eine Säule genauer auseinander:
 
-- **Die zwei Fundamente**, auf denen alles läuft, warum der ganze Stack über zwei SaaS-Tools koordiniert statt über eigene Services.
-- **Das Nervensystem**, Event-Automatisierung und der Datenschutz-Filter als Musterbeispiel für „verifiziere mit Code".
-- **Skills als Apps**, der Plugin-Marktplatz für Firmenwissen.
-- **Agenten, die nachts arbeiten**, Claude Code als autonomer Daemon, und die Narben.
-- **Ein Cockpit für einen Menschen**, den eigenen Tag mit zehn Agenten orchestrieren.
+- **Die zwei Fundamente**: warum ich den Stack über zwei SaaS-Tools koordiniere statt über eigene Services.
+- **Das Nervensystem**: Event-Automatisierung und der Datenschutz-Filter.
+- **Skills als Apps**: wie Firmenwissen als installierbare Skills funktioniert.
+- **Die Agenten**: Claude Code als autonomer Daemon, und was dabei schiefging.
+- **Das Cockpit**: wie zehn Agenten meinen Arbeitstag zusammenfassen.
 
-Das ist keine Zukunftsvision. Das läuft. Und alles, was in dieser Serie folgt, ist ein Narben-Protokoll, die Schutzmaßnahme und der datierte Vorfall dahinter.
+Das ist keine Zukunftsvision. Das läuft. Jeder folgende Artikel zeigt deshalb nicht nur eine Komponente, sondern auch die Schutzmaßnahmen dahinter, und den konkreten Vorfall, der dazu geführt hat.
