@@ -1,34 +1,34 @@
-# bumbleflies — Full Content Summary
+# bumbleflies: Full Content Summary
 
 > Facilitation, AI Consulting, and App Development for organizations navigating change. Based in Munich, serving the DACH region. Three founders, four service pillars, one goal: helping teams talk, decide, and build.
 
-We help teams move from conversation to code. Our approach combines structured facilitation with hands-on technical execution — no consulting decks that collect dust, just work that sticks.
+We help teams move from conversation to code. Our approach combines structured facilitation with hands-on technical execution: no consulting decks that collect dust, just work that sticks.
 
 ---
 
 ## Services
 
-### Talk — Facilitation & Workshop Design
+### Talk: Facilitation & Workshop Design
 
-Structured dialogue that surfaces real issues and creates clarity. We design and facilitate workshops, team alignment sessions, and bumble:space (Open Space) events — from executive offsites to sensitive community conversations. Our facilitation creates safety, surfaces truth, and produces decisions that stick. Formats include: Gesamtmoderation (full-day facilitation), bumble:space / Open Space, structured dialogue, team retrospectives.
+Structured dialogue that surfaces real issues and creates clarity. We design and facilitate workshops, team alignment sessions, and bumble:space (Open Space) events, from executive offsites to sensitive community conversations. Our facilitation creates safety, surfaces truth, and produces decisions that stick. Formats include: Gesamtmoderation (full-day facilitation), bumble:space / Open Space, structured dialogue, team retrospectives.
 
-### Decide — Decision-Making & Strategy
+### Decide: Decision-Making & Strategy
 
-From strategic direction to operational ownership. We help teams make decisions they can actually commit to — because the right people were in the room, the right questions were asked, and the right process held the conversation. Services include: strategy workshops, decision-making frameworks, organizational design, agile transformation coaching.
+From strategic direction to operational ownership. We help teams make decisions they can actually commit to, because the right people were in the room, the right questions were asked, and the right process held the conversation. Services include: strategy workshops, decision-making frameworks, organizational design, agile transformation coaching.
 
-### Build & Embed — Software Development
+### Build & Embed: Software Development
 
-Custom software, internal tools, and AI applications built to solve real organizational problems. We don't hand off code and disappear — we embed with your team, build what you actually need, and stay through adoption. The difference between a project and a product. Capabilities: full-stack development, AI integration, internal tooling, SaaS products, DevOps.
+Custom software, internal tools, and AI applications built to solve real organizational problems. We don't hand off code and disappear; we embed with your team, build what you actually need, and stay through adoption. The difference between a project and a product. Capabilities: full-stack development, AI integration, internal tooling, SaaS products, DevOps.
 
-### Full Journey — End-to-End Engagement
+### Full Journey: End-to-End Engagement
 
-When the problem doesn't fit a single box. We accompany teams from first conversation through implementation — facilitation, strategy, and execution in one continuous engagement. For organizations that need a partner, not a vendor.
+When the problem doesn't fit a single box. We accompany teams from first conversation through implementation: facilitation, strategy, and execution in one continuous engagement. For organizations that need a partner, not a vendor.
 
 ---
 
 ## AI Consulting
 
-Practical AI for organizations — no hype, just results. We help teams understand what AI can actually do for their work, then implement it. Our approach: start with the problem, not the technology. We focus on human-in-the-loop AI, agentic systems, and practical automation — the kind that changes how teams work without requiring a PhD to operate.
+Practical AI for organizations, no hype, just results. We help teams understand what AI can actually do for their work, then implement it. Our approach: start with the problem, not the technology. We focus on human-in-the-loop AI, agentic systems, and practical automation: the kind that changes how teams work without requiring a PhD to operate.
 
 Key areas: AI strategy workshops, agentic software development, human-in-the-loop AI systems, process automation, AI literacy training.
 
@@ -42,17 +42,17 @@ Our approach connects facilitation and development. We believe transformation ha
 
 ## Case Studies
 
-### Siemens AG — Enterprise Team Alignment
+### Siemens AG: Enterprise Team Alignment
 
 **Service:** Talk | **Duration:** May 2023
 
-A large enterprise team walked in with competing priorities and unclear ownership. They walked out with clear decisions and named owners — and immediately booked follow-up sessions to sustain the momentum.
+A large enterprise team walked in with competing priorities and unclear ownership. They walked out with clear decisions and named owners, and immediately booked follow-up sessions to sustain the momentum.
 
 **What we did:** Full-day workshop (Gesamtmoderation) with the entire team. Structured dialogue to surface competing priorities, named ownership for each decision, action clarity for next steps. Pivoted to a replacement program when the original agenda needed adjustment.
 
 **Outcome:** Clear decisions with explicit ownership, aligned direction across divisions, repeat bookings, sustained momentum. One focused workshop created enough clarity that multiple follow-up sessions were requested.
 
-### LeagueSphere — Building a Regional SaaS
+### LeagueSphere: Building a Regional SaaS
 
 **Service:** Build & Embed | **Duration:** 2021–2026 (Ongoing)
 
@@ -62,7 +62,7 @@ American football leagues in Germany were drowning in spreadsheets. We took full
 
 **Outcome:** Live SaaS across 6+ regional German leagues, recurring revenue, 5-year partnership, leagues actively recommend to other leagues.
 
-### Dialograum Geld — Values-Driven Community Dialogue
+### Dialograum Geld: Values-Driven Community Dialogue
 
 **Service:** Talk | **Duration:** March 2021
 
@@ -70,7 +70,7 @@ A community initiative dedicated to normalizing conversations about money. We de
 
 **Outcome:** Difficult conversations happened authentically, community voices were heard, money moved from "forbidden topic" to "normal conversation," Dialograum demonstrated their commitment beyond theory.
 
-### Wohnungshelden — Annual Team Alignment
+### Wohnungshelden: Annual Team Alignment
 
 **Service:** Talk | **Duration:** Annual (Jahresendretro)
 
@@ -78,7 +78,7 @@ Full-day Open Space retrospective combining structured reflection with community
 
 **Outcome:** Team clarity on priorities, continued annual engagement, high participation and buy-in. An annual ritual that the team actually looks forward to.
 
-### UnternehmerTUM — Agile Transformation at Scale
+### UnternehmerTUM: Agile Transformation at Scale
 
 **Service:** Decide | **Duration:** 2025–2026 (Ongoing)
 
@@ -90,59 +90,59 @@ Multi-modal training and coaching program for agile transformation. Core offerin
 
 ## Team
 
-### Christoph Kämpfe — Founder & Engineering Lead
+### Christoph Kämpfe: Founder & Engineering Lead
 
 Full-stack engineer and product builder. Turns workshop insights into production tools. Believes great internal tooling and custom software are force multipliers for organizational change. Expertise: backend systems, frontend design, DevOps, custom software for organizational needs.
 
-### Christian Dähn — Founder & Content Strategy
+### Christian Dähn: Founder & Content Strategy
 
-Facilitator, speaker, and organizational psychologist with 15+ years helping teams find their voice. From workshops to AI strategy to custom tooling. Founded bumbleflies because organizations often have the answers within themselves — they just need the right container and the right questions.
+Facilitator, speaker, and organizational psychologist with 15+ years helping teams find their voice. From workshops to AI strategy to custom tooling. Founded bumbleflies because organizations often have the answers within themselves: they just need the right container and the right questions.
 
-### Sebastian Keller — Founder & Product Strategy
+### Sebastian Keller: Founder & Product Strategy
 
-Digital strategist and organizational designer. Shapes how bumbleflies' services fit together and ensures every engagement creates lasting impact. Obsessed with understanding how change actually sticks — through thoughtful service design that creates conditions for sustainable transformation.
+Digital strategist and organizational designer. Shapes how bumbleflies' services fit together and ensures every engagement creates lasting impact. Obsessed with understanding how change actually sticks, through thoughtful service design that creates conditions for sustainable transformation.
 
 ---
 
 ## Why We Exist
 
-The integrated model — why one team doing Talk + Decide + Build beats fragmented vendors. Most transformation services are relay races: a facilitator hands off to a strategist who hands off to a developer. Knowledge gets lost, nobody owns the outcome. bumbleflies does all three. One team, one conversation, one accountability. From the first workshop to the deployed software — we're there the whole way.
+The integrated model: why one team doing Talk + Decide + Build beats fragmented vendors. Most transformation services are relay races: a facilitator hands off to a strategist who hands off to a developer. Knowledge gets lost, nobody owns the outcome. bumbleflies does all three. One team, one conversation, one accountability. From the first workshop to the deployed software, we're there the whole way.
 
-Comparison: fragmented vs integrated approach — who leads, goals, learning between phases, adoption timeline.
+Comparison: fragmented vs integrated approach, who leads, goals, learning between phases, adoption timeline.
 
 ---
 
 ## About
 
-bumbleflies was founded in 2021 in Munich by three people who believed that organizations don't need more consultants — they need better conversations and better tools. We facilitate, we consult, and we build. Sometimes all three in the same engagement.
+bumbleflies was founded in 2021 in Munich by three people who believed that organizations don't need more consultants; they need better conversations and better tools. We facilitate, we consult, and we build. Sometimes all three in the same engagement.
 
 ---
 
 ## Blog
 
-Field Notes — the bumbleflies article series on AI, facilitation, and organizational change. Each article ships in German and English, with an audio summary.
+Field Notes: the bumbleflies article series on AI, facilitation, and organizational change. Each article ships in German and English, with an audio summary.
 
-- [Statt KI zu kaufen: Was ich wirklich gebaut habe](https://bumbleflies.de/blog/ki-agenten-betriebssystem) — Field Notes #1. Not "we bought AI" but "we translated our own operational processes into code a language model composes". Four agent pillars on two foundations: autonomous agents that open pull requests, a skill marketplace for company knowledge, and a cockpit that plans the day. Built at JUNE, a German legal-tech company, running in production for over a year.
-- [What I Actually Built Instead of "Adding AI"](https://bumbleflies.de/en/blog/ai-agent-operating-system) — English version of Field Notes #1, same content and audio summary in English.
+- [Statt KI zu kaufen: Was ich wirklich gebaut habe](https://bumbleflies.de/blog/ki-agenten-betriebssystem): Field Notes #1. Not "we bought AI" but "we translated our own operational processes into code a language model composes". Four agent pillars on two foundations: autonomous agents that open pull requests, a skill marketplace for company knowledge, and a cockpit that plans the day. Built at JUNE, a German legal-tech company, running in production for over a year.
+- [What I Actually Built Instead of "Adding AI"](https://bumbleflies.de/en/blog/ai-agent-operating-system): English version of Field Notes #1, same content and audio summary in English.
 
 ---
 
 ## English Pages
 
 All pages are available in English at /en/. Full content mirrors the German site:
-- [Home (EN)](https://bumbleflies.de/en/) — What we do and who we serve.
-- [Services (EN)](https://bumbleflies.de/en/services) — Four service pillars.
-- [AI Consulting (EN)](https://bumbleflies.de/en/ai-consulting) — Practical AI, no hype.
-- [How We Work (EN)](https://bumbleflies.de/en/how-we-work) — The bumbleflies method.
-- [Why bumbleflies (EN)](https://bumbleflies.de/en/why-bumbleflies) — Why teams choose us.
-- [Why We Exist (EN)](https://bumbleflies.de/en/why-we) — The integrated model.
-- [Risk Derisking (EN)](https://bumbleflies.de/en/risk-derisking) — Reducing risk in change.
-- [Open Space (EN)](https://bumbleflies.de/en/open-space) — Open Space principles.
-- [Case Studies (EN)](https://bumbleflies.de/en/case-studies) — Real results.
-- [About (EN)](https://bumbleflies.de/en/about) — Who we are.
-- [Blog (EN)](https://bumbleflies.de/en/blog) — Field Notes.
-- [Imprint (EN)](https://bumbleflies.de/en/imprint) — Legal info.
-- [Privacy (EN)](https://bumbleflies.de/en/privacy) — Privacy policy.
+- [Home (EN)](https://bumbleflies.de/en/): What we do and who we serve.
+- [Services (EN)](https://bumbleflies.de/en/services): Four service pillars.
+- [AI Consulting (EN)](https://bumbleflies.de/en/ai-consulting): Practical AI, no hype.
+- [How We Work (EN)](https://bumbleflies.de/en/how-we-work): The bumbleflies method.
+- [Why bumbleflies (EN)](https://bumbleflies.de/en/why-bumbleflies): Why teams choose us.
+- [Why We Exist (EN)](https://bumbleflies.de/en/why-we): The integrated model.
+- [Risk Derisking (EN)](https://bumbleflies.de/en/risk-derisking): Reducing risk in change.
+- [Open Space (EN)](https://bumbleflies.de/en/open-space): Open Space principles.
+- [Case Studies (EN)](https://bumbleflies.de/en/case-studies): Real results.
+- [About (EN)](https://bumbleflies.de/en/about): Who we are.
+- [Blog (EN)](https://bumbleflies.de/en/blog): Field Notes.
+- [Imprint (EN)](https://bumbleflies.de/en/imprint): Legal info.
+- [Privacy (EN)](https://bumbleflies.de/en/privacy): Privacy policy.
 
 ---
 

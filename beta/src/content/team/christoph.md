@@ -10,7 +10,7 @@ order: 3
 
 Christoph is a full-stack engineer with a deep commitment to translating organizational insights into working software. With expertise spanning backend systems, frontend design, and DevOps, he builds the technical infrastructure that allows bumbleflies to scale custom solutions and internal tools for clients.
 
-Christoph believes that great engineering isn't just about clean code — it's about understanding the human problems code solves and building systems that multiply the impact of organizational change work.
+Christoph believes that great engineering isn't just about clean code; it's about understanding the human problems code solves and building systems that multiply the impact of organizational change work.
 
 ## Interests
 

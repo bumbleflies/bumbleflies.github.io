@@ -1,5 +1,5 @@
 ---
-title: "AI Consulting — From Conversation to Code"
+title: "AI Consulting: From Conversation to Code"
 published: true
 heading: "KI-Beratung, die liefert."
 subheading: "Vom ersten Gespräch zur laufenden KI-Lösung. Wir helfen dir, KI nicht nur zu verstehen, sondern einzusetzen."
@@ -18,7 +18,7 @@ steps:
     title: "Skalieren"
     description: "Der Pilot läuft? Dann rollen wir aus. Integration in deine Systeme, Training für dein Team, Begleitung bis zur Eigenständigkeit."
 quote: '"Die meisten Probleme, die wir lösen, fangen als Gespräch an. Manche enden auch dort. Andere brauchen einen KI-Piloten. Wieder andere wollen gebaut werden. Wir machen alle drei."'
-quoteCite: "— Aus unserem Manifesto"
+quoteCite: "Aus unserem Manifesto"
 ctaHeading: "Lass uns"
 ctaHeading_em: "reden."
 ctaBody: "Schreib uns zwei Sätze zu deinem Thema. Wir antworten innerhalb von 24h mit einer Einschätzung, ob und wie KI helfen kann."

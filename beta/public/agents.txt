@@ -1,6 +1,6 @@
-# bumbleflies — Agent Directory
+# bumbleflies: Agent Directory
 # Machine-readable page index for AI crawlers and agents.
-# Updated: 2026-09-05
+# Updated: 2026-09-07
 
 # Site
 Homepage: https://bumbleflies.de/
