@@ -24,9 +24,9 @@ Diese Artikelserie beschreibt das System: wie es aufgebaut ist, welche Entscheid
 
 Ich habe keine KI-Lösung *eingekauft*. Ich habe die **operativen Verfahren von JUNE in Code übersetzt, den ein Sprachmodell zusammensetzt.**
 
-Ein generischer KI-Assistent kennt deine Deployment-Pipeline, Ticket-Konventionen und Freigabe-Regeln nicht automatisch. Er muss sie aus Kontext ableiten. Ein System, das diese Verfahren als versionierten, testbaren Code kennt, kann sie deterministisch ausführen. Das Sprachmodell trifft die Entscheidungen, bei denen Urteil gefragt ist; deterministische Skripte übernehmen die Mechanik.
+Der Unterschied liegt tief. Ein generischer KI-Assistent kennt deine Deployment-Pipeline, Ticket-Konventionen und Freigabe-Regeln nicht automatisch. Er muss sie aus Kontext ableiten. Ein System, das diese Verfahren als versionierten, testbaren Code kennt, kann sie deterministisch ausführen. Das Sprachmodell trifft die Urteilsentscheidungen; deterministische Skripte führen die Mechanik aus.
 
-Das ist das System, das heute meinen Arbeitsalltag trägt.
+Daraus ist das System entstanden, das heute meinen Arbeitsalltag trägt.
 
 ## Die Architektur: zwei Fundamente, vier Säulen
 
@@ -42,7 +42,7 @@ Darauf stehen die vier Säulen:
 
 - **Säule 1, das Nervensystem.** Eine Automatisierungsplattform (n8n) reagiert auf Ereignisse aus Fundament 1 (dem Zustand) und steuert Fundament 2 (die Interaktion) sowie andere Systeme. Kein Mensch in der Schleife. 24 Workflows, knapp 700 Verarbeitungsschritte. Hier entsteht z. B. aus einer Support-E-Mail automatisch ein klassifiziertes Ticket, doppelte Meldungen werden dabei zusammengeführt.
 
-- **Säule 2, der Skill-Marktplatz.** Das Firmenwissen als installierbare, versionierte „Apps". 11 Plugins, 53 Skills. Jeder Skill ist die Kombination aus Modell-Urteil und deterministischem Skript und funktioniert identisch für einen Menschen am Laptop, einen Agenten im Container und die CI-Pipeline.
+- **Säule 2, der Skill-Marktplatz.** Das Firmenwissen als installierbare, versionierte „Apps". 11 Plugins, 53 Skills. Jeder Skill ist die Kombination aus Modell-Urteil und deterministischem Skript, und funktioniert identisch für einen Menschen am Laptop, einen Agenten im Container und die CI-Pipeline.
 
 - **Säule 3, die autonomen Agenten.** Claude Code, das rund um die Uhr als Daemon läuft. Diese Serie nennt jeden KI-Prozess, der eine Rolle ausfüllt, einheitlich „Agent", auch die, die ohne Zutun autonom laufen. Ein Wort im Team-Chat weckt einen Agenten; er implementiert Code, öffnet Pull-Requests, adressiert Review-Kommentare, rollt Hotfixes aus und meldet sich zurück. Vier Personas aus *einem* gemeinsamen Bausatz.
 
@@ -56,7 +56,7 @@ Ein durchgängiger Ablauf, wie er täglich passiert:
 
 1. Ein Kunde schreibt an den Support. Das Nervensystem erzeugt daraus automatisch ein klassifiziertes Ticket. Sobald ein Pull-Request das Ticket adressiert, verweisen beide aufeinander.
 2. Jemand tippt im Team-Chat ein Triggerwort. Der Agent wacht auf, sichtet die Pull-Requests, die zu offenen Tickets gehören, und triagiert sie.
-3. Nach expliziter menschlicher Freigabe führt der Agent den Rollout aus, erst die Datenbank-Migrationen, dann die Services.
+3. Nach expliziter menschlicher Freigabe rollt der Agent aus, erst die Datenbank-Migrationen, dann die Services.
 4. Der Agent hinterlässt einen Kommentar am zugehörigen Ticket; das Nervensystem generiert daraus automatisch die kundensichtbaren Release-Notes, durch einen mehrstufigen Datenschutz-Filter.
 5. Am nächsten Morgen taucht der gesamte Vorgang im Tagesbriefing des Cockpits auf, zusammengeführt mit den Tickets, damit nichts doppelt auftaucht.
 
@@ -66,7 +66,7 @@ Vier Säulen, ein Arbeitsvorgang. Kein einziger Direktaufruf zwischen den Kompon
 
 Über alle Säulen hinweg tauchen dieselben Entwurfsprinzipien auf, die sich durch alle Teile des Systems ziehen:
 
-**Vertraue dem Modell nicht, verifiziere mit Code.** Die durchgängige Antwort auf „Wie macht man ein Sprachmodell in Produktion sicher?" lautet: eine deterministische Grenze drumherum ziehen. Das Modell schreibt, ein Regex-Filter prüft, das Modell korrigiert, derselbe Filter prüft erneut und blockiert im Zweifel.
+**Vertraue dem Modell nicht, verifiziere mit Code.** Die durchgängige Antwort auf „Wie macht man ein Sprachmodell in Produktion sicher?" lautet: eine deterministische Grenze drumherum ziehen. Das Modell schreibt, ein Regex-Filter prüft, das Modell korrigiert, derselbe Filter prüft erneut, und blockiert im Zweifel.
 
 **Narben als Design.** Fast jede Schutzmaßnahme geht auf einen datierten Vorfall zurück: eine Nacht, in der ein Agent für mehrere hundert Euro Tokens verbrannte, eine Regression bei der Terminbuchung, eine defekte Konfiguration auf einem Netzlaufwerk. Die Systeme wachsen, indem sie ihre eigenen Fehler in Regeln gießen.
 

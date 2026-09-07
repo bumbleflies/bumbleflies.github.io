@@ -24,9 +24,9 @@ This article series describes the system: how it's structured, what decisions I 
 
 I didn't *purchase* an AI solution. I **translated JUNE's operational procedures into code that a language model assembles.**
 
-A generic AI assistant doesn't automatically know your deployment pipeline, ticket conventions, or approval rules. It has to infer them from context. A system that knows these procedures as versioned, testable code can execute them deterministically. The language model makes the judgment calls; deterministic scripts handle the mechanics.
+The difference runs deep. A generic AI assistant doesn't automatically know your deployment pipeline, ticket conventions, or approval rules. It has to infer them from context. A system that knows these procedures as versioned, testable code can execute them deterministically. The language model makes the judgment calls; deterministic scripts handle the mechanics.
 
-This is the system that carries my day-to-day work today.
+That gave rise to the system that carries my day-to-day work today.
 
 ## The architecture: two foundations, four pillars
 
@@ -42,7 +42,7 @@ Standing on them are the four pillars:
 
 - **Pillar 1, the nervous system.** An automation platform (n8n) reacts to events from Foundation 1 (the state) and controls Foundation 2 (the interaction) and other systems. No human in the loop. 24 workflows, nearly 700 processing steps. This is where a support email automatically becomes a classified ticket, with duplicates merged in along the way.
 
-- **Pillar 2, the skill marketplace.** Company knowledge as installable, versioned "apps". 11 plugins, 53 skills. Each skill is a combination of model judgment and deterministic script and works identically for a human on a laptop, an agent in a container, and the CI pipeline.
+- **Pillar 2, the skill marketplace.** Company knowledge as installable, versioned "apps". 11 plugins, 53 skills. Each skill is a combination of model judgment and deterministic script, and works identically for a human on a laptop, an agent in a container, and the CI pipeline.
 
 - **Pillar 3, the autonomous agents.** Claude Code running around the clock as a daemon. This series uses "agent" as the single term for any AI process filling a role, including the ones that run with nobody in the loop. A word in the team chat wakes an agent; it implements code, opens pull requests, addresses review comments, rolls out hotfixes, and reports back. Four personas from *one* shared building kit.
 
