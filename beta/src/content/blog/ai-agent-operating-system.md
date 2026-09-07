@@ -46,7 +46,7 @@ Standing on them are the four pillars:
 
 - **Pillar 3, the autonomous agents.** Claude Code running around the clock as a daemon. This series uses "agent" as the single term for any AI process filling a role, including the ones that run with nobody in the loop. A word in the team chat wakes an agent; it implements code, opens pull requests, addresses review comments, rolls out hotfixes, and reports back. Four personas from *one* shared building kit.
 
-- **Pillar 4, the personal cockpit.** A meta-agent that scans ten sources in parallel and plans a human's day from them. It reads both foundations, and even the AI's own conversation history to rediscover open threads.
+- **Pillar 4, the personal cockpit.** A meta-agent that scans ten sources in parallel and plans a human's day from them. It reads both foundations and even the AI's own conversation history to rediscover open threads.
 
 ## How the components work together
 
@@ -88,4 +88,4 @@ The next articles each take a closer look at one foundation or pillar:
 - **The agents**: Claude Code as an autonomous daemon, and what went wrong.
 - **The cockpit**: how ten agents summarize my workday.
 
-This isn't a vision of the future. This is running. Every article that follows therefore shows not just one component, but also the protective measures behind it, and the concrete incident that led to it.
+This isn't a vision of the future. This is running. Every article that follows therefore shows not just one component, but also the protective measures behind it and the concrete incident that led to it.

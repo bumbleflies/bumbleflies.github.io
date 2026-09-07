@@ -1,6 +1,6 @@
 ---
 title: "Statt KI zu kaufen: Was ich wirklich gebaut habe"
-description: "Nicht „ich habe KI gekauft\", sondern „ich habe meine eigenen Betriebsabläufe in Code übersetzt, den ein Sprachmodell komponiert\". Hier ist die Architektur dahinter."
+description: "Nicht „ich habe KI gekauft\", sondern „ich habe meine eigenen Betriebsabläufe in Code übersetzt, den ein Sprachmodell zusammensetzt\". Hier ist die Architektur dahinter."
 excerpt: "Vier Agenten-Säulen auf zwei Fundamenten. Autonome Agenten, die Pull-Requests öffnen, ein Skill-Marktplatz für Firmenwissen, ein Cockpit, das den Tag plant. So sieht KI aus, wenn sie nicht in der Demo endet."
 category: "Überblick"
 image: "/images/blog/ki-agenten-betriebssystem.svg"
@@ -44,9 +44,9 @@ Darauf stehen die vier Säulen:
 
 - **Säule 2, der Skill-Marktplatz.** Das Firmenwissen als installierbare, versionierte „Apps". 11 Plugins, 53 Skills. Jeder Skill ist die Kombination aus Modell-Urteil und deterministischem Skript, und funktioniert identisch für einen Menschen am Laptop, einen Agenten im Container und die CI-Pipeline.
 
-- **Säule 3, die autonomen Agenten.** Claude Code, das rund um die Uhr als Daemon läuft. Diese Serie nennt jeden KI-Prozess, der eine Rolle ausfüllt, einheitlich „Agent", auch die, die ohne Zutun autonom laufen. Ein Wort im Team-Chat weckt einen Agenten; er implementiert Code, öffnet Pull-Requests, adressiert Review-Kommentare, rollt Hotfixes aus, und meldet sich zurück. Vier Personas aus *einem* gemeinsamen Bausatz.
+- **Säule 3, die autonomen Agenten.** Claude Code, das rund um die Uhr als Daemon läuft. Diese Serie nennt jeden KI-Prozess, der eine Rolle ausfüllt, einheitlich „Agent", auch die, die ohne Zutun autonom laufen. Ein Wort im Team-Chat weckt einen Agenten; er implementiert Code, öffnet Pull-Requests, adressiert Review-Kommentare, rollt Hotfixes aus und meldet sich zurück. Vier Personas aus *einem* gemeinsamen Bausatz.
 
-- **Säule 4, das persönliche Cockpit.** Ein Meta-Agent, der zehn Quellen parallel scannt und daraus den Tag eines Menschen plant. Er liest beide Fundamente, und sogar die eigene Gesprächshistorie der KI, um offene Fäden wiederzufinden.
+- **Säule 4, das persönliche Cockpit.** Ein Meta-Agent, der zehn Quellen parallel scannt und daraus den Tag eines Menschen plant. Er liest beide Fundamente und sogar die eigene Gesprächshistorie der KI, um offene Fäden wiederzufinden.
 
 ## Wie die Komponenten zusammenspielen
 
@@ -88,4 +88,4 @@ Die nächsten Artikel nehmen jeweils ein Fundament oder eine Säule genauer ause
 - **Die Agenten**: Claude Code als autonomer Daemon, und was dabei schiefging.
 - **Das Cockpit**: wie zehn Agenten meinen Arbeitstag zusammenfassen.
 
-Das ist keine Zukunftsvision. Das läuft. Jeder folgende Artikel zeigt deshalb nicht nur eine Komponente, sondern auch die Schutzmaßnahmen dahinter, und den konkreten Vorfall, der dazu geführt hat.
+Das ist keine Zukunftsvision. Das läuft. Jeder folgende Artikel zeigt deshalb nicht nur eine Komponente, sondern auch die Schutzmaßnahmen dahinter und den konkreten Vorfall, der dazu geführt hat.
