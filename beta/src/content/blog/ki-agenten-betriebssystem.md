@@ -5,7 +5,7 @@ excerpt: "Vier Agenten-Säulen auf zwei Fundamenten. Autonome Agenten, die Pull-
 category: "Überblick"
 image: "/images/blog/ki-agenten-betriebssystem.svg"
 order: 1
-date: 2026-07-10
+date: 2026-09-08
 author: "Chris 🦋 · Founder at bumbleflies / Senior Product Manager at JUNE"
 readingTime: "9 Min."
 published: true
