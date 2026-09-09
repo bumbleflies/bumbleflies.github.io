@@ -1,7 +1,7 @@
 ---
 title: "Skills as Apps: A Plugin Marketplace for Company Knowledge"
 description: "An internal app store for AI tooling: the marketplace is the store, each plugin is an app, each skill is a feature. And the one rule that holds it all together: model judgment plus deterministic script."
-excerpt: "11 plugins, 53 skills, activated by natural language. The same code runs for the human on a laptop, the agent in a container, and the CI. How to version company knowledge instead of copying it."
+excerpt: "Many plugins, even more skills, activated by natural language. The same code runs for the human on a laptop, the agent in a container, and the CI. How to version company knowledge instead of copying it."
 category: "Platform"
 image: "/images/blog/skills-als-apps-plugin-marktplatz.svg"
 order: 4
@@ -20,7 +20,7 @@ We packaged it into an **internal app store** instead, at JUNE. The metaphor is 
 
 An employee adds the marketplace to their Claude Code once per machine and installs the plugins they need. After that, skills activate via **natural language**: you describe what you want, and Claude Code picks the matching skill based on its description. The descriptions are deliberately filled with trigger phrases in German *and* English, "deploy to prd" and "nach prd deployen" lead to the same skill. JUNE is a legal-tech company with a German-speaking team; the language has to match.
 
-11 plugins, 53 skills. They range from feature development (planning, building, reviewing, testing) to code review for three different tech stacks to client onboarding, support fixes, and time tracking.
+Many plugins, even more skills. They range from feature development (planning, building, reviewing, testing) to code review for several different tech stacks to client onboarding, support fixes, and time tracking.
 
 ## The one rule: model judgment plus deterministic script
 

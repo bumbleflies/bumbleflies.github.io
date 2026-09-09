@@ -1,7 +1,7 @@
 ---
-title: "Ein Cockpit für einen Menschen: den eigenen Tag mit zehn Agenten orchestrieren"
-description: "Zehn parallele Scanner, die aus Mail, Chat, Tickets, Kalender und sogar der eigenen KI-Historie einen priorisierten Tagesplan machen, mit zwei Versprechen: nichts geht verloren, nichts bleibt stecken."
-excerpt: "Die persönliche Seite des Stacks. Ein Meta-Agent, der zehn Quellen scannt, jeden losen Faden gegen die Tickets abgleicht und jede Aufgabe eine Nachricht davon entfernt macht, erledigt zu sein."
+title: "Ein Cockpit für einen Menschen: den eigenen Tag mit vielen Agenten orchestrieren"
+description: "Viele parallele Scanner, die aus Mail, Chat, Tickets, Kalender und sogar der eigenen KI-Historie einen priorisierten Tagesplan machen, mit zwei Versprechen: nichts geht verloren, nichts bleibt stecken."
+excerpt: "Die persönliche Seite des Stacks. Ein Meta-Agent, der viele Quellen scannt, jeden losen Faden gegen die Tickets abgleicht und jede Aufgabe eine Nachricht davon entfernt macht, erledigt zu sein."
 category: "Produktivität"
 image: "/images/blog/cockpit-tag-mit-zehn-agenten.svg"
 order: 6
@@ -23,9 +23,9 @@ Alles am Cockpit folgt aus zwei Zusagen:
 1. **Nichts geht verloren.** Jeder lose Faden aus jeder Quelle wird gegen die Tickets abgeglichen, und wenn er nirgends erfasst ist, in ein Eingangs-Ticket geroutet.
 2. **Nichts bleibt stecken.** Jede aufgetauchte Aufgabe kommt mit einem fertig einfügbaren Fortsetzungs-Befehl, sodass sie „eine Nachricht davon entfernt ist, erledigt zu sein".
 
-## Zehn Scanner, parallel, die niemals scheitern
+## Viele Scanner, parallel, die niemals scheitern
 
-Das Herz ist ein Fächer aus zehn **Scannern**, je einer pro Quelle, alle gleichzeitig gestartet. Jeder Scanner bekommt denselben Auftrag und muss ein streng strukturiertes JSON-Ergebnis zurückgeben.
+Das Herz ist ein Fächer aus **Scannern**, je einer pro Quelle, alle gleichzeitig gestartet. Jeder Scanner bekommt denselben Auftrag und muss ein streng strukturiertes JSON-Ergebnis zurückgeben.
 
 Die wichtigste Regel dabei: Ein Scanner **scheitert nie.** Wenn eine Quelle nicht erreichbar ist, gibt er keinen Fehler zurück, sondern ein sauberes „nicht verfügbar, Grund: …". Damit kann eine tote Quelle niemals den ganzen Lauf abbrechen. Das ist dieselbe Fehlertoleranz-Philosophie wie im Nervensystem: Das System degradiert würdevoll, statt umzukippen.
 
@@ -33,21 +33,21 @@ Und weil das strukturierte Ergebnis strikt validiert wird, bevor irgendetwas ihm
 
 ## Der Scanner, der die eigene KI-Historie liest
 
-Ein Detail hebt das Cockpit heraus. Einer der zehn Scanner liest die **eigene Gesprächshistorie von Claude Code**, die Protokolle der KI-Sitzungen des Menschen. Warum? Weil dort Verpflichtungen liegen, die man mündlich gegenüber der KI eingegangen ist („ich mache später X"), offene Fragen, angefangene Arbeitsschritte. Der Scanner holt diese in Arbeit befindlichen Zusagen zurück an die Oberfläche, damit sie nicht im Sitzungsverlauf versickern.
+Ein Detail hebt das Cockpit heraus. Einer dieser Scanner liest die **eigene Gesprächshistorie von Claude Code**, die Protokolle der KI-Sitzungen des Menschen. Warum? Weil dort Verpflichtungen liegen, die man mündlich gegenüber der KI eingegangen ist („ich mache später X"), offene Fragen, angefangene Arbeitsschritte. Der Scanner holt diese in Arbeit befindlichen Zusagen zurück an die Oberfläche, damit sie nicht im Sitzungsverlauf versickern.
 
 Ein Agent, der über die Arbeit eines Menschen mit anderen Agenten reflektiert. Das ist die vielleicht unerwartetste, aber logischste Konsequenz eines Systems, in dem Mensch und KI ständig zusammenarbeiten.
 
-Der Historie-Scanner ist der neueste der zehn, und die ehrliche Antwort ist, dass ich noch nicht weiß, ob er eine gute Idee ist oder nur eine seltsame. Er holt Zusagen an die Oberfläche, die ich sonst vergessen würde, aber er holt auch Rauschen hoch. Es ist der Scanner, bei dem ich mir am wenigsten sicher bin.
+Der Historie-Scanner ist der neueste davon, und die ehrliche Antwort ist, dass ich noch nicht weiß, ob er eine gute Idee ist oder nur eine seltsame. Er holt Zusagen an die Oberfläche, die ich sonst vergessen würde, aber er holt auch Rauschen hoch. Es ist der Scanner, bei dem ich mir am wenigsten sicher bin.
 
 ## „Gelesen heißt nicht erledigt"
 
-Meine liebste Regel im Cockpit stammt, wie so vieles im System, aus einem echten Vorfall. Der Mail-Scanner listet nicht nur ungelesene, sondern auch *gelesene* Mails. Denn: **Gelesen heißt nicht erledigt.** Eine gelesene Mail, bei der die Gegenseite zuletzt geschrieben hat und die eine Bitte oder eine Lieferung enthält, ist weiterhin offene Arbeit.
+Meine liebste Regel im Cockpit stammt, wie so vieles im System, aus einer echten Erfahrung. Der Mail-Scanner listet nicht nur ungelesene, sondern auch *gelesene* Mails. Denn: **Gelesen heißt nicht erledigt.** Eine gelesene Mail, bei der die Gegenseite zuletzt geschrieben hat und die eine Bitte oder eine Lieferung enthält, ist weiterhin offene Arbeit.
 
-Dahinter steht eine konkrete Regression: eine Beispieldatei, gelesen an einem Montag, aber erst zwei Tage später manuell bemerkt, weil „gelesen" fälschlich als „erledigt" galt. Die Regel ist die Narbe dieser zwei verlorenen Tage.
+Dahinter steht eine konkrete Regression: eine Beispieldatei, gelesen an einem Montag, aber erst Tage später manuell bemerkt, weil „gelesen" fälschlich als „erledigt" galt. Die Regel ist die Narbe dieser verlorenen Tage.
 
 ## Blockiert, wartend, als Nächstes
 
-Das Cockpit unterscheidet sauber drei Zustände, die die meisten Menschen im Kopf vermischen:
+Das Cockpit unterscheidet sauber die Zustände, die die meisten Menschen im Kopf vermischen:
 
 - **Blockiert**, es fehlt Zugang, Daten oder eine Voraussetzung. Kann hoch priorisiert sein, aber nie „als Nächstes" dran sein.
 - **Wartend**, ich schulde noch eine Nachverfolgung, aber jemand anderes muss zuerst handeln.
@@ -57,10 +57,10 @@ Diese Unterscheidung ist der Grund, warum die „nächste Handlung" immer wirkli
 
 ## DRY, sogar hier
 
-Auch das Cockpit folgt dem Prinzip „eine Definition, viele Laufzeiten". Es teilt sich eine Konfiguration und einen gemeinsamen Speicher mit einem leichteren Geschwister-Skill, der in jedem Projekt verfügbar ist. Und seine Scanner rufen dieselben Kommunikations-Skills aus dem Marktplatz auf, die auch die Agenten benutzen. Das Cockpit ist kein Solitär, es sitzt auf demselben Fundament wie der Rest des Systems und liest dieselben zwei Fundamente.
+Auch das Cockpit folgt dem Prinzip „eine Definition, viele Laufzeiten". Es teilt sich eine Konfiguration und einen gemeinsamen Speicher mit einem leichteren Geschwister-Skill, der in jedem Projekt verfügbar ist. Und seine Scanner rufen dieselben Kommunikations-Skills aus dem Marktplatz auf, die auch die Agenten benutzen. Das Cockpit ist kein Solitär, es sitzt auf demselben Fundament wie der Rest des Systems und liest dieselben Fundamente.
 
 ## Wo die Serie landet
 
-Zurück auf den zwei Fundamenten, mit denen die Serie begonnen hat. Das ist die Bedeutung von „ein System": Ein Mensch, ein Agent und ein zeitgesteuerter Job benutzen dasselbe Vokabular, dieselben Tickets, dieselben Skills, nicht weil es elegant aussieht, sondern weil nur so aus einzelnen KI-Tricks ein Betriebssystem wird, das trägt.
+Zurück auf den Fundamenten, mit denen die Serie begonnen hat. Das ist die Bedeutung von „ein System": Ein Mensch, ein Agent und ein zeitgesteuerter Job benutzen dasselbe Vokabular, dieselben Tickets, dieselben Skills, nicht weil es elegant aussieht, sondern weil nur so aus einzelnen KI-Tricks ein Betriebssystem wird, das trägt.
 
-Das Cockpit ist das Ende dieses Musters, ein einzelner Morgenplan. Und wie jede Säule ist es aus Narben gebaut statt aus Versprechen: die gelesene Mail, die zwei Tage kostete; der Scanner, der niemals scheitern darf; die Validierung, die ein halluziniertes Ergebnis einfriedet. Der Plan, den man jeden Morgen sieht, ist der aktuelle Zustand dieser Narben.
+Das Cockpit ist das Ende dieses Musters, ein einzelner Morgenplan. Und wie jede Säule ist es aus Narben gebaut statt aus Versprechen: die gelesene Mail, die tagelang liegen blieb; der Scanner, der niemals scheitern darf; die Validierung, die ein halluziniertes Ergebnis einfriedet. Der Plan, den man jeden Morgen sieht, ist der aktuelle Zustand dieser Narben.
