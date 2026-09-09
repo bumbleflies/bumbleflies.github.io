@@ -43,7 +43,7 @@ Der Historie-Scanner ist der neueste davon, und die ehrliche Antwort ist, dass i
 
 Meine liebste Regel im Cockpit stammt, wie so vieles im System, aus einer echten Erfahrung. Der Mail-Scanner listet nicht nur ungelesene, sondern auch *gelesene* Mails. Denn: **Gelesen heißt nicht erledigt.** Eine gelesene Mail, bei der die Gegenseite zuletzt geschrieben hat und die eine Bitte oder eine Lieferung enthält, ist weiterhin offene Arbeit.
 
-Dahinter steht eine konkrete Regression: eine Beispieldatei, gelesen an einem Montag, aber erst Tage später manuell bemerkt, weil „gelesen" fälschlich als „erledigt" galt. Die Regel ist die Narbe dieser verlorenen Tage.
+Dahinter steht eine konkrete Regression: eine Beispieldatei, gelesen an einem Montag, aber erst Tage später manuell bemerkt, weil „gelesen" fälschlich als „erledigt" galt. Die Regel ist die Lektion aus diesen verlorenen Tagen.
 
 ## Blockiert, wartend, als Nächstes
 
@@ -63,4 +63,4 @@ Auch das Cockpit folgt dem Prinzip „eine Definition, viele Laufzeiten". Es tei
 
 Zurück auf den Fundamenten, mit denen die Serie begonnen hat. Das ist die Bedeutung von „ein System": Ein Mensch, ein Agent und ein zeitgesteuerter Job benutzen dasselbe Vokabular, dieselben Tickets, dieselben Skills, nicht weil es elegant aussieht, sondern weil nur so aus einzelnen KI-Tricks ein Betriebssystem wird, das trägt.
 
-Das Cockpit ist das Ende dieses Musters, ein einzelner Morgenplan. Und wie jede Säule ist es aus Narben gebaut statt aus Versprechen: die gelesene Mail, die tagelang liegen blieb; der Scanner, der niemals scheitern darf; die Validierung, die ein halluziniertes Ergebnis einfriedet. Der Plan, den man jeden Morgen sieht, ist der aktuelle Zustand dieser Narben.
+Das Cockpit ist das Ende dieses Musters, ein einzelner Morgenplan. Und wie jede Säule ist es aus Lektionen gebaut statt aus Versprechen: die gelesene Mail, die tagelang liegen blieb; der Scanner, der niemals scheitern darf; die Validierung, die ein halluziniertes Ergebnis einfriedet. Der Plan, den man jeden Morgen sieht, ist der aktuelle Zustand dieser Lektionen.

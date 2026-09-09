@@ -18,7 +18,7 @@ Die häufigste Frage, die mir Leute zum Thema KI stellen, klingt ungefähr so:
 
 Das ist ein echtes Zitat aus einer Kundenanfrage. Und die ehrliche Antwort lautet: Ja, genau das haben wir gebaut, meine Kolleg:innen und ich bei JUNE, einem deutschen Legal-Tech-Unternehmen, wo ich es bis heute im Arbeitsalltag betreibe. Bei bumbleflies berate ich andere Unternehmen zu KI. Diese Serie ist deshalb mein persönlicher Erfahrungsbericht aus JUNE, kein bumbleflies-Kundenprojekt.
 
-Diese Artikelserie beschreibt das System: wie es aufgebaut ist, welche Entscheidungen ich getroffen habe und vor allem die Narben. Fast jede Leitplanke darin lässt sich auf eine konkrete Erfahrung im Betrieb zurückführen.
+Diese Artikelserie beschreibt das System: wie es aufgebaut ist, welche Entscheidungen ich getroffen habe und vor allem die Lektionen. Fast jede Leitplanke darin lässt sich auf eine konkrete Erfahrung im Betrieb zurückführen.
 
 ## Der Kern: keine gekaufte KI, sondern kompilierte Betriebsabläufe
 
@@ -68,7 +68,7 @@ Mehrere Säulen, ein Arbeitsvorgang. Kein einziger Direktaufruf zwischen den Kom
 
 **Vertraue dem Modell nicht, verifiziere mit Code.** Die durchgängige Antwort auf „Wie macht man ein Sprachmodell in Produktion sicher?" lautet: eine deterministische Grenze drumherum ziehen. Das Modell schreibt, ein Regex-Filter prüft, das Modell korrigiert, derselbe Filter prüft erneut, und blockiert im Zweifel.
 
-**Narben als Design.** Fast jede Leitplanke geht auf eine konkrete Erfahrung zurück: eine Nacht, in der ein Agent im Leerlauf Tokens verbrannte, eine Regression bei der Terminbuchung, eine defekte Konfiguration auf einem Netzlaufwerk. Die Systeme wachsen, indem sie ihre eigenen Fehler in Regeln gießen.
+**Lektionen als Design.** Fast jede Leitplanke geht auf eine konkrete Erfahrung zurück: eine Nacht, in der ein Agent im Leerlauf Tokens verbrannte, eine Regression bei der Terminbuchung, eine defekte Konfiguration auf einem Netzlaufwerk. Die Systeme wachsen, indem sie ihre eigenen Fehler in Regeln gießen.
 
 **Koordination über dauerhafte Artefakte, nicht über RPC.** Agenten und Menschen sprechen über Tickets, Tags, Status und Chat-Nachrichten miteinander, nachvollziehbar, wiederaufnehmbar, für Menschen einsehbar.
 
@@ -76,7 +76,7 @@ Mehrere Säulen, ein Arbeitsvorgang. Kein einziger Direktaufruf zwischen den Kom
 
 **Mensch am Bremshebel.** Deutschsprachige Trigger, eine Rechts-Domäne und vor allem: Alle wirklich folgenreichen Aktionen (Freigaben, Merges, Produktiv-Deployments) brauchen eine explizite menschliche Bestätigung. Autonomie mit der Hand am Hebel.
 
-Es ist der aktuelle Zustand eines laufenden Systems, Narben inklusive, und manche Entscheidungen darin sind mir bis heute nicht ganz geheuer.
+Es ist der aktuelle Zustand eines laufenden Systems, mit allen Lektionen, die darin stecken, und manche Entscheidungen darin sind mir bis heute nicht ganz geheuer.
 
 ## Was in dieser Serie kommt
 

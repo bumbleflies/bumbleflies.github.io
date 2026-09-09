@@ -1,6 +1,6 @@
 ---
 title: "Agenten, die arbeiten, während du schläfst: Claude Code als autonomer Daemon"
-description: "Autonome Agenten, die einen Team-Chat beobachten, Code implementieren, Pull-Requests öffnen und Hotfixes ausrollen, und die Narben, die jede einzelne Leitplanke erklären."
+description: "Autonome Agenten, die einen Team-Chat beobachten, Code implementieren, Pull-Requests öffnen und Hotfixes ausrollen, und die Lektionen, die jede einzelne Leitplanke erklären."
 excerpt: "Ein Wort im Chat weckt einen Agenten. Er implementiert, öffnet einen PR, meldet sich zurück. Mehrere Personas aus einem Bausatz. Und die Nacht, in der ein Agent im Leerlauf eine Menge Tokens verbrannte."
 category: "Autonomie"
 image: "/images/blog/bots-die-nachts-arbeiten.svg"
@@ -38,7 +38,7 @@ Im Kern ruft der Bootstrap Claude Code im **Headless-Modus** (ohne interaktive B
 
 Der Agent darf pushen, darf Pull-Requests öffnen, aber der Merge in die Hauptlinie bleibt eine menschliche Entscheidung. Das ist die „Hand am Bremshebel", von der sich das ganze System leiten lässt. Weil die Berechtigungen übersprungen sind, muss dieser Stopp ein *harter* Code-Stopp sein. Eine bloße Prompt-Regel wäre nur ein Ratschlag, den das Modell im Eifer ignorieren könnte.
 
-## Die Narben, und warum sie das Wertvollste sind
+## Die Lektionen, und warum sie das Wertvollste sind
 
 Jetzt zum ehrlichen Teil. Fast jede Leitplanke in diesem System lässt sich auf eine konkrete Erfahrung aus dem Betrieb zurückführen. Das ist keine Peinlichkeit, sondern die Methode: **Das System wächst, indem es seine eigenen Fehler in Code gießt.**
 

@@ -43,7 +43,7 @@ The history scanner is the newest of them, and the honest answer is that I don't
 
 My favorite rule in the cockpit, like so much in the system, comes from a real experience. The email scanner lists not just unread but also *read* emails. Because: **read doesn't mean done.** A read email where the other party last wrote and that contains a request or a delivery is still open work.
 
-Behind it is a concrete regression: a sample email, read on a Monday, but only manually noticed days later, because "read" was wrongly treated as "done". The rule is the scar of those lost days.
+Behind it is a concrete regression: a sample email, read on a Monday, but only manually noticed days later, because "read" was wrongly treated as "done". The rule is the lesson from those lost days.
 
 ## Blocked, waiting, next
 
@@ -63,4 +63,4 @@ The cockpit also follows the "one definition, many runtimes" principle. It share
 
 Back on the foundations the series started with. This is what "one system" means: a human, an agent, and a scheduled job use the same vocabulary, the same tickets, the same skills, not because it looks elegant, but because it's the only way individual AI tricks carry as an operating system.
 
-The cockpit is where that pattern ends, in a single morning plan. And like every pillar, it's built from scars rather than promises: the read email that sat for days, the scanner that must never fail, the validation that fences a hallucinated result. The plan you see each morning is the current state of those scars.
+The cockpit is where that pattern ends, in a single morning plan. And like every pillar, it's built from lessons rather than promises: the read email that sat for days, the scanner that must never fail, the validation that fences a hallucinated result. The plan you see each morning is the current state of those lessons.

@@ -1,6 +1,6 @@
 ---
 title: "Agents That Work While You Sleep: Claude Code as an Autonomous Daemon"
-description: "Autonomous agents watching a team chat, implementing code, opening pull requests, and rolling out hotfixes, and the scars that explain every single guardrail."
+description: "Autonomous agents watching a team chat, implementing code, opening pull requests, and rolling out hotfixes, and the lessons that explain every single guardrail."
 excerpt: "A word in the chat wakes an agent. It implements, opens a PR, reports back. Several personas from one building kit. And the night an agent burned a lot of tokens in an idle loop."
 category: "Autonomy"
 image: "/images/blog/bots-die-nachts-arbeiten.svg"
@@ -38,7 +38,7 @@ At its core, the bootstrap calls Claude Code in headless mode, with permission p
 
 The agent may push, may open pull requests, but merging into the main line remains a human decision. That's the "hand on the brake lever" the entire system is guided by. Because permissions are skipped, this stop must be a *hard* code stop. A mere prompt rule would just be advice the model might ignore in the heat of the moment.
 
-## The scars, and why they're the most valuable part
+## The lessons, and why they're the most valuable part
 
 Now to the honest part. Nearly every guardrail in this system traces back to a concrete experience in day-to-day operation. That's not embarrassing, it's the method: **the system grows by pouring its own errors into code.**
 

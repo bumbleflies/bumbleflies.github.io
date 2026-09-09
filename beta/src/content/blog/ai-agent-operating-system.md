@@ -18,7 +18,7 @@ The most common question people ask me about AI goes something like this:
 
 That's a real quote from a client inquiry. And the honest answer is: yes, we built exactly that, my colleagues and I at JUNE, a German legal-tech company where I still run it day-to-day. At bumbleflies, I do AI consulting for other companies. This series is therefore my personal account from JUNE, not a bumbleflies client project.
 
-This article series describes the system: how it's structured, what decisions I made, and especially the scars. Nearly every guardrail traces back to a concrete experience in day-to-day operation.
+This article series describes the system: how it's structured, what decisions I made, and especially the lessons. Nearly every guardrail traces back to a concrete experience in day-to-day operation.
 
 ## The core: no purchased AI, but compiled operational processes
 
@@ -68,7 +68,7 @@ The same design principles appear across all pillars, running through every part
 
 **Don't trust the model, verify with code.** The consistent answer to "How do you make a language model safe in production?" is: draw a deterministic boundary around it. The model writes, a regex filter checks, the model corrects, the same filter checks again, and blocks if in doubt.
 
-**Scars as design.** Nearly every guardrail traces back to a concrete experience: a night when an agent burned tokens in an idle loop, a regression in appointment booking, a broken configuration on a network drive. The systems grow by pouring their own errors into rules.
+**Lessons as design.** Nearly every guardrail traces back to a concrete experience: a night when an agent burned tokens in an idle loop, a regression in appointment booking, a broken configuration on a network drive. The systems grow by pouring their own errors into rules.
 
 **Coordination via persistent artifacts, not RPC.** Agents and humans speak to each other through tickets, tags, statuses, and chat messages, traceable, resumable, visible to humans.
 
@@ -76,7 +76,7 @@ The same design principles appear across all pillars, running through every part
 
 **Human at the brake lever.** German-language triggers, a legal domain, and above all: every truly consequential action (approvals, merges, production deployments) requires explicit human confirmation. Autonomy with a hand on the lever.
 
-It's the current state of one running system, scars included, and there are decisions in here I'm still not sure about.
+It's the current state of one running system, with every lesson that's baked into it, and there are decisions in here I'm still not sure about.
 
 ## What's coming in this series
 
