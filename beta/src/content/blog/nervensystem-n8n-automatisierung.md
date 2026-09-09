@@ -1,7 +1,7 @@
 ---
 title: "Das Nervensystem: Event-Automatisierung, und wie man ein Sprachmodell ehrlich hält"
 description: "Wie eine always-on Automatisierungssäule aus Support-Mails klassifizierte Tickets macht, und der mehrstufige Datenschutz-Filter, der das beste Beispiel für 'vertraue dem Modell nicht, verifiziere mit Code' ist."
-excerpt: "24 Workflows, knapp 700 Verarbeitungsschritte, kein Mensch in der Schleife. Ein selbstlernender Ticket-Router und ein Datenschutz-Filter, der das Sprachmodell schreiben lässt, aber ihm kein Wort glaubt."
+excerpt: "Viele Workflows, eine Menge Verarbeitungsschritte, kein Mensch in der Schleife. Ein selbstlernender Ticket-Router und ein Datenschutz-Filter, der das Sprachmodell schreiben lässt, aber ihm kein Wort glaubt."
 category: "Automatisierung"
 image: "/images/blog/nervensystem-n8n-automatisierung.svg"
 order: 3
@@ -12,9 +12,9 @@ published: false
 lang: "DE"
 ---
 
-Wenn die zwei Fundamente, Tickets und Chat, das Skelett des Systems sind, dann ist die Automatisierungssäule das Nervensystem: immer wach, ereignisgetrieben, ohne Menschen in der Schleife. Sie reagiert auf jede Veränderung an einem Ticket und steuert daraus die anderen Systeme.
+Wenn die Fundamente, Tickets und Chat, das Skelett des Systems sind, dann ist die Automatisierungssäule das Nervensystem: immer wach, ereignisgetrieben, ohne Menschen in der Schleife. Sie reagiert auf jede Veränderung an einem Ticket und steuert daraus die anderen Systeme.
 
-Wir haben diese Säule bei JUNE mit n8n gebaut, einer Open-Source-Automatisierungsplattform. 24 Workflows, knapp 700 Verarbeitungsschritte. Sie verwandelt eine Support-Mail in ein klassifiziertes Ticket, ein Call-Recording in eine strukturierte Aufgabenliste, einen Kommentar in fertige Release-Notes. Zwei dieser Workflows verdienen einen genaueren Blick, weil sie zwei Prinzipien verkörpern, die für jedes KI-System gelten.
+Wir haben diese Säule bei JUNE mit n8n gebaut, einer Open-Source-Automatisierungsplattform. Viele Workflows, eine Menge Verarbeitungsschritte. Sie verwandelt eine Support-Mail in ein klassifiziertes Ticket, ein Call-Recording in eine strukturierte Aufgabenliste, einen Kommentar in fertige Release-Notes. Zwei dieser Workflows verdienen einen genaueren Blick, weil sie zwei Prinzipien verkörpern, die für jedes KI-System gelten.
 
 ## Erstens: der Code ist die Wahrheit, nicht die Handarbeit
 
@@ -26,13 +26,13 @@ Warum? Weil das Hand-Editieren großer Workflow-Definitionen immer wieder diesel
 
 Der Support-Workflow ist ein selbstverbessernder Kreislauf aus zwei Teilen.
 
-Der erste Teil fängt jede neue Support-Konversation ab und legt daraus ein Ticket an. Dann klassifiziert ein Sprachmodell das Ticket: In welche Liste gehört es? Die Klassifikation läuft als **Few-Shot-Prompt** (ein Prompt mit Beispielen statt festen Regeln), das Modell bekommt Beispiele vergangener Tickets mit der Liste, in die sie einsortiert wurden. Ist es sich zu mehr als 75 % sicher, verschiebt es das Ticket automatisch. Ist es unsicher, bleibt das Ticket im Eingang liegen.
+Der erste Teil fängt jede neue Support-Konversation ab und legt daraus ein Ticket an. Dann klassifiziert ein Sprachmodell das Ticket: In welche Liste gehört es? Die Klassifikation läuft als **Few-Shot-Prompt** (ein Prompt mit Beispielen statt festen Regeln), das Modell bekommt Beispiele vergangener Tickets mit der Liste, in die sie einsortiert wurden. Ist es sich hinreichend sicher, verschiebt es das Ticket automatisch. Ist es unsicher, bleibt das Ticket im Eingang liegen.
 
 Der zweite Teil schließt den Kreis: Immer wenn ein *Mensch* ein Ticket manuell aus dem Eingang verschiebt, wird genau diese Korrektur als neues Beispiel gespeichert. Die Trainingsdaten des Routers *sind* das Protokoll der menschlichen Korrekturen. Es gibt keinen separaten Labeling-Schritt. Am ersten Tag, mit leerer Beispiel-Tabelle, überspringt das System das Modell einfach und lässt alles im Eingang, und lernt ab der ersten manuellen Verschiebung.
 
 **Die beste Trainingsquelle für deine KI ist die tägliche Korrektur durch dein Team.** Man muss sie nur einfangen.
 
-Eine Zahl darin ist ehrliches Raten: die 75-%-Schwelle. Ich habe sie nach Gefühl gewählt, nicht durch Tuning. Bisher hat sie gehalten, ob 75 richtig ist oder nur Glück, weiß ich bis heute nicht.
+Ein Wert darin ist ehrliches Raten: die Sicherheitsschwelle, ab der das Modell selbst verschieben darf. Ich habe sie nach Gefühl gewählt, nicht durch Tuning. Bisher hat sie gehalten, ob sie richtig sitzt oder nur Glück war, weiß ich bis heute nicht.
 
 Und das Ganze ist an jeder Verzweigung fehlertolerant entworfen: Schlägt die Klassifikation fehl, wurde das Ticket ja bereits im Eingang angelegt, ein sicherer Rückfall. Nichts geht verloren, nur weil das Modell mal patzt.
 
@@ -40,7 +40,7 @@ Und das Ganze ist an jeder Verzweigung fehlertolerant entworfen: Schlägt die Kl
 
 Jetzt zum wichtigsten Baustein, dem, den ich jedem zeige, der fragt, wie man ein Sprachmodell in Produktion sicher macht.
 
-JUNE generiert kundensichtbare Release-Notes automatisch aus internen Tickets. Diese Notes sind **für jeden Mandanten öffentlich sichtbar**. Ein Ticket kann aber Mandantennamen, Personennamen, E-Mail-Adressen, Fall-IDs enthalten. Ein Sprachmodell, das aus so einem Ticket eine Release-Note schreibt, könnte diese Daten durchlassen. Das darf nie passieren.
+JUNE generiert kundensichtbare Release-Notes automatisch aus internen Tickets. Interne Tickets sind für Kolleg:innen geschrieben, nicht für die Öffentlichkeit: Sie enthalten Details, die in einer Release-Note nichts zu suchen haben. Deshalb liegt zwischen Ticket und Note von Anfang an eine deterministische Grenze, und nicht bloß eine Anweisung im Prompt.
 
 Die naive Lösung wäre: dem Modell im Prompt sagen „nenne keine Namen". Ich tue das auch, der Prompt enthält ein hartes Verbot mit Beispielen. **Aber ich vertraue dem Prompt nicht.** Der Ablauf ist ein Verteidigungswall in Tiefe:
 

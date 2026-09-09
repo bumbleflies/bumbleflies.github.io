@@ -1,7 +1,7 @@
 ---
 title: "Skills als Apps: ein Plugin-Marktplatz für Firmenwissen"
 description: "Ein interner App-Store für KI-Tooling: der Marktplatz ist der Store, jedes Plugin eine App, jeder Skill ein Feature. Und die eine Regel, die alles zusammenhält: Modell-Urteil plus deterministisches Skript."
-excerpt: "11 Plugins, 53 Skills, die per natürlicher Sprache aktiviert werden. Derselbe Code läuft für den Menschen am Laptop, den Agenten im Container und die CI. Wie man Firmenwissen versioniert statt kopiert."
+excerpt: "Viele Plugins, noch mehr Skills, die per natürlicher Sprache aktiviert werden. Derselbe Code läuft für den Menschen am Laptop, den Agenten im Container und die CI. Wie man Firmenwissen versioniert statt kopiert."
 category: "Plattform"
 image: "/images/blog/skills-als-apps-plugin-marktplatz.svg"
 order: 4
@@ -20,7 +20,7 @@ Wir haben es bei JUNE stattdessen in einen **internen App-Store** verpackt. Die 
 
 Ein Mitarbeiter fügt den Marktplatz einmal pro Rechner zu seinem Claude Code hinzu und installiert die Plugins, die er braucht. Danach aktivieren sich die Skills über **natürliche Sprache**: Man beschreibt, was man will, und Claude Code wählt den passenden Skill anhand seiner Beschreibung. Die Beschreibungen sind bewusst mit Trigger-Phrasen auf Deutsch *und* Englisch gefüllt, „deploy to prd" und „nach prd deployen" führen zum selben Skill. JUNE ist ein Legal-Tech-Unternehmen mit deutschsprachigem Team; die Sprache muss stimmen.
 
-11 Plugins, 53 Skills. Sie reichen von der Feature-Entwicklung (Planen, Bauen, Reviewen, Testen) über Code-Review für drei verschiedene Technologie-Stacks bis zu Kunden-Onboarding, Support-Fixes und Zeiterfassung.
+Viele Plugins, noch mehr Skills. Sie reichen von der Feature-Entwicklung (Planen, Bauen, Reviewen, Testen) über Code-Review für mehrere Technologie-Stacks bis zu Kunden-Onboarding, Support-Fixes und Zeiterfassung.
 
 ## Die eine Regel: Modell-Urteil plus deterministisches Skript
 

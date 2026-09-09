@@ -54,7 +54,7 @@ Rate every hunk individually before approving or merging, the same way you'd pro
 
 ## Always preserve
 
-- Concrete numbers and specifics (workflow counts, plugin counts, dated incidents) — these are the strongest anti-slop signal in the piece.
+- Concrete specifics: a named tool, a real code comment, a quoted system message, a dated regression — these are the strongest anti-slop signal in the piece.
 - Real quotes and slightly imperfect human phrasing (a customer's actual words, a self-deprecating aside) — don't polish the humanity out of them.
 - Short, punchy declarative sentences that land the thesis.
 - Self-aware or vulnerable admissions ("there are decisions in here I'm still not sure about").

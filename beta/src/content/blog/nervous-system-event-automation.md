@@ -1,7 +1,7 @@
 ---
 title: "The Nervous System: Event Automation, and How to Keep a Language Model Honest"
 description: "How an always-on automation pillar turns support emails into classified tickets, and the multi-stage privacy filter that's the best example of 'don't trust the model, verify with code'."
-excerpt: "24 workflows, nearly 700 processing steps, no human in the loop. A self-learning ticket router and a privacy filter that lets the model write, but doesn't believe a single word."
+excerpt: "Many workflows, a lot of processing steps, no human in the loop. A self-learning ticket router and a privacy filter that lets the model write, but doesn't believe a single word."
 category: "Automation"
 image: "/images/blog/nervensystem-n8n-automatisierung.svg"
 order: 3
@@ -12,9 +12,9 @@ published: false
 lang: "EN"
 ---
 
-If the two foundations, tickets and chat, are the skeleton of the system, then the automation pillar is the nervous system: always awake, event-driven, no human in the loop. It reacts to every change in a ticket and controls the other systems from there.
+If the foundations, tickets and chat, are the skeleton of the system, then the automation pillar is the nervous system: always awake, event-driven, no human in the loop. It reacts to every change in a ticket and controls the other systems from there.
 
-We built this pillar with n8n, an open-source automation platform, at JUNE. 24 workflows, nearly 700 processing steps. It turns a support email into a classified ticket, a call recording into a structured task list, a comment into finished release notes. Two of these workflows deserve a closer look because they embody two principles that apply to any AI system.
+We built this pillar with n8n, an open-source automation platform, at JUNE. Many workflows, a lot of processing steps. It turns a support email into a classified ticket, a call recording into a structured task list, a comment into finished release notes. Two of these workflows deserve a closer look because they embody two principles that apply to any AI system.
 
 ## First: code is the truth, not manual work
 
@@ -26,13 +26,13 @@ Why? Because hand-editing large workflow definitions always produces the same er
 
 The support workflow is a self-improving loop of two parts.
 
-The first part catches every new support conversation and creates a ticket from it. Then a language model classifies the ticket: which list does it belong to? The classification runs as a **few-shot prompt**, the model gets examples of past tickets with the list they were sorted into. If it's more than 75% sure, it moves the ticket automatically. If unsure, the ticket stays in the inbox.
+The first part catches every new support conversation and creates a ticket from it. Then a language model classifies the ticket: which list does it belong to? The classification runs as a **few-shot prompt**, the model gets examples of past tickets with the list they were sorted into. If it's confident enough, it moves the ticket automatically. If unsure, the ticket stays in the inbox.
 
 The second part closes the loop: whenever a *human* manually moves a ticket from the inbox, that exact correction is saved as a new example. The router's training data *is* the log of human corrections. There's no separate labeling step. On day one, with an empty example table, the system simply skips the model and leaves everything in the inbox, and learns from the first manual move onward.
 
 **The best training source for your AI is your team's daily corrections.** You just have to capture them.
 
-One number in there is honest guesswork: the 75% confidence threshold. I picked it by feel, not by tuning. It's held up so far, whether 75 is right or just lucky, I still don't know.
+One value in there is honest guesswork: the confidence threshold above which the model may move a ticket itself. I picked it by feel, not by tuning. It's held up so far, whether it sits right or was just luck, I still don't know.
 
 And the whole thing is designed to be fault-tolerant at every branch: if classification fails, the ticket was already created in the inbox, a safe fallback. Nothing is lost just because the model makes a mistake.
 
@@ -40,7 +40,7 @@ And the whole thing is designed to be fault-tolerant at every branch: if classif
 
 Now to the most important building block, the one I show everyone who asks how to make a language model safe in production.
 
-JUNE generates customer-facing release notes automatically from internal tickets. These notes are **publicly visible for every client**. But a ticket can contain client names, personal names, email addresses, case IDs. A language model writing a release note from such a ticket might let these data through. That must never happen.
+JUNE generates customer-facing release notes automatically from internal tickets. Internal tickets are written for colleagues, not for the public: they hold details that have no place in a release note. So from the start there is a deterministic boundary between ticket and note, not merely an instruction in the prompt.
 
 The naive solution would be: tell the model in the prompt "don't mention names". I do that too, the prompt contains a hard prohibition with examples. **But I don't trust the prompt.** The flow is a defense in depth:
 

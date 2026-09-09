@@ -1,6 +1,6 @@
 ---
-title: "Die zwei Fundamente, auf denen alles läuft: Zustand und Interaktion"
-description: "Warum ein ganzes KI-Agenten-System über zwei Standard-SaaS-Tools koordiniert statt über eigene Microservices, und was das über robuste Agenten-Architektur verrät."
+title: "Die Fundamente, auf denen alles läuft: Zustand und Interaktion"
+description: "Warum ein ganzes KI-Agenten-System über Standard-SaaS-Tools koordiniert statt über eigene Microservices, und was das über robuste Agenten-Architektur verrät."
 excerpt: "Das Projektmanagement-Tool ist der Speicher der Wahrheit und die Zündung. Der Team-Chat ist das zweite Fundament: Interaktion und Transport. Agenten koordinieren sich über dauerhafte Artefakte, nicht über direkte Aufrufe."
 category: "Architektur"
 image: "/images/blog/zwei-ebenen-zustand-und-interaktion.svg"
@@ -14,15 +14,15 @@ lang: "DE"
 
 Wenn man ein System aus autonomen Agenten baut, ist die verführerischste Idee, sie direkt miteinander reden zu lassen. Agent A ruft eine API von Agent B auf, der schickt eine Nachricht an Dienst C. Nach ein paar Wochen hat man ein Geflecht aus Direktaufrufen, das niemand mehr überblickt, das bei jedem Neustart Zustand verliert und das man nicht nachvollziehen kann, wenn nachts etwas schiefgeht.
 
-Wir haben es anders gemacht. Das gesamte Agenten-System, das ich mit meinen Kolleg:innen bei JUNE gebaut habe, einem deutschen Legal-Tech-Unternehmen, koordiniert über **zwei Fundamente aus Standard-Tools**, und fast keine Komponente ruft eine andere direkt auf.
+Wir haben es anders gemacht. Das gesamte Agenten-System, das ich mit meinen Kolleg:innen bei JUNE gebaut habe, einem deutschen Legal-Tech-Unternehmen, koordiniert über **Fundamente aus Standard-Tools**, und fast keine Komponente ruft eine andere direkt auf.
 
 ## Fundament 1: das Projektmanagement-Tool als Zustandsfundament
 
 Das erste Fundament ist ClickUp, das Projektmanagement-Tool, in dem JUNE ohnehin arbeitet. Es ist zweierlei zugleich: der **dauerhafte Speicher der Wahrheit** und die **Zündung** für Automatisierung.
 
-Jedes Arbeitselement wird als Ticket geboren oder gegen ein Ticket abgeglichen. Und jede Veränderung an einem Ticket ist ein Ereignis: ein Statuswechsel per Drag-and-Drop, ein neuer Kommentar, ein geändertes Feld. Vier solcher Ereignistypen, Ticket erstellt, verschoben, kommentiert, aktualisiert, zünden praktisch jede Automatisierung im ganzen Stack. Das Prinzip heißt schlicht: **Veränderung → Aktion.**
+Jedes Arbeitselement wird als Ticket geboren oder gegen ein Ticket abgeglichen. Und jede Veränderung an einem Ticket ist ein Ereignis: ein Statuswechsel per Drag-and-Drop, ein neuer Kommentar, ein geändertes Feld. Diese Ereignistypen, Ticket erstellt, verschoben, kommentiert, aktualisiert, zünden praktisch jede Automatisierung im ganzen Stack. Das Prinzip heißt schlicht: **Veränderung → Aktion.**
 
-Drei Details, die aus der Praxis stammen und die zeigen, dass „ein Ticket-Tool als Datenbank benutzen" mehr Disziplin verlangt, als es klingt:
+Ein paar Details, die aus der Praxis stammen und die zeigen, dass „ein Ticket-Tool als Datenbank benutzen" mehr Disziplin verlangt, als es klingt:
 
 - **Der Kommentar-Befehlsbus.** Kommentare, deren erstes Wort ein festes Steuerwort ist, werden zu Kommandos, also zu Steuerbefehlen, die per Chat-Kommentar ausgelöst werden. Ein Mensch kann sie tippen, ein Agent kann sie posten, und beide sind für immer im Ticket protokolliert. Die gesamte Release-Pipeline wird über diesen einen, auditierbaren Kanal gesteuert, kein separates Dashboard, keine versteckte API.
 
@@ -36,9 +36,9 @@ Der Vorteil: Alles ist für Menschen einsehbar. Wenn ein Agent etwas tut, steht 
 
 Das zweite Fundament ist Microsoft Teams, der Chat, in dem das Team ohnehin kommuniziert. Hier trifft Autonomie auf den Menschen.
 
-Der Chat ist gleich vierfach belastet:
+Der Chat ist mehrfach belastet:
 
-- Er ist der **einzige Auslöser** für die autonomen Agenten. Kein Webhook, ein schlichter 30-Sekunden-Poll, der nach einem Triggerwort sucht. Das klingt primitiv, ist aber robust: Es gibt keine Webhook-Registrierung, die kaputtgehen kann, keine offene Schnittstelle nach außen.
+- Er ist der **einzige Auslöser** für die autonomen Agenten. Kein Webhook, ein schlichter, kurz getakteter Poll, der nach einem Triggerwort sucht. Das klingt primitiv, ist aber robust: Es gibt keine Webhook-Registrierung, die kaputtgehen kann, keine offene Schnittstelle nach außen.
 - Er ist der Kanal, auf dem Agenten ihren **Status zurückmelden**, direkt im Thread, den der Mensch gerade sieht.
 - Er ist der **Agent-zu-Agent-Bus**: ein gemeinsamer Gruppenchat, in dem sich Agenten auf verschiedenen Rechnern registrieren, gegenseitig erwähnen und Fäden hinterlassen.
 - Er ist eine **Scan-Quelle** für das persönliche Cockpit.
@@ -53,7 +53,7 @@ Der Agent-zu-Agent-Bus treibt denselben Trick ins Positive: Alle Agenten posten 
 
 ## Warum das die richtige Architektur ist
 
-Man könnte all das mit eigenen Services und einer Message-Queue bauen. Ich habe es bewusst nicht getan, aus drei Gründen, die für jedes Agenten-System gelten:
+Man könnte all das mit eigenen Services und einer Message-Queue bauen. Ich habe es bewusst nicht getan, aus mehreren Gründen, die für jedes Agenten-System gelten:
 
 1. **Wiederaufnehmbarkeit.** Zustand, der in einem Ticket-Kommentar lebt, überlebt jeden Neustart, jedes Deployment, jeden Absturz. Ein Agent kann jederzeit dort weitermachen, wo er aufgehört hat, weil der Zustand nicht in seinem Prozess steckt.
 
