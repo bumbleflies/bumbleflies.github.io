@@ -52,18 +52,9 @@ Rate every hunk individually before approving or merging, the same way you'd pro
 - **Classify each hunk** as a genuine fix (grammar error, real inconsistency), a lateral taste call (optional comma, either wording works), or a regression (wordier, less precise, or introduces an asymmetry between languages) before deciding whether to keep it.
 - It's fine to keep only a subset of a PR. Strip it down to the hunks that are unambiguous wins and revert the rest, rather than accepting or rejecting the whole thing wholesale.
 
-## JUNE framing constraints (CTO direction, 2026-09-09)
-
-These override the anti-slop instinct to reach for hard specifics. They apply to every post in the series, DE and EN, drafts included:
-
-- **No „Schutzmaßnahme" / "protective measure" framing.** Use „Leitplanke" / "guardrail". Stacking "protective measures" against JUNE plus a privacy filter reads as though customer data had been mishandled there.
-- **Don't pair a guardrail with a „Vorfall" / "incident".** A guardrail traces back to „eine konkrete Erfahrung aus dem Betrieb" / "a concrete experience in day-to-day operation". „Narben" / "scars" stays: it's the series' own frame and is about the agent system, not about customer data.
-- **Describe data boundaries as designed-in, never as a reaction.** The release-note filter exists because internal tickets aren't public material, not because something leaked. Don't enumerate what a ticket „could contain" (client names, case IDs, …) and don't write that a model „could let it through".
-- **No concrete figures about JUNE's operation.** Workflow, step, plugin, skill, persona, pillar, scanner and source counts, token cost figures, confidence thresholds and poll intervals all go vague: „viele", „eine Menge", „noch mehr", „mehrere", „kurz getaktet" / "many", "a lot of", "even more", "several", "short-interval". Ordinal labels stay („Fundament 1", „Säule 2", numbered lists), and so do durations in production („seit über einem Jahr") — those are track record, not internal metrics.
-
 ## Always preserve
 
-- Concrete specifics that aren't figures about JUNE (a named tool, a real code comment, a quoted system message, a dated regression *without* the number attached) — these carry the anti-slop weight now that the counts are gone.
+- Concrete specifics: a named tool, a real code comment, a quoted system message, a dated regression — these are the strongest anti-slop signal in the piece.
 - Real quotes and slightly imperfect human phrasing (a customer's actual words, a self-deprecating aside) — don't polish the humanity out of them.
 - Short, punchy declarative sentences that land the thesis.
 - Self-aware or vulnerable admissions ("there are decisions in here I'm still not sure about").
